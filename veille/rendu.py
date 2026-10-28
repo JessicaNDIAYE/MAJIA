@@ -5,7 +5,15 @@ from pathlib import Path
 
 import markdown
 
-TITRES = {"article": "📄 Articles scientifiques", "modele": "🤖 Nouveaux modèles", "pratique": "🛠️ Nouvelles pratiques"}
+TITRES = {
+    "modele": "🤖 Modèles et labos (Claude, NVIDIA, OpenAI, Google, open source…)",
+    "article": "📄 Articles scientifiques",
+    "robotique": "🦾 Robotique",
+    "parsing": "🔍 Parsing de documents avec l'IA",
+    "monitoring": "📈 Monitoring et observabilité",
+    "pratique": "🛠️ Nouvelles pratiques",
+    "comparatif": "⚖️ Benchmarks et comparatifs",
+}
 
 
 def slug(texte):
@@ -13,7 +21,7 @@ def slug(texte):
     return re.sub(r"[^a-z0-9]+", "-", texte.lower()).strip("-")[:60] or "lecon"
 
 
-def digest_markdown(date, digest, lecon):
+def digest_markdown(date, digest, lecon, tableau_prix=""):
     lignes = [f"# Veille IA — semaine du {date}", ""]
     if digest.get("tendance"):
         lignes += [f"> **Tendance de la semaine :** {digest['tendance']}", ""]
@@ -28,8 +36,15 @@ def digest_markdown(date, digest, lecon):
                 f"### [{s['titre']}]({s['url']})",
                 f"*{s['source']}*", "",
                 s.get("resume", ""), "",
-                f"👉 {s.get('pourquoi', '')}", "",
             ]
+            lignes += [f"- {point}" for point in s.get("specificites", [])]
+            lignes += ["", f"👉 {s.get('pourquoi', '')}", ""]
+
+    if tableau_prix:
+        lignes += ["## 💰 Comparatif prix / qualité", "",
+                   "*Prix réels OpenRouter en $ par million de tokens.*", "", tableau_prix, ""]
+        if digest.get("comparatif"):
+            lignes += [digest["comparatif"], ""]
 
     lignes += ["## 💡 Idées à proposer à ton équipe", ""]
     for i, idee in enumerate(lecon.get("idees", []), 1):

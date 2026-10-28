@@ -25,11 +25,12 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
         run: python -m veille.main
       - name: Archiver digest, leçon et idées
         run: |
           git config user.name "JessicaNDIAYE"
           git config user.email "ndiajessi13@gmail.com"
-          git add digests lecons idees.md data/vus.json
+          git add digests lecons idees.md data
           git diff --cached --quiet || git commit -m "Veille du $(date +%F)"
           git push

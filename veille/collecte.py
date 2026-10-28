@@ -91,7 +91,7 @@ def collecter(config, deja_vus, maintenant=None):
     """Retourne les nouveaux éléments récents, sans doublons, triés du plus récent au plus ancien."""
     maintenant = maintenant or time.time()
     limite = maintenant - config.get("jours", 7) * 86400
-    mots_cles = config.get("mots_cles", [])
+    max_par_source = config.get("max_par_source", 12)
     resultats, vus = [], set(deja_vus)
 
     for source in config["sources"]:
@@ -108,8 +108,12 @@ def collecter(config, deja_vus, maintenant=None):
             log.warning("Source ignorée %s : %s", source["nom"], exc)
             continue
 
+        mots_cles = source.get("mots_cles") or config.get("mots_cles", [])
+        elements.sort(key=lambda e: e.date, reverse=True)
         gardes = 0
         for el in elements:
+            if gardes >= max_par_source:
+                break
             if el.id in vus or el.date < limite:
                 continue
             if source.get("filtrer") and not correspond(el, mots_cles):
@@ -120,4 +124,4 @@ def collecter(config, deja_vus, maintenant=None):
         log.info("%s : %d éléments retenus", source["nom"], gardes)
 
     resultats.sort(key=lambda e: e.date, reverse=True)
-    return resultats[: config.get("max_elements", 60)]
+    return resultats[: config.get("max_elements", 150)]

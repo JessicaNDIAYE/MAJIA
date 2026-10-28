@@ -8,7 +8,7 @@ from pathlib import Path
 
 import yaml
 
-from . import collecte, llm, rendu
+from . import collecte, llm, prix, rendu
 
 RACINE = Path(__file__).resolve().parent.parent
 FICHIER_VUS = RACINE / "data" / "vus.json"
@@ -24,14 +24,18 @@ def executer(racine, client_llm, envoyer=None, maintenant=None):
         logging.warning("Aucun nouveau contenu cette semaine.")
         return None
 
-    digest = llm.faire_digest(client_llm, config, elements)
+    fichier_prix = racine / "data" / "prix.json"
+    prix_avant = json.loads(fichier_prix.read_text()) if fichier_prix.exists() else []
+    modeles = prix.recuperer(config, prix_avant)
+
+    digest = llm.faire_digest(client_llm, config, elements, modeles)
     if not digest["selection"]:
         logging.warning("Le LLM n'a rien sélectionné.")
         return None
     lecon = llm.faire_lecon(client_llm, config, digest["selection"])
 
     date = dt.date.today().isoformat()
-    md = rendu.digest_markdown(date, digest, lecon)
+    md = rendu.digest_markdown(date, digest, lecon, prix.tableau_markdown(modeles))
     rendu.sauvegarder(racine, date, md, lecon, lecon.get("idees", []))
 
     if envoyer:
@@ -41,6 +45,8 @@ def executer(racine, client_llm, envoyer=None, maintenant=None):
     fichier_vus.parent.mkdir(exist_ok=True)
     tous = deja_vus + [e.id for e in elements]
     fichier_vus.write_text(json.dumps(tous[-5000:], indent=0), encoding="utf-8")
+    if modeles:
+        fichier_prix.write_text(json.dumps(modeles, indent=1, ensure_ascii=False), encoding="utf-8")
     return md
 
 
