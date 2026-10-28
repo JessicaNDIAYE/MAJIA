@@ -42,14 +42,19 @@ def _date_entree(entree):
 
 def lire_flux(source, contenu):
     flux = feedparser.parse(contenu)
+    # Les releases GitHub n'ont souvent qu'un numéro de version comme titre : on préfixe le nom du projet.
+    projet = source["nom"].split(" (")[0] if "/releases.atom" in source.get("url", "") else ""
     elements = []
     for e in flux.entries:
         url = e.get("link", "")
         if not url:
             continue
+        titre = nettoyer(e.get("title", ""), 200)
+        if projet and projet.lower() not in titre.lower():
+            titre = f"{projet} {titre}"
         elements.append(Element(
             id=url,
-            titre=nettoyer(e.get("title", ""), 200),
+            titre=titre,
             url=url,
             source=source["nom"],
             categorie=source["categorie"],

@@ -1,16 +1,24 @@
 # Profil utilisé par le LLM pour adapter les idées et la leçon à ton travail.
 profil: >
   Ingénieure IA / data. Je construis des agents LLM, des pipelines RAG,
-  des intégrations MCP, du text-to-SQL, du parsing de documents avec l'IA
+  des intégrations MCP, du text-to-SQL, du parsing HTML et du scraping web avec l'IA
   et du monitoring/observabilité de systèmes IA. Je veux comprendre les
   spécificités réelles de chaque modèle (forces, limites, prix) pour choisir
   le bon outil et proposer des améliorations concrètes à mon équipe.
 
-# Fenêtre de collecte (jours), volume envoyé au LLM et taille de la sélection.
-jours: 7
-max_elements: 150
-max_par_source: 12   # évite qu'une source très bavarde écrase les autres
-max_selection: 25
+# Veille quotidienne : fenêtre de collecte (jours), volume envoyé au LLM et taille de la sélection.
+# Les liens déjà traités ne reviennent jamais, la fenêtre de 2 jours sert de marge si un jour échoue.
+jours: 2
+max_elements: 100
+max_par_source: 6    # évite qu'une source très bavarde écrase les autres
+max_selection: 12
+
+# Jour de la leçon et des 3 idées : lundi, mardi… ou « tous » pour en avoir chaque jour.
+lecon_le: lundi
+
+# Week-end : « lundi » = pas d'e-mail samedi et dimanche, ils sont résumés dans l'e-mail du lundi
+# (le site, lui, est mis à jour chaque jour) ; « normal » = un e-mail chaque jour.
+mail_weekend: lundi
 
 # Mots-clés par défaut pour les sources marquées `filtrer: true`.
 # Une source peut définir ses propres `mots_cles`.
@@ -31,8 +39,10 @@ mots_cles:
   - Claude
   - Anthropic
   - NVIDIA
-  - parsing
-  - OCR
+  - HTML parsing
+  - web scraping
+  - scraping
+  - crawler
   - observability
   - monitoring
 
@@ -108,18 +118,25 @@ sources:
     url: https://news.google.com/rss/search?q=%22humanoid+robot%22+OR+%22robot+foundation+model%22+when:7d&hl=en-US&gl=US&ceid=US:en
     categorie: robotique
 
-  # 🔍 Parsing de documents avec l'IA
-  - nom: Parsing IA (actualités)
-    url: https://news.google.com/rss/search?q=%22document+parsing%22+OR+LlamaParse+OR+Docling+OR+%22OCR+LLM%22+OR+%22document+AI%22+when:7d&hl=en-US&gl=US&ceid=US:en
+  # 🔍 Parsing HTML et scraping web avec l'IA
+  - nom: Scraping et parsing HTML (actualités)
+    url: https://news.google.com/rss/search?q=%22web+scraping%22+AI+OR+%22LLM+scraping%22+OR+%22HTML+parsing%22+OR+Firecrawl+OR+Crawl4AI+OR+%22AI+web+crawler%22+when:7d&hl=en-US&gl=US&ceid=US:en
     categorie: parsing
-  - nom: Docling (releases)
-    url: https://github.com/docling-project/docling/releases.atom
+  - nom: Firecrawl (releases)
+    url: https://github.com/firecrawl/firecrawl/releases.atom
     categorie: parsing
-  - nom: arXiv cs.CV (documents)
-    url: https://rss.arxiv.org/rss/cs.CV
+  - nom: Crawl4AI (releases)
+    url: https://github.com/unclecode/crawl4ai/releases.atom
+    categorie: parsing
+  - nom: Hacker News — scraping
+    url: https://hnrss.org/newest?q=scraping&points=30
+    categorie: parsing
+  - nom: arXiv cs.IR / cs.CL (web)
+    url: https://rss.arxiv.org/rss/cs.IR+cs.CL
     categorie: parsing
     filtrer: true
-    mots_cles: [document parsing, document understanding, OCR, layout analysis, table extraction, PDF]
+    mots_cles: [HTML, web scraping, web page, web extraction, information extraction, crawler, crawling, DOM,
+                web agent, boilerplate]
 
   # 📈 Monitoring / observabilité avec l'IA
   - nom: Observabilité LLM (actualités)

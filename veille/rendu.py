@@ -1,4 +1,5 @@
 """Mise en forme du digest, de la leçon et du backlog d'idées."""
+import datetime as dt
 import re
 import unicodedata
 from pathlib import Path
@@ -9,7 +10,7 @@ TITRES = {
     "modele": "Modèles et labos",
     "article": "Recherche",
     "robotique": "Robotique",
-    "parsing": "Parsing de documents",
+    "parsing": "Parsing HTML et scraping",
     "monitoring": "Monitoring et observabilité",
     "pratique": "Pratiques",
     "comparatif": "Benchmarks et comparatifs",
@@ -22,9 +23,9 @@ def slug(texte):
 
 
 def digest_markdown(date, digest, lecon, tableau_prix=""):
-    lignes = [f"# Veille IA — semaine du {date}", ""]
+    lignes = [f"# Veille IA du {date}", ""]
     if digest.get("tendance"):
-        lignes += [f"> **Synthèse :** {digest['tendance']}", ""]
+        lignes += [f"> **Synthèse du jour :** {digest['tendance']}", ""]
 
     for cat, titre in TITRES.items():
         items = [s for s in digest["selection"] if s.get("categorie") == cat]
@@ -52,9 +53,28 @@ def digest_markdown(date, digest, lecon, tableau_prix=""):
         lignes += [f"{i}. **{idee['titre']}** (effort : {idee.get('effort', '?')}) — {idee['description']}"]
     if lecon.get("lecon"):
         lignes += ["", f"## Leçon de la semaine : {lecon['lecon']['titre']}", "", lecon["lecon"]["markdown"], ""]
-    else:
+    elif lecon.get("echec"):
         lignes += ["", "*La leçon n'a pas pu être générée cette semaine.*", ""]
     lignes += ["---", "*Résumés générés automatiquement à partir des sources citées. À vérifier avant diffusion.*"]
+    return "\n".join(lignes)
+
+
+JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+
+def weekend_markdown(jours):
+    """Section du mail du lundi : l'essentiel des veilles du samedi et du dimanche."""
+    if not jours:
+        return ""
+    lignes = ["", "---", "", "## Ce que tu as raté ce week-end", ""]
+    for jour in jours:
+        date = dt.date.fromisoformat(jour["date"])
+        lignes += [f"### {JOURS[date.weekday()].capitalize()} {date.day:02d}/{date.month:02d}", ""]
+        if jour.get("tendance"):
+            lignes += [f"*{jour['tendance']}*", ""]
+        lignes += [f"- [{s['titre']}]({s['url']}) — {TITRES.get(s.get('categorie'), '')} : {s.get('resume', '')}"
+                   for s in jour.get("selection", [])]
+        lignes.append("")
     return "\n".join(lignes)
 
 

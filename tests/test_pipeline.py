@@ -1,4 +1,5 @@
 """Test de bout en bout avec un LLM simulé et des sources simulées (aucun appel réseau)."""
+import datetime as dt
 import json
 import shutil
 import time
@@ -10,6 +11,7 @@ from veille import collecte, main, prix
 
 RACINE = Path(__file__).resolve().parent.parent
 MAINTENANT = time.time()
+MERCREDI = dt.date(2026, 10, 28)
 
 RSS = """<?xml version="1.0"?><rss version="2.0"><channel><title>t</title>
 <item><title>Agents with MCP tool use</title><link>https://ex.org/a</link>
@@ -56,7 +58,8 @@ class FauxLLM:
 
 @pytest.fixture
 def projet(tmp_path, monkeypatch):
-    shutil.copy(RACINE / "sources.yaml", tmp_path / "sources.yaml")
+    config = (RACINE / "sources.yaml").read_text(encoding="utf-8").replace("lecon_le: lundi", "lecon_le: tous")
+    (tmp_path / "sources.yaml").write_text(config, encoding="utf-8")
     (tmp_path / "idees.md").write_text("# Backlog\n", encoding="utf-8")
     date = time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime(MAINTENANT - 3600))
 
@@ -75,7 +78,7 @@ def projet(tmp_path, monkeypatch):
 
 def test_pipeline_complet(projet):
     envois = []
-    md = main.executer(projet, FauxLLM(), lambda *a: envois.append(a), MAINTENANT)
+    md = main.executer(projet, FauxLLM(), lambda *a: envois.append(a), MAINTENANT, MERCREDI)
 
     assert "Agents with MCP tool use" in md
     assert "invente.org" not in md  # un lien inventé par le LLM est rejeté
@@ -91,7 +94,7 @@ def test_pipeline_complet(projet):
     assert json.loads((projet / "data" / "vus.json").read_text()) == ["https://ex.org/a"]
 
     # Deuxième exécution : plus rien de nouveau, pas de doublon.
-    assert main.executer(projet, FauxLLM(), None, MAINTENANT) is None
+    assert main.executer(projet, FauxLLM(), None, MAINTENANT, MERCREDI) is None
 
 
 def test_evolution_des_prix():
@@ -122,7 +125,7 @@ def test_plafond_et_mots_cles_par_source(monkeypatch):
 
 def test_site_web(projet):
     from veille import site
-    main.executer(projet, FauxLLM(), None, MAINTENANT)
+    main.executer(projet, FauxLLM(), None, MAINTENANT, MERCREDI)
     sortie = site.construire(projet, projet / "_site")
 
     accueil = (sortie / "index.html").read_text(encoding="utf-8")
@@ -133,7 +136,7 @@ def test_site_web(projet):
     assert 'class="case"' in (sortie / "idees.html").read_text(encoding="utf-8")
     lecons = list((sortie / "lecon").glob("*.html"))
     assert len(lecons) == 1 and "../style.css" in lecons[0].read_text(encoding="utf-8")
-    assert len(list((sortie / "semaine").glob("*.html"))) == 1
+    assert len(list((sortie / "jour").glob("*.html"))) == 1
 
 
 def test_site_echappe_le_html(tmp_path):
@@ -187,9 +190,9 @@ def test_veille_envoyee_meme_si_la_lecon_echoue(projet):
             raise ConnectionError("Remote end closed connection without response")
 
     envois = []
-    md = main.executer(projet, LLMSansLecon(), lambda *a: envois.append(a), MAINTENANT)
+    md = main.executer(projet, LLMSansLecon(), lambda *a: envois.append(a), MAINTENANT, MERCREDI)
     assert "Agents with MCP tool use" in md and "pas pu être générée" in md
-    assert envois and envois[0][0].endswith(time.strftime("%Y-%m-%d"))
+    assert envois and envois[0][0].endswith("2026-10-28")
     assert not list((projet / "lecons").glob("*.md"))
     assert (projet / "idees.md").read_text(encoding="utf-8") == "# Backlog\n"
 
@@ -216,3 +219,65 @@ def test_gemini_reessaie_apres_une_coupure(monkeypatch):
     monkeypatch.setattr(llm.requests, "post", post)
     monkeypatch.setattr(llm.time, "sleep", lambda s: None)
     assert llm.GeminiLLM(cle="x").json("p") == {"ok": 1} and len(essais) == 3
+
+
+def test_titre_des_releases_github():
+    flux = (b'<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">'
+            b'<entry><title>v2.144.0</title><link href="https://github.com/a/b/releases/tag/v2.144.0"/></entry>'
+            b'<entry><title>Crawl4AI 0.8</title><link href="https://github.com/a/b/releases/tag/0.8"/></entry></feed>')
+    source = {"nom": "Crawl4AI (releases)", "url": "https://github.com/a/b/releases.atom", "categorie": "parsing"}
+    assert [e.titre for e in collecte.lire_flux(source, flux)] == ["Crawl4AI v2.144.0", "Crawl4AI 0.8"]
+
+
+def ecrire_jour(racine, date, titre, **extra):
+    dossier = racine / "data" / "semaines"
+    dossier.mkdir(parents=True, exist_ok=True)
+    jour = {"date": date, "tendance": f"Tendance du {date}", "prix": [], "idees": [], "lecon": None,
+            "selection": [{"titre": titre, "url": f"https://ex.org/{date}", "source": "S", "categorie": "pratique",
+                           "resume": "Résumé."}], **extra}
+    (dossier / f"{date}.json").write_text(json.dumps(jour), encoding="utf-8")
+
+
+def test_lecon_seulement_le_jour_prevu(projet):
+    config = (projet / "sources.yaml").read_text(encoding="utf-8").replace("lecon_le: tous", "lecon_le: lundi")
+    (projet / "sources.yaml").write_text(config, encoding="utf-8")
+    md = main.executer(projet, FauxLLM(), None, MAINTENANT, MERCREDI)
+    assert "Leçon de la semaine" not in md and "pas pu être générée" not in md
+    assert not list((projet / "lecons").glob("*.md"))
+    assert main.jour_de_lecon({"lecon_le": "lundi"}, dt.date(2026, 10, 26))
+
+
+def test_pas_de_mail_le_weekend(projet):
+    envois = []
+    assert main.executer(projet, FauxLLM(), lambda *a: envois.append(a), MAINTENANT, dt.date(2026, 10, 31))
+    assert envois == [] and (projet / "data" / "semaines" / "2026-10-31.json").exists()
+    assert main.mail_du_jour({"mail_weekend": "normal"}, dt.date(2026, 10, 31))
+
+
+def test_mail_du_lundi_resume_le_weekend(projet):
+    ecrire_jour(projet, "2026-10-31", "Nouveauté du samedi")
+    ecrire_jour(projet, "2026-11-01", "Nouveauté du dimanche")
+    envois = []
+    main.executer(projet, FauxLLM(), lambda *a: envois.append(a), MAINTENANT, dt.date(2026, 11, 2))
+    sujet, texte, _ = envois[0]
+    assert "+ week-end" in sujet and "Ce que tu as raté ce week-end" in texte
+    assert texte.index("Samedi 31/10") < texte.index("Nouveauté du samedi") < texte.index("Nouveauté du dimanche")
+
+
+def test_site_historique_hier_et_weekend(tmp_path):
+    from veille import site
+    ecrire_jour(tmp_path, "2026-10-31", "Samedi A")
+    ecrire_jour(tmp_path, "2026-11-01", "Dimanche B")
+    ecrire_jour(tmp_path, "2026-11-02", "Lundi C")
+    sortie = site.construire(tmp_path, tmp_path / "_site")
+
+    accueil = (sortie / "index.html").read_text(encoding="utf-8")
+    assert "Lundi C" in accueil
+    assert 'href="jour/2026-11-01.html">Voir hier' in accueil
+    assert 'href="weekend/2026-10-31.html">Voir le week-end' in accueil
+    weekend = (sortie / "weekend" / "2026-10-31.html").read_text(encoding="utf-8")
+    assert "Week-end du 31 octobre au 1er novembre 2026" in weekend and "Samedi A" in weekend and "Dimanche B" in weekend
+    dimanche = (sortie / "jour" / "2026-11-01.html").read_text(encoding="utf-8")
+    assert "../jour/2026-10-31.html" in dimanche and "../jour/2026-11-02.html" in dimanche
+    historique = (sortie / "archives.html").read_text(encoding="utf-8")
+    assert "Novembre 2026" in historique and "Octobre 2026" in historique

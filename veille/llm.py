@@ -17,7 +17,7 @@ CATEGORIES = "article|modele|robotique|parsing|monitoring|pratique|comparatif"
 PROMPT_DIGEST = """Tu es un veilleur expert en IA, très technique. Voici mon profil :
 {profil}
 
-Voici les contenus collectés cette semaine (JSON) :
+Voici les contenus publiés depuis la dernière veille (JSON) :
 {elements}
 
 Voici le tableau des prix réels des modèles (en $ par million de tokens, JSON) :
@@ -25,6 +25,8 @@ Voici le tableau des prix réels des modèles (en $ par million de tokens, JSON)
 
 Sélectionne au maximum {max_selection} éléments les plus utiles pour mon travail, en couvrant
 si possible chaque catégorie : {categories}.
+La catégorie "parsing" désigne le parsing HTML, le scraping et l'extraction de données de pages web
+avec l'IA (crawlers, extraction structurée, agents web) ; pas l'OCR ni le parsing de PDF.
 Règles :
 - Sois concret et technique : chiffres, versions, tailles de contexte, prix, benchmarks, limites.
 - Pas de formules marketing ni de généralités ("révolutionnaire", "change la donne"…).
@@ -35,15 +37,15 @@ Réponds UNIQUEMENT en JSON avec ce format :
 "resume": "2-3 phrases factuelles",
 "specificites": ["2 à 4 points précis : ce qui distingue ce modèle/outil/article, forces, limites, chiffres"],
 "pourquoi": "1 phrase : pourquoi c'est utile pour moi"}}],
-"tendance": "2-3 phrases sur la tendance principale de la semaine",
+"tendance": "2-3 phrases sur la tendance principale du jour",
 "comparatif": "Analyse en Markdown (liste à puces) du tableau de prix : meilleur rapport qualité/prix
-par usage (agents, RAG, parsing, volume), modèles les moins chers, changements de la semaine.
+par usage (agents, RAG, scraping/extraction web, volume), modèles les moins chers, changements récents.
 Chaque affirmation doit s'appuyer sur un chiffre du tableau. Chaîne vide si le tableau est vide."}}"""
 
 PROMPT_LECON = """Tu es un formateur expert en IA. Voici mon profil :
 {profil}
 
-Voici la sélection de veille de la semaine (JSON) :
+Voici la sélection de veille du jour (JSON) :
 {selection}
 
 1. Propose 3 idées concrètes que je peux proposer à mon équipe, inspirées de cette veille.
