@@ -8,7 +8,34 @@ Chaque lundi matin, ce projet :
 3. construit un **tableau comparatif prix / qualité** des modèles à partir de données réelles,
    et signale les nouveaux modèles et les changements de prix ;
 4. génère **3 idées à proposer à ton équipe** et **une leçon complète** (concept, application, exercice, auto-évaluation) ;
-5. t'envoie le tout **par e-mail** et l'archive dans le dépôt.
+5. t'envoie le tout **par e-mail**, l'archive dans le dépôt et le publie sur **ton site web**.
+
+## 🌐 Le site web
+
+En plus de l'e-mail, ta veille est publiée sur un site (GitHub Pages, gratuit, mis à jour tout seul chaque lundi) :
+
+| Page | Ce qu'on y fait |
+|---|---|
+| **Cette semaine** | Les cartes de la veille, filtrables par thème (Claude/NVIDIA, robotique, parsing…), la tendance, le comparatif, les idées et la leçon |
+| **Archives** | Toutes les semaines passées + une recherche instantanée dans tous les contenus |
+| **Leçons** | Ta base de cours |
+| **Idées** | Ton backlog (☐ à présenter, ✅ présentée) |
+| **Prix** | Tableau triable des prix des modèles, filtre par fournisseur et **simulateur de coût mensuel** selon ton volume de tokens |
+
+![Accueil](docs/apercu-accueil.png)
+![Prix](docs/apercu-prix.png)
+
+**Activer le site (une seule fois)** : *Settings → Pages → Build and deployment → Source : **GitHub Actions***.
+L'adresse s'affiche ensuite sur cette page (du type `https://<ton-compte>.github.io/MAJIA/`).
+
+> ⚠️ Sur un compte GitHub gratuit, GitHub Pages ne fonctionne qu'avec un **dépôt public** : ton site sera alors visible
+> par tous (il ne contient que ta veille, aucun secret). Pour un site privé, il faut un compte GitHub Pro.
+
+Aperçu en local :
+
+```bash
+python -m veille.site && python -m http.server -d _site 8000   # puis ouvre http://localhost:8000
+```
 
 ## Ce que tu reçois
 
@@ -31,6 +58,8 @@ Chaque lundi matin, ce projet :
 | `idees.md` | Ton backlog d'idées, à cocher quand tu les présentes |
 | `data/vus.json` | Les liens déjà traités (évite les doublons) |
 | `data/prix.json` | Les prix de la semaine précédente (pour détecter les changements) |
+| `data/semaines/` | Chaque veille en JSON, utilisée pour construire le site |
+| `veille/site.py` | Le générateur du site web |
 
 ## Mise en route (≈ 15 min)
 

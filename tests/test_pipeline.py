@@ -118,3 +118,30 @@ def test_plafond_et_mots_cles_par_source(monkeypatch):
     config = {"max_par_source": 3, "mots_cles": ["MCP"], "sources": [
         {"nom": "RO", "url": "u", "categorie": "robotique", "filtrer": True, "mots_cles": ["humanoid"]}]}
     assert len(collecte.collecter(config, [], MAINTENANT)) == 3
+
+
+def test_site_web(projet):
+    from veille import site
+    main.executer(projet, FauxLLM(), None, MAINTENANT)
+    sortie = site.construire(projet, projet / "_site")
+
+    accueil = (sortie / "index.html").read_text(encoding="utf-8")
+    assert "Agents with MCP tool use" in accueil and 'data-cat="article"' in accueil
+    assert "Claude Test est le moins cher" in accueil
+    assert "Claude Test" in (sortie / "prix.html").read_text(encoding="utf-8")
+    assert "Agents with MCP tool use" in (sortie / "archives.html").read_text(encoding="utf-8")
+    assert "☐" in (sortie / "idees.html").read_text(encoding="utf-8")
+    lecons = list((sortie / "lecon").glob("*.html"))
+    assert len(lecons) == 1 and "../style.css" in lecons[0].read_text(encoding="utf-8")
+    assert len(list((sortie / "semaine").glob("*.html"))) == 1
+
+
+def test_site_echappe_le_html(tmp_path):
+    from veille import site
+    (tmp_path / "data" / "semaines").mkdir(parents=True)
+    semaine = {"date": "2026-01-05", "selection": [{"titre": "<script>alert(1)</script>", "url": "https://x.org",
+                                                    "categorie": "article"}]}
+    (tmp_path / "data" / "semaines" / "2026-01-05.json").write_text(json.dumps(semaine))
+    sortie = site.construire(tmp_path, tmp_path / "_site")
+    assert "<script>alert(1)" not in (sortie / "index.html").read_text(encoding="utf-8")
+    assert "<\\/script>" in (sortie / "archives.html").read_text(encoding="utf-8")

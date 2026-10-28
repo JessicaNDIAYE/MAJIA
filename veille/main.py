@@ -36,7 +36,14 @@ def executer(racine, client_llm, envoyer=None, maintenant=None):
 
     date = dt.date.today().isoformat()
     md = rendu.digest_markdown(date, digest, lecon, prix.tableau_markdown(modeles))
-    rendu.sauvegarder(racine, date, md, lecon, lecon.get("idees", []))
+    chemin_lecon = rendu.sauvegarder(racine, date, md, lecon, lecon.get("idees", []))
+
+    # Version structurée de la semaine, utilisée par le site web.
+    semaine = {**digest, "date": date, "prix": modeles, "idees": lecon.get("idees", []),
+               "lecon": {**lecon["lecon"], "fichier": chemin_lecon.name}}
+    (racine / "data" / "semaines").mkdir(parents=True, exist_ok=True)
+    (racine / "data" / "semaines" / f"{date}.json").write_text(
+        json.dumps(semaine, indent=1, ensure_ascii=False), encoding="utf-8")
 
     if envoyer:
         envoyer(f"🧠 Veille IA — {date} — {lecon['lecon']['titre']}", md, rendu.en_html(md))
