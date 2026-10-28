@@ -1,0 +1,36 @@
+name: Veille IA hebdomadaire
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"  # chaque lundi à 5h17 UTC (~7h à Paris)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Générer et envoyer la veille
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+        run: python -m veille.main
+      - name: Archiver digest, leçon et idées
+        run: |
+          git config user.name "JessicaNDIAYE"
+          git config user.email "ndiajessi13@gmail.com"
+          git add digests lecons idees.md data
+          git diff --cached --quiet || git commit -m "Veille du $(date +%F)"
+          git push

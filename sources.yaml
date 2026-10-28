@@ -1,0 +1,159 @@
+# Profil utilisé par le LLM pour adapter les idées et la leçon à ton travail.
+profil: >
+  Ingénieure IA / data. Je construis des agents LLM, des pipelines RAG,
+  des intégrations MCP, du text-to-SQL, du parsing de documents avec l'IA
+  et du monitoring/observabilité de systèmes IA. Je veux comprendre les
+  spécificités réelles de chaque modèle (forces, limites, prix) pour choisir
+  le bon outil et proposer des améliorations concrètes à mon équipe.
+
+# Fenêtre de collecte (jours), volume envoyé au LLM et taille de la sélection.
+jours: 7
+max_elements: 150
+max_par_source: 12   # évite qu'une source très bavarde écrase les autres
+max_selection: 25
+
+# Mots-clés par défaut pour les sources marquées `filtrer: true`.
+# Une source peut définir ses propres `mots_cles`.
+mots_cles:
+  - agent
+  - agentic
+  - tool use
+  - MCP
+  - model context protocol
+  - RAG
+  - retrieval
+  - LangGraph
+  - text-to-SQL
+  - evaluation
+  - benchmark
+  - reasoning
+  - LLM
+  - Claude
+  - Anthropic
+  - NVIDIA
+  - parsing
+  - OCR
+  - observability
+  - monitoring
+
+# Comparatif prix / qualité (section 💰 de la veille).
+prix:
+  # Préfixes d'identifiants OpenRouter à suivre, et nombre de modèles récents par fournisseur.
+  fournisseurs: [anthropic, openai, google, mistralai, meta-llama, deepseek, qwen, x-ai, nvidia]
+  modeles_par_fournisseur: 4
+
+sources:
+  # 📄 Articles scientifiques
+  - nom: Hugging Face Daily Papers
+    type: hf_papers
+    categorie: article
+  - nom: arXiv cs.AI
+    url: https://rss.arxiv.org/rss/cs.AI
+    categorie: article
+    filtrer: true
+  - nom: arXiv cs.CL
+    url: https://rss.arxiv.org/rss/cs.CL
+    categorie: article
+    filtrer: true
+  - nom: arXiv cs.LG
+    url: https://rss.arxiv.org/rss/cs.LG
+    categorie: article
+    filtrer: true
+
+  # 🤖 Modèles et labos (Claude, NVIDIA, OpenAI, Google, open source…)
+  - nom: Anthropic / Claude (actualités)
+    url: https://news.google.com/rss/search?q=Anthropic+OR+%22Claude+AI%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    categorie: modele
+  - nom: Claude Code (releases)
+    url: https://github.com/anthropics/claude-code/releases.atom
+    categorie: modele
+  - nom: Anthropic SDK Python (releases)
+    url: https://github.com/anthropics/anthropic-sdk-python/releases.atom
+    categorie: modele
+  - nom: NVIDIA Blog
+    url: https://blogs.nvidia.com/feed/
+    categorie: modele
+  - nom: NVIDIA Technical Blog
+    url: https://developer.nvidia.com/blog/feed
+    categorie: modele
+  - nom: OpenAI News
+    url: https://openai.com/news/rss.xml
+    categorie: modele
+  - nom: Google DeepMind
+    url: https://deepmind.google/blog/rss.xml
+    categorie: modele
+  - nom: Google AI Blog
+    url: https://blog.google/technology/ai/rss/
+    categorie: modele
+  - nom: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    categorie: modele
+  - nom: Mistral, DeepSeek, Qwen, Llama (actualités)
+    url: https://news.google.com/rss/search?q=%22Mistral+AI%22+OR+DeepSeek+OR+Qwen+OR+%22Meta+Llama%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    categorie: modele
+
+  # 🦾 Robotique
+  - nom: IEEE Spectrum Robotics
+    url: https://spectrum.ieee.org/feeds/topic/robotics.rss
+    categorie: robotique
+  - nom: The Robot Report
+    url: https://www.therobotreport.com/feed/
+    categorie: robotique
+  - nom: arXiv cs.RO
+    url: https://rss.arxiv.org/rss/cs.RO
+    categorie: robotique
+    filtrer: true
+    mots_cles: [humanoid, VLA, vision-language-action, foundation model, manipulation, LLM]
+  - nom: Robots humanoïdes (actualités)
+    url: https://news.google.com/rss/search?q=%22humanoid+robot%22+OR+%22robot+foundation+model%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    categorie: robotique
+
+  # 🔍 Parsing de documents avec l'IA
+  - nom: Parsing IA (actualités)
+    url: https://news.google.com/rss/search?q=%22document+parsing%22+OR+LlamaParse+OR+Docling+OR+%22OCR+LLM%22+OR+%22document+AI%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    categorie: parsing
+  - nom: Docling (releases)
+    url: https://github.com/docling-project/docling/releases.atom
+    categorie: parsing
+  - nom: arXiv cs.CV (documents)
+    url: https://rss.arxiv.org/rss/cs.CV
+    categorie: parsing
+    filtrer: true
+    mots_cles: [document parsing, document understanding, OCR, layout analysis, table extraction, PDF]
+
+  # 📈 Monitoring / observabilité avec l'IA
+  - nom: Observabilité LLM (actualités)
+    url: https://news.google.com/rss/search?q=%22LLM+observability%22+OR+%22AI+observability%22+OR+AIOps+OR+%22LLM+monitoring%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    categorie: monitoring
+  - nom: Langfuse (releases)
+    url: https://github.com/langfuse/langfuse/releases.atom
+    categorie: monitoring
+  - nom: Hacker News — observabilité
+    url: https://hnrss.org/newest?q=observability&points=30
+    categorie: monitoring
+
+  # 🛠️ Nouvelles pratiques
+  - nom: Ahead of AI (Sebastian Raschka)
+    url: https://magazine.sebastianraschka.com/feed
+    categorie: pratique
+  - nom: Latent Space
+    url: https://www.latent.space/feed
+    categorie: pratique
+  - nom: Import AI
+    url: https://importai.substack.com/feed
+    categorie: pratique
+  - nom: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    categorie: pratique
+  - nom: LangChain Blog
+    url: https://blog.langchain.com/rss/
+    categorie: pratique
+  - nom: Hacker News — IA (front page)
+    url: https://hnrss.org/frontpage?points=150
+    categorie: pratique
+    filtrer: true
+
+  # 💰 Comparatifs prix / qualité (en plus du tableau chiffré)
+  - nom: Benchmarks et comparatifs (actualités)
+    url: https://news.google.com/rss/search?q=%22LLM+benchmark%22+OR+%22Artificial+Analysis%22+OR+LMArena+OR+%22LLM+pricing%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    categorie: comparatif
