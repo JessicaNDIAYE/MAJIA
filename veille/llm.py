@@ -70,11 +70,17 @@ class GeminiLLM:
             "generationConfig": {"responseMimeType": "application/json", "temperature": 0.4},
         }
         for essai in range(4):
-            r = requests.post(GEMINI_URL.format(modele=self.modele), params={"key": self.cle},
-                              json=corps, timeout=300)
-            if r.status_code not in (429, 500, 503) or essai == 3:
-                return r
-            time.sleep(15 * (essai + 1))  # quota ou surcharge passagère : on réessaie
+            try:
+                r = requests.post(GEMINI_URL.format(modele=self.modele), params={"key": self.cle},
+                                  json=corps, timeout=300)
+                if r.status_code not in (429, 500, 502, 503, 504) or essai == 3:
+                    return r
+                log.warning("Gemini : erreur %s, nouvel essai", r.status_code)
+            except (requests.ConnectionError, requests.Timeout) as exc:
+                if essai == 3:
+                    raise
+                log.warning("Gemini : connexion interrompue (%s), nouvel essai", exc)
+            time.sleep(15 * (essai + 1))  # quota, surcharge ou coupure passagère : on réessaie
 
     def json(self, prompt):
         r = self._appeler(prompt)
@@ -141,5 +147,7 @@ def faire_digest(llm, config, elements, prix=None):
 def faire_lecon(llm, config, selection):
     return llm.json(PROMPT_LECON.format(
         profil=config.get("profil", ""),
-        selection=json.dumps(selection, ensure_ascii=False),
+        # Version allégée de la sélection : moins de texte en entrée, réponse plus rapide.
+        selection=json.dumps([{k: s.get(k) for k in ("titre", "url", "categorie", "resume", "specificites")}
+                              for s in selection], ensure_ascii=False),
     ))

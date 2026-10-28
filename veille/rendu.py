@@ -46,10 +46,14 @@ def digest_markdown(date, digest, lecon, tableau_prix=""):
         if digest.get("comparatif"):
             lignes += [digest["comparatif"], ""]
 
-    lignes += ["## 💡 Idées à proposer à ton équipe", ""]
+    if lecon.get("idees"):
+        lignes += ["## 💡 Idées à proposer à ton équipe", ""]
     for i, idee in enumerate(lecon.get("idees", []), 1):
         lignes += [f"{i}. **{idee['titre']}** (effort : {idee.get('effort', '?')}) — {idee['description']}"]
-    lignes += ["", f"## 🎓 Leçon de la semaine : {lecon['lecon']['titre']}", "", lecon["lecon"]["markdown"], ""]
+    if lecon.get("lecon"):
+        lignes += ["", f"## 🎓 Leçon de la semaine : {lecon['lecon']['titre']}", "", lecon["lecon"]["markdown"], ""]
+    else:
+        lignes += ["", "*La leçon n'a pas pu être générée cette semaine.*", ""]
     lignes += ["---", "*Résumés générés par IA à partir des abstracts : vérifie la source avant de citer.*"]
     return "\n".join(lignes)
 
@@ -68,13 +72,17 @@ def sauvegarder(racine, date, digest_md, lecon, idees):
     (racine / "lecons").mkdir(exist_ok=True)
     (racine / "digests" / f"{date}.md").write_text(digest_md, encoding="utf-8")
 
+    if idees:
+        with open(racine / "idees.md", "a", encoding="utf-8") as f:
+            f.write(f"\n## Semaine du {date}\n\n")
+            for idee in idees:
+                source = f" ([source]({idee['source']}))" if idee.get("source") else ""
+                f.write(f"- [ ] **{idee['titre']}** (effort : {idee.get('effort', '?')}) — "
+                        f"{idee['description']}{source}\n")
+    if not lecon.get("lecon"):
+        return None
+
     titre = lecon["lecon"]["titre"]
     chemin_lecon = racine / "lecons" / f"{date}-{slug(titre)}.md"
     chemin_lecon.write_text(f"# {titre}\n\n*Leçon du {date}*\n\n{lecon['lecon']['markdown']}\n", encoding="utf-8")
-
-    with open(racine / "idees.md", "a", encoding="utf-8") as f:
-        f.write(f"\n## Semaine du {date}\n\n")
-        for idee in idees:
-            source = f" ([source]({idee['source']}))" if idee.get("source") else ""
-            f.write(f"- [ ] **{idee['titre']}** (effort : {idee.get('effort', '?')}) — {idee['description']}{source}\n")
     return chemin_lecon

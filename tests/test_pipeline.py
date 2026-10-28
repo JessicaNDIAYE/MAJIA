@@ -177,3 +177,42 @@ def test_gemini_remplace_un_modele_disparu(monkeypatch):
     assert client.json("prompt") == {"ok": True}
     assert client.modele == "gemini-3.1-flash"
     assert "gemini-3.1-flash:" in appels[-1]
+
+
+def test_veille_envoyee_meme_si_la_lecon_echoue(projet):
+    class LLMSansLecon(FauxLLM):
+        def json(self, prompt):
+            if "Sélectionne" in prompt:
+                return super().json(prompt)
+            raise ConnectionError("Remote end closed connection without response")
+
+    envois = []
+    md = main.executer(projet, LLMSansLecon(), lambda *a: envois.append(a), MAINTENANT)
+    assert "Agents with MCP tool use" in md and "pas pu être générée" in md
+    assert envois and envois[0][0].endswith(time.strftime("%Y-%m-%d"))
+    assert not list((projet / "lecons").glob("*.md"))
+    assert (projet / "idees.md").read_text(encoding="utf-8") == "# Backlog\n"
+
+    from veille import site
+    assert "Agents with MCP" in (site.construire(projet, projet / "_site") / "index.html").read_text("utf-8")
+
+
+def test_gemini_reessaie_apres_une_coupure(monkeypatch):
+    from veille import llm
+    essais = []
+
+    class R:
+        status_code, ok, text = 200, True, ""
+
+        def json(self):
+            return {"candidates": [{"content": {"parts": [{"text": '{"ok": 1}'}]}}]}
+
+    def post(url, **_):
+        essais.append(url)
+        if len(essais) < 3:
+            raise llm.requests.ConnectionError("Connection aborted.")
+        return R()
+
+    monkeypatch.setattr(llm.requests, "post", post)
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+    assert llm.GeminiLLM(cle="x").json("p") == {"ok": 1} and len(essais) == 3
