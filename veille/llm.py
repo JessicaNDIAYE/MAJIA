@@ -1,10 +1,16 @@
 """Appels au LLM (Gemini par défaut) pour trier, résumer et créer la leçon."""
 import json
+import logging
 import os
+import re
+import time
 
 import requests
 
+log = logging.getLogger(__name__)
+
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{modele}:generateContent"
+GEMINI_MODELES_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 
 CATEGORIES = "article|modele|robotique|parsing|monitoring|pratique|comparatif"
 
@@ -52,23 +58,57 @@ Réponds UNIQUEMENT en JSON avec ce format :
 
 
 class GeminiLLM:
+    """Client Gemini. Si le modèle demandé n'existe plus, choisit le meilleur modèle Flash disponible."""
+
     def __init__(self, cle=None, modele=None):
         self.cle = cle or os.environ["GEMINI_API_KEY"]
-        self.modele = modele or os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+        self.modele = modele or os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
+
+    def _appeler(self, prompt):
+        corps = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {"responseMimeType": "application/json", "temperature": 0.4},
+        }
+        for essai in range(4):
+            r = requests.post(GEMINI_URL.format(modele=self.modele), params={"key": self.cle},
+                              json=corps, timeout=300)
+            if r.status_code not in (429, 500, 503) or essai == 3:
+                return r
+            time.sleep(15 * (essai + 1))  # quota ou surcharge passagère : on réessaie
 
     def json(self, prompt):
-        r = requests.post(
-            GEMINI_URL.format(modele=self.modele),
-            params={"key": self.cle},
-            json={
-                "contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"responseMimeType": "application/json", "temperature": 0.4},
-            },
-            timeout=180,
-        )
-        r.raise_for_status()
+        r = self._appeler(prompt)
+        if r.status_code == 404:
+            ancien, self.modele = self.modele, self.choisir_modele()
+            log.warning("Modèle %s introuvable, utilisation de %s", ancien, self.modele)
+            r = self._appeler(prompt)
+        if not r.ok:
+            raise RuntimeError(f"Gemini {self.modele} : erreur {r.status_code} — {r.text[:500]}")
         texte = r.json()["candidates"][0]["content"]["parts"][0]["text"]
         return json.loads(texte)
+
+    def choisir_modele(self):
+        r = requests.get(GEMINI_MODELES_URL, params={"key": self.cle, "pageSize": 1000}, timeout=30)
+        r.raise_for_status()
+        return meilleur_modele(r.json().get("models", []))
+
+
+def meilleur_modele(modeles):
+    """Le modèle Flash stable le plus récent qui sait générer du texte."""
+    exclus = ("lite", "image", "tts", "audio", "live", "embedding", "thinking", "exp", "preview")
+
+    def version(nom):
+        return tuple(int(n) for n in re.findall(r"\d+", nom.split("gemini-", 1)[-1].split("-flash")[0]))
+
+    candidats = [
+        m["name"].removeprefix("models/") for m in modeles
+        if "generateContent" in m.get("supportedGenerationMethods", [])
+        and re.fullmatch(r"models/gemini-[\d.]+-flash(-\d+)?", m.get("name", ""))
+        and not any(x in m["name"] for x in exclus)
+    ]
+    if not candidats:
+        raise RuntimeError("Aucun modèle Gemini Flash disponible pour cette clé API.")
+    return max(candidats, key=lambda nom: (version(nom), -len(nom)))
 
 
 def faire_digest(llm, config, elements, prix=None):

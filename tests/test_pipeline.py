@@ -145,3 +145,35 @@ def test_site_echappe_le_html(tmp_path):
     sortie = site.construire(tmp_path, tmp_path / "_site")
     assert "<script>alert(1)" not in (sortie / "index.html").read_text(encoding="utf-8")
     assert "<\\/script>" in (sortie / "archives.html").read_text(encoding="utf-8")
+
+
+def test_gemini_remplace_un_modele_disparu(monkeypatch):
+    from veille import llm
+    appels = []
+
+    class R:
+        def __init__(self, code, donnees=None):
+            self.status_code, self._d, self.ok, self.text = code, donnees, code == 200, ""
+
+        def json(self):
+            return self._d
+
+        def raise_for_status(self):
+            pass
+
+    def post(url, **_):
+        appels.append(url)
+        if "gemini-2.5-flash:" in url:
+            return R(404)
+        return R(200, {"candidates": [{"content": {"parts": [{"text": '{"ok": true}'}]}}]})
+
+    modeles = [{"name": f"models/{n}", "supportedGenerationMethods": ["generateContent"]} for n in
+               ["gemini-2.5-flash", "gemini-3.1-flash", "gemini-3.1-flash-lite", "gemini-4-flash-preview",
+                "gemini-3.1-pro", "gemini-3-flash"]]
+    monkeypatch.setattr(llm.requests, "post", post)
+    monkeypatch.setattr(llm.requests, "get", lambda *a, **k: R(200, {"models": modeles}))
+
+    client = llm.GeminiLLM(cle="x", modele="gemini-2.5-flash")
+    assert client.json("prompt") == {"ok": True}
+    assert client.modele == "gemini-3.1-flash"
+    assert "gemini-3.1-flash:" in appels[-1]
