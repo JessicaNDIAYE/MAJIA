@@ -50,7 +50,7 @@ def executer(racine, client_llm, envoyer=None, maintenant=None):
         json.dumps(semaine, indent=1, ensure_ascii=False), encoding="utf-8")
 
     if envoyer:
-        sujet = f"🧠 Veille IA — {date}" + (f" — {lecon['lecon']['titre']}" if lecon["lecon"] else "")
+        sujet = f"Veille IA — {date}" + (f" — {lecon['lecon']['titre']}" if lecon["lecon"] else "")
         envoyer(sujet, md, rendu.en_html(md))
 
     # Garde un historique borné des liens déjà traités pour éviter les doublons.

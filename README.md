@@ -10,16 +10,16 @@ Chaque lundi matin, ce projet :
 4. génère **3 idées à proposer à ton équipe** et **une leçon complète** (concept, application, exercice, auto-évaluation) ;
 5. t'envoie le tout **par e-mail**, l'archive dans le dépôt et le publie sur **ton site web**.
 
-## 🌐 Le site web
+## Le site web
 
 En plus de l'e-mail, ta veille est publiée sur un site (GitHub Pages, gratuit, mis à jour tout seul chaque lundi) :
 
 | Page | Ce qu'on y fait |
 |---|---|
-| **Cette semaine** | Les cartes de la veille, filtrables par thème (Claude/NVIDIA, robotique, parsing…), la tendance, le comparatif, les idées et la leçon |
+| **Cette semaine** | Les contenus de la veille, filtrables par thème (Claude/NVIDIA, robotique, parsing…), la synthèse, le comparatif, les idées et la leçon |
 | **Archives** | Toutes les semaines passées + une recherche instantanée dans tous les contenus |
 | **Leçons** | Ta base de cours |
-| **Idées** | Ton backlog (☐ à présenter, ✅ présentée) |
+| **Idées** | Ton backlog d'idées, à cocher quand elles sont présentées |
 | **Prix** | Tableau triable des prix des modèles, filtre par fournisseur et **simulateur de coût mensuel** selon ton volume de tokens |
 
 ![Accueil](docs/apercu-accueil.png)
@@ -41,14 +41,14 @@ python -m veille.site && python -m http.server -d _site 8000   # puis ouvre http
 
 | Section | Sources |
 |---|---|
-| 🤖 Modèles et labos | Anthropic/Claude (actus, releases Claude Code et SDK), NVIDIA (blog + blog technique), OpenAI, Google DeepMind, Google AI, Hugging Face, Mistral/DeepSeek/Qwen/Llama |
-| 📄 Articles scientifiques | Hugging Face Daily Papers, arXiv cs.AI / cs.CL / cs.LG (filtrés par mots-clés) |
-| 🦾 Robotique | IEEE Spectrum Robotics, The Robot Report, arXiv cs.RO, actus robots humanoïdes |
-| 🔍 Parsing de documents avec l'IA | Actus (LlamaParse, Docling, OCR + LLM…), releases Docling, arXiv cs.CV (documents) |
-| 📈 Monitoring et observabilité | Actus observabilité LLM / AIOps, releases Langfuse, Hacker News |
-| 🛠️ Nouvelles pratiques | Raschka, Latent Space, Import AI, Simon Willison, LangChain, Hacker News |
-| ⚖️ Benchmarks et comparatifs | Actus benchmarks, LMArena, Artificial Analysis |
-| 💰 Comparatif prix / qualité | Tableau chiffré : prix réels [OpenRouter](https://openrouter.ai/models) (entrée/sortie en $ par million de tokens, contexte) pour Claude, GPT, Gemini, Mistral, Llama, DeepSeek, Qwen, Grok, NVIDIA ; score de qualité et vitesse [Artificial Analysis](https://artificialanalysis.ai) si tu ajoutes la clé (optionnel) ; analyse du meilleur rapport qualité/prix par usage |
+| Modèles et labos | Anthropic/Claude (actus, releases Claude Code et SDK), NVIDIA (blog + blog technique), OpenAI, Google DeepMind, Google AI, Hugging Face, Mistral/DeepSeek/Qwen/Llama |
+| Recherche | Hugging Face Daily Papers, arXiv cs.AI / cs.CL / cs.LG (filtrés par mots-clés) |
+| Robotique | IEEE Spectrum Robotics, The Robot Report, arXiv cs.RO, actus robots humanoïdes |
+| Parsing de documents | Actus (LlamaParse, Docling, OCR + LLM…), releases Docling, arXiv cs.CV (documents) |
+| Monitoring et observabilité | Actus observabilité LLM / AIOps, releases Langfuse, Hacker News |
+| Pratiques | Raschka, Latent Space, Import AI, Simon Willison, LangChain, Hacker News |
+| Benchmarks et comparatifs | Actus benchmarks, LMArena, Artificial Analysis |
+| Comparatif prix / qualité | Tableau chiffré : prix réels [OpenRouter](https://openrouter.ai/models) (entrée/sortie en $ par million de tokens, contexte) pour Claude, GPT, Gemini, Mistral, Llama, DeepSeek, Qwen, Grok, NVIDIA ; score de qualité et vitesse [Artificial Analysis](https://artificialanalysis.ai) si tu ajoutes la clé (optionnel) ; analyse du meilleur rapport qualité/prix par usage |
 
 | Dossier / fichier | Rôle |
 |---|---|

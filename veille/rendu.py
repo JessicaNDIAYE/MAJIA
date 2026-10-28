@@ -6,13 +6,13 @@ from pathlib import Path
 import markdown
 
 TITRES = {
-    "modele": "🤖 Modèles et labos (Claude, NVIDIA, OpenAI, Google, open source…)",
-    "article": "📄 Articles scientifiques",
-    "robotique": "🦾 Robotique",
-    "parsing": "🔍 Parsing de documents avec l'IA",
-    "monitoring": "📈 Monitoring et observabilité",
-    "pratique": "🛠️ Nouvelles pratiques",
-    "comparatif": "⚖️ Benchmarks et comparatifs",
+    "modele": "Modèles et labos",
+    "article": "Recherche",
+    "robotique": "Robotique",
+    "parsing": "Parsing de documents",
+    "monitoring": "Monitoring et observabilité",
+    "pratique": "Pratiques",
+    "comparatif": "Benchmarks et comparatifs",
 }
 
 
@@ -24,7 +24,7 @@ def slug(texte):
 def digest_markdown(date, digest, lecon, tableau_prix=""):
     lignes = [f"# Veille IA — semaine du {date}", ""]
     if digest.get("tendance"):
-        lignes += [f"> **Tendance de la semaine :** {digest['tendance']}", ""]
+        lignes += [f"> **Synthèse :** {digest['tendance']}", ""]
 
     for cat, titre in TITRES.items():
         items = [s for s in digest["selection"] if s.get("categorie") == cat]
@@ -38,23 +38,23 @@ def digest_markdown(date, digest, lecon, tableau_prix=""):
                 s.get("resume", ""), "",
             ]
             lignes += [f"- {point}" for point in s.get("specificites", [])]
-            lignes += ["", f"👉 {s.get('pourquoi', '')}", ""]
+            lignes += ["", f"*Pertinence : {s.get('pourquoi', '')}*", ""]
 
     if tableau_prix:
-        lignes += ["## 💰 Comparatif prix / qualité", "",
+        lignes += ["## Comparatif prix / qualité", "",
                    "*Prix réels OpenRouter en $ par million de tokens.*", "", tableau_prix, ""]
         if digest.get("comparatif"):
             lignes += [digest["comparatif"], ""]
 
     if lecon.get("idees"):
-        lignes += ["## 💡 Idées à proposer à ton équipe", ""]
+        lignes += ["## Idées à proposer", ""]
     for i, idee in enumerate(lecon.get("idees", []), 1):
         lignes += [f"{i}. **{idee['titre']}** (effort : {idee.get('effort', '?')}) — {idee['description']}"]
     if lecon.get("lecon"):
-        lignes += ["", f"## 🎓 Leçon de la semaine : {lecon['lecon']['titre']}", "", lecon["lecon"]["markdown"], ""]
+        lignes += ["", f"## Leçon de la semaine : {lecon['lecon']['titre']}", "", lecon["lecon"]["markdown"], ""]
     else:
         lignes += ["", "*La leçon n'a pas pu être générée cette semaine.*", ""]
-    lignes += ["---", "*Résumés générés par IA à partir des abstracts : vérifie la source avant de citer.*"]
+    lignes += ["---", "*Résumés générés automatiquement à partir des sources citées. À vérifier avant diffusion.*"]
     return "\n".join(lignes)
 
 

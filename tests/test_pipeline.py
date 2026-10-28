@@ -80,7 +80,7 @@ def test_pipeline_complet(projet):
     assert "Agents with MCP tool use" in md
     assert "invente.org" not in md  # un lien inventé par le LLM est rejeté
     assert "Protein folding" not in md  # filtré par mots-clés
-    assert "## 📄 Articles scientifiques" in md  # catégorie inconnue → catégorie de la source
+    assert "## Recherche" in md  # catégorie inconnue → catégorie de la source
     assert "- Contexte 200k tokens" in md
     assert "| Claude Test | 3.0 | 15.0 | 200k |" in md
     assert "Hors liste" not in md and "Gratuit" not in md
@@ -99,7 +99,7 @@ def test_evolution_des_prix():
     modeles = prix.comparer([{"id": "a/x", "entree": 0.5, "sortie": 2.0},
                              {"id": "a/y", "entree": 1.0, "sortie": 1.0}], avant)
     assert modeles[0]["evolution"].startswith("prix modifié")
-    assert modeles[1]["evolution"] == "🆕 nouveau"
+    assert modeles[1]["evolution"] == "Nouveau"
 
 
 def test_qualite_artificial_analysis():
@@ -126,11 +126,11 @@ def test_site_web(projet):
     sortie = site.construire(projet, projet / "_site")
 
     accueil = (sortie / "index.html").read_text(encoding="utf-8")
-    assert "Agents with MCP tool use" in accueil and 'data-cat="article"' in accueil
+    assert "Agents with MCP tool use" in accueil and 'id="theme-article"' in accueil
     assert "Claude Test est le moins cher" in accueil
     assert "Claude Test" in (sortie / "prix.html").read_text(encoding="utf-8")
     assert "Agents with MCP tool use" in (sortie / "archives.html").read_text(encoding="utf-8")
-    assert "☐" in (sortie / "idees.html").read_text(encoding="utf-8")
+    assert 'class="case"' in (sortie / "idees.html").read_text(encoding="utf-8")
     lecons = list((sortie / "lecon").glob("*.html"))
     assert len(lecons) == 1 and "../style.css" in lecons[0].read_text(encoding="utf-8")
     assert len(list((sortie / "semaine").glob("*.html"))) == 1
