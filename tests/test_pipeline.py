@@ -216,3 +216,11 @@ def test_gemini_reessaie_apres_une_coupure(monkeypatch):
     monkeypatch.setattr(llm.requests, "post", post)
     monkeypatch.setattr(llm.time, "sleep", lambda s: None)
     assert llm.GeminiLLM(cle="x").json("p") == {"ok": 1} and len(essais) == 3
+
+
+def test_titre_des_releases_github():
+    flux = (b'<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">'
+            b'<entry><title>v2.144.0</title><link href="https://github.com/a/b/releases/tag/v2.144.0"/></entry>'
+            b'<entry><title>Crawl4AI 0.8</title><link href="https://github.com/a/b/releases/tag/0.8"/></entry></feed>')
+    source = {"nom": "Crawl4AI (releases)", "url": "https://github.com/a/b/releases.atom", "categorie": "parsing"}
+    assert [e.titre for e in collecte.lire_flux(source, flux)] == ["Crawl4AI v2.144.0", "Crawl4AI 0.8"]

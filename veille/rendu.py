@@ -9,7 +9,7 @@ TITRES = {
     "modele": "Modèles et labos",
     "article": "Recherche",
     "robotique": "Robotique",
-    "parsing": "Parsing de documents",
+    "parsing": "Parsing HTML et scraping",
     "monitoring": "Monitoring et observabilité",
     "pratique": "Pratiques",
     "comparatif": "Benchmarks et comparatifs",

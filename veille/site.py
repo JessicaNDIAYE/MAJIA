@@ -316,7 +316,7 @@ def contenu_semaine(s, prefixe=""):
     heros = f"""<div class="conteneur heros"><div>
 <p class="surtitre">Semaine du {date_fr(s['date'])}</p>
 <h1>Veille IA et nouvelles pratiques de la semaine</h1>
-<p>Modèles, recherche, robotique, parsing et monitoring : une sélection commentée, des idées à proposer et une leçon.</p>
+<p>Modèles, recherche, robotique, scraping web et monitoring : une sélection commentée, des idées à proposer et une leçon.</p>
 <a class="bouton" href="#themes">Lire la sélection</a></div>
 <div class="formes" aria-hidden="true"><div class="arche"></div>
 <div class="cercle"><strong>{total}</strong><span>contenus<br>sélectionnés</span></div></div></div>"""
@@ -440,7 +440,7 @@ def construire(racine=RACINE, sortie=None):
                      for i in s["selection"]]
     donnees = json.dumps(elements, ensure_ascii=False).replace("</", "<\\/")
     archives = entete_page("Archives", "Toutes les veilles", "Recherche dans l'ensemble des contenus publiés.") + f"""
-<div class="conteneur contenu"><input id="recherche" type="search" placeholder="Rechercher : Claude, NVIDIA, OCR, humanoïde…">
+<div class="conteneur contenu"><input id="recherche" type="search" placeholder="Rechercher : Claude, NVIDIA, scraping, humanoïde…">
 <ul id="resultats" class="liste-simple" style="margin:8px 0 48px"></ul>
 <ul class="liste-simple">{liste or '<li class="vide">Aucune veille pour le moment.</li>'}</ul></div>"""
     (sortie / "archives.html").write_text(page("Archives", archives, "archives.html",

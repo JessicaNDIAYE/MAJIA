@@ -16,7 +16,7 @@ En plus de l'e-mail, ta veille est publiée sur un site (GitHub Pages, gratuit, 
 
 | Page | Ce qu'on y fait |
 |---|---|
-| **Cette semaine** | Les contenus de la veille, filtrables par thème (Claude/NVIDIA, robotique, parsing…), la synthèse, le comparatif, les idées et la leçon |
+| **Cette semaine** | Les contenus de la veille, filtrables par thème (Claude/NVIDIA, robotique, scraping…), la synthèse, le comparatif, les idées et la leçon |
 | **Archives** | Toutes les semaines passées + une recherche instantanée dans tous les contenus |
 | **Leçons** | Ta base de cours |
 | **Idées** | Ton backlog d'idées, à cocher quand elles sont présentées |
@@ -44,7 +44,7 @@ python -m veille.site && python -m http.server -d _site 8000   # puis ouvre http
 | Modèles et labos | Anthropic/Claude (actus, releases Claude Code et SDK), NVIDIA (blog + blog technique), OpenAI, Google DeepMind, Google AI, Hugging Face, Mistral/DeepSeek/Qwen/Llama |
 | Recherche | Hugging Face Daily Papers, arXiv cs.AI / cs.CL / cs.LG (filtrés par mots-clés) |
 | Robotique | IEEE Spectrum Robotics, The Robot Report, arXiv cs.RO, actus robots humanoïdes |
-| Parsing de documents | Actus (LlamaParse, Docling, OCR + LLM…), releases Docling, arXiv cs.CV (documents) |
+| Parsing HTML et scraping | Actus (scraping avec LLM, Firecrawl, Crawl4AI…), releases Firecrawl et Crawl4AI, Hacker News, arXiv cs.IR / cs.CL (extraction web) |
 | Monitoring et observabilité | Actus observabilité LLM / AIOps, releases Langfuse, Hacker News |
 | Pratiques | Raschka, Latent Space, Import AI, Simon Willison, LangChain, Hacker News |
 | Benchmarks et comparatifs | Actus benchmarks, LMArena, Artificial Analysis |
