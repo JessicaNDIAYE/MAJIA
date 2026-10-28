@@ -126,7 +126,7 @@ def test_site_web(projet):
     sortie = site.construire(projet, projet / "_site")
 
     accueil = (sortie / "index.html").read_text(encoding="utf-8")
-    assert "Agents with MCP tool use" in accueil and 'data-cat="article"' in accueil
+    assert "Agents with MCP tool use" in accueil and 'id="theme-article"' in accueil
     assert "Claude Test est le moins cher" in accueil
     assert "Claude Test" in (sortie / "prix.html").read_text(encoding="utf-8")
     assert "Agents with MCP tool use" in (sortie / "archives.html").read_text(encoding="utf-8")
