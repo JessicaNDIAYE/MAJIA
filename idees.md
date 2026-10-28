@@ -1,3 +1,9 @@
 # Backlog d’idées à proposer
 
 Coche une idée quand tu l’as présentée à ton équipe.
+
+## Semaine du 2026-10-28
+
+- [ ] **Transition de l'extraction structurée vers le scoring de logprobs pour les tâches d'étiquetage** (effort : moyen) — Remplacer les prompts générant du JSON ou des listes syntaxiques (ex. validation binaire, classification textuelle) par l'extraction directe des probabilités des tokens cibles (YES/NO). Cette approche, validée par LinkedIn, élimine les erreurs de parsing en sortie et accélère radicalement le débit d'inférence en production. ([source](https://arxiv.org/abs/2610.36383))
+- [ ] **Audit et purge temporelle du contexte pour fiabiliser la mémoire des agents** (effort : faible) — Implémenter une étape d'invalidation explicite des faits obsolètes avant l'injection en mémoire contextuelle de l'agent. Des travaux récents montrent qu'élargir la fenêtre de retrieval sans filtrer l'historique fait chuter la précision (de 45% à 32% sur FactConsolidation), car le modèle échoue à prioriser le fait le plus récent lors de la génération. ([source](https://arxiv.org/abs/2610.36308))
+- [ ] **Optimisation du parsing de documents longs avec un modèle dédié 1.3B ou Docling v2.144** (effort : moyen) — Délester les pipelines RAG de l'usage systématique de LLM coûteux en intégrant OXR-1.0 (1,3B paramètres) ou Docling v2.144 pour extraire la hiérarchie des titres sans parsing lourd. Cela permet de préserver la VRAM, de contourner le découpage manuel de PDF complexes et de réduire la facture d'API de vision. ([source](https://news.google.com/rss/articles/CBMisgFBVV95cUxPVEZnaWdmVEJlYVE5SnBMTFdTaGVTSzFFd3d0T1dPdk5hYTQ1MnlrU2N3d2QydTNITEZud0lRYTJaWXY5cVU0QUdOUlI1OVlfTExCREJCeEVhekZvSmpMUGs2VklUbmp0TVB3endQY05lSEpyRlVWZEFGT04yT0Z2bk8wTHU0dVNoQWhaLUhENnB0NmhzVG1COGdRbThINk1fNXB4T2l1cHNtNDh2cFlsekhR?oc=5))

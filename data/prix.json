@@ -1,1 +1,362 @@
-[]
+[
+ {
+  "id": "anthropic/claude-haiku-5.5",
+  "nom": "Anthropic: Claude Haiku 5.5",
+  "fournisseur": "anthropic",
+  "entree": 0.1,
+  "sortie": 0.5,
+  "contexte": 1000000,
+  "cree": 1791397883,
+  "evolution": ""
+ },
+ {
+  "id": "anthropic/claude-sonnet-5.5",
+  "nom": "Anthropic: Claude Sonnet 5.5",
+  "fournisseur": "anthropic",
+  "entree": 2.0,
+  "sortie": 10.0,
+  "contexte": 1000000,
+  "cree": 1790618686,
+  "evolution": ""
+ },
+ {
+  "id": "anthropic/claude-opus-5.5",
+  "nom": "Anthropic: Claude Opus 5.5",
+  "fournisseur": "anthropic",
+  "entree": 4.0,
+  "sortie": 20.0,
+  "contexte": 1000000,
+  "cree": 1790094732,
+  "evolution": ""
+ },
+ {
+  "id": "anthropic/claude-fable-5.1",
+  "nom": "Anthropic: Claude Fable 5.1",
+  "fournisseur": "anthropic",
+  "entree": 10.0,
+  "sortie": 50.0,
+  "contexte": 1000000,
+  "cree": 1788285838,
+  "evolution": ""
+ },
+ {
+  "id": "openai/gpt-6.1-terra-pro",
+  "nom": "OpenAI: GPT-6.1 Terra Pro",
+  "fournisseur": "openai",
+  "entree": 1.0,
+  "sortie": 5.0,
+  "contexte": 1050000,
+  "cree": 1793038556,
+  "evolution": ""
+ },
+ {
+  "id": "openai/gpt-6.1-terra",
+  "nom": "OpenAI: GPT-6.1 Terra",
+  "fournisseur": "openai",
+  "entree": 1.0,
+  "sortie": 5.0,
+  "contexte": 1050000,
+  "cree": 1793038409,
+  "evolution": ""
+ },
+ {
+  "id": "openai/gpt-6.1-sol-pro",
+  "nom": "OpenAI: GPT-6.1 Sol Pro",
+  "fournisseur": "openai",
+  "entree": 2.0,
+  "sortie": 10.0,
+  "contexte": 1050000,
+  "cree": 1790702886,
+  "evolution": ""
+ },
+ {
+  "id": "openai/gpt-6.1-sol",
+  "nom": "OpenAI: GPT-6.1 Sol",
+  "fournisseur": "openai",
+  "entree": 2.0,
+  "sortie": 10.0,
+  "contexte": 1050000,
+  "cree": 1790702882,
+  "evolution": ""
+ },
+ {
+  "id": "google/gemini-4-argon",
+  "nom": "Google: Gemini 4 Argon",
+  "fournisseur": "google",
+  "entree": 2.0,
+  "sortie": 10.0,
+  "contexte": 1048576,
+  "cree": 1791907477,
+  "evolution": ""
+ },
+ {
+  "id": "google/gemini-nano-banana-2.1",
+  "nom": "Google: Nano Banana 2.1",
+  "fournisseur": "google",
+  "entree": 1.5,
+  "sortie": 7.5,
+  "contexte": 65536,
+  "cree": 1791300825,
+  "evolution": ""
+ },
+ {
+  "id": "google/gemini-3.8-flash",
+  "nom": "Google: Gemini 3.8 Flash",
+  "fournisseur": "google",
+  "entree": 0.825,
+  "sortie": 4.125,
+  "contexte": 1048576,
+  "cree": 1788362056,
+  "evolution": ""
+ },
+ {
+  "id": "google/gemini-3.7-flash",
+  "nom": "Google: Gemini 3.7 Flash",
+  "fournisseur": "google",
+  "entree": 0.75,
+  "sortie": 3.75,
+  "contexte": 1048576,
+  "cree": 1786640581,
+  "evolution": ""
+ },
+ {
+  "id": "mistralai/mistral-large-4-0",
+  "nom": "Mistral: Mistral Large 4",
+  "fournisseur": "mistralai",
+  "entree": 1.36,
+  "sortie": 4.18,
+  "contexte": 1048576,
+  "cree": 1791294122,
+  "evolution": ""
+ },
+ {
+  "id": "mistralai/mistral-medium-3-5",
+  "nom": "Mistral: Mistral Medium 3.5",
+  "fournisseur": "mistralai",
+  "entree": 1.5,
+  "sortie": 7.5,
+  "contexte": 262144,
+  "cree": 1777570439,
+  "evolution": ""
+ },
+ {
+  "id": "mistralai/mistral-small-2603",
+  "nom": "Mistral: Mistral Small 4",
+  "fournisseur": "mistralai",
+  "entree": 0.15,
+  "sortie": 0.6,
+  "contexte": 262144,
+  "cree": 1773695685,
+  "evolution": ""
+ },
+ {
+  "id": "mistralai/devstral-2512",
+  "nom": "Mistral: Devstral 2 2512",
+  "fournisseur": "mistralai",
+  "entree": 0.4,
+  "sortie": 2.0,
+  "contexte": 262144,
+  "cree": 1765285419,
+  "evolution": ""
+ },
+ {
+  "id": "meta-llama/llama-guard-4-12b",
+  "nom": "Meta: Llama Guard 4 12B",
+  "fournisseur": "meta-llama",
+  "entree": 0.18,
+  "sortie": 0.18,
+  "contexte": 163840,
+  "cree": 1745975193,
+  "evolution": ""
+ },
+ {
+  "id": "meta-llama/llama-4-maverick",
+  "nom": "Meta: Llama 4 Maverick",
+  "fournisseur": "meta-llama",
+  "entree": 0.188,
+  "sortie": 0.652,
+  "contexte": 524288,
+  "cree": 1743881822,
+  "evolution": ""
+ },
+ {
+  "id": "meta-llama/llama-4-scout",
+  "nom": "Meta: Llama 4 Scout",
+  "fournisseur": "meta-llama",
+  "entree": 0.1,
+  "sortie": 0.3,
+  "contexte": 1310720,
+  "cree": 1743881519,
+  "evolution": ""
+ },
+ {
+  "id": "meta-llama/llama-3.3-70b-instruct",
+  "nom": "Meta: Llama 3.3 70B Instruct",
+  "fournisseur": "meta-llama",
+  "entree": 0.1,
+  "sortie": 0.32,
+  "contexte": 131072,
+  "cree": 1733506137,
+  "evolution": ""
+ },
+ {
+  "id": "deepseek/deepseek-v4.1-flash-1017",
+  "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+  "fournisseur": "deepseek",
+  "entree": 0.15,
+  "sortie": 0.6,
+  "contexte": 1048576,
+  "cree": 1792225624,
+  "evolution": ""
+ },
+ {
+  "id": "deepseek/deepseek-v4.1-flash",
+  "nom": "DeepSeek: DeepSeek V4.1 Flash",
+  "fournisseur": "deepseek",
+  "entree": 0.14,
+  "sortie": 0.42,
+  "contexte": 1048576,
+  "cree": 1789021285,
+  "evolution": ""
+ },
+ {
+  "id": "deepseek/deepseek-v4-flash-vision-exp",
+  "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+  "fournisseur": "deepseek",
+  "entree": 0.216,
+  "sortie": 0.647,
+  "contexte": 1048576,
+  "cree": 1787311563,
+  "evolution": ""
+ },
+ {
+  "id": "deepseek/deepseek-v4-pro-0813",
+  "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+  "fournisseur": "deepseek",
+  "entree": 0.66,
+  "sortie": 1.98,
+  "contexte": 1048576,
+  "cree": 1786549364,
+  "evolution": ""
+ },
+ {
+  "id": "qwen/qwen3.8-max-prime",
+  "nom": "Qwen: Qwen3.8 Max Prime",
+  "fournisseur": "qwen",
+  "entree": 4.0,
+  "sortie": 12.0,
+  "contexte": 1000000,
+  "cree": 1790191228,
+  "evolution": ""
+ },
+ {
+  "id": "qwen/qwen3.8-omni-flash",
+  "nom": "Qwen: Qwen3.8 Omni Flash",
+  "fournisseur": "qwen",
+  "entree": 0.15,
+  "sortie": 0.47,
+  "contexte": 1000000,
+  "cree": 1789959954,
+  "evolution": ""
+ },
+ {
+  "id": "qwen/qwen3.8-max-0902",
+  "nom": "Qwen: Qwen3.8 Max (0902)",
+  "fournisseur": "qwen",
+  "entree": 2.0,
+  "sortie": 6.0,
+  "contexte": 1000000,
+  "cree": 1788469704,
+  "evolution": ""
+ },
+ {
+  "id": "qwen/qwen3.8-flash",
+  "nom": "Qwen: Qwen3.8 Flash",
+  "fournisseur": "qwen",
+  "entree": 0.15,
+  "sortie": 0.47,
+  "contexte": 1000000,
+  "cree": 1787773060,
+  "evolution": ""
+ },
+ {
+  "id": "x-ai/grok-4.7",
+  "nom": "SpaceXAI: Grok 4.7",
+  "fournisseur": "x-ai",
+  "entree": 2.0,
+  "sortie": 6.0,
+  "contexte": 500000,
+  "cree": 1790007541,
+  "evolution": ""
+ },
+ {
+  "id": "x-ai/grok-4.6",
+  "nom": "SpaceXAI: Grok 4.6",
+  "fournisseur": "x-ai",
+  "entree": 2.0,
+  "sortie": 6.0,
+  "contexte": 500000,
+  "cree": 1786548957,
+  "evolution": ""
+ },
+ {
+  "id": "x-ai/grok-4.5",
+  "nom": "SpaceXAI: Grok 4.5",
+  "fournisseur": "x-ai",
+  "entree": 2.0,
+  "sortie": 6.0,
+  "contexte": 500000,
+  "cree": 1783523154,
+  "evolution": ""
+ },
+ {
+  "id": "x-ai/grok-build-0.1",
+  "nom": "SpaceXAI: Grok Build 0.1",
+  "fournisseur": "x-ai",
+  "entree": 1.0,
+  "sortie": 2.0,
+  "contexte": 256000,
+  "cree": 1779298123,
+  "evolution": ""
+ },
+ {
+  "id": "nvidia/nemotron-3.5-super-vl",
+  "nom": "NVIDIA: Nemotron 3.5 Super VL",
+  "fournisseur": "nvidia",
+  "entree": 0.15,
+  "sortie": 0.5,
+  "contexte": 1048576,
+  "cree": 1792076662,
+  "evolution": ""
+ },
+ {
+  "id": "nvidia/nemotron-3.5-lightning",
+  "nom": "NVIDIA: Nemotron 3.5 Lightning",
+  "fournisseur": "nvidia",
+  "entree": 0.07,
+  "sortie": 0.2,
+  "contexte": 262144,
+  "cree": 1786452751,
+  "evolution": ""
+ },
+ {
+  "id": "nvidia/nemotron-3.5-content-safety",
+  "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+  "fournisseur": "nvidia",
+  "entree": 0.2,
+  "sortie": 0.2,
+  "contexte": 131072,
+  "cree": 1780581864,
+  "evolution": ""
+ },
+ {
+  "id": "nvidia/nemotron-3-ultra-550b-a55b",
+  "nom": "NVIDIA: Nemotron 3 Ultra",
+  "fournisseur": "nvidia",
+  "entree": 0.6,
+  "sortie": 2.4,
+  "contexte": 262144,
+  "cree": 1780551208,
+  "evolution": ""
+ }
+]
