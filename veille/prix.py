@@ -70,7 +70,7 @@ def comparer(modeles, precedents):
     for m in modeles:
         ancien = avant.get(m["id"])
         if not ancien:
-            m["evolution"] = "🆕 nouveau" if precedents else ""
+            m["evolution"] = "Nouveau" if precedents else ""
         elif (ancien["entree"], ancien["sortie"]) != (m["entree"], m["sortie"]):
             m["evolution"] = f"prix modifié (avant {ancien['entree']} / {ancien['sortie']} $)"
         else:
