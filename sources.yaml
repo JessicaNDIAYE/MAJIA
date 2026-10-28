@@ -6,11 +6,19 @@ profil: >
   spécificités réelles de chaque modèle (forces, limites, prix) pour choisir
   le bon outil et proposer des améliorations concrètes à mon équipe.
 
-# Fenêtre de collecte (jours), volume envoyé au LLM et taille de la sélection.
-jours: 7
-max_elements: 150
-max_par_source: 12   # évite qu'une source très bavarde écrase les autres
-max_selection: 25
+# Veille quotidienne : fenêtre de collecte (jours), volume envoyé au LLM et taille de la sélection.
+# Les liens déjà traités ne reviennent jamais, la fenêtre de 2 jours sert de marge si un jour échoue.
+jours: 2
+max_elements: 100
+max_par_source: 6    # évite qu'une source très bavarde écrase les autres
+max_selection: 12
+
+# Jour de la leçon et des 3 idées : lundi, mardi… ou « tous » pour en avoir chaque jour.
+lecon_le: lundi
+
+# Week-end : « lundi » = pas d'e-mail samedi et dimanche, ils sont résumés dans l'e-mail du lundi
+# (le site, lui, est mis à jour chaque jour) ; « normal » = un e-mail chaque jour.
+mail_weekend: lundi
 
 # Mots-clés par défaut pour les sources marquées `filtrer: true`.
 # Une source peut définir ses propres `mots_cles`.

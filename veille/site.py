@@ -1,4 +1,5 @@
 """Génère le site web statique de la veille : python -m veille.site [dossier_de_sortie]"""
+import datetime as dt
 import html
 import json
 import re
@@ -11,8 +12,9 @@ import markdown
 from .rendu import TITRES
 
 RACINE = Path(__file__).resolve().parent.parent
-NAV = [("index.html", "Cette semaine"), ("archives.html", "Archives"), ("lecons.html", "Leçons"),
+NAV = [("index.html", "Aujourd'hui"), ("archives.html", "Historique"), ("lecons.html", "Leçons"),
        ("idees.html", "Idées"), ("prix.html", "Prix")]
+JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
         "novembre", "décembre"]
 
@@ -34,6 +36,17 @@ nav{display:flex;gap:28px;overflow-x:auto}
 nav a{font-size:13px;color:var(--doux);white-space:nowrap;padding:4px 0;border-bottom:1.5px solid transparent}
 nav a:hover{color:var(--texte)}
 nav a.actif{color:var(--texte);border-bottom-color:var(--olive)}
+.navjour{border-bottom:1px solid var(--bord);font-size:13px}
+.navjour .conteneur{display:flex;justify-content:space-between;align-items:center;gap:16px;height:48px}
+.navjour a{color:var(--doux)}.navjour a:hover{color:var(--olive-fonce)}
+.navjour .centre{color:var(--leger)}.navjour .vide-nav{visibility:hidden}
+.heros .actions{display:flex;gap:12px;flex-wrap:wrap}
+.jour-weekend{margin-bottom:64px}.jour-weekend>h2{font-size:22px;font-weight:600;margin:0 0 12px;
+color:var(--olive-fonce)}.synthese-weekend{color:var(--doux);max-width:760px;margin:0 0 8px}
+.theme-weekend{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--doux);
+margin:28px 0 8px}.lien-jour{display:inline-block;margin-top:16px;font-size:13px;color:var(--olive-fonce)}
+.mois{margin-bottom:48px}.mois h2{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+color:var(--olive-fonce);margin:0;padding-bottom:10px;border-bottom:1px solid var(--bord)}
 .date-entete{margin-left:auto;font-size:12px;color:var(--leger);white-space:nowrap}
 .bouton{display:inline-block;background:var(--olive);color:#fff;border:0;border-radius:999px;padding:11px 26px;
 font:500 13px "Montserrat",sans-serif;cursor:pointer;transition:background .15s}
@@ -250,9 +263,22 @@ def e(texte):
 def date_fr(iso):
     try:
         a, m, j = (int(x) for x in iso[:10].split("-"))
-        return f"{j} {MOIS[m - 1]} {a}"
+        return f"{'1er' if j == 1 else j} {MOIS[m - 1]} {a}"
     except (ValueError, IndexError):
         return iso
+
+
+def date_longue(iso):
+    """« 2026-10-28 » → « mercredi 28 octobre 2026 »."""
+    try:
+        return f"{JOURS[dt.date.fromisoformat(iso[:10]).weekday()]} {date_fr(iso)}"
+    except ValueError:
+        return iso
+
+
+def libelle_precedent(jour, precedent):
+    veille = (dt.date.fromisoformat(jour) - dt.timedelta(days=1)).isoformat()
+    return "Voir hier" if precedent == veille else f"Voir le {date_fr(precedent)}"
 
 
 def md_html(texte):
@@ -274,7 +300,7 @@ def page(titre, contenu, actif="", prefixe="", script="", date=""):
 <body><header><div class="conteneur barre"><a class="logo" href="{prefixe}index.html">Veille <b>IA</b></a>
 <nav>{liens}</nav>{f'<span class="date-entete">{e(date)}</span>' if date else ""}</div></header>
 <main>{contenu}</main>
-<footer><div class="conteneur"><span>Veille IA · mise à jour chaque lundi</span>
+<footer><div class="conteneur"><span>Veille IA · mise à jour chaque matin</span>
 <span>Résumés générés automatiquement à partir des sources citées. À vérifier avant diffusion.</span></div></footer>
 {f"<script>{script}</script>" if script else ""}</body></html>"""
 
@@ -305,30 +331,74 @@ def moins_cher(modeles):
     return min(modeles, key=lambda m: (3 * m["entree"] + m["sortie"]) / 4)
 
 
-def contenu_semaine(s, prefixe=""):
+def nav_jour(s, prefixe, precedent, suivant):
+    gauche = (f'<a href="{prefixe}jour/{precedent}.html">← {date_longue(precedent)}</a>' if precedent
+              else '<span class="vide-nav">←</span>')
+    droite = (f'<a href="{prefixe}jour/{suivant}.html">{date_longue(suivant)} →</a>' if suivant
+              else '<span class="vide-nav">→</span>')
+    return (f'<div class="navjour"><div class="conteneur">{gauche}'
+            f'<a class="centre" href="{prefixe}archives.html">Historique</a>{droite}</div></div>')
+
+
+def samedi_du_weekend(iso):
+    """Date du samedi pour un samedi ou un dimanche, sinon None."""
+    jour = dt.date.fromisoformat(iso)
+    return (jour - dt.timedelta(days=jour.weekday() - 5)).isoformat() if jour.weekday() >= 5 else None
+
+
+def titre_weekend(samedi):
+    debut = dt.date.fromisoformat(samedi)
+    fin = debut + dt.timedelta(days=1)
+    if debut.month == fin.month:
+        return f"Week-end du {debut.day} au {date_fr(fin.isoformat())}"
+    return f"Week-end du {date_fr(debut.isoformat())[:-5]} au {date_fr(fin.isoformat())}"
+
+
+def contenu_weekend(samedi, jours, prefixe):
+    blocs = ""
+    for s in jours:
+        par_cat = {c: [i for i in s["selection"] if i.get("categorie") == c] for c in TITRES}
+        listes = "".join(f'<h3 class="theme-weekend">{TITRES[c]}</h3><ul class="liste">'
+                         f'{"".join(element_liste(i) for i in items)}</ul>' for c, items in par_cat.items() if items)
+        synthese = f'<p class="synthese-weekend">{e(s["tendance"])}</p>' if s.get("tendance") else ""
+        blocs += (f'<section class="jour-weekend"><h2>{date_longue(s["date"]).capitalize()}</h2>{synthese}'
+                  f'{listes}<a class="lien-jour" href="{prefixe}jour/{s["date"]}.html">Voir la page du jour →</a>'
+                  f'</section>')
+    total = sum(len(s["selection"]) for s in jours)
+    return entete_page("Rattrapage", titre_weekend(samedi), f"{total} contenus publiés samedi et dimanche.") + \
+        f'<div class="conteneur contenu">{blocs}</div>'
+
+
+def contenu_semaine(s, prefixe="", precedent=None, suivant=None, lecon_recente=None, weekend=None):
     par_cat = {c: [i for i in s["selection"] if i.get("categorie") == c] for c in TITRES}
     par_cat = {c: items for c, items in par_cat.items() if items}
     idees = s.get("idees", [])
-    lecon = s.get("lecon") or {}
+    lecon = s.get("lecon") or lecon_recente or {}  # sinon la leçon hebdomadaire la plus récente
     lien_lecon = f'{prefixe}lecon/{Path(lecon["fichier"]).stem}.html' if lecon.get("fichier") else ""
     total = len(s["selection"])
 
-    heros = f"""<div class="conteneur heros"><div>
-<p class="surtitre">Semaine du {date_fr(s['date'])}</p>
-<h1>Veille IA et nouvelles pratiques de la semaine</h1>
-<p>Modèles, recherche, robotique, scraping web et monitoring : une sélection commentée, des idées à proposer et une leçon.</p>
-<a class="bouton" href="#themes">Lire la sélection</a></div>
+    bouton_hier = (f'<a class="bouton clair" href="{prefixe}jour/{precedent}.html">'
+                   f'{libelle_precedent(s["date"], precedent)}</a>') if precedent else ""
+    if weekend:
+        bouton_hier += f'<a class="bouton clair" href="{prefixe}weekend/{weekend}.html">Voir le week-end</a>'
+    heros = f"""{nav_jour(s, prefixe, precedent, suivant)}<div class="conteneur heros"><div>
+<p class="surtitre">{date_longue(s['date'])}</p>
+<h1>Veille IA et nouvelles pratiques du jour</h1>
+<p>Modèles, recherche, robotique, scraping web et monitoring : une sélection commentée chaque matin, des idées
+et une leçon chaque semaine.</p>
+<div class="actions"><a class="bouton" href="#themes">Lire la sélection</a>{bouton_hier}</div></div>
 <div class="formes" aria-hidden="true"><div class="arche"></div>
 <div class="cercle"><strong>{total}</strong><span>contenus<br>sélectionnés</span></div></div></div>"""
 
-    synthese = f"""<div class="bande"><div class="conteneur synthese"><h2>Synthèse de la semaine</h2>
+    synthese = f"""<div class="bande"><div class="conteneur synthese"><h2>Synthèse du jour</h2>
 <p>{e(s["tendance"])}</p></div></div>""" if s.get("tendance") else ""
 
     chiffres = f"""<section class="bloc-page"><div class="conteneur"><h2 class="titre-section">En un coup d'œil</h2>
 <div class="chiffres">
 <div><div class="pastille">{total}</div><h3>Contenus</h3><p>Sélectionnés parmi les sources suivies, résumés et commentés.</p></div>
 <div><div class="pastille">{len(par_cat)}</div><h3>Thèmes</h3><p>{e(", ".join(TITRES[c] for c in par_cat))}.</p></div>
-<div><div class="pastille">{len(idees)}</div><h3>Idées</h3><p>Propositions concrètes à présenter à ton équipe.</p></div>
+<div><div class="pastille">{len(idees)}</div><h3>Idées</h3><p>{"Propositions concrètes à présenter à ton équipe." if idees
+    else "Les idées sont proposées chaque semaine avec la leçon."}</p></div>
 </div></div></section>"""
 
     # À la une : le premier contenu de chacun des trois premiers thèmes.
@@ -350,7 +420,7 @@ def contenu_semaine(s, prefixe=""):
 
     m = moins_cher(s.get("prix") or [])
     bandeau = f"""<div class="bande"><div class="conteneur bandeau">
-<h2>{f"Le moins cher cette semaine : {e(m['nom'])}" if m else "Comparatif des prix"}</h2>
+<h2>{f"Le moins cher aujourd'hui : {e(m['nom'])}" if m else "Comparatif des prix"}</h2>
 <p>{f"{m['entree']} $ en entrée et {m['sortie']} $ en sortie par million de tokens. " if m else ""}
 Compare les modèles et simule ton coût mensuel.</p>
 {f'<div class="analyse">{md_html(s["comparatif"])}</div>' if s.get("comparatif") else ""}
@@ -362,7 +432,7 @@ Compare les modèles et simule ton coût mensuel.</p>
 <div class="meta">Effort {e(i.get("effort"))}</div></div>""" for i in idees)
         points = "".join(f'<button aria-label="Idée {n + 1}" class="{"actif" if n == 0 else ""}"></button>'
                          for n in range(len(idees)))
-        carrousel = f"""<section class="bloc-page"><div class="conteneur"><h2 class="titre-section">Idées à proposer</h2>
+        carrousel = f"""<section class="bloc-page"><div class="conteneur"><h2 class="titre-section">Idées de la semaine</h2>
 <div class="carrousel"><button class="fleche prec" aria-label="Précédent">‹</button><div class="piste">{slides}</div>
 <button class="fleche suiv" aria-label="Suivant">›</button></div><div class="points">{points}</div></div></section>"""
 
@@ -409,40 +479,68 @@ def construire(racine=RACINE, sortie=None):
     sortie = Path(sortie or racine / "_site")
     if sortie.exists():
         shutil.rmtree(sortie)
-    (sortie / "semaine").mkdir(parents=True)
+    (sortie / "jour").mkdir(parents=True)
+    (sortie / "weekend").mkdir()
     (sortie / "lecon").mkdir()
     (sortie / "style.css").write_text(CSS, encoding="utf-8")
 
     semaines = [json.loads(f.read_text(encoding="utf-8"))
                 for f in sorted((racine / "data" / "semaines").glob("*.json"), reverse=True)]
-    derniere = f"Semaine du {date_fr(semaines[0]['date'])}" if semaines else ""
+    derniere = date_longue(semaines[0]["date"]).capitalize() if semaines else ""
+    dates = [s["date"] for s in semaines]  # du plus récent au plus ancien
+    weekends = {}
+    for s in reversed(semaines):  # samedi puis dimanche
+        if samedi_du_weekend(s["date"]):
+            weekends.setdefault(samedi_du_weekend(s["date"]), []).append(s)
+    for samedi, jours in weekends.items():
+        (sortie / "weekend" / f"{samedi}.html").write_text(
+            page(titre_weekend(samedi), contenu_weekend(samedi, jours, "../"), "archives.html", "../",
+                 date=titre_weekend(samedi)), "utf-8")
+    weekends = sorted(weekends, reverse=True)
 
-    # Accueil : la dernière veille.
+    def voisins(i):
+        precedent = dates[i + 1] if i + 1 < len(dates) else None
+        suivant = dates[i - 1] if i > 0 else None
+        lecon = next((x["lecon"] for x in semaines[i:] if (x.get("lecon") or {}).get("fichier")), None)
+        # Le week-end le plus récent, s'il date de moins d'une semaine (ou celui du jour affiché).
+        jour = dt.date.fromisoformat(dates[i])
+        weekend = next((w for w in weekends if 0 <= (jour - dt.date.fromisoformat(w)).days < 7), None)
+        return precedent, suivant, lecon, weekend
+
+    # Accueil : la veille la plus récente.
     if semaines:
-        accueil = contenu_semaine(semaines[0])
+        accueil = contenu_semaine(semaines[0], "", *voisins(0))
     else:
-        accueil = entete_page("Bienvenue", "Veille IA hebdomadaire", "La première veille apparaîtra ici après la "
-                              "prochaine exécution (chaque lundi, ou via Actions → Run workflow).")
+        accueil = entete_page("Bienvenue", "Veille IA quotidienne", "La première veille apparaîtra ici après la "
+                              "prochaine exécution (chaque matin, ou via Actions → Run workflow).")
     (sortie / "index.html").write_text(
-        page("Cette semaine", accueil, "index.html", script=JS_ACCUEIL, date=derniere), "utf-8")
+        page("Aujourd'hui", accueil, "index.html", script=JS_ACCUEIL, date=derniere), "utf-8")
 
-    # Archives + recherche dans toutes les semaines.
-    elements, liste = [], ""
-    for s in semaines:
-        (sortie / "semaine" / f"{s['date']}.html").write_text(
-            page(f"Semaine du {date_fr(s['date'])}", contenu_semaine(s, "../"), "archives.html", "../",
-                 JS_ACCUEIL, f"Semaine du {date_fr(s['date'])}"), "utf-8")
-        liste += (f'<li><a href="semaine/{s["date"]}.html"><b>Semaine du {date_fr(s["date"])}</b></a>'
-                  f'{e(s.get("tendance", ""))[:200]}<div class="meta">{len(s["selection"])} contenus</div></li>')
+    # Une page par jour, et l'historique groupé par mois avec une recherche globale.
+    elements, mois = [], {}
+    for i, s in enumerate(semaines):
+        (sortie / "jour" / f"{s['date']}.html").write_text(
+            page(date_longue(s["date"]).capitalize(), contenu_semaine(s, "../", *voisins(i)), "archives.html",
+                 "../", JS_ACCUEIL, date_longue(s["date"]).capitalize()), "utf-8")
+        cle = f"{MOIS[int(s['date'][5:7]) - 1].capitalize()} {s['date'][:4]}"
+        mois[cle] = mois.get(cle, "") + (
+            f'<li><a href="jour/{s["date"]}.html"><b>{date_longue(s["date"]).capitalize()}</b></a>'
+            f'{e(s.get("tendance", ""))[:200]}<div class="meta">{len(s["selection"])} contenus'
+            f'{" · leçon de la semaine" if (s.get("lecon") or {}).get("fichier") else ""}'
+            + (f' · <a class="lien" href="weekend/{samedi_du_weekend(s["date"])}.html">tout le week-end</a>'
+               if samedi_du_weekend(s["date"]) else "") + '</div></li>')
         elements += [{"titre": i["titre"], "url": i["url"], "source": i.get("source", ""),
                       "resume": i.get("resume", ""), "cat": TITRES.get(i.get("categorie"), ""),
                       "date": date_fr(s["date"])}
                      for i in s["selection"]]
     donnees = json.dumps(elements, ensure_ascii=False).replace("</", "<\\/")
-    archives = entete_page("Archives", "Toutes les veilles", "Recherche dans l'ensemble des contenus publiés.") + f"""
+    liste = "".join(f'<div class="mois"><h2>{m}</h2><ul class="liste-simple">{jours}</ul></div>'
+                    for m, jours in mois.items())
+    archives = entete_page("Historique", "Toutes les veilles",
+                           "Chaque jour de veille, et une recherche dans l'ensemble des contenus publiés.") + f"""
 <div class="conteneur contenu"><input id="recherche" type="search" placeholder="Rechercher : Claude, NVIDIA, scraping, humanoïde…">
 <ul id="resultats" class="liste-simple" style="margin:8px 0 48px"></ul>
-<ul class="liste-simple">{liste or '<li class="vide">Aucune veille pour le moment.</li>'}</ul></div>"""
+{liste or '<p class="vide">Aucune veille pour le moment.</p>'}</div>"""
     (sortie / "archives.html").write_text(page("Archives", archives, "archives.html",
                                                script=f"const ELEMENTS={donnees};{JS_RECHERCHE}", date=derniere),
                                           "utf-8")
@@ -460,7 +558,7 @@ def construire(racine=RACINE, sortie=None):
         liste += (f'<li><a href="lecon/{f.stem}.html"><b>{e(titre)}</b></a>'
                   f'<div class="meta">{date_fr(f.stem)}</div></li>')
     (sortie / "lecons.html").write_text(page("Leçons", entete_page(
-        "Formation", "Leçons", "Une leçon par semaine, tirée de la veille.")
+        "Formation", "Leçons", "Une leçon par semaine, tirée de la veille quotidienne.")
         + f'<div class="conteneur contenu"><ul class="liste-simple">'
           f'{liste or "<li class=vide>Aucune leçon pour le moment.</li>"}</ul></div>', "lecons.html",
         date=derniere), "utf-8")

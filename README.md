@@ -1,23 +1,23 @@
-# MAJIA — Ma veille IA hebdomadaire
+# MAJIA — Ma veille IA quotidienne
 
-Chaque lundi matin, ce projet :
+Chaque matin, ce projet :
 
 1. **collecte** les nouveautés de ~30 sources réparties en 7 thèmes (voir ci-dessous) ;
 2. **trie et résume** les plus utiles pour ton profil avec Gemini (offre gratuite), avec pour chaque élément
    ses **spécificités concrètes** (chiffres, forces, limites), sans blabla marketing ;
 3. construit un **tableau comparatif prix / qualité** des modèles à partir de données réelles,
    et signale les nouveaux modèles et les changements de prix ;
-4. génère **3 idées à proposer à ton équipe** et **une leçon complète** (concept, application, exercice, auto-évaluation) ;
+4. chaque semaine, génère **3 idées à proposer à ton équipe** et **une leçon complète** (concept, application, exercice, auto-évaluation) ;
 5. t'envoie le tout **par e-mail**, l'archive dans le dépôt et le publie sur **ton site web**.
 
 ## Le site web
 
-En plus de l'e-mail, ta veille est publiée sur un site (GitHub Pages, gratuit, mis à jour tout seul chaque lundi) :
+En plus de l'e-mail, ta veille est publiée sur un site (GitHub Pages, gratuit, mis à jour tout seul chaque matin) :
 
 | Page | Ce qu'on y fait |
 |---|---|
-| **Cette semaine** | Les contenus de la veille, filtrables par thème (Claude/NVIDIA, robotique, scraping…), la synthèse, le comparatif, les idées et la leçon |
-| **Archives** | Toutes les semaines passées + une recherche instantanée dans tous les contenus |
+| **Aujourd'hui** | Les contenus du jour, avec les boutons **Voir hier** et **Voir le week-end**, filtrables par thème (Claude/NVIDIA, robotique, scraping…), la synthèse, le comparatif, les idées et la leçon |
+| **Historique** | Chaque jour de veille classé par mois, une page par week-end, et une recherche instantanée dans tous les contenus |
 | **Leçons** | Ta base de cours |
 | **Idées** | Ton backlog d'idées, à cocher quand elles sont présentées |
 | **Prix** | Tableau triable des prix des modèles, filtre par fournisseur et **simulateur de coût mensuel** selon ton volume de tokens |
@@ -53,12 +53,12 @@ python -m veille.site && python -m http.server -d _site 8000   # puis ouvre http
 | Dossier / fichier | Rôle |
 |---|---|
 | `sources.yaml` | Ton profil, tes mots-clés et la liste des sources (à personnaliser) |
-| `digests/` | Les veilles hebdomadaires archivées |
+| `digests/` | Les veilles quotidiennes archivées (Markdown) |
 | `lecons/` | Ta base de cours, une leçon par semaine |
 | `idees.md` | Ton backlog d'idées, à cocher quand tu les présentes |
 | `data/vus.json` | Les liens déjà traités (évite les doublons) |
-| `data/prix.json` | Les prix de la semaine précédente (pour détecter les changements) |
-| `data/semaines/` | Chaque veille en JSON, utilisée pour construire le site |
+| `data/prix.json` | Les prix de la veille précédente (pour détecter les changements) |
+| `data/semaines/` | Chaque veille du jour en JSON, utilisée pour construire le site |
 | `veille/site.py` | Le générateur du site web |
 
 ## Mise en route (≈ 15 min)
@@ -75,9 +75,15 @@ python -m veille.site && python -m http.server -d _site 8000   # puis ouvre http
    | `EMAIL_TO` | l'adresse qui reçoit la veille (plusieurs : séparées par des virgules) |
    | `ARTIFICIAL_ANALYSIS_API_KEY` | *(optionnel)* clé gratuite sur <https://artificialanalysis.ai> pour ajouter les scores de qualité et de vitesse au comparatif |
 
-4. **Premier envoi** : onglet *Actions* → *Veille IA hebdomadaire* → *Run workflow*.
+4. **Premier envoi** : onglet *Actions* → *Veille IA quotidienne* → *Run workflow*.
 
-Ensuite, la veille part automatiquement chaque lundi vers 7 h (heure de Paris).
+Ensuite, la veille tourne automatiquement chaque matin vers 7 h (heure de Paris) :
+
+- **Du lundi au vendredi** : un e-mail avec la sélection du jour.
+- **Samedi et dimanche** : pas d'e-mail, mais le site est mis à jour. Le **lundi**, l'e-mail contient en plus
+  une section « Ce que tu as raté ce week-end » (réglage `mail_weekend` dans `sources.yaml`, `normal` pour
+  recevoir un e-mail chaque jour).
+- **Leçon et 3 idées** : une fois par semaine, le lundi (réglage `lecon_le` : un autre jour, ou `tous`).
 
 ## Personnaliser
 
@@ -112,5 +118,6 @@ GEMINI_API_KEY=xxx python -m veille.main --dry-run     # affiche la veille sans 
 
 ## Ta routine (le vrai levier)
 
-- **Lundi, 30 min** : lis la veille, fais la leçon et son exercice.
+- **Chaque matin, 10 min** : parcours la veille du jour (et le week-end le lundi).
+- **Lundi, 30 min** : fais la leçon de la semaine et son exercice.
 - **Dans la semaine** : présente **une** idée de `idees.md` à ton équipe, puis coche-la.
