@@ -1,0 +1,74 @@
+# Profil utilisé par le LLM pour adapter les idées et la leçon à ton travail.
+profil: >
+  Ingénieure IA / data. Je construis des agents LLM, des pipelines RAG,
+  des intégrations MCP et du text-to-SQL. Je veux rester à jour et proposer
+  des améliorations concrètes à mon équipe.
+
+# Fenêtre de collecte (jours) et nombre max d'éléments envoyés au LLM.
+jours: 7
+max_elements: 60
+max_selection: 12
+
+# Mots-clés pour filtrer les flux très volumineux (arXiv).
+mots_cles:
+  - agent
+  - agentic
+  - tool use
+  - MCP
+  - model context protocol
+  - RAG
+  - retrieval
+  - LangGraph
+  - text-to-SQL
+  - SQL
+  - evaluation
+  - reasoning
+
+sources:
+  # Articles scientifiques
+  - nom: Hugging Face Daily Papers
+    type: hf_papers
+    categorie: article
+  - nom: arXiv cs.AI
+    url: https://rss.arxiv.org/rss/cs.AI
+    categorie: article
+    filtrer: true
+  - nom: arXiv cs.CL
+    url: https://rss.arxiv.org/rss/cs.CL
+    categorie: article
+    filtrer: true
+  - nom: arXiv cs.LG
+    url: https://rss.arxiv.org/rss/cs.LG
+    categorie: article
+    filtrer: true
+
+  # Nouveaux modèles
+  - nom: OpenAI News
+    url: https://openai.com/news/rss.xml
+    categorie: modele
+  - nom: Google DeepMind
+    url: https://deepmind.google/blog/rss.xml
+    categorie: modele
+  - nom: Google AI Blog
+    url: https://blog.google/technology/ai/rss/
+    categorie: modele
+  - nom: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    categorie: modele
+
+  # Nouvelles pratiques
+  - nom: Ahead of AI (Sebastian Raschka)
+    url: https://magazine.sebastianraschka.com/feed
+    categorie: pratique
+  - nom: Latent Space
+    url: https://www.latent.space/feed
+    categorie: pratique
+  - nom: Import AI
+    url: https://importai.substack.com/feed
+    categorie: pratique
+  - nom: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    categorie: pratique
+  - nom: LangChain Blog
+    url: https://blog.langchain.com/rss/
+    categorie: pratique
