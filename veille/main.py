@@ -32,7 +32,11 @@ def executer(racine, client_llm, envoyer=None, maintenant=None):
     if not digest["selection"]:
         logging.warning("Le LLM n'a rien sélectionné.")
         return None
-    lecon = llm.faire_lecon(client_llm, config, digest["selection"])
+    try:
+        lecon = llm.faire_lecon(client_llm, config, digest["selection"])
+    except Exception as exc:  # la veille part quand même, sans leçon ni idées cette semaine
+        logging.error("Leçon non générée : %s", exc)
+        lecon = {"idees": [], "lecon": None}
 
     date = dt.date.today().isoformat()
     md = rendu.digest_markdown(date, digest, lecon, prix.tableau_markdown(modeles))
@@ -40,13 +44,14 @@ def executer(racine, client_llm, envoyer=None, maintenant=None):
 
     # Version structurée de la semaine, utilisée par le site web.
     semaine = {**digest, "date": date, "prix": modeles, "idees": lecon.get("idees", []),
-               "lecon": {**lecon["lecon"], "fichier": chemin_lecon.name}}
+               "lecon": {**lecon["lecon"], "fichier": chemin_lecon.name} if chemin_lecon else None}
     (racine / "data" / "semaines").mkdir(parents=True, exist_ok=True)
     (racine / "data" / "semaines" / f"{date}.json").write_text(
         json.dumps(semaine, indent=1, ensure_ascii=False), encoding="utf-8")
 
     if envoyer:
-        envoyer(f"🧠 Veille IA — {date} — {lecon['lecon']['titre']}", md, rendu.en_html(md))
+        sujet = f"🧠 Veille IA — {date}" + (f" — {lecon['lecon']['titre']}" if lecon["lecon"] else "")
+        envoyer(sujet, md, rendu.en_html(md))
 
     # Garde un historique borné des liens déjà traités pour éviter les doublons.
     fichier_vus.parent.mkdir(exist_ok=True)
