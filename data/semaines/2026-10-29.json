@@ -1,0 +1,539 @@
+{
+ "selection": [
+  {
+   "id": "https://arxiv.org/abs/2610.36444",
+   "categorie": "article",
+   "resume": "L'article présente RouteDRAG, une méthode de routage dynamique pour les architectures RAG appliquées aux documents multimodaux longs. Les auteurs démontrent que l'exécution itérative par agent n'est pas systématiquement bénéfique et peut introduire des calculs superflus ou dégrader la précision sur certaines requêtes.",
+   "specificites": [
+    "Routage conditionnel adaptatif selon la complexité de la requête documentaire",
+    "Réduction de la latence et des coûts de calcul liés aux boucles d'agents superflues",
+    "Évite les hallucinations et dégradations de réponse causées par des itérations agentiques excessives"
+   ],
+   "pourquoi": "Essentiel pour optimiser le compromis coût/latence de mes pipelines RAG multimodaux en évitant d'activer systématiquement des boucles agentiques coûteuses.",
+   "titre": "RouteDRAG: Learning to Route and Control Agentic Execution for Multimodal Document RAG",
+   "url": "https://arxiv.org/abs/2610.36444",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2610.36405",
+   "categorie": "article",
+   "resume": "L'article introduit kw-bench, un benchmark évaluant les modèles frontières intégrés dans des environnements d'exécution complets (boucle, terminal shell, système de fichiers, exécution de code). Il cible spécifiquement la robustesse des modèles face à des tâches complexes de travail intellectuel et d'ingénierie.",
+   "specificites": [
+    "Évaluation directe de l'infrastructure de harnais (harness) d'agents de code",
+    "Mesure de la tolérance aux pannes sur des séquences longues avec manipulation d'outils",
+    "Dépasse les benchmarks purement génératifs en évaluant l'exécution réelle et le feedback d'environnement"
+   ],
+   "pourquoi": "Permet de concevoir des tests de robustesse réalistes pour mes agents LLM outillés et intégrations MCP en boucle fermée.",
+   "titre": "kw-bench: Breaking Frontier Harnesses on Real-World Tasks",
+   "url": "https://arxiv.org/abs/2610.36405",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+   "categorie": "modele",
+   "resume": "Google DeepMind officialise Gemini 4 Carbon, son nouveau modèle frontière axé sur les performances de pointe. Le modèle prend la tête des classements indépendants, avec un déploiement ciblé initialement sur la cyberdéfense.",
+   "specificites": [
+    "Nouveau fer de lance frontier de DeepMind succédant aux itérations Gemini 4",
+    "Mise à disposition initiale restreinte aux cas d'usage de sécurité et défense",
+    "Conçu pour le raisonnement complexe et l'analyse approfondie de menaces informatiques"
+   ],
+   "pourquoi": "Permet d'anticiper l'arrivée de la prochaine génération de capacités de raisonnement de Google pour l'architecture de systèmes critiques.",
+   "titre": "Gemini 4 Carbon: Our next frontier model",
+   "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+   "source": "Google DeepMind"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRVdtajFoWHpsbVNpUThwS1dua1FOV2t4N2lmeEkwRHluX1EyUDdBNHRJOWd1QllwUWNDeG9kdUpnUUg5eS1pSEUwN0pQMjlYUlBGdHo1SksyX0ZFQWQtTExHT0xhUmdEYlZxR2F3MDgtSWF4UGVGVDZKSGxSNEgyZUNzTklQSzF6My1RdHVkVEFXTTRuRThUUXRaTHlnT0NLUkE?oc=5",
+   "categorie": "modele",
+   "resume": "Des identifiants relatifs à DeepSeek V5 ont été détectés dans le dépôt officiel du framework Harness. Cela confirme la préparation technique active de la prochaine génération de modèles DeepSeek.",
+   "specificites": [
+    "Apparition d'identifiants officiels confirmant l'intégration amont du modèle V5",
+    "Intégration prévue dans les bancs de tests standardisés de code et d'agents",
+    "Perspective d'évolution pour une architecture réputée pour son ratio performance/coût très agressif"
+   ],
+   "pourquoi": "Permet de préparer mes architectures d'agents et pipelines à l'intégration du successeur de la série V4.1.",
+   "titre": "DeepSeek V5 identifiers surface in official Harness code repository - TechNode",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRVdtajFoWHpsbVNpUThwS1dua1FOV2t4N2lmeEkwRHluX1EyUDdBNHRJOWd1QllwUWNDeG9kdUpnUUg5eS1pSEUwN0pQMjlYUlBGdHo1SksyX0ZFQWQtTExHT0xhUmdEYlZxR2F3MDgtSWF4UGVGVDZKSGxSNEgyZUNzTklQSzF6My1RdHVkVEFXTTRuRThUUXRaTHlnT0NLUkE?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRXRnMVh6YWp1aHdGSUJBUUpwM0JCVC15T3NxcXJZUW81SUZQM21GTHFqUm85NkdRZjV5UER3c0hLd3lzVnRYdlJTRF9GWGkybHYxbGNlSHBZamZabzFuVGxfMUNfOGFzYUpvN0dHWGhRWExmem9SWVRDNnI5SXlISVBjNXZEWTBkUFpqVnh4N21DbmNRUzc2Y0ptYzh6czdINWNFQWw0Wk8?oc=5",
+   "categorie": "parsing",
+   "resume": "Decodo a lancé une API de données web spécifiquement pensée pour fournir aux agents IA un accès structuré au web. L'API automatise l'acquisition et le nettoyage du flux de données pour alimenter directement les modèles de langage.",
+   "specificites": [
+    "Interface API conçue nativement pour la consommation par des agents autonomes",
+    "Prise en charge directe de l'extraction et du formatage sans nécessiter de pipeline headless tiers",
+    "Alternative aux solutions classiques de crawling géré"
+   ],
+   "pourquoi": "Fournit une brique clé en main pour fiabiliser le scraping et l'apport de contexte web en temps réel dans mes agents LLM.",
+   "titre": "Decodo Launches Web Data API To Give AI Agents Web Access - Search Engine Journal",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRXRnMVh6YWp1aHdGSUJBUUpwM0JCVC15T3NxcXJZUW81SUZQM21GTHFqUm85NkdRZjV5UER3c0hLd3lzVnRYdlJTRF9GWGkybHYxbGNlSHBZamZabzFuVGxfMUNfOGFzYUpvN0dHWGhRWExmem9SWVRDNnI5SXlISVBjNXZEWTBkUFpqVnh4N21DbmNRUzc2Y0ptYzh6czdINWNFQWw0Wk8?oc=5",
+   "source": "Scraping et parsing HTML (actualités)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.621",
+   "categorie": "parsing",
+   "resume": "Firecrawl publie la version API image v2.11.621 de son moteur d'extraction web. L'outil convertit des pages HTML complexes et dynamiques en markdown propre prêt pour les LLM.",
+   "specificites": [
+    "Mise à jour v2.11.621 de l'image de conteneur API",
+    "Amélioration de la robustesse d'extraction de contenu web sans balises parasites",
+    "Composant central pour les pipelines RAG s'alimentant sur des sources web non structurées"
+   ],
+   "pourquoi": "Permet de maintenir à jour mon infrastructure locale de parsing HTML vers Markdown pour le scraping et l'ingestion RAG.",
+   "titre": "Firecrawl v2.11.621",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.621",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+   "categorie": "pratique",
+   "resume": "Une analyse technique montre que Claude Code transmet de manière récurrente les transcriptions d'exécution de chaque sous-agent d'arrière-plan à son modèle. Ce comportement impacte directement la gestion de contexte et la confidentialité opérationnelle.",
+   "specificites": [
+    "Envoi systématique des transcripts d'agents d'arrière-plan au modèle central",
+    "Consommation accrue de tokens d'entrée lors de l'orchestration multi-agents",
+    "Risque potentiel de fuite de contexte intermédiaire ou de données sensibles dans les requêtes secondaires"
+   ],
+   "pourquoi": "Crucial pour concevoir mes harnais d'agents multi-processus et monitorer précisément la consommation de tokens et la rétention de données.",
+   "titre": "Claude Code regularly sends each background agent’s transcript to its model",
+   "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+   "source": "Hacker News — IA (front page)"
+  },
+  {
+   "id": "https://latent.space/p/supabase/",
+   "categorie": "pratique",
+   "resume": "Paul Copplestone et Ant Wilson détaillent dans Latent Space les patterns d'architecture backend adaptés aux agents autonomes via Supabase. L'échange analyse le stockage vectoriel, l'état d'exécution et les autorisations requises par les agents.",
+   "specificites": [
+    "Patterns d'intégration Postgres pour la mémoire long-terme et la gestion d'état d'agents",
+    "Support combiné pgvector, Row Level Security (RLS) et fonctions temps réel",
+    "Architecture de persistance pour les interactions tool-calling et text-to-SQL"
+   ],
+   "pourquoi": "Apporte des retours concrets sur la construction d'un backend robuste et sécurisé pour mes agents et mes workflows text-to-SQL.",
+   "titre": "Why Agents Love Supabase",
+   "url": "https://latent.space/p/supabase/",
+   "source": "Latent Space"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONmlabFlxM3VrMzhuZmljQVVfQ2lsTHJrM0J3VjkwR0hHQ092NkRsX2hiTGhnOWZQbmhzcnJyWXFIZ2otdHVpdmtvdm1yX2c1UXA5ejRmRU11bHRmdERhUmdZNmRzektoSnZBalh4SmlYX2NybHBkT2JyMXJVZHFTaVVabF9nNGNMbzlzaGVZRHBQUkNEUGZqblp2ZUhrS243VFpIZkV1c2xjeTRHMC1LWFZzZnFqTTlabFN6aG1Welo?oc=5",
+   "categorie": "monitoring",
+   "resume": "Digitate lance ignio Hummingbird, une solution d'AIOps agentique visant l'exécution d'actions autonomes en production informatique. Le système combine monitoring d'événements, corrélation causale et prise de décision automatisée.",
+   "specificites": [
+    "Passage d'alertes descriptives à des boucles d'action fermées pilotées par agents",
+    "Corrélation d'incidents télémétriques en temps réel",
+    "Nécessite des garde-fous d'observabilité stricts pour encadrer l'autonomie des actions IT"
+   ],
+   "pourquoi": "Fournit des patterns utiles pour superviser des systèmes agentiques qui effectuent des actions opérationnelles automatisées.",
+   "titre": "Digitate Advances Agentic AIOps with ignio Hummingbird, Bringing Autonomous Action to IT Operations - VMblog",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONmlabFlxM3VrMzhuZmljQVVfQ2lsTHJrM0J3VjkwR0hHQ092NkRsX2hiTGhnOWZQbmhzcnJyWXFIZ2otdHVpdmtvdm1yX2c1UXA5ejRmRU11bHRmdERhUmdZNmRzektoSnZBalh4SmlYX2NybHBkT2JyMXJVZHFTaVVabF9nNGNMbzlzaGVZRHBQUkNEUGZqblp2ZUhrS243VFpIZkV1c2xjeTRHMC1LWFZzZnFqTTlabFN6aG1Welo?oc=5",
+   "source": "Observabilité LLM (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV1dIcjlHb0Vnakx5eDh6aXNWa0hxcU1VYTg0M3V2d2VzaksybVdkclZqcFlVSEU5ZElfeVpKYko2NTRvMzJyLTh3ZkJlcDhsTTd3Q1JENE1QdVNNWUllM0VyZXJIWFNUSzQ2UUw1Y3k2SWZfQnltZ0FIZEZhZTdlOEdDd2h1U1lZRVFfYUZSSlJmQnVFYmx6aTZTakszZENwMXlF?oc=5",
+   "categorie": "monitoring",
+   "resume": "Colleen Kozak de Dynatrace détaille les impératifs techniques d'observabilité pour les charges de travail IA. L'accent est mis sur le traçage des dépendances des pipelines LLM et la dérive de performance.",
+   "specificites": [
+    "Traçage de bout en bout des requêtes : prompts, latence d'inférence, et appels d'API externes",
+    "Détection des anomalies de coûts et de consommation excessive de tokens",
+    "Corrélation entre santé des serveurs et qualité de service des modèles d'inférence"
+   ],
+   "pourquoi": "Aide à définir les métriques et dashboards essentiels pour surveiller nos agents et pipelines RAG en production.",
+   "titre": "Dynatrace’s Colleen Kozak on the AI Observability Imperative - Technology Magazine",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV1dIcjlHb0Vnakx5eDh6aXNWa0hxcU1VYTg0M3V2d2VzaksybVdkclZqcFlVSEU5ZElfeVpKYko2NTRvMzJyLTh3ZkJlcDhsTTd3Q1JENE1QdVNNWUllM0VyZXJIWFNUSzQ2UUw1Y3k2SWZfQnltZ0FIZEZhZTdlOEdDd2h1U1lZRVFfYUZSSlJmQnVFYmx6aTZTakszZENwMXlF?oc=5",
+   "source": "Observabilité LLM (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMickFVX3lxTE5PMExLMTNBYXRKZTVsRkN4czhBbU0tTzFqOFZzYlFhcEltWW8wd05yWllnR1FYQWtWWnpEUXFlN3Bva3JZS0tkQ1dLSnRZSzB2QVoyUlhsVnF3dS00Q0x5WkJiUGFUMWN2dFFyQmEzZDJxdw?oc=5",
+   "categorie": "comparatif",
+   "resume": "Le benchmark 'Intelligence Index v5' est annoncé avec deux nouvelles suites d'évaluation et trois mises à niveau majeures. Cette révision vise à mieux mesurer la résolution de problèmes réels et à contrecarrer la sur-optimisation des modèles.",
+   "specificites": [
+    "Ajout de 2 nouveaux protocoles de benchmark et mise à jour de 3 métriques existantes",
+    "Évaluation plus stricte des capacités de raisonnement avancé et de planification",
+    "Réalignement des scores suite à la saturation des anciens tests standardisés"
+   ],
+   "pourquoi": "Permet de vérifier la validité des scores de nos modèles cibles face aux nouvelles métriques d'évaluation indépendantes.",
+   "titre": "AI benchmark 'Intelligence Index v5' announced, featuring two new benchmarks and three upgrades. - GIGAZINE",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5PMExLMTNBYXRKZTVsRkN4czhBbU0tTzFqOFZzYlFhcEltWW8wd05yWllnR1FYQWtWWnpEUXFlN3Bva3JZS0tkQ1dLSnRZSzB2QVoyUlhsVnF3dS00Q0x5WkJiUGFUMWN2dFFyQmEzZDJxdw?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://www.therobotreport.com/worldoracle-tests-whether-world-models-can-reliably-predict-real-world-executions/",
+   "categorie": "robotique",
+   "resume": "La plateforme WorldOracle teste la capacité réelle des modèles de monde à anticiper les exécutions physiques. Les tests ont révélé des cas d'hallucination où le modèle prédisait une saisie d'objet réussie alors que le bras robotique l'avait manquée.",
+   "specificites": [
+    "Mise en évidence d'hallucinations de perception physique dans les modèles de monde prédictifs",
+    "Écart critique entre l'exécution physique réelle et l'état simulé par le modèle",
+    "Souligne la nécessité d'une vérification sensorielle en boucle fermée sans se fier uniquement à la prédiction interne"
+   ],
+   "pourquoi": "Rappelle les limites fondamentales des modèles prédictifs sans retour d'état vérifiable, un problème analogue aux hallucinations en text-to-SQL et agent planning.",
+   "titre": "WorldOracle Tests Whether World Models Can Reliably Predict Real-World Executions",
+   "url": "https://www.therobotreport.com/worldoracle-tests-whether-world-models-can-reliably-predict-real-world-executions/",
+   "source": "The Robot Report"
+  }
+ ],
+ "tendance": "La veille met en avant la transition des architectures agentiques d'une exécution aveugle vers un contrôle d'exécution strict : routage adaptatif (RouteDRAG), harnais d'exécution instrumentés (kw-bench) et alertes sur les surcoûts liés aux transferts de contextes internes (Claude Code). En parallèle, la course aux modèles frontières s'intensifie avec l'apparition de Gemini 4 Carbon et les préparatifs de DeepSeek V5, tandis que le besoin d'observabilité fine des traces agentiques devient un standard de production.",
+ "comparatif": "### Analyse comparative des prix et recommandations par usage\n\n* **Scraping web et extraction HTML haute volumétrie :**\n  * **DeepSeek V4.1 Flash** s'impose comme le choix le plus économique pour l'ingestion massive de texte HTML : son prix d'entrée est de seulement **0,045 $ / M tokens** (sortie à **0,50 $**) avec un contexte étendu de **1 048 576 tokens**. À noter une évolution récente : le tarif d'entrée a fortement baissé (auparavant 0,14 $), tandis que la sortie est passée de 0,42 $ à 0,50 $.\n  * **Meta Llama 4 Scout** est une excellente alternative open-weights/inférence avec une entrée à **0,10 $ / M** et une sortie très basse à **0,30 $ / M**, tout en offrant la plus grande fenêtre de contexte du tableau (**1 310 720 tokens**).\n\n* **Orchestration d'agents et sous-agents d'exécution :**\n  * **Claude Haiku 5.5** (**0,10 $ en entrée, 0,50 $ en sortie**, fenêtre de **1 000 000 tokens**) offre un rapport précision/coût exceptionnel pour les agents intermédiaires, le parsing structuré JSON et la validation d'appels d'outils.\n  * **Qwen 3.8 Flash** et **Qwen 3.8 Omni Flash** se positionnent très près avec **0,15 $ / M en entrée** et **0,47 $ / M en sortie** pour **1 000 000 tokens** de contexte.\n\n* **RAG complexe, text-to-SQL et raisonnement lourd :**\n  * **OpenAI GPT-6.1 Terra / Terra Pro** à **1,00 $ en entrée / 5,00 $ en sortie** (contexte **1 050 000 tokens**) propose un palier intermédiaire deux fois moins cher que **GPT-6.1 Sol** (**2,00 $ / 10,00 $**) et quatre fois moins cher en sortie que **Claude Opus 5.5** (**4,00 $ / 20,00 $**).\n  * **Mistral Large 4** présente une option compétitive à **1,36 $ en entrée / 4,18 $ en sortie** pour **1 048 576 tokens** de contexte, particulièrement économique sur la génération de code SQL et d'analyses détaillées par rapport à **Claude Sonnet 5.5** (**2,00 $ / 10,00 $**).\n\n* **Ultra-faible latence et filtrage / garde-fous :**\n  * **NVIDIA Nemotron 3.5 Lightning** propose le coût de sortie le plus bas du marché à **0,07 $ en entrée / 0,20 $ en sortie** (contexte de **262 144 tokens**), idéal pour les tâches de classification et de routing rapide avant agents RAG.\n  * **Meta Llama Guard 4 12B** applique un tarif symétrique fixe très modéré de **0,18 $ en entrée / 0,18 $ en sortie** (contexte **163 840 tokens**) pour sécuriser les entrées/sorties sans gonfler le budget.",
+ "date": "2026-10-29",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.8-flash",
+   "nom": "Google: Gemini 3.8 Flash",
+   "fournisseur": "google",
+   "entree": 0.825,
+   "sortie": 4.125,
+   "contexte": 1048576,
+   "cree": 1788362056,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.7-flash",
+   "nom": "Google: Gemini 3.7 Flash",
+   "fournisseur": "google",
+   "entree": 0.75,
+   "sortie": 3.75,
+   "contexte": 1048576,
+   "cree": 1786640581,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 1.36,
+   "sortie": 4.18,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.188,
+   "sortie": 0.652,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.32,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.045,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.14 / 0.42 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.66,
+   "sortie": 1.98,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

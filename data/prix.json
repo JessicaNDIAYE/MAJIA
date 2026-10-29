@@ -213,11 +213,11 @@
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.14,
-  "sortie": 0.42,
+  "entree": 0.045,
+  "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.14 / 0.42 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
