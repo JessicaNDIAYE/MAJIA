@@ -1,0 +1,525 @@
+{
+ "selection": [
+  {
+   "id": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVGVmcmxZdFpKS25HOEFNbnFrZmRkd0ZRVFNjUlNMMEEwQXZ3YjFSTm9nNGU3NGZMeFBQWEhtZUlvQU9Va3UzeDlIZXVMaW5QM0w1YUpscHUtMHVqeDlSTnotOTZLNXNUV09abkc3U0VGZjU0MTlLaWJJdGtEWnhTMFlkQWJuWWFVUmRnTFB4eXlUbDNiY0HSAZYBQVVfeXFMTlRlZnJsWXRaSktuRzhBTW5xa2ZkZHdGUVRTY1JTTDBBMEF2d2IxUk5vZzRlNzRmTHhQUFhIbWVJb0FPVWt1M3g5SGV1TGluUDNMNWFKbHB1LTB1ang5Uk56LTk2SzVzVFdPWm5HN1NFRmY1NDE5S2liSXRrRFp4UzBZZEFibllhVVJkZ0xQeHl5VGwzYmNB?oc=5",
+   "categorie": "modele",
+   "resume": "DeepSeek a publié en open-source 'dsh-superagent', un agent de code autonome structuré selon un pattern router-worker. Ce système vise à concurrencer directement les solutions de développement agentique comme Claude Code. L'architecture sépare le routage des intentions et l'exécution outillée des tâches logicielles.",
+   "specificites": [
+    "Architecture logicielle explicite de type 'Router-Worker' facilitant la délégation de tâches sous-jacentes",
+    "Conçu pour l'automatisation autonome de workflows de code complexes",
+    "Alternative open-source directe aux environnements propriétaires type Claude Code"
+   ],
+   "pourquoi": "Cette architecture router-worker fournit un blueprint open-source directement transposable pour orchestrer des sous-agents de dev ou de text-to-SQL.",
+   "titre": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent - MarkTechPost",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVGVmcmxZdFpKS25HOEFNbnFrZmRkd0ZRVFNjUlNMMEEwQXZ3YjFSTm9nNGU3NGZMeFBQWEhtZUlvQU9Va3UzeDlIZXVMaW5QM0w1YUpscHUtMHVqeDlSTnotOTZLNXNUV09abkc3U0VGZjU0MTlLaWJJdGtEWnhTMFlkQWJuWWFVUmRnTFB4eXlUbDNiY0HSAZYBQVVfeXFMTlRlZnJsWXRaSktuRzhBTW5xa2ZkZHdGUVRTY1JTTDBBMEF2d2IxUk5vZzRlNzRmTHhQUFhIbWVJb0FPVWt1M3g5SGV1TGluUDNMNWFKbHB1LTB1ang5Uk56LTk2SzVzVFdPWm5HN1NFRmY1NDE5S2liSXRrRFp4UzBZZEFibllhVVJkZ0xQeHl5VGwzYmNB?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://latent.space/p/arca/",
+   "categorie": "pratique",
+   "resume": "Le responsable IA d'Arca détaille la mise en production d'agents autonomes pour des tâches financières à horizon long s'étalant sur plusieurs jours. L'accent est mis sur la gestion d'une mémoire persistante et l'abandon des frameworks génériques au profit d'un banc d'essai (harness) personnalisé. Le retour d'expérience aborde le pattern où les agents sollicitent activement les humains en cas de blocage.",
+   "specificites": [
+    "Workflows agentiques asynchrones multi-jours ('long-horizon')",
+    "Implémentation d'une mémoire persistante sur mesure au lieu de contextes éphémères",
+    "Pattern 'Agents Prompt People' inversant la boucle d'interaction homme-machine"
+   ],
+   "pourquoi": "Essentiel pour architecturer la persistance d'état et le 'human-in-the-loop' sur des agents exécutant des extractions web ou du RAG complexe sur de longues durées.",
+   "titre": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+   "url": "https://latent.space/p/arca/",
+   "source": "Latent Space"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+   "categorie": "pratique",
+   "resume": "Parameter Labs documente une chaîne d'exploitation ayant permis la prise de contrôle de comptes ChatGPT via la fonctionnalité d'artefacts / prévisualisations HTML sandboxées dans des iframes. La vulnérabilité impliquait la bibliothèque JavaScript MathLive intégrée pour les rendus graphiques. Ce cas met en lumière les risques d'exfiltration d'API et de données privées lors du rendu de code HTML généré par IA.",
+   "specificites": [
+    "Vecteur d'attaque reposant sur l'injection et l'évasion d'iframe sandboxée",
+    "Exploitation de dépendances tierces (librairie JS MathLive) intégrées dans le pipeline de rendu",
+    "Risque direct d'accès non autorisé aux tokens API et sessions utilisateur de l'environnement hôte"
+   ],
+   "pourquoi": "Crucial pour sécuriser les pipelines de scraping et d'affichage HTML dynamique afin d'éviter l'exécution de payloads malveillants au sein de nos interfaces d'agents.",
+   "titre": "How We Took Over ChatGPT Accounts",
+   "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOc1lMUGhmc3dMOElMYW41ZG1LLXdnbGZFZ3BNV2F5by1rNWpkSUpoMXhMUGVhUVBCVDZmaVVqbklrT0FFVjlieERXeDdsMVp1Ql9IX0FVOVM3T1ZBeUVBdXRiSmtKd1RzSll1N0Zsd0VJTEUwNHVhcGpGdEx2VE9JUHlxNkNpUThOSExsVVhGYUVTN1lCd0FtclUxZ3F5UDFRYWtBN0VQSlhKOW1BQVRv?oc=5",
+   "categorie": "modele",
+   "resume": "L'extension officielle VS Code d'Anthropic intégrée sur l'éditeur Cursor est restée corrompue par une porte dérobée (backdoor) pendant près de 12 heures. Cet incident de supply chain illustre la vulnérabilité des environnements d'ingénierie augmentés par l'IA face aux compromissions de paquets. Le problème soulève des alertes critiques sur la télémétrie et l'accès au code source d'entreprise.",
+   "specificites": [
+    "Compromission de la supply chain ciblant les développeurs via le marketplace d'extensions Cursor",
+    "Fenêtre d'exposition de près de 12 heures avant mitigation",
+    "Menace d'exfiltration directe sur les dépôts de code et clés d'API locales"
+   ],
+   "pourquoi": "Alerte de sécurité critique imposant de durcir le monitoring réseau et la gestion des accès API au sein des postes développant nos intégrations MCP.",
+   "titre": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours - Ars Technica",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOc1lMUGhmc3dMOElMYW41ZG1LLXdnbGZFZ3BNV2F5by1rNWpkSUpoMXhMUGVhUVBCVDZmaVVqbklrT0FFVjlieERXeDdsMVp1Ql9IX0FVOVM3T1ZBeUVBdXRiSmtKd1RzSll1N0Zsd0VJTEUwNHVhcGpGdEx2VE9JUHlxNkNpUThOSExsVVhGYUVTN1lCd0FtclUxZ3F5UDFRYWtBN0VQSlhKOW1BQVRv?oc=5",
+   "source": "Anthropic / Claude (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPS2NLQkY3WXNvRTJ0ZG5oN0Jfb1ROVUFIUURmcWhPcFVuRThnQ3dzZmdreUdla2ltN3o2NzlwU0k5TnhXNVJTRHE5aGdRVjV4c0g4aDM1anFjcHhsSTM1U21TcDc4Z2xQNHB1dTlNcG9QNk5XMm5Udk03dmdMRUxVY0p3dXVEQVFjZUpiaVpyVmVjeXZNMzFXVFB4SzlqWVlXUUZVNGJLRjg1NlpnU1JDYXVsNzBlNzNwaG81Vm1XYTNXTEs1cDFGS2t3TEFfRm9oa3EzeVZJTS10SmxpdXc?oc=5",
+   "categorie": "comparatif",
+   "resume": "Mistral a mis à disposition les poids de 'Le Chonk', un modèle ouvert atteignant le trillion de paramètres spécialisé pour le développement logiciel et la cybersécurité. Ce modèle open-weights cible frontalement les tâches d'analyse statique, d'audit de sécurité et de génération de code complexe. Il redéfinit l'échelle des modèles hébergeables pour les cas d'usage techniques avancés.",
+   "specificites": [
+    "Échelle inédite pour un modèle ouvert : ~1 trillion de paramètres (open weights)",
+    "Spécialisation poussée sur le code, l'analyse de failles et la défense cyber",
+    "Alternative on-premise potentielle aux modèles closed-source pour les environnements de dev sécurisés"
+   ],
+   "pourquoi": "Fournit une cible d'évaluation majeure pour remplacer les LLMs propriétaires dans nos tâches de text-to-SQL et d'analyse statique de code.",
+   "titre": "Mistral releases the weights of Le Chonk, its trillion-parameter open model built for coders and cyber defenders - Dealroom",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPS2NLQkY3WXNvRTJ0ZG5oN0Jfb1ROVUFIUURmcWhPcFVuRThnQ3dzZmdreUdla2ltN3o2NzlwU0k5TnhXNVJTRHE5aGdRVjV4c0g4aDM1anFjcHhsSTM1U21TcDc4Z2xQNHB1dTlNcG9QNk5XMm5Udk03dmdMRUxVY0p3dXVEQVFjZUpiaVpyVmVjeXZNMzFXVFB4SzlqWVlXUUZVNGJLRjg1NlpnU1JDYXVsNzBlNzNwaG81Vm1XYTNXTEs1cDFGS2t3TEFfRm9oa3EzeVZJTS10SmxpdXc?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.636",
+   "categorie": "parsing",
+   "resume": "Le projet open-source Firecrawl poursuit son cycle de versions rapides avec la publication de l'image API v2.11.636 (succédant aux v2.11.633 à v2.11.635). Ces versions itératives stabilisent le moteur de conversion du web brut vers du Markdown propre pour LLM. Elles corrigent les régressions d'extraction et de scraping headless en production.",
+   "specificites": [
+    "Mise à jour directe de l'image de conteneur de l'API Firecrawl (v2.11.636)",
+    "Nettoyage et formatage HTML vers Markdown optimisé pour injection en contexte RAG",
+    "Améliorations continues sur la robustesse du scraping et la gestion des flux de crawling"
+   ],
+   "pourquoi": "Outil central de notre stack de scraping et parsing HTML, à synchroniser dans notre infrastructure d'ingestion.",
+   "titre": "Firecrawl v2.11.636",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.636",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPenZqSmRiWTZNcmJwazhxcVlITk5SdFc0TThJaEtySEtYR1VLQzJmaDQ0VlFEQ1RvUE9ZVmtud1I4U3ItaTFLLXFpRmR2c1lwNC1SamcwV25SR0FRZGZPX0R2elZPRWlzZ2FtUjVVT0d1TnBlR25OWGlLakctZVQtQi1LdGsyY2I5OFFBRHZvSlhDWVRiWHBqYkkxZFJGSFdCOUZmeVlkZjJjM05IRGptdWgwbDFMLWhHWlFOQWR3?oc=5",
+   "categorie": "parsing",
+   "resume": "Un article technique de Meteora Web analyse l'harmonisation du standard robots.txt comme signal universel pour interdire ou restreindre l'indexation par les scrapers d'IA. Le texte aborde l'impact de ces directives sur les crawlers de données d'entraînement et d'inférence en direct. Il met en lumière les tensions entre respect des protocoles web et collecte automatisée.",
+   "specificites": [
+    "Normalisation des user-agents et directives robots.txt spécifiques aux bots IA",
+    "Gestion du filtrage en amont dans les pipelines de scraping dynamique",
+    "Impact sur le taux d'échec et les blocages réseau rencontrés par les agents web"
+   ],
+   "pourquoi": "Indispensable pour configurer les stratégies de fallback et la conformité légale/technique de nos agents de scraping web.",
+   "titre": "Robots.txt, one shared signal to block AI - Meteora Web",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPenZqSmRiWTZNcmJwazhxcVlITk5SdFc0TThJaEtySEtYR1VLQzJmaDQ0VlFEQ1RvUE9ZVmtud1I4U3ItaTFLLXFpRmR2c1lwNC1SamcwV25SR0FRZGZPX0R2elZPRWlzZ2FtUjVVT0d1TnBlR25OWGlLakctZVQtQi1LdGsyY2I5OFFBRHZvSlhDWVRiWHBqYkkxZFJGSFdCOUZmeVlkZjJjM05IRGptdWgwbDFMLWhHWlFOQWR3?oc=5",
+   "source": "Scraping et parsing HTML (actualités)"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+   "categorie": "pratique",
+   "resume": "Simon Willison a publié la version 0.1a9 du plugin 'datasette-llm', simplifiant l'intégration de Datasette Agent. Le plugin hérite désormais automatiquement du modèle par défaut configuré au niveau de l'outil LLM global, évitant la redéclaration manuelle d'arguments en ligne de commande. Cette modification fluidifie l'utilisation des workflows text-to-SQL sur bases SQLite.",
+   "specificites": [
+    "Support de l'héritage de configuration du modèle par défaut pour 'datasette-agent'",
+    "Exécution simplifiée via 'uvx --with datasette-agent datasette'",
+    "Suppression du paramètre obligatoire d'assignation explicite du modèle (ex. gpt-6-astra)"
+   ],
+   "pourquoi": "Améliore l'outillage pour nos pipelines text-to-SQL légers et le prototypage rapide d'agents de requêtage de bases de données.",
+   "titre": "datasette-llm 0.1a9",
+   "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTEFtb2NlWFgyM0RlRnpwODA2X05BYnhYOURaQ2xiOHg1YnlraFBoeDBVMFFfR0xLU25CRUN4YUFHV0RnYXVwNWFqalNZWnAtakFBX3hBZmtNcW4zNHVGdWQ5eFhhUWc2LWxqYW9EMEhveGpCUG52YUFtUURMenFMRFVYVWhFRzBLOThvNm5xdkxXbV9PcTBKV2NqYkdRajA1MmFjamxNZ0FGcWtT?oc=5",
+   "categorie": "modele",
+   "resume": "Alibaba et Apple ont conclu un accord prévoyant l'intégration des modèles de la famille Qwen pour propulser les fonctionnalités d'Apple Intelligence en Chine. Cette adoption valide les performances de Qwen sur les tâches sur appareil et dans le cloud dans un cadre réglementaire strict. Le déploiement consacre la position de Qwen face aux modèles occidentaux sur les marchés asiatiques.",
+   "specificites": [
+    "Intégration au sein de l'écosystème Apple Intelligence pour le marché chinois",
+    "Validation industrielle des capacités de raisonnement et de conformité locale de Qwen",
+    "Positionnement stratégique fort pour la série Qwen3.8 dans des contextes de production grand public"
+   ],
+   "pourquoi": "Confirme la pertinence d'intégrer Qwen3.8 (notamment les variantes Flash à 0,15 $ / 0,47 $) comme solution de premier plan dans nos architectures multilingues.",
+   "titre": "Alibaba’s Qwen AI to power Apple Intelligence features in China - Türkiye Today",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTEFtb2NlWFgyM0RlRnpwODA2X05BYnhYOURaQ2xiOHg1YnlraFBoeDBVMFFfR0xLU25CRUN4YUFHV0RnYXVwNWFqalNZWnAtakFBX3hBZmtNcW4zNHVGdWQ5eFhhUWc2LWxqYW9EMEhveGpCUG52YUFtUURMenFMRFVYVWhFRzBLOThvNm5xdkxXbV9PcTBKV2NqYkdRajA1MmFjamxNZ0FGcWtT?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrRU5xQ1VCVFhMQjhrRWtEajNiYmRRRk9NbkM0Zk5qT3dOMGg0WkFyMHlJQ2dnN3dCakFPT2NqemdBcVV2d0szbW1BQzZNclAzY2NENngtb2ZaUlFtZjBySUpXbDBXVHRmbm9J?oc=5",
+   "categorie": "robotique",
+   "resume": "Meta a développé son robot humanoïde nommé 'Max' en partenariat avec l'entreprise chinoise Fourier Intelligence, finalisant la conception en trois mois seulement. Ce cycle de développement très court s'appuie sur des composants matériels préexistants combinés aux modèles d'IA de Meta. L'entreprise travaille déjà sur une version améliorée.",
+   "specificites": [
+    "Conception matérielle conjointe avec le spécialiste robotique Fourier",
+    "Délai d'itération réduit à 3 mois pour le premier prototype",
+    "Convergence accrue entre la recherche en embodied AI de Meta et le hardware robotique"
+   ],
+   "pourquoi": "Permet de surveiller l'évolution des modèles de contrôle d'actions physiques et d'embodied AI développés par Meta pour nos réflexions d'automatisation.",
+   "titre": "Meta humanoid robot Max was built with China’s Fourier in three months - The Next Web",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrRU5xQ1VCVFhMQjhrRWtEajNiYmRRRk9NbkM0Zk5qT3dOMGg0WkFyMHlJQ2dnN3dCakFPT2NqemdBcVV2d0szbW1BQzZNclAzY2NENngtb2ZaUlFtZjBySUpXbDBXVHRmbm9J?oc=5",
+   "source": "Robots humanoïdes (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBGbjFEcWFkdk85YXY3Rng4RGpiMDJkQjY4MUN2MW15cHFodTZlNEFYT1BJb0FEekFfY2pva2o0RHpnS1JrRFFMU0ZqN1hxZEVuZTh2Y1d6d0FDMkZtLXF3WnZjSUNnaFhRZDctUXN3?oc=5",
+   "categorie": "comparatif",
+   "resume": "La revue hebdomadaire synthétise l'actualité des benchmarks et des évolutions de modèles IA au 31 octobre. Elle couvre les dernières métriques comparatives publiées par les acteurs du secteur face à la montée en charge des modèles de raisonnement. Ce tour d'horizon permet de suivre l'état de l'art sur les tâches logiques et d'ingénierie.",
+   "specificites": [
+    "Synthèse hebdomadaire des benchmarks de la communauté au 31/10",
+    "Regroupement des données de performance relatives sur le code et le raisonnement",
+    "Suivi de l'évolution des leaders de modèles ouverts vs propriétaires"
+   ],
+   "pourquoi": "Utile pour disposer d'une base comparative consolidée afin d'arbitrer les choix de modèles au sein de l'équipe.",
+   "titre": "AI Week in Review 26.10.31 - Substack",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBGbjFEcWFkdk85YXY3Rng4RGpiMDJkQjY4MUN2MW15cHFodTZlNEFYT1BJb0FEekFfY2pva2o0RHpnS1JrRFFMU0ZqN1hxZEVuZTh2Y1d6d0FDMkZtLXF3WnZjSUNnaFhRZDctUXN3?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  }
+ ],
+ "tendance": "La tendance majeure est à la structuration modulaire des agents autonomes de code (architecture Router-Worker de DeepSeek avec dsh-superagent, modèle trillion-paramètres Le Chonk de Mistral), accompagnée d'une vigilance accrue sur la sécurité (vulnérabilités d'injection dans les artefacts HTML et compromission de supply chain d'extensions d'IDE). En parallèle, la réduction drastique des coûts d'inférence en entrée sur les modèles à long contexte (jusqu'à 1M tokens) accélère le déploiement de pipelines de traitement massif pour le scraping et le RAG.",
+ "comparatif": "### Analyse comparative des coûts d'inférence ($ / million de tokens)\n\n* **Changements tarifaires récents** :\n  * `deepseek/deepseek-v4-pro-0813` a vu sa grille profondément remaniée : le token d'entrée s'effondre à **0,115 $** (contre 0,66 $ auparavant), tandis que la génération bondit à **4,0 $** (contre 1,98 $ auparavant). Cela en fait un choix très avantageux pour les gros volumes de contexte en lecture (RAG/scraping dense), mais pénalisant pour les réponses très verbeuses.\n\n* **Meilleur rapport qualité/prix pour le Scraping HTML, Parsing et RAG volumineux** :\n  * `deepseek/deepseek-v4.1-flash` s'impose comme le leader absolu du coût à l'ingestion : **0,045 $ / M tokens en entrée** et **0,5 $ / M en sortie** avec une fenêtre de **1 048 576 tokens**. Idéal pour ingérer des pages web brutes ou des documents massifs.\n  * `nvidia/nemotron-3.5-lightning` offre l'option la plus économique sur contexte moyen (262k) : **0,07 $ en entrée** et **0,2 $ en sortie**.\n  * `meta-llama/llama-4-scout` se positionne extrêmement bien avec un contexte record de **1 310 720 tokens** à seulement **0,1 $ en entrée** et **0,3 $ en sortie**.\n  * `anthropic/claude-haiku-5.5` propose pour le monde Anthropic un ratio agressif à **0,1 $ en entrée** et **0,5 $ en sortie** pour **1 000 000 tokens**, parfait comme worker d'extraction structurée.\n\n* **Meilleur compromis pour les Agents, Text-to-SQL et Routage (Router-Worker)** :\n  * `mistralai/mistral-large-4-0` offre d'excellentes capacités de raisonnement à coût modéré : **0,7 $ en entrée / 2,1 $ en sortie** pour **1 048 576 tokens** de contexte. C'est nettement moins cher que les modèles de tête concurrents.\n  * `mistralai/devstral-2512` représente une alternative ultra-ciblée pour le code à **0,4 $ en entrée / 2,0 $ en sortie** (contexte 262k).\n  * `openai/gpt-6.1-terra-pro` et `terra` affichent un tarif équilibré pour la stack OpenAI : **1,0 $ entrée / 5,0 $ sortie** sur **1 050 000 tokens**, soit 50 % moins cher que `gpt-6.1-sol` (**2,0 $ / 10,0 $**).\n  * `qwen/qwen3.8-flash` constitue un choix d'appoint très solide pour le function calling et SQL : **0,15 $ entrée / 0,47 $ sortie** pour **1 000 000 tokens**.\n\n* **Modèles haut de gamme (Orchestration lourde / Raisonnement complexe)** :\n  * `anthropic/claude-sonnet-5.5` (**2,0 $ / 10,0 $**), `openai/gpt-6.1-sol-pro` (**2,0 $ / 10,0 $**) et `google/gemini-4-argon` (**2,0 $ / 10,0 $**) sont au coude-à-coude tarifaire sur le segment premium standard.\n  * `qwen/qwen3.8-max-prime` (**4,0 $ / 12,0 $**) et `anthropic/claude-opus-5.5` (**4,0 $ / 20,0 $**) ferment la marche en tête de coût, à réserver exclusivement aux étapes d'arbitrage critique ou d'analyse complexe ne pouvant être résolues par un modèle flash ou medium.",
+ "date": "2026-11-01",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.8-flash",
+   "nom": "Google: Gemini 3.8 Flash",
+   "fournisseur": "google",
+   "entree": 0.825,
+   "sortie": 4.125,
+   "contexte": 1048576,
+   "cree": 1788362056,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.7-flash",
+   "nom": "Google: Gemini 3.7 Flash",
+   "fournisseur": "google",
+   "entree": 0.75,
+   "sortie": 3.75,
+   "contexte": 1048576,
+   "cree": 1786640581,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.188,
+   "sortie": 0.652,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.32,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.045,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.115,
+   "sortie": 4.0,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 0.66 / 1.98 $)"
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

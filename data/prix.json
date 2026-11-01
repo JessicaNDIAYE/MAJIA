@@ -233,11 +233,11 @@
   "id": "deepseek/deepseek-v4-pro-0813",
   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
   "fournisseur": "deepseek",
-  "entree": 0.66,
-  "sortie": 1.98,
+  "entree": 0.115,
+  "sortie": 4.0,
   "contexte": 1048576,
   "cree": 1786549364,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.66 / 1.98 $)"
  },
  {
   "id": "qwen/qwen3.8-max-prime",
