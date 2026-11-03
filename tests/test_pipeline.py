@@ -281,3 +281,35 @@ def test_site_historique_hier_et_weekend(tmp_path):
     assert "../jour/2026-10-31.html" in dimanche and "../jour/2026-11-02.html" in dimanche
     historique = (sortie / "archives.html").read_text(encoding="utf-8")
     assert "Novembre 2026" in historique and "Octobre 2026" in historique
+
+
+def test_gemini_bascule_sur_un_modele_de_secours(monkeypatch):
+    from veille import llm
+    appels = []
+
+    class R:
+        def __init__(self, code, donnees=None):
+            self.status_code, self.ok, self.text, self._d = code, code == 200, "high demand", donnees
+
+        def json(self):
+            return self._d
+
+        def raise_for_status(self):
+            pass
+
+    reponse = {"candidates": [{"content": {"parts": [{"text": '{"ok": 1}'}]}}]}
+    modeles = {"models": [{"name": "models/gemini-3-flash", "supportedGenerationMethods": ["generateContent"]}]}
+
+    def post(url, **_):
+        appels.append(url.split("/models/")[1].split(":")[0])
+        return R(200, reponse) if "flash-lite-latest" in url else R(503)
+
+    monkeypatch.setattr(llm.requests, "post", post)
+    monkeypatch.setattr(llm.requests, "get", lambda *a, **k: R(200, modeles))
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+    monkeypatch.delenv("GEMINI_MODELES_SECOURS", raising=False)
+
+    client = llm.GeminiLLM(cle="x", modele="gemini-flash-latest")
+    assert client.json("p") == {"ok": 1}
+    assert client.modele == "gemini-flash-lite-latest"
+    assert appels == ["gemini-flash-latest"] * 4 + ["gemini-3-flash"] * 4 + ["gemini-flash-lite-latest"]

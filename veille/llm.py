@@ -59,8 +59,12 @@ Réponds UNIQUEMENT en JSON avec ce format :
 "lecon": {{"titre": "...", "markdown": "..."}}}}"""
 
 
+SURCHARGE = (429, 500, 502, 503, 504)
+
+
 class GeminiLLM:
-    """Client Gemini. Si le modèle demandé n'existe plus, choisit le meilleur modèle Flash disponible."""
+    """Client Gemini. Si le modèle demandé n'existe plus, choisit le meilleur modèle Flash disponible ;
+    s'il reste surchargé malgré les réessais, bascule sur des modèles de secours."""
 
     def __init__(self, cle=None, modele=None):
         self.cle = cle or os.environ["GEMINI_API_KEY"]
@@ -75,7 +79,7 @@ class GeminiLLM:
             try:
                 r = requests.post(GEMINI_URL.format(modele=self.modele), params={"key": self.cle},
                                   json=corps, timeout=300)
-                if r.status_code not in (429, 500, 502, 503, 504) or essai == 3:
+                if r.status_code not in SURCHARGE or essai == 3:
                     return r
                 log.warning("Gemini : erreur %s, nouvel essai", r.status_code)
             except (requests.ConnectionError, requests.Timeout) as exc:
@@ -90,10 +94,27 @@ class GeminiLLM:
             ancien, self.modele = self.modele, self.choisir_modele()
             log.warning("Modèle %s introuvable, utilisation de %s", ancien, self.modele)
             r = self._appeler(prompt)
+        if r.status_code in SURCHARGE:
+            for secours in self.modeles_secours():
+                log.warning("Gemini %s indisponible (%s), essai avec %s", self.modele, r.status_code, secours)
+                self.modele = secours  # garde le modèle qui répond pour les appels suivants
+                r = self._appeler(prompt)
+                if r.status_code not in SURCHARGE:
+                    break
         if not r.ok:
             raise RuntimeError(f"Gemini {self.modele} : erreur {r.status_code} — {r.text[:500]}")
         texte = r.json()["candidates"][0]["content"]["parts"][0]["text"]
         return json.loads(texte)
+
+    def modeles_secours(self):
+        """Modèles à essayer quand le principal est surchargé (réglable via GEMINI_MODELES_SECOURS)."""
+        noms = os.environ.get("GEMINI_MODELES_SECOURS") or "gemini-flash-lite-latest,gemini-pro-latest"
+        noms = [n.strip() for n in noms.split(",") if n.strip()]
+        try:
+            noms.insert(0, self.choisir_modele())  # version précise du dernier Flash
+        except Exception as exc:
+            log.warning("Liste des modèles Gemini indisponible : %s", exc)
+        return [n for n in dict.fromkeys(noms) if n != self.modele]
 
     def choisir_modele(self):
         r = requests.get(GEMINI_MODELES_URL, params={"key": self.cle, "pageSize": 1000}, timeout=30)
