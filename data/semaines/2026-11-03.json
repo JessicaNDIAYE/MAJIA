@@ -1,0 +1,539 @@
+{
+ "selection": [
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.74.0",
+   "categorie": "monitoring",
+   "resume": "Langfuse publie la version v4.74.0 introduisant des limites de requêtes et de volume d'octets par organisation sur son endpoint /resolve de l'AI-Gateway. La release intègre également l'audit systématique des accès support dans ClickHouse et masque les modèles dépréciés d'OpenAI et retirés d'Anthropic.",
+   "specificites": [
+    "Rate limiting par organisation en volume d'octets et de requêtes sur /resolve",
+    "Persistance des lectures de support dans ClickHouse pour l'audit",
+    "Nettoyage du routage AI-Gateway pour exclure les modèles arrêtés d'OpenAI et Anthropic"
+   ],
+   "pourquoi": "Essentiel pour durcir la gouvernance de vos passerelles LLM et monitorer les coûts/quotas par projet en production.",
+   "titre": "Langfuse v4.74.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.74.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+   "categorie": "modele",
+   "resume": "La mise à jour v2.1.317 de Claude Code renforce la sécurité des flux d'outils et de l'Agent SDK. Elle introduit onFailure: 'block' pour suspendre les actions en cas d'erreur de hook, ajoute une validation avant l'envoi de l'adresse email par les outils web/shell, et notifie l'absence de réponse sur les tool calls des sous-agents en auto-mode.",
+   "specificites": [
+    "Paramètre onFailure: 'block' pour empêcher l'exécution non supervisée après incident d'un hook",
+    "Garde-fou réseau bloquant l'exfiltration involontaire d'identifiants/emails",
+    "Contrôles accrus sur l'allocation de connecteurs non requis via /schedule"
+   ],
+   "pourquoi": "Directement applicable pour sécuriser l'exécution de vos agents et intégrations MCP contre les régressions et fuites de données.",
+   "titre": "Claude Code v2.1.317",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+   "source": "Claude Code (releases)"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.00442",
+   "categorie": "article",
+   "resume": "Cette publication étudie la dégradation de fidélité dans les agents de production manipulant des données structurées. L'étude démontre que la corruption des données ne provient pas du nombre de tours de conversation, mais de la taille des tables injectées en contexte (architecture SYNTHESIS vs BYPASS basée sur l'état de session).",
+   "specificites": [
+    "Démontre que ré-émettre des enregistrements tabulaires dans le contexte à chaque tour corrompt les calculs corrects de l'outil",
+    "Architecture BYPASS : maintien des tables volumineuses dans l'état de session hors contexte",
+    "Architecture SYNTHESIS : dégradation rapide de la précision par saturation du contexte"
+   ],
+   "pourquoi": "Crucial pour fiabiliser vos pipelines Text-to-SQL et agents RAG en évitant d'injecter l'intégralité des tables dans l'historique de prompt.",
+   "titre": "Fidelity Collapses with Table Size, Not Turn Count: Delivery Architecture in a Deployed Tool-Using Agent",
+   "url": "https://arxiv.org/abs/2611.00442",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.00171",
+   "categorie": "article",
+   "resume": "Ce survey analyse les architectures LLM modernes pour le Text-to-SQL en comparant des frameworks comme ReFoRCE, Agentar-Scale-SQL, Snowflake Arctic-Text2SQL-R1 et XiYan-SQL. Il détaille les mécanismes de schema linking, de décodage contraint et les stratégies multi-agents.",
+   "specificites": [
+    "Comparatif des architectures modulaires (ex. XiYan-SQL) et spécialisées (Arctic-Text2SQL-R1)",
+    "Analyse du décodage sous contrainte pour garantir la syntaxe SQL",
+    "Stratégies d'extraction de schéma pour réduire les hallucinations de colonnes/tables"
+   ],
+   "pourquoi": "Fournit un état de l'art technique indispensable pour architecturer vos agents d'interrogation de bases de données relationnelles.",
+   "titre": "Reimagining Text-to-SQL: A Survey of Large Language Model Architectures and Strategies",
+   "url": "https://arxiv.org/abs/2611.00171",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.00244",
+   "categorie": "article",
+   "resume": "Les auteurs présentent MEMENTO, un agent basé sur Qwen3-8B entraîné à la gestion dynamique de son contexte via la compaction. Contrairement aux modèles comme GPT-5.5 ou GLM-5.3 dont les résumés générés spontanément dégradent la précision, MEMENTO apprend à créer des notes d'historique conservant les dépendances critiques.",
+   "specificites": [
+    "Entraînement explicite à la compaction d'historique sur base Qwen3-8B",
+    "Remédie aux échecs de RL standard pour découvrir des stratégies de prise de notes efficaces",
+    "Alternative ciblée pour maintenir des agents longue durée dans des fenêtres de contexte finies"
+   ],
+   "pourquoi": "Permet de concevoir des agents capables de naviguer sur de très longues sessions d'interaction sans perte d'information clé.",
+   "titre": "MEMENTO: Learning Context Management for Long Context Processing Agents",
+   "url": "https://arxiv.org/abs/2611.00244",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.00169",
+   "categorie": "parsing",
+   "resume": "L'article formalise le problème de la collecte thématique de données web et introduit PatchScout, une approche d'information foraging. Le système résout les limites des crawlers classiques et des agents LLM limités aux horizons courts pour rassembler des documents non liés structurellement sur le web.",
+   "specificites": [
+    "Dépasse les limites d'exploration locale des parsers HTML traditionnels",
+    "Mécanismes de décision par foraging pour éviter l'arrêt prématuré de l'agent web",
+    "Assemblage automatisé de corpus distribués et sémantiquement cohérents"
+   ],
+   "pourquoi": "Offre des patterns algorithmiques exploitables pour concevoir des scrapers IA naviguant au-delà du crawling de liens bruts.",
+   "titre": "PatchScout: Thematic Web Data Collection via Information Foraging",
+   "url": "https://arxiv.org/abs/2611.00169",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.00450",
+   "categorie": "article",
+   "resume": "Le papier propose ResMem, une méthode permettant de distiller des connaissances récupérées via RAG directement dans la mémoire paramétrique du LLM. Cela permet de répondre à des requêtes sans devoir systématiquement exécuter de retriever en ligne, diminuant ainsi les coûts de calcul et de stockage.",
+   "specificites": [
+    "Entraînement combinant prédictions existantes du modèle et données récupérées pour éviter les interférences",
+    "Suppression des requêtes de retrieval en direct pour les faits statiques appris",
+    "Réduction mesurable de la latence d'inférence et des coûts de vector DB"
+   ],
+   "pourquoi": "Très utile pour optimiser les coûts et le temps de réponse de vos pipelines RAG sur les connaissances stables.",
+   "titre": "From Lookups to Lessons: Turning Retrieved Knowledge into Parametric Memory",
+   "url": "https://arxiv.org/abs/2611.00450",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.00491",
+   "categorie": "article",
+   "resume": "Cet article analyse les biais des architectures LLM-as-a-judge lors de l'évaluation automatisée. Les auteurs introduisent VoirDire, un protocole d'agrégation calibré par interventions contrefactuelles afin d'éliminer les biais communs comme la verbosité, le formatage ou la fluidité.",
+   "specificites": [
+    "Distinction mathématique entre accord réel sur la qualité et corrélation fallacieuse (verbosité, style)",
+    "Méthode d'intervention contrefactuelle appliquée aux panels de modèles juges",
+    "Amélioration de la fiabilité des pipelines d'évaluation automatisée"
+   ],
+   "pourquoi": "Indispensable pour mettre en place des métriques d'observabilité rigoureuses et sans biais pour évaluer vos agents et RAG.",
+   "titre": "VoirDire: Counterfactual Calibration for Reliable LLM-as-a-Judge Aggregation",
+   "url": "https://arxiv.org/abs/2611.00491",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBUzI5TE1ISHhVNEhIMkUxSDNyYWktVXpOY2NhbnQ2alItYm4zWVBoQVhtbUtkZTBHdVl6NVdQYnkwa0l2Q200Z0VSdlZyWmJvekdsWHkwaWdCWHEzYlh3Uno0NjdaNnRqWTZj?oc=5",
+   "categorie": "comparatif",
+   "resume": "Le rapport d'infrastructure de Beam met en évidence les gains de coût directs obtenus en limitant le volume de tokens générés lors de l'inférence. L'article détaille comment l'élagage des contextes et l'optimisation des réponses réduisent drastiquement les factures d'API de leurs pipelines.",
+   "specificites": [
+    "Quantification de l'impact direct de la taille de sortie sur les factures d'inférence",
+    "Mise en avant des gains par rapport à une optimisation exclusive des invites système",
+    "Corrélation directe entre tokens de raisonnement émis et coût marginal"
+   ],
+   "pourquoi": "Apporte des arguments quantitatifs pour imposer le streaming contraint et des limites de tokens stricts dans vos agents.",
+   "titre": "Generating Fewer Tokens Helps Beam Cut AI Inference Bills - Geeky Gadgets",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBUzI5TE1ISHhVNEhIMkUxSDNyYWktVXpOY2NhbnQ2alItYm4zWVBoQVhtbUtkZTBHdVl6NVdQYnkwa0l2Q200Z0VSdlZyWmJvekdsWHkwaWdCWHEzYlh3Uno0NjdaNnRqWTZj?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://github.com/NVIDIA/auto-ontology",
+   "categorie": "pratique",
+   "resume": "NVIDIA a rendu open-source son projet auto-ontology, un outil automatisé pour construire et structurer des ontologies à partir de données textuelles. Le framework permet d'organiser les relations conceptuelles complexes sans modélisation manuelle préalable.",
+   "specificites": [
+    "Automatisation de l'extraction d'entités et de hiérarchies de classes",
+    "Dépôt open-source accessible pour des intégrations sur mesure",
+    "Standardisation exploitable pour structurer des graphes de connaissances"
+   ],
+   "pourquoi": "Idéal pour accélérer la conception de schémas de graphes dans vos systèmes Graph-RAG et text-to-SQL complexes.",
+   "titre": "Nvidia – open-source auto-ontology",
+   "url": "https://github.com/NVIDIA/auto-ontology",
+   "source": "Hacker News — IA (front page)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQR1UzNE55RTVOTnl4MF9DUnpNaFZDRGdwVVZxSHh1T1RGVVJ2MnROdmpFV3ZCN0tDaEtDanZiN0pOR2o4V0JTallIZmhlMjVLMGtiS1lGb2c1NHFaelVhcVJJTS1rbFZHSnlFQ2Nod2FwZlhUcS1ZNHVXV09KbWV1eFM2R1dMLWl3UVRYWGFYOU5Rc1hwc09WTVZYd3Q?oc=5",
+   "categorie": "monitoring",
+   "resume": "CrowdStrike a annoncé l'acquisition de la plateforme Fiddler afin d'intégrer une couche d'observabilité et de sécurité dédiée aux agents IA. L'opération vise à fournir des contrôles de conformité, de détection d'anomalies de décision et de monitoring d'exécution en environnement d'entreprise.",
+   "specificites": [
+    "Intégration native de l'observabilité agentique dans une plateforme de sécurité cloud",
+    "Surveillance en temps réel de la dérive des modèles et des actions des agents",
+    "Convergence entre monitoring de performance LLM et sécurité opérationnelle"
+   ],
+   "pourquoi": "Signale l'évolution des exigences d'entreprise où observabilité et sécurité des agents LLM deviennent interdépendantes.",
+   "titre": "CrowdStrike to Acquire Fiddler to Deliver Agent Observability for AI Trust - 01net",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQR1UzNE55RTVOTnl4MF9DUnpNaFZDRGdwVVZxSHh1T1RGVVJ2MnROdmpFV3ZCN0tDaEtDanZiN0pOR2o4V0JTallIZmhlMjVLMGtiS1lGb2c1NHFaelVhcVJJTS1rbFZHSnlFQ2Nod2FwZlhUcS1ZNHVXV09KbWV1eFM2R1dMLWl3UVRYWGFYOU5Rc1hwc09WTVZYd3Q?oc=5",
+   "source": "Observabilité LLM (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWFrUm41VGlrbHRQSFU2WUFFS2hMVGNFUEFlTlgwbnVCUlM0WXFkRzR5NzJMM0JoUlBTSkdFSjhKUHdfeHlzb0dOZHBYdGx6MDhtWVhUNlBNOG1jcldTX05GM2JoZVJlSHJCUm1VZ2xtakF2ZmxoSS1RQWRvQTNNTmdRWDVscWNGZUE?oc=5",
+   "categorie": "robotique",
+   "resume": "Meta collabore avec la société chinoise Fourier pour intégrer son agent d'IA Muse au sein d'une plateforme de robot humanoïde. Ce partenariat illustre le déploiement d'agents de décision multimodaux dans des architectures de contrôle physique.",
+   "specificites": [
+    "Intégration d'un agent IA généraliste (Muse) sur le hardware robotique de Fourier",
+    "Convergence entre modèles de vision-langage-action et plateformes humanoïdes",
+    "Validation concrète du déploiement physique d'agents multimodaux"
+   ],
+   "pourquoi": "Permet de suivre le portage des architectures agentiques avancées vers les actionneurs physiques et la robotique.",
+   "titre": "Meta & China’s Fourier: A Humanoid Robot for Muse AI Agent - AI Magazine",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWFrUm41VGlrbHRQSFU2WUFFS2hMVGNFUEFlTlgwbnVCUlM0WXFkRzR5NzJMM0JoUlBTSkdFSjhKUHdfeHlzb0dOZHBYdGx6MDhtWVhUNlBNOG1jcldTX05GM2JoZVJlSHJCUm1VZ2xtakF2ZmxoSS1RQWRvQTNNTmdRWDVscWNGZUE?oc=5",
+   "source": "Robots humanoïdes (actualités)"
+  }
+ ],
+ "tendance": "L'accent technique du jour porte sur la fiabilisation des agents et la rationalisation des architectures de contexte : les recherches démontrent que la saturation de la fenêtre de contexte par des données tabulaires corrompt les états d'agents, poussant à isoler le stockage hors-prompts ou à entraîner des modèles dédiés à la compaction. En parallèle, les plateformes d'observabilité (Langfuse, Fiddler) durcissent le contrôle d'accès, la gouvernance des coûts et le filtrage des modèles en production.",
+ "comparatif": "### Analyse des coûts et rapport qualité/prix (par million de tokens)\n\n* **Parsing HTML, Scraping et extraction haut volume** :\n  * **DeepSeek V4.1 Flash** s'impose comme le choix le plus agressif du marché avec **0,045 $ en entrée** et **0,5 $ en sortie** pour un contexte de 1 048 576 tokens. C'est le tarif d'entrée le plus bas de la sélection.\n  * **NVIDIA Nemotron 3.5 Lightning** propose le coût de sortie le plus faible (**0,2 $**) et une entrée à **0,07 $**, mais sur un contexte plus restreint de 262 144 tokens.\n  * **Claude Haiku 5.5** (**0,1 $ en entrée, 0,5 $ en sortie**) reste une option solide dotée d'1 million de tokens de contexte pour les flux d'extraction nécessitant un respect strict des formats JSON.\n\n* **Pipelines RAG et Text-to-SQL (Raisonnement intermédiaire et équilibre coût/qualité)** :\n  * **Mistral Large 4** affiche un ratio attractif à **0,7 $ en entrée et 2,1 $ en sortie** avec une fenêtre de 1 048 576 tokens, offrant une alternative européenne économique face aux modèles de pointe.\n  * **Meta Llama 4 Scout** (**0,1 $ entrée / 0,3 $ sortie** pour 1 310 720 tokens) combine une très grande fenêtre de contexte et un prix réduit pour l'injection massive de chunks RAG.\n  * **OpenAI GPT-6.1 Terra / Terra Pro** (**1,0 $ entrée / 5,0 $ sortie**, 1 050 000 tokens) se positionne à la moitié du prix de **GPT-6.1 Sol** et **Gemini 4 Argon** (**2,0 $ entrée / 10,0 $ sortie**), ce qui en fait un bon compromis pour l'orchestration SQL.\n\n* **Agents autonomes complexes (Multi-turn et décisions critiques)** :\n  * **Claude Sonnet 5.5** (**2,0 $ entrée / 10,0 $ sortie**) et **Claude Opus 5.5** (**4,0 $ entrée / 20,0 $ sortie**) demeurent des références pour l'exécution d'outils et le suivi d'instructions complexes sur un contexte de 1M, mais entraînent un coût unitaire élevé en sortie.\n  * **Qwen 3.8 Max Prime** (**4,0 $ entrée / 12,0 $ sortie**) se classe au même niveau de tarification d'entrée qu'Opus, avec une sortie légèrement plus basse.\n\n* **Changements récents constatés** :\n  * **Meta Llama 3.3 70B Instruct** a vu son prix augmenter : il est désormais fixé à **0,2 $ en entrée et 0,52 $ en sortie** (contre 0,1 $ / 0,32 $ précédemment), réduisant son avantage compétitif face aux modèles récents comme DeepSeek V4.1 Flash ou Llama 4 Scout.",
+ "date": "2026-11-03",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.8-flash",
+   "nom": "Google: Gemini 3.8 Flash",
+   "fournisseur": "google",
+   "entree": 0.825,
+   "sortie": 4.125,
+   "contexte": 1048576,
+   "cree": 1788362056,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.7-flash",
+   "nom": "Google: Gemini 3.7 Flash",
+   "fournisseur": "google",
+   "entree": 0.75,
+   "sortie": 3.75,
+   "contexte": 1048576,
+   "cree": 1786640581,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.188,
+   "sortie": 0.652,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.2,
+   "sortie": 0.52,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": "prix modifié (avant 0.1 / 0.32 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.045,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.115,
+   "sortie": 4.0,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

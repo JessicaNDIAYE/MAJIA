@@ -193,11 +193,11 @@
   "id": "meta-llama/llama-3.3-70b-instruct",
   "nom": "Meta: Llama 3.3 70B Instruct",
   "fournisseur": "meta-llama",
-  "entree": 0.1,
-  "sortie": 0.32,
+  "entree": 0.2,
+  "sortie": 0.52,
   "contexte": 131072,
   "cree": 1733506137,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.1 / 0.32 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash-1017",
