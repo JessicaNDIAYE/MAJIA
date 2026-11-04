@@ -1,0 +1,494 @@
+{
+ "selection": [
+  {
+   "id": "https://arxiv.org/abs/2611.03662",
+   "categorie": "article",
+   "resume": "Présentation de MCPGuard, un framework automatisé basé sur LLM pour détecter les écarts de conformité et les omissions de spécifications dans les SDK officiels du Model Context Protocol (MCP).",
+   "specificites": [
+    "Analyse double piste et adjudication dynamique",
+    "Cible les SDK implémentant la validation des messages et la logique de session du MCP",
+    "Permet de remonter les failles de conformité avant qu'elles n'atteignent les applications"
+   ],
+   "pourquoi": "Essentiel pour sécuriser et auditer mes intégrations MCP au niveau des SDK.",
+   "titre": "MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication",
+   "url": "https://arxiv.org/abs/2611.03662",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.03725",
+   "categorie": "article",
+   "resume": "Introduction de RAGLog, une méthode de localisation de pannes sans référence pour les pipelines de Retrieval-Augmented Generation (RAG).",
+   "specificites": [
+    "Détecte et localise les pannes à travers des étapes interdépendantes",
+    "Empêche la propagation des erreurs en cascade dans le pipeline",
+    "Remédie au manque d'outils d'évaluation par étape sans nécessiter de réponses de référence"
+   ],
+   "pourquoi": "Permet d'améliorer directement le monitoring et le debugging de mes pipelines RAG en production.",
+   "titre": "From Logs to Faults: Reference-Free Fault Localization for Retrieval-Augmented Generation Pipelines",
+   "url": "https://arxiv.org/abs/2611.03725",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.03852",
+   "categorie": "article",
+   "resume": "Étude sur l'effet causal de la compaction des historiques de raisonnement sur la génération future et le coût des agents.",
+   "specificites": [
+    "Analyse la réduction des traces longues pour limiter les coûts d'inférence",
+    "Constate que les modèles open-weight peuvent générer un raisonnement moins verbeux en modifiant la forme de leurs pensées antérieures",
+    "Met en lumière l'impact économique des chaînes de pensée superflues"
+   ],
+   "pourquoi": "Fournit des pistes d'optimisation concrètes pour réduire le coût d'exécution de mes agents LLM.",
+   "titre": "Why Pay for Long Reasoning When Rewrite Do Trick? Causal Effects of Reasoning History Compaction on Future Generation and Agent Cost",
+   "url": "https://arxiv.org/abs/2611.03852",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1NSW1XeTdzTC1fV1NSX1pzZExmNlFsSEhTc2xPYlhMMjFJOWpVSi03X0RiVmxETzI2SUNKYjR6anVWVE5JcXdTNmF4Y1VnWVZEMzlxVlU4Um9VZTlKYnRR?oc=5",
+   "categorie": "comparatif",
+   "resume": "Analyse d'Artificial Analysis soulignant l'importance critique du caching pour les agents IA.",
+   "specificites": [
+    "Une défaillance de cache peut multiplier par 10 ou plus le coût d'une tâche d'agent",
+    "Exemple cité : un coût passant de 21 $ à 200 $ à cause d'un défaut de mise en cache",
+    "Met en avant les exigences d'infrastructure pour l'optimisation des coûts"
+   ],
+   "pourquoi": "Motive la mise en place d'un monitoring rigoureux et l'activation systématique du prompt caching dans mes architectures.",
+   "titre": "Without Caching, Your AI Agent Costs 10x More - George Cameron, Artificial Analysis｜AI Engineer - finance.biggo.com",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1NSW1XeTdzTC1fV1NSX1pzZExmNlFsSEhTc2xPYlhMMjFJOWpVSi03X0RiVmxETzI2SUNKYjR6anVWVE5JcXdTNmF4Y1VnWVZEMzlxVlU4Um9VZTlKYnRR?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.75.0",
+   "categorie": "monitoring",
+   "resume": "Mise à jour v4.75.0 de Langfuse intégrant des améliorations majeures sur l'AI Gateway et les traces.",
+   "specificites": [
+    "Augmentation des limites de la passerelle Pro/Team/Enterprise à 10k requêtes/min et 5 GiB/min",
+    "Ajout du traçage des charges de ressources des compétences Codex",
+    "Simplification de la configuration Codex via un fichier config.toml et une clé exportée"
+   ],
+   "pourquoi": "Offre des outils de monitoring et de gestion de passerelle accrus pour mes flux d'agents.",
+   "titre": "Langfuse v4.75.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.75.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.679",
+   "categorie": "parsing",
+   "resume": "Publication de la version v2.11.679 de l'image API Firecrawl dédiée au scraping et au parsing web.",
+   "specificites": [
+    "Mise à jour mineure de l'image conteneurisée de l'API",
+    "Outil orienté crawler et extraction structurée de données de pages web"
+   ],
+   "pourquoi": "Permet de maintenir à jour mes pipelines de scraping et d'extraction de données HTML.",
+   "titre": "Firecrawl v2.11.679",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.679",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWWl2STdYLTRvNFRTMU5WX0xCa0l5RXZnUjVIOWRyMVBXblZqNFAxb01nOE0wb0h6ZmR6Nk5lb0hValQ0Y1BrQmFQbUh4bmJQSGpCNENadEE0SGUzWnlOZ1lpNnlNV0pZZmVxVHJ0SXF2ejZ5TE5DeEVzNEtFN284OHNwWDJjRExiMlFOdWpISmE0eTZfWDJ3RzNpUnpoTHlKTWhWaDRYT2dwSEVwRDBZNC0tUUYzdXZ1bXFYVzNHMA?oc=5",
+   "categorie": "robotique",
+   "resume": "Ouverture par la Corée du Sud d'une usine de données pour robots humanoïdes afin d'entraîner des modèles d'IA sur des tâches du monde réel.",
+   "specificites": [
+    "Production de données de terrain à grande échelle",
+    "Visée : entraînement de modèles d'IA pour robots"
+   ],
+   "pourquoi": "Illustre l'évolution des exigences en matière de datasets pour l'embodied AI.",
+   "titre": "South Korea Opens Humanoid Robot Data Factory to Train AI Models on Real-World Tasks - AI Insider",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWWl2STdYLTRvNFRTMU5WX0xCa0l5RXZnUjVIOWRyMVBXblZqNFAxb01nOE0wb0h6ZmR6Nk5lb0hValQ0Y1BrQmFQbUh4bmJQSGpCNENadEE0SGUzWnlOZ1lpNnlNV0pZZmVxVHJ0SXF2ejZ5TE5DeEVzNEtFN284OHNwWDJjRExiMlFOdWpISmE0eTZfWDJ3RzNpUnpoTHlKTWhWaDRYT2dwSEVwRDBZNC0tUUYzdXZ1bXFYVzNHMA?oc=5",
+   "source": "Robots humanoïdes (actualités)"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+   "categorie": "pratique",
+   "resume": "Expérimentation de Simon Willison sur la capacité des modèles open-weight, comme Qwen 3.8 27B, à interpréter et modifier directement des poids de réseaux de neurones.",
+   "specificites": [
+    "Basé sur la recherche 'Sparks of Weight-Space Programming'",
+    "Exécution locale sur machine (ordinateur portable)",
+    "Capacité à lire et écrire des représentations textuelles de poids de modèles (valeurs flottantes)"
+   ],
+   "pourquoi": "Ouvre des perspectives techniques fascinantes pour l'analyse et le méta-contrôle de modèles en local.",
+   "titre": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+   "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZXdHS2QzOFVFZVA0bURnRDZLM0lzNTRhWTVicFBRTS1yb1Z4MjVyS25JR3V5aFRfNGV2TGpXU3h6bWR0WDlub0RPUzhYR194LTh4OEpsVDZkY05oY1hQWnpER2FmY3Q2eXVBYnZqRTNmdUdsemhzUUVkbVBpM1RsWlN2ZTk4WjI5MXlmbWRPcnZUTm1RZlBMSHNtMGtpaHRSSmpsekZB?oc=5",
+   "categorie": "comparatif",
+   "resume": "Comparaison entre modèles open-weights et propriétaires sur AA-PersonalityBench.",
+   "specificites": [
+    "Analyse comparative des comportements de modèles selon leur type de pondération",
+    "Met en évidence les divergences de réponses sur des benchmarks de personnalité"
+   ],
+   "pourquoi": "Aide à choisir entre modèles ouverts et propriétaires pour des cas d'usage textuels spécifiques.",
+   "titre": "How top open weights and proprietary models differ in AA-PersonalityBench - LinkedIn",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZXdHS2QzOFVFZVA0bURnRDZLM0lzNTRhWTVicFBRTS1yb1Z4MjVyS25JR3V5aFRfNGV2TGpXU3h6bWR0WDlub0RPUzhYR194LTh4OEpsVDZkY05oY1hQWnpER2FmY3Q2eXVBYnZqRTNmdUdsemhzUUVkbVBpM1RsWlN2ZTk4WjI5MXlmbWRPcnZUTm1RZlBMSHNtMGtpaHRSSmpsekZB?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  }
+ ],
+ "tendance": "La veille technique de ce jour met l'accent sur l'optimisation des coûts d'inférence des agents (compaction des traces, gestion critique du caching), l'audit de robustesse des pipelines RAG et des SDK MCP, ainsi que la progression des capacités des modèles open-weight à manipuler directement des structures de données complexes ou des poids de réseaux de neurones.",
+ "comparatif": "- **Modèles les moins chers (Entrée / Sortie par million de tokens)** :\n  - DeepSeek V4.1 Flash : 0.045 $ (entrée) / 0.5 $ (sortie)\n  - NVIDIA Nemotron 3.5 Lightning : 0.07 $ (entrée) / 0.2 $ (sortie)\n  - Meta Llama 4 Scout : 0.1 $ (entrée) / 0.3 $ (sortie)\n  - Anthropic Claude Haiku 5.5 : 0.1 $ (entrée) / 0.5 $ (sortie)\n- **Meilleur rapport qualité/prix pour les Agents et RAG** :\n  - DeepSeek V4.1 Flash (1M de contexte) ou Qwen3.8 Omni Flash / Flash (0.15 $ / 0.47 $, 1M de contexte) offrent d'excellentes capacités de traitement à faible coût pour de grands volumes textuels.\n- **Modèles pour les tâches lourdes (Extraction web, Scraping structuré, Raisonnement complexe)** :\n  - OpenAI GPT-6.1 Sol Pro (2.0 $ / 10.0 $, 1.05M de contexte)\n  - Anthropic Claude Sonnet 5.5 (2.0 $ / 10.0 $, 1M de contexte)\n  - Mistral Large 4 (0.7 $ / 2.1 $, 1.04M de contexte) qui reste très compétitif pour une grande fenêtre de contexte.\n- **Changements récents de prix** :\n  - Meta Llama 3.3 70B Instruct : prix modifié à 0.1 $ (entrée) / 0.32 $ (sortie) contre 0.2 / 0.52 $ auparavant.\n  - DeepSeek V4 Pro 0813 : prix de sortie modifié à 4.6 $ contre 4.0 $ auparavant (entrée stable à 0.115 $).",
+ "date": "2026-11-04",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.8-flash",
+   "nom": "Google: Gemini 3.8 Flash",
+   "fournisseur": "google",
+   "entree": 0.825,
+   "sortie": 4.125,
+   "contexte": 1048576,
+   "cree": 1788362056,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-3.7-flash",
+   "nom": "Google: Gemini 3.7 Flash",
+   "fournisseur": "google",
+   "entree": 0.75,
+   "sortie": 3.75,
+   "contexte": 1048576,
+   "cree": 1786640581,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.188,
+   "sortie": 0.652,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.32,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": "prix modifié (avant 0.2 / 0.52 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.045,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.115,
+   "sortie": 4.6,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 0.115 / 4.0 $)"
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

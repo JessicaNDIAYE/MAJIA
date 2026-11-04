@@ -193,11 +193,11 @@
   "id": "meta-llama/llama-3.3-70b-instruct",
   "nom": "Meta: Llama 3.3 70B Instruct",
   "fournisseur": "meta-llama",
-  "entree": 0.2,
-  "sortie": 0.52,
+  "entree": 0.1,
+  "sortie": 0.32,
   "contexte": 131072,
   "cree": 1733506137,
-  "evolution": "prix modifié (avant 0.1 / 0.32 $)"
+  "evolution": "prix modifié (avant 0.2 / 0.52 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -234,10 +234,10 @@
   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
   "fournisseur": "deepseek",
   "entree": 0.115,
-  "sortie": 4.0,
+  "sortie": 4.6,
   "contexte": 1048576,
   "cree": 1786549364,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.115 / 4.0 $)"
  },
  {
   "id": "qwen/qwen3.8-max-prime",
