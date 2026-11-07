@@ -80,6 +80,26 @@
   "evolution": ""
  },
  {
+  "id": "google/gemini-omni-1.2-flash",
+  "nom": "Google: Gemini Omni 1.2 Flash",
+  "fournisseur": "google",
+  "entree": 1.5,
+  "sortie": 9.0,
+  "contexte": 131072,
+  "cree": 1793898961,
+  "evolution": "Nouveau"
+ },
+ {
+  "id": "google/gemini-omni-1.1-flash",
+  "nom": "Google: Gemini Omni 1.1 Flash",
+  "fournisseur": "google",
+  "entree": 1.5,
+  "sortie": 9.0,
+  "contexte": 131072,
+  "cree": 1793825668,
+  "evolution": "Nouveau"
+ },
+ {
   "id": "google/gemini-4-argon",
   "nom": "Google: Gemini 4 Argon",
   "fournisseur": "google",
@@ -97,26 +117,6 @@
   "sortie": 7.5,
   "contexte": 65536,
   "cree": 1791300825,
-  "evolution": ""
- },
- {
-  "id": "google/gemini-3.8-flash",
-  "nom": "Google: Gemini 3.8 Flash",
-  "fournisseur": "google",
-  "entree": 0.825,
-  "sortie": 4.125,
-  "contexte": 1048576,
-  "cree": 1788362056,
-  "evolution": ""
- },
- {
-  "id": "google/gemini-3.7-flash",
-  "nom": "Google: Gemini 3.7 Flash",
-  "fournisseur": "google",
-  "entree": 0.75,
-  "sortie": 3.75,
-  "contexte": 1048576,
-  "cree": 1786640581,
   "evolution": ""
  },
  {
@@ -173,11 +173,11 @@
   "id": "meta-llama/llama-4-maverick",
   "nom": "Meta: Llama 4 Maverick",
   "fournisseur": "meta-llama",
-  "entree": 0.188,
-  "sortie": 0.652,
+  "entree": 0.35,
+  "sortie": 1.0,
   "contexte": 524288,
   "cree": 1743881822,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.188 / 0.652 $)"
  },
  {
   "id": "meta-llama/llama-4-scout",
@@ -193,11 +193,11 @@
   "id": "meta-llama/llama-3.3-70b-instruct",
   "nom": "Meta: Llama 3.3 70B Instruct",
   "fournisseur": "meta-llama",
-  "entree": 0.1,
-  "sortie": 0.32,
+  "entree": 0.59,
+  "sortie": 0.79,
   "contexte": 131072,
   "cree": 1733506137,
-  "evolution": "prix modifié (avant 0.2 / 0.52 $)"
+  "evolution": "prix modifié (avant 0.1 / 0.32 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -213,31 +213,31 @@
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.045,
-  "sortie": 0.5,
+  "entree": 0.051,
+  "sortie": 0.567,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.045 / 0.5 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
   "fournisseur": "deepseek",
-  "entree": 0.216,
-  "sortie": 0.647,
+  "entree": 0.44,
+  "sortie": 1.32,
   "contexte": 1048576,
   "cree": 1787311563,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.216 / 0.647 $)"
  },
  {
   "id": "deepseek/deepseek-v4-pro-0813",
   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
   "fournisseur": "deepseek",
-  "entree": 0.115,
-  "sortie": 4.6,
+  "entree": 0.117,
+  "sortie": 4.66,
   "contexte": 1048576,
   "cree": 1786549364,
-  "evolution": "prix modifié (avant 0.115 / 4.0 $)"
+  "evolution": "prix modifié (avant 0.115 / 4.6 $)"
  },
  {
   "id": "qwen/qwen3.8-max-prime",

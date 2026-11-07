@@ -1,0 +1,525 @@
+{
+ "selection": [
+  {
+   "id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+   "categorie": "modele",
+   "resume": "La version v2.1.319 de Claude Code intègre le support des tâches MCP directes dans le terminal lorsqu'un serveur exécute un outil en sous-tâche. Elle modifie également la gestion du mode automatique derrière les passerelles LLM et ajuste la variable d'environnement CLAUDE_CODE_AUTO_MODE_SERVER.",
+   "specificites": [
+    "Exécution des appels d'outils MCP sous forme de tâches terminales dédiées.",
+    "Gestion durcie des passerelles LLM : désactivation du repli vers le classifieur local si CLAUDE_CODE_AUTO_MODE_SERVER=0.",
+    "Maintien des comportements standards pour Bedrock, Vertex et Foundry."
+   ],
+   "pourquoi": "Essentiel pour l'orchestration de nos agents outillés via MCP et la sécurisation des appels d'outils derrière un proxy interne.",
+   "titre": "Claude Code v2.1.319",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+   "source": "Claude Code (releases)"
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.76.0",
+   "categorie": "monitoring",
+   "resume": "Langfuse publie la version v4.76.0 avec l'ajout d'une vue chronologique pour la liste des sessions et l'intégration de la gestion des 'Topics' (résumés, affectations et règles) via API publique, MCP et agent in-app. La release inclut aussi l'audit log sur les lectures de traces/sessions et le reporting des clés de gateway IA.",
+   "specificites": [
+    "Exposition des règles et résumés de topics directement via un serveur MCP.",
+    "Logs d'audit traçant les lectures tRPC sur les traces, sessions et scores.",
+    "Visualisation chronologique des sessions et onglet dédié dans la vue détaillée des traces."
+   ],
+   "pourquoi": "Permet de surveiller et déboguer nos pipelines RAG et sessions multi-tours tout en connectant le monitoring à nos serveurs MCP.",
+   "titre": "Langfuse v4.76.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.76.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://hightouch.com/blog/llm-judges-identity-resolution",
+   "categorie": "pratique",
+   "resume": "Ce retour d'expérience documente un pattern d'architecture en cascade où un modèle intermédiaire délègue les cas litigieux à Opus pour l'évaluation LLM-as-a-judge. L'approche permet d'obtenir un niveau de précision équivalent à Opus seul tout en réduisant le coût par 4.",
+   "specificites": [
+    "Architecture de routage conditionnel : escalade vers Opus uniquement sur seuil d'incertitude.",
+    "Division des coûts d'inférence par 4 par rapport à un pipeline 100% grand modèle.",
+    "Maintien des scores de classification nécessaires aux tâches critiques."
+   ],
+   "pourquoi": "Très utile pour optimiser les coûts de nos pipelines de validation text-to-SQL et d'évaluation LLM-as-a-judge sans dégrader la précision.",
+   "titre": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+   "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+   "source": "Hacker News — IA (front page)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.701",
+   "categorie": "parsing",
+   "resume": "Firecrawl publie la mise à jour API image v2.11.701, consolidant les correctifs successifs des versions v2.11.696 à v2.11.700. Cette version stabilise le moteur d'extraction web structuré et de crawling pour LLM.",
+   "specificites": [
+    "Release consécutive aux versions correctives rapprochées (v2.11.696 à v2.11.700).",
+    "Moteur conteneurisé dédié au scraping et à la conversion de pages HTML complexes en Markdown propre.",
+    "Format optimisé pour l'injection directe dans des contextes de modèles de langage."
+   ],
+   "pourquoi": "Indispensable pour maintenir nos pipelines de scraping et garantir une extraction HTML propre avant ingestion dans nos RAG.",
+   "titre": "Firecrawl v2.11.701",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.701",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://huggingface.co/papers/2611.08376",
+   "categorie": "article",
+   "resume": "L'article présente Muir, une architecture d'attention linéaire à portes sensibles avec lecture par filtre adapté pour traiter de longs contextes. Les auteurs montrent que les mises à jour d'états sont asymétriques : la suppression (erasure) nécessite moins de bande passante que l'écriture, permettant une compression KV constante.",
+   "specificites": [
+    "Compression du contexte dans un état clé-valeur (KV) de taille fixe à mémoire d'inférence constante.",
+    "Temps d'entraînement linéaire et élimination du goulot d'étranglement quadratique.",
+    "Découplage des portes d'effacement et d'écriture basé sur la sparsité d'activation des clés."
+   ],
+   "pourquoi": "Fournit une base théorique sur l'optimisation de la mémoire KV, critique pour nos traitements de volumétries massives de documents.",
+   "titre": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
+   "url": "https://huggingface.co/papers/2611.08376",
+   "source": "Hugging Face Daily Papers"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUEhyd3ZfUnV3U1VmNmR0T2E0M2hqY2Z3N1NuSC05WDFVbFA2bVJMamNrRHlFdWxCeHRxX01JbVg4SG0yYmI4QUhwSlB0elZEcG9zamg0Q1cyOWI4LUY1djV4VjBYMGdvX0Nmbm9wM2M1TUxtZEp2NFNrd29oUmQ0RWxjTkxfa1lf?oc=5",
+   "categorie": "comparatif",
+   "resume": "Le modèle Inkling 2 de Thinking Machines (fondé par Mira Murati) dépasse Mistral dans les benchmarks des modèles à poids ouverts non-chinois. Doté de 594 milliards de paramètres, il sera publié sous licence permissive Apache 2.0.",
+   "specificites": [
+    "Architecture de 594B de paramètres (17A-594B) sous licence Apache 2.0.",
+    "Entraîné en 68 heures sur 12 000 milliards de tokens.",
+    "Premier modèle open-weight occidental à surpasser la concurrence chinoise sur l'Artificial Analysis Intelligence Index."
+   ],
+   "pourquoi": "Permet d'évaluer une future alternative open-weight auto-hébergeable de grande envergure pour nos tâches de raisonnement et text-to-SQL.",
+   "titre": "Mira Murati’s Inkling 2 Overtakes Mistral as the Top Open-Weight Model Outside China - trendingtopics.eu",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUEhyd3ZfUnV3U1VmNmR0T2E0M2hqY2Z3N1NuSC05WDFVbFA2bVJMamNrRHlFdWxCeHRxX01JbVg4SG0yYmI4QUhwSlB0elZEcG9zamg0Q1cyOWI4LUY1djV4VjBYMGdvX0Nmbm9wM2M1TUxtZEp2NFNrd29oUmQ0RWxjTkxfa1lf?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/",
+   "categorie": "modele",
+   "resume": "NVIDIA détaille une méthode d'accélération du réalignement de poids (weight refit) en RL post-training via la primitive Reshard Collective. Cette optimisation cible les goulots d'étranglement mémoire lors du passage alternatif entre génération de trajectoires d'inférence et mise à jour de politique.",
+   "specificites": [
+    "Optimisation du transfert de poids GPU-to-GPU lors des boucles d'inférence/entraînement RL.",
+    "Réduction de l'empreinte mémoire HBM liée à la duplication de modèles.",
+    "Accélération du cycle de rafraîchissement des politiques pour agents de raisonnement."
+   ],
+   "pourquoi": "Utile pour comprendre les contraintes d'infrastructure GPU et de latence lors du fine-tuning RL de modèles d'agents.",
+   "titre": "Accelerating Reinforcement Learning Weight Refit with the Reshard Collective",
+   "url": "https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/",
+   "source": "NVIDIA Technical Blog"
+  },
+  {
+   "id": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0",
+   "categorie": "modele",
+   "resume": "Le SDK Python officiel d'Anthropic passe en version v2.6.0. Il standardise les codes d'erreur d'API pour les dépassements de ramp limit et les échecs de validation des External Keys, tout en retirant l'enregistrement des paramètres d'échantillonnage des spans OpenTelemetry.",
+   "specificites": [
+    "Nouveaux codes d'erreur explicites pour la gestion des 'ramp limits' et clés externes.",
+    "Suppression des hyperparamètres de sampling dans les spans OpenTelemetry pour limiter la surcharge de télémétrie.",
+    "Gestion uniforme des classes d'exceptions pour Bedrock et Vertex AI."
+   ],
+   "pourquoi": "Crucial pour adapter notre couche d'observabilité OpenTelemetry et affiner la résilience de nos appels clients face aux rate limits.",
+   "titre": "Anthropic SDK Python v2.6.0",
+   "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0",
+   "source": "Anthropic SDK Python (releases)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQckpwVTRSdndxeFd6VkZnWUlQaU1XUUowcmphY0trMXdZQmc1czdMM0dpWlZwWmxlUC10eWlVMElRQjd4WUlfQzJjenRSSkZxdUlUN1MtSTRkZ0ZNZVZ3QlRqTzNxM1prMHpXdlg0NnI4VUxNa2FJZV9ha1B1cnVWVzk2emg1RHFrU3ZOZ2lCU2YyeXM?oc=5",
+   "categorie": "parsing",
+   "resume": "Meta a suspendu indéfiniment ses nouvelles conditions d'utilisation relatives au web-scraping suite aux protestations des éditeurs de presse. Ce blocage réglementaire illustre le durcissement d'accès aux données publiques pour les crawlers d'IA.",
+   "specificites": [
+    "Gel des clauses contractuelles autorisant le scraping automatique de contenus d'éditeurs.",
+    "Augmentation des mesures défensives et des risques légaux sur le scraping web à grande échelle.",
+    "Impact direct sur la disponibilité des sources de données d'actualité pour l'ingestion IA."
+   ],
+   "pourquoi": "Alerte sur la nécessité de sécuriser nos pipelines d'extraction via des proxies conformes et du scraping respectueux des restrictions légales.",
+   "titre": "Meta halts web-scraping terms after publisher protests - Journalism Pakistan",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQckpwVTRSdndxeFd6VkZnWUlQaU1XUUowcmphY0trMXdZQmc1czdMM0dpWlZwWmxlUC10eWlVMElRQjd4WUlfQzJjenRSSkZxdUlUN1MtSTRkZ0ZNZVZ3QlRqTzNxM1prMHpXdlg0NnI4VUxNa2FJZV9ha1B1cnVWVzk2emg1RHFrU3ZOZ2lCU2YyeXM?oc=5",
+   "source": "Scraping et parsing HTML (actualités)"
+  },
+  {
+   "id": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+   "categorie": "modele",
+   "resume": "NVIDIA met en avant l'architecture de ses processeurs Vera conçus pour décharger l'exécution des agents IA. L'article détaille la répartition de charge entre les phases de raisonnement sur GPU et les phases d'actions système (requêtes SQL, parsing, outils de recherche) exécutées sur CPU.",
+   "specificites": [
+    "Ciblage explicite des workflows agentiques alternant inférence GPU et requêtes SQL/bash sur CPU.",
+    "Optimisation des débits I/O lors des interactions répétées avec des bases de données et APIs.",
+    "Réduction de la latence de bout en bout des architectures de type ReAct."
+   ],
+   "pourquoi": "Aide au dimensionnement machine de nos pipelines d'agents où le text-to-SQL et l'outillage sollicitent fortement le CPU hôte.",
+   "titre": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
+   "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
+   "source": "NVIDIA Blog"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLTlVa1JkYVlpblNONmtzMThmRE9TUHVTWG9RQUtXeUczajdyRWZKeEFFUTF2ZHNuam5leHNLVXJzLWllYUZCcllwd2trVjhQbHpGVHk3NTZlVFVfNXg2R0FNazJmcmlmclFGZHFqOXYtV0lsc0psRW9uc2dXbGVMUHFBdnBOcDF5OHRrY0lWVy1jRktKRmk1RjhmYjF1N3JYczFKNVktR21kQkpLUzd0aFVWZ1FhNEk?oc=5",
+   "categorie": "robotique",
+   "resume": "Agility Robotics est entrée en bourse au Nasdaq (ticker AGLT) avec une valorisation de 2,5 milliards de dollars. L'action s'est stabilisée à 11,49 $ lors de sa première séance, marquant une étape d'industrialisation pour les robots bipèdes de manutention.",
+   "specificites": [
+    "Valorisation boursière fixée à 2,5 milliards de dollars à l'introduction.",
+    "Cours de clôture initial à 11,49 $ (+2% par rapport à l'offre).",
+    "Modèle économique axé sur l'automatisation logistique d'entrepôt et la manutention de bacs."
+   ],
+   "pourquoi": "Fournit un indicateur économique réel sur le niveau de maturité et d'industrialisation des systèmes physiques autonomes.",
+   "titre": "Agility Robotics Goes Public With $2.5bn Valuation as Humanoid Robot Economics Face Scrutiny - Tekedia",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLTlVa1JkYVlpblNONmtzMThmRE9TUHVTWG9RQUtXeUczajdyRWZKeEFFUTF2ZHNuam5leHNLVXJzLWllYUZCcllwd2trVjhQbHpGVHk3NTZlVFVfNXg2R0FNazJmcmlmclFGZHFqOXYtV0lsc0psRW9uc2dXbGVMUHFBdnBOcDF5OHRrY0lWVy1jRktKRmk1RjhmYjF1N3JYczFKNVktR21kQkpLUzd0aFVWZ1FhNEk?oc=5",
+   "source": "Robots humanoïdes (actualités)"
+  }
+ ],
+ "tendance": "L'écosystème structure activement l'outillage agentique avec l'ancrage profond du protocole MCP dans les terminaux et les plateformes de monitoring comme Langfuse. En parallèle, la recherche et l'industrie ciblent l'efficacité économique : passage à des modèles en cascade pour abaisser les coûts d'inférence, publication de grands modèles open-weight sous licence Apache 2.0 (Inkling 2 594B), et refonte de l'attention mémoire pour traiter de longs contextes à coût fixe.",
+ "comparatif": "### Analyse des coûts et positionnement par cas d'usage\n\n* **Scraping HTML, extraction de texte et parsing haut volume :**\n  * **DeepSeek V4.1 Flash** s'impose comme le modèle le plus agressif en entrée à **0,051 $/M tokens** (sortie à **0,567 $/M tokens**) avec une fenêtre contextuelle de **1 048 576 tokens**, idéal pour ingérer des pages HTML brutes volumineuses.\n  * **NVIDIA Nemotron 3.5 Lightning** offre le coût de sortie le plus bas du marché à **0,20 $/M tokens** (entrée à **0,07 $/M tokens**), parfait pour générer des JSON normalisés en sortie de parsing, bien que sa fenêtre soit limitée à **262 144 tokens**.\n  * **Meta Llama 4 Scout** propose un contexte massif de **1 310 720 tokens** à un tarif très compétitif de **0,10 $/M tokens en entrée** et **0,30 $/M tokens en sortie**, surpassant le ratio coût/contexte des offres propriétaires.\n\n* **Pipelines RAG et Text-to-SQL (précision intermédiaire et faible latence) :**\n  * **Mistral Small 4** (**0,15 $ entrée / 0,60 $ sortie**, contexte 262k) et **Claude Haiku 5.5** (**0,10 $ entrée / 0,50 $ sortie**, contexte 1M) sont les options de référence pour la génération SQL structurée et le reranking.\n  * **Mistral Large 4** présente un rapport qualité/prix très avantageux pour les requêtes complexes à **0,70 $/M entrée** et **2,10 $/M sortie** avec un contexte de **1 048 576 tokens**, se positionnant nettement en dessous des modèles flagship concurrents.\n\n* **Agents autonomes, raisonnement complexe et LLM-as-a-judge :**\n  * **Claude Sonnet 5.5** (**2,00 $ entrée / 10,00 $ sortie**) et **Claude Opus 5.5** (**4,00 $ entrée / 20,00 $ sortie**) offrent 1M de contexte et dominent les tâches de coding et MCP. L'approche d'arbitrage en cascade (escalade vers Opus uniquement sur cas complexes) est justifiée par l'écart de coût du simple au double entre Sonnet et Opus.\n  * **GPT-6.1 Terra Pro** (**1,00 $ entrée / 5,00 $ sortie**, contexte 1,05M) s'avère 2 fois moins cher que Sonnet 5.5 et Gemini 4 Argon (**2,00 $ / 10,00 $**) pour des capacités de raisonnement équivalentes.\n\n* **Modèles multimodaux / Vision pour le web :**\n  * Le nouveau **Google Gemini Omni 1.2 Flash** s'affiche à **1,50 $ entrée / 9,00 $ sortie**, mais reste contraint par un contexte restreint de **131 072 tokens**, le rendant moins compétitif que **Nemotron 3.5 Super VL** (**0,15 $ entrée / 0,50 $ sortie** pour 1M de tokens).\n\n* **Évolutions récentes et hausses de tarifs constatées :**\n  * **DeepSeek V4 Flash Vision Exp** a subi une forte augmentation, passant de 0,216 $/0,647 $ à **0,44 $ entrée / 1,32 $ sortie** (hausse de plus de 100%).\n  * **DeepSeek V4.1 Flash** a connu une légère revalorisation (de 0,045 $/0,50 $ à **0,051 $ / 0,567 $**).\n  * **Meta Llama 4 Maverick** a presque doublé son coût d'entrée, passant de 0,188 $/0,652 $ à **0,35 $ entrée / 1,00 $ sortie**.\n  * **Meta Llama 3.3 70B Instruct** a vu ses coûts exploser, passant de 0,10 $/0,32 $ à **0,59 $ entrée / 0,79 $ sortie**.",
+ "date": "2026-11-07",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "google/gemini-omni-1.1-flash",
+   "nom": "Google: Gemini Omni 1.1 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793825668,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": "prix modifié (avant 0.188 / 0.652 $)"
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.59,
+   "sortie": 0.79,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": "prix modifié (avant 0.1 / 0.32 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.567,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.045 / 0.5 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": "prix modifié (avant 0.216 / 0.647 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.117,
+   "sortie": 4.66,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 0.115 / 4.6 $)"
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
