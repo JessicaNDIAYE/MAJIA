@@ -1,0 +1,511 @@
+{
+ "selection": [
+  {
+   "id": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+   "categorie": "pratique",
+   "resume": "Une analyse de sécurité met en évidence une vulnérabilité opérationnelle liée à l'option « Don't Ask Again » dans l'agent de code Claude Code. Cette configuration d'automatisation permissive a conduit à l'exposition de mots de passe et secrets dans 1 122 dépôts publics GitHub.",
+   "specificites": [
+    "Impact mesuré : 1 122 fichiers publics GitHub exposant des secrets et identifiants.",
+    "Cause technique : contournement aveugle des prompts de validation humaine (HITL) par auto-approbation des actions CLI.",
+    "Risque direct pour les architectures d'agents : fuite de credentials lors d'opérations automatisées de push/commit sans garde-fous."
+   ],
+   "pourquoi": "Essentiel pour auditer et durcir les droits d'exécution de nos agents autonomes et pipelines CI/CD manipulant des dépôts de code.",
+   "titre": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+   "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+   "source": "Hacker News — IA (front page)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.704",
+   "categorie": "parsing",
+   "resume": "Publication de la version v2.11.704 de l'image API Firecrawl, moteur d'extraction et de conversion de pages web en Markdown pour LLM. Cette version itérative succède aux correctifs rapprochés v2.11.702 et v2.11.703.",
+   "specificites": [
+    "Mise à jour de l'image API (v2.11.704) pour le scraping et parsing headless.",
+    "Améliorations continues sur la conversion HTML vers Markdown nettoyé pour les pipelines RAG.",
+    "Rythme de patchs très dense (3 versions consécutives publiées), nécessitant une validation en staging."
+   ],
+   "pourquoi": "Permet de maintenir à jour notre conteneur d'ingestion web et d'assurer la stabilité du parsing HTML destiné au context window de nos modèles.",
+   "titre": "Firecrawl v2.11.704",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.704",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+   "categorie": "pratique",
+   "resume": "Simon Willison détaille la suppression des en-têtes HTTP 'link: rel=next' pour Firefox dans Datasette (#3046). La présence de cet en-tête déclenchait un prefetch automatique non sollicité de la page de pagination suivante par le navigateur.",
+   "specificites": [
+    "Problème identifié : requêtes HTTP de préchargement inutiles sur des tables de base de données à forte volumétrie.",
+    "Impact réseau et charge SQL : exécution inutile de requêtes de pagination à clés composées (ex. compound primary keys ?_next=a,d,v).",
+    "Solution : suppression ciblée du header pour éviter les surcoûts d'I/O et de bande passante."
+   ],
+   "pourquoi": "Critique pour la conception d'APIs de scraping et d'interfaces de données afin d'éviter le sur-requêtage invisible lors de l'exploration automatisée.",
+   "titre": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+   "url": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTFRkaW10X3BFS3pBNERxNFB0Yks5ajkxRXp2a0hQSDBxMlNmcWV6dzhzVFJhYTQxRjNFdGpEWnZmdjMwSkdhbFpFOVlLdDFNT2gwVVprY1gxUVI0Z0NHR2RkS0RwZ2FVTGp5SG5aNUFVX0dJOU1wUUxBR1B6RmFKVVVrZzZySEhxeFZjT29jZw?oc=5",
+   "categorie": "modele",
+   "resume": "DeepSeek affiche des performances proches des modèles cyber spécialisés d'OpenAI sur le banc de test Vals. Le coût mesuré se monte à seulement 3 $ par exécution complète.",
+   "specificites": [
+    "Coût d'inférence agressif : 3 $ par run d'évaluation cyber complète.",
+    "Réduction drastique de l'écart avec les modèles fermés d'OpenAI sur des tâches d'analyse de vulnérabilités et sécurité.",
+    "Démontre la viabilité des modèles ouverts/distillés sur des domaines experts hautement spécialisés."
+   ],
+   "pourquoi": "Offre une alternative économique pour orchestrer des sous-agents de validation de code et d'audit technique sans exploser la facture d'API.",
+   "titre": "DeepSeek Nears OpenAI’s Cyber Model in Vals Test at $3 a Run - FourWeekMBA",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTFRkaW10X3BFS3pBNERxNFB0Yks5ajkxRXp2a0hQSDBxMlNmcWV6dzhzVFJhYTQxRjNFdGpEWnZmdjMwSkdhbFpFOVlLdDFNT2gwVVprY1gxUVI0Z0NHR2RkS0RwZ2FVTGp5SG5aNUFVX0dJOU1wUUxBR1B6RmFKVVVrZzZySEhxeFZjT29jZw?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZmlndjg1T0Z5MFBEWGstTXJmYTlGeVVFa3FCanFkckdxSjl2SXVxVGJLR1MwUmh0YWNUaTl2Um8xMVhlWHFuQnlRRVRLakJIUV84eG5JZFFTalFxNjFoNW9SQ0J6VkFEZlNlWmtTbzdZaXNSTkV1ZXB6WVJmdlFLdlgzOG5GVmVVejQ0?oc=5",
+   "categorie": "modele",
+   "resume": "DeepSeek concentre désormais 56 % du volume total de tokens parmi le Top 10 des modèles consommés sur OpenRouter. Cette bascule massive illustre la migration de trafic d'inférence vers les architectures à coût réduit.",
+   "specificites": [
+    "Part de marché dominante : 56 % des tokens Top 10 sur OpenRouter.",
+    "Catalyseur : différentiel de coût massif pour des contextes longs (1M de tokens supportés en production).",
+    "Pression directe sur la tarification et la disponibilité des fournisseurs traditionnels (OpenAI, Anthropic)."
+   ],
+   "pourquoi": "Valide l'adoption massive de DeepSeek en production pour calibrer nos choix d'architecture multi-fournisseurs et de basculement.",
+   "titre": "DeepSeek’s Share of OpenRouter Top-10 Tokens Rises to 56% - FourWeekMBA",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZmlndjg1T0Z5MFBEWGstTXJmYTlGeVVFa3FCanFkckdxSjl2SXVxVGJLR1MwUmh0YWNUaTl2Um8xMVhlWHFuQnlRRVRLakJIUV84eG5JZFFTalFxNjFoNW9SQ0J6VkFEZlNlWmtTbzdZaXNSTkV1ZXB6WVJmdlFLdlgzOG5GVmVVejQ0?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWmR3Z1lXbzR3cUplOE52ZTFIaUljU2JVTnJhazIwNFJJbFltU3FhRTRPZGFVTkppdld1R0FRYXRBNnlMZTk1UzdVXzc2Zld5UUp3TzV1ZzI3QldOd1ZGbFVRSUo2R0plbUQxZWxrUHV6ZW5VSDI3ck9OM05mV21zd2xuVnppSk5RSjJZUWpBODFVUTFwSGFrLVdlSVBLS09pU2ktWlFMTQ?oc=5",
+   "categorie": "modele",
+   "resume": "Une étude documente la réduction continue de l'écart technique entre modèles ouverts et propriétaires sur les capacités offensives et défensives en cybersécurité. Les modèles ouverts atteignent une quasi-parité sur l'analyse de code et l'automatisation d'exploits.",
+   "specificites": [
+    "Érosion de la supériorité exclusive des modèles propriétaires (GPT-4/Claude 3.5) sur le raisonnement technique cyber.",
+    "Renforcement des capacités de parsing et de rétro-ingénierie dans les poids ouverts.",
+    "Nécessité accrue de mettre en place des couches de garde-fous (Guardrails) au niveau applicatif."
+   ],
+   "pourquoi": "Permet d'envisager des modèles open-weights auto-hébergés pour nos tâches de text-to-SQL et d'analyse de sécurité des requêtes.",
+   "titre": "The gap between open and closed AI models in cyber capabilities keeps shrinking - The Decoder",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWmR3Z1lXbzR3cUplOE52ZTFIaUljU2JVTnJhazIwNFJJbFltU3FhRTRPZGFVTkppdld1R0FRYXRBNnlMZTk1UzdVXzc2Zld5UUp3TzV1ZzI3QldOd1ZGbFVRSUo2R0plbUQxZWxrUHV6ZW5VSDI3ck9OM05mV21zd2xuVnppSk5RSjJZUWpBODFVUTFwSGFrLVdlSVBLS09pU2ktWlFMTQ?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUDI1amhrbGRrZThtSTNTYjNXTVVRT0pRZmJSQ0c0NGpnblh0SFpjS1ZLUXhzX2xYUWp5N3lVU2lnc0ZmR281Vl82QTNsQWdqcEN3d2ZXZllwWGFnNDBOb0F1eHNfb1Nrb3NkdWswcHREbnlUTnRYY29DN3lDd0R1MXZzNy1wckVpWDFOTWpvdw?oc=5",
+   "categorie": "comparatif",
+   "resume": "Comparaison de performance et coût entre Claude et Gemini, affichant des indices de score proches (59 vs 58) pour un positionnement tarifaire étalé de 4 $ à 20 $ le million de tokens selon les déclinaisons.",
+   "specificites": [
+    "Score synthétique très serré : index 59 (Claude) contre 58 (Gemini).",
+    "Écart de prix marqué : fourchette de 4 $ à 20 $ / M tokens sur les déclinaisons de pointe.",
+    "Arbitrage crucial entre performance pure de raisonnement et efficacité économique par requête."
+   ],
+   "pourquoi": "Aide à objectiver le choix entre Claude et Gemini pour nos pipelines de synthèse RAG et de génération complexe.",
+   "titre": "Claude vs Gemini: 59 vs 58 Index, $4/$20 Price [2026] - shattered.io",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUDI1amhrbGRrZThtSTNTYjNXTVVRT0pRZmJSQ0c0NGpnblh0SFpjS1ZLUXhzX2xYUWp5N3lVU2lnc0ZmR281Vl82QTNsQWdqcEN3d2ZXZllwWGFnNDBOb0F1eHNfb1Nrb3NkdWswcHREbnlUTnRYY29DN3lDd0R1MXZzNy1wckVpWDFOTWpvdw?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://caleb.software/posts/claude-to-pi.html",
+   "categorie": "pratique",
+   "resume": "Retour d'expérience technique sur la migration d'un workflow centré sur l'API de Claude vers l'utilisation d'environnements légers et d'outils dédiés (Pi). L'article analyse les frictions de dépendance et de coûts associées aux grands modèles fermés.",
+   "specificites": [
+    "Discussion sur l'ergonomie des agents de développement et le coût cumulé d'inférence.",
+    "Débat sur Hacker News réunissant 363 points et 222 commentaires d'ingénieurs sur les alternatives aux LLM lourds.",
+    "Focus sur l'efficience locale et la réduction du recours systématique aux appels API distants."
+   ],
+   "pourquoi": "Utile pour évaluer le coût d'exploitation des agents de dev dans l'équipe et explorer des architectures client plus légères.",
+   "titre": "Goodbye Claude, Hello Pi",
+   "url": "https://caleb.software/posts/claude-to-pi.html",
+   "source": "Hacker News — IA (front page)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNT2I0SW8wX19vQTV5cm9qR2pfUFVDY2dKVXozSTRNOC1aQXRMWVJwbURVWVVkQ0FBYWM1S01Ic3VXdDVfZHgzTl9xTDZaNG9iX1VVTjdpRW5XcUhka19KeHlBTk84WkhpTllkd2dTazB3T2JoVFhkMGJ4dlZmOEl6MTBsUk1kRG9WRTVpUnkzN0dHbmFmM2plaXl2ZXBfQnVncVluVWdJMzBia3BLcnppSGwyck9ib0hJSzN5YlQwLUZrMTJIMnc?oc=5",
+   "categorie": "monitoring",
+   "resume": "Enquête de Bloomberg évaluant l'empreinte carbone et l'efficacité énergétique comparative des différents chatbots et fournisseurs LLM du marché. L'article détaille les métriques d'émissions induites par les calculs d'inférence.",
+   "specificites": [
+    "Mesure comparative des émissions carbone par batch de tokens générés selon les fournisseurs.",
+    "Mise en lumière de l'impact des architectures MoE (Mixture of Experts) sur la consommation énergétique par inférence.",
+    "Critère émergeant pour les dashboards d'observabilité et le monitoring FinOps/GreenOps des systèmes IA."
+   ],
+   "pourquoi": "Fournit des métriques concrètes à intégrer dans notre observabilité pour suivre le coût énergétique de nos pipelines RAG à fort volume.",
+   "titre": "Which AI Chatbots Have the Highest Emissions? Here's What We Know - Bloomberg",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNT2I0SW8wX19vQTV5cm9qR2pfUFVDY2dKVXozSTRNOC1aQXRMWVJwbURVWVVkQ0FBYWM1S01Ic3VXdDVfZHgzTl9xTDZaNG9iX1VVTjdpRW5XcUhka19KeHlBTk84WkhpTllkd2dTazB3T2JoVFhkMGJ4dlZmOEl6MTBsUk1kRG9WRTVpUnkzN0dHbmFmM2plaXl2ZXBfQnVncVluVWdJMzBia3BLcnppSGwyck9ib0hJSzN5YlQwLUZrMTJIMnc?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOOGlaSm90SEhEcFNDc3RJYjlqODMxOHNuMkhnVHlnM1c5Z1R2Y0lPWV9hb0tJdHVpeHhpQUhSbTZxdktHVHNlakRfR2pzWFNiNXlWQjBVZ0xDbl82VjdwM1pPelhGV2Jub1BQeE56Z1lSY0ZQX3YycVl2enE3NDloSFVsaGlrNDAzc0ZDXzE1bzJsRFU?oc=5",
+   "categorie": "robotique",
+   "resume": "La Corée du Sud a inauguré une infrastructure de production de données dédiée à l'apprentissage de tâches physiques réelles pour les robots humanoïdes. L'usine capture et synthétise des trajectoires multimodales pour l'entraînement de modèles d'action physique.",
+   "specificites": [
+    "Pipeline dédié à la collecte de données sensori-motrices et spatio-temporelles à grande échelle.",
+    "Génération de datasets réels pour pallier le gap de simulation (sim-to-real).",
+    "Approche industrielle de la constitution de bases de données pour modèles embodied AI."
+   ],
+   "pourquoi": "Intéressant pour observer les méthodologies de data engineering et de pipelines d'ingestion massive appliquées à la robotique.",
+   "titre": "South Korea’s new humanoid robot data factory teaches real-world tasks - Yahoo Tech",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOOGlaSm90SEhEcFNDc3RJYjlqODMxOHNuMkhnVHlnM1c5Z1R2Y0lPWV9hb0tJdHVpeHhpQUhSbTZxdktHVHNlakRfR2pzWFNiNXlWQjBVZ0xDbl82VjdwM1pPelhGV2Jub1BQeE56Z1lSY0ZQX3YycVl2enE3NDloSFVsaGlrNDAzc0ZDXzE1bzJsRFU?oc=5",
+   "source": "Robots humanoïdes (actualités)"
+  }
+ ],
+ "tendance": "La tendance du jour est marquée par une guerre des prix et une accélération de l'efficience sur les modèles ouverts ou distillés (notamment DeepSeek), qui rivalisent avec les solutions fermées en cybersécurité et captent la majorité des volumes sur OpenRouter. Parallèlement, l'autonomie croissante des agents CLI soulève des failles de sécurité opérationnelle critiques (fuites de secrets Git), exigeant un durcissement des garde-fous applicatifs.",
+ "comparatif": "### Analyse comparative des coûts d'inférence (au million de tokens)\n\n#### 1. Mouvements récents de prix\n- **Baisse radicale chez DeepSeek** :\n  - `deepseek/deepseek-v4.1-flash-1017` : l'entrée s'effondre à **0,006 $** (auparavant 0,15 $) et la sortie à **0,50 $** (auparavant 0,60 $), pour 1 048 576 tokens de contexte.\n  - `deepseek/deepseek-v4.1-flash` : la sortie passe de 0,567 $ à **0,41 $** (entrée stable à **0,051 $**).\n  - `deepseek/deepseek-v4-pro-0813` : révision marginale à la baisse avec une entrée à **0,111 $** (vs 0,117 $) et une sortie à **4,44 $** (vs 4,66 $).\n\n#### 2. Scraping web, parsing HTML et traitement de volume extrême\n- **Le champion absolu de l'ingestion brute** : `deepseek/deepseek-v4.1-flash-1017` avec **0,006 $ / 1M d'entrée** et 1M de contexte. À ce tarif, ingérer des milliers de pages HTML nettoyées ne coûte quasiment rien.\n- **Alternatives légères pour le parsing** :\n  - `nvidia/nemotron-3.5-lightning` : **0,07 $** entrée / **0,20 $** sortie (262k de contexte), le plus économique en génération courte.\n  - `anthropic/claude-haiku-5.5` : **0,10 $** entrée / **0,50 $** sortie (1M contexte), fiable pour extraire des schémas JSON stricts.\n  - `meta-llama/llama-4-scout` : **0,10 $** entrée / **0,30 $** sortie avec une fenêtre étendue de 1 310 720 tokens.\n\n#### 3. Pipelines RAG et text-to-SQL (compromis latence / contexte / précision)\n- **Synthèse RAG grand contexte économique** :\n  - `mistralai/mistral-large-4-0` se distingue à **0,70 $** entrée / **2,10 $** sortie pour 1M de contexte, offrant un excellent ratio pour du parsing complexe et de la génération SQL sans recourir aux tarifs premium.\n  - `deepseek/deepseek-v4-pro-0813` (**0,111 $** entrée / **4,44 $** sortie) offre une entrée 6x moins chère que Mistral Large, idéal pour les gros contextes RAG multi-documents.\n- **Modèles de garde-fous (Guardrails)** : `meta-llama/llama-guard-4-12b` (**0,18 $** / **0,18 $**, 163k contexte) et `nvidia/nemotron-3.5-content-safety` (**0,20 $** / **0,20 $**, 131k contexte) permettent un monitoring d'entrées/sorties à coût symétrique très faible.\n\n#### 4. Agents autonomes et raisonnement complexe (MCP / Code)\n- **Rapport performance/prix intermédiaire** :\n  - `openai/gpt-6.1-terra` et `terra-pro` à **1,00 $** entrée / **5,00 $** sortie (1,05M de contexte) se positionnent 2x moins chers que `claude-sonnet-5.5` (**2,00 $** / **10,00 $**).\n- **Haut de gamme / Tâches critiques** :\n  - `anthropic/claude-opus-5.5` (**4,00 $** / **20,00 $**) et `qwen/qwen3.8-max-prime` (**4,00 $** / **12,00 $**). Qwen offre un coût de génération 40 % inférieur à Opus pour un contexte identique (1M tokens).\n  - `anthropic/claude-fable-5.1` ressort comme le modèle le plus prohibitif de la grille à **10,00 $** entrée / **50,00 $** sortie.",
+ "date": "2026-11-08",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.1-flash",
+   "nom": "Google: Gemini Omni 1.1 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793825668,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.59,
+   "sortie": 0.79,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.006,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": "prix modifié (avant 0.15 / 0.6 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.41,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.051 / 0.567 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 0.117 / 4.66 $)"
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
