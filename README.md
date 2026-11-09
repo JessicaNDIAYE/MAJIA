@@ -110,6 +110,13 @@ GEMINI_API_KEY=xxx python -m veille.main --dry-run     # affiche la veille sans 
 
 ## Limites à connaître
 
+- **Relancer une veille** : utilise toujours *Actions → Veille IA quotidienne → **Run workflow***. Le bouton
+  *Re-run* d'une ancienne exécution rejoue le code et le dépôt **du jour de cette exécution**, sans les corrections
+  ni les veilles publiées depuis.
+- **Si Gemini est saturé** (offre gratuite) : la veille part quand même en version brute, triée par thème avec les
+  extraits des sources (« sans résumé IA » dans le sujet). Après un jour manqué, la veille suivante remonte jusqu'au
+  dernier jour réussi (7 jours max), et une leçon manquée est générée le lendemain.
+
 - Les résumés se basent sur les **abstracts et extraits RSS**, pas sur les PDF complets : vérifie l'article avant de le citer en réunion.
 - Le LLM ne peut citer que des liens réellement collectés (les liens inventés sont rejetés), mais un résumé peut rester imprécis.
 - Anthropic et Mistral n'ont pas de flux RSS officiel : ils sont suivis via Google News et les releases GitHub, donc certaines annonces peuvent arriver avec du retard ou via des articles de presse.
