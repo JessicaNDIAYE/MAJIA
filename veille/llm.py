@@ -108,7 +108,7 @@ class GeminiLLM:
 
     def modeles_secours(self):
         """Modèles à essayer quand le principal est surchargé (réglable via GEMINI_MODELES_SECOURS)."""
-        noms = os.environ.get("GEMINI_MODELES_SECOURS") or "gemini-flash-lite-latest,gemini-pro-latest"
+        noms = os.environ.get("GEMINI_MODELES_SECOURS") or "gemini-flash-lite-latest"
         noms = [n.strip() for n in noms.split(",") if n.strip()]
         try:
             noms.insert(0, self.choisir_modele())  # version précise du dernier Flash
@@ -138,6 +138,23 @@ def meilleur_modele(modeles):
     if not candidats:
         raise RuntimeError("Aucun modèle Gemini Flash disponible pour cette clé API.")
     return max(candidats, key=lambda nom: (version(nom), -len(nom)))
+
+
+def digest_sans_ia(config, elements):
+    """Veille de secours quand le LLM est indisponible : contenus répartis équitablement entre les thèmes,
+    avec l'extrait fourni par la source à la place du résumé."""
+    par_cat = {}
+    for el in elements:  # déjà triés du plus récent au plus ancien
+        par_cat.setdefault(el.categorie, []).append(el)
+    selection, maximum = [], config.get("max_selection", 25)
+    while len(selection) < maximum and any(par_cat.values()):
+        for items in par_cat.values():
+            if items and len(selection) < maximum:
+                el = items.pop(0)
+                selection.append({"id": el.id, "categorie": el.categorie, "titre": el.titre, "url": el.url,
+                                  "source": el.source, "resume": el.resume[:300], "specificites": []})
+    return {"selection": selection, "comparatif": "", "sans_ia": True,
+            "tendance": "Veille brute : l'IA était indisponible, les extraits viennent directement des sources."}
 
 
 def faire_digest(llm, config, elements, prix=None):

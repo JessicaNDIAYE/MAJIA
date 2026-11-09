@@ -313,3 +313,36 @@ def test_gemini_bascule_sur_un_modele_de_secours(monkeypatch):
     assert client.json("p") == {"ok": 1}
     assert client.modele == "gemini-flash-lite-latest"
     assert appels == ["gemini-flash-latest"] * 4 + ["gemini-3-flash"] * 4 + ["gemini-flash-lite-latest"]
+
+
+def test_veille_brute_si_ia_indisponible(projet):
+    class IAEnPanne:
+        def json(self, prompt):
+            raise RuntimeError("Gemini : erreur 503 — high demand")
+
+    envois = []
+    md = main.executer(projet, IAEnPanne(), lambda *a: envois.append(a), MAINTENANT, MERCREDI)
+    assert "Agents with MCP tool use" in md and "Veille brute" in md
+    assert "(sans résumé IA)" in envois[0][0]
+    jour = json.loads((projet / "data" / "semaines" / "2026-10-28.json").read_text(encoding="utf-8"))
+    assert jour["sans_ia"] and jour["lecon"] is None
+    assert json.loads((projet / "data" / "vus.json").read_text()) == ["https://ex.org/a"]
+
+
+def test_rattrapage_des_jours_manques(projet, monkeypatch):
+    ecrire_jour(projet, "2026-10-24", "Dernière veille réussie")
+    fenetres = []
+    monkeypatch.setattr(main.collecte, "collecter", lambda config, *a: fenetres.append(config["jours"]) or [])
+    main.executer(projet, FauxLLM(), None, MAINTENANT, MERCREDI)          # 4 jours sans veille
+    main.executer(projet, FauxLLM(), None, MAINTENANT, dt.date(2026, 11, 30))  # plafonné à 7 jours
+    assert fenetres == [5, 7]
+
+
+def test_lecon_rattrapee_le_lendemain(tmp_path):
+    (tmp_path / "lecons").mkdir()
+    config = {"lecon_le": "lundi"}
+    assert not main.lecon_due(tmp_path, config, dt.date(2026, 11, 3))  # aucune leçon encore : on attend lundi
+    (tmp_path / "lecons" / "2026-10-26-agents.md").write_text("# Agents")
+    assert main.lecon_due(tmp_path, config, dt.date(2026, 11, 3))       # lundi 2 manqué : rattrapée mardi
+    (tmp_path / "lecons" / "2026-11-03-memoire.md").write_text("# Mémoire")
+    assert not main.lecon_due(tmp_path, config, dt.date(2026, 11, 4))

@@ -40,10 +40,35 @@ def lire_weekend(racine, config, jour):
     return jours
 
 
+def derniere_date(dossier, motif):
+    """Date du fichier le plus récent nommé AAAA-MM-JJ…, ou None."""
+    dates = []
+    for f in dossier.glob(motif):
+        try:
+            dates.append(dt.date.fromisoformat(f.name[:10]))
+        except ValueError:
+            pass
+    return max(dates, default=None)
+
+
+def lecon_due(racine, config, jour):
+    """Le jour prévu, ou le lendemain si la leçon de la semaine n'a pas pu être générée."""
+    if jour_de_lecon(config, jour):
+        return True
+    derniere = derniere_date(racine / "lecons", "*.md")
+    return derniere is not None and (jour - derniere).days >= 7
+
+
 def executer(racine, client_llm, envoyer=None, maintenant=None, aujourd_hui=None):
     config = yaml.safe_load((racine / "sources.yaml").read_text(encoding="utf-8"))
     fichier_vus = racine / "data" / "vus.json"
     deja_vus = json.loads(fichier_vus.read_text()) if fichier_vus.exists() else []
+    aujourd_hui = aujourd_hui or dt.date.today()
+
+    # Rattrapage : après un ou plusieurs jours sans veille, on remonte jusqu'à la dernière réussie (7 jours max).
+    derniere = derniere_date(racine / "data" / "semaines", "*.json")
+    if derniere:
+        config["jours"] = min(max(config.get("jours", 2), (aujourd_hui - derniere).days + 1), 7)
 
     elements = collecte.collecter(config, deja_vus, maintenant)
     if not elements:
@@ -54,13 +79,16 @@ def executer(racine, client_llm, envoyer=None, maintenant=None, aujourd_hui=None
     prix_avant = json.loads(fichier_prix.read_text()) if fichier_prix.exists() else []
     modeles = prix.recuperer(config, prix_avant)
 
-    digest = llm.faire_digest(client_llm, config, elements, modeles)
+    try:
+        digest = llm.faire_digest(client_llm, config, elements, modeles)
+    except Exception as exc:  # IA indisponible : la veille part quand même, en version brute
+        logging.error("Résumé IA impossible, envoi d'une veille brute : %s", exc)
+        digest = llm.digest_sans_ia(config, elements)
     if not digest["selection"]:
         logging.warning("Le LLM n'a rien sélectionné.")
         return None
-    aujourd_hui = aujourd_hui or dt.date.today()
     lecon = {"idees": [], "lecon": None}
-    if jour_de_lecon(config, aujourd_hui):
+    if not digest.get("sans_ia") and lecon_due(racine, config, aujourd_hui):
         try:
             lecon = llm.faire_lecon(client_llm, config, digest["selection"])
         except Exception as exc:  # la veille part quand même, sans leçon ni idées
@@ -81,7 +109,8 @@ def executer(racine, client_llm, envoyer=None, maintenant=None, aujourd_hui=None
     if envoyer and mail_du_jour(config, aujourd_hui):
         weekend = lire_weekend(racine, config, aujourd_hui)
         corps = md + rendu.weekend_markdown(weekend)
-        sujet = f"Veille IA — {date}" + (" + week-end" if weekend else "") + (
+        sujet = f"Veille IA — {date}" + (" (sans résumé IA)" if digest.get("sans_ia") else "") + (
+            " + week-end" if weekend else "") + (
             f" — {lecon['lecon']['titre']}" if lecon["lecon"] else "")
         envoyer(sujet, corps, rendu.en_html(corps))
     elif envoyer:
