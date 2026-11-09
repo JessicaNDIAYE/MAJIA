@@ -1,0 +1,480 @@
+{
+ "selection": [
+  {
+   "id": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+   "categorie": "modele",
+   "titre": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+   "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+   "source": "Hugging Face Blog",
+   "resume": "",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZGpVQmNwQlV3Yk9pVDNlWFZhRUxoXzZiaGNlV0R4am0weFRtTEY3c0ZCM0NBQzBRemlWYXJGYzVQUEQ3cXd2ejdJUzVOWmc2SHRUbk9FNHI5NUlwcnl2YU5kU1FBUjhXLVRoWGY3WEtZeVZZNVB6UnJXNlBiQndUMmh1aUk4VDdqdEVXWV8yWlc5QnpTSkpHZ0dudXVmWTVKNFR0enF1NzdQVkJRVzh6UDNEbVVSTFJHa3MwYjg5Z1k?oc=5",
+   "categorie": "robotique",
+   "titre": "Lisbon Web Summit 2026 opens with humanoid robot speakers and record Chinese delegation - Euronews.com",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZGpVQmNwQlV3Yk9pVDNlWFZhRUxoXzZiaGNlV0R4am0weFRtTEY3c0ZCM0NBQzBRemlWYXJGYzVQUEQ3cXd2ejdJUzVOWmc2SHRUbk9FNHI5NUlwcnl2YU5kU1FBUjhXLVRoWGY3WEtZeVZZNVB6UnJXNlBiQndUMmh1aUk4VDdqdEVXWV8yWlc5QnpTSkpHZ0dudXVmWTVKNFR0enF1NzdQVkJRVzh6UDNEbVVSTFJHa3MwYjg5Z1k?oc=5",
+   "source": "Robots humanoïdes (actualités)",
+   "resume": "Lisbon Web Summit 2026 opens with humanoid robot speakers and record Chinese delegation &nbsp;&nbsp; Euronews.com",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.77.0",
+   "categorie": "monitoring",
+   "titre": "Langfuse v4.77.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.77.0",
+   "source": "Langfuse (releases)",
+   "resume": "What's Changed Features feat(topics): proper cost tracking for executions by @nimarb in #19432 feat(external-media-storage): make external media storage an enterprise feature by @wochinge in #19778 feat(web): use Langfuse by ClickHouse logo in the app shell and auth screens by @marcklingen in #19740",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQ2d4cEotZFY0bWdLRlFSdnF6eVJIcUJBTklraTBOdlY5R1Q5VGUzb2p1NWZSaFdTcDRPTVpneVdzU1k0amswR3BoVGtPWnRlOG1KSnNEQml2Q3BIVG9idGxmTHprTS1uYzJUYlc5SHl5YjFDaXpDWElkS0dRQzh2UVh3TFhSWk83X0k0UDJ3aDZLd3U2UFpfVGJzd0FGMm5Nb0l6dE0xbEk1UnV0Ym45VEdJbUFBQVNmQjd2bkY2dmp1Q0RQWVJFXzhNX1Q1Z1NxMkwzXzN5YUtUNWpPelA1eV9lNU1qazFm?oc=5",
+   "categorie": "parsing",
+   "titre": "CyberYozh App Launches Free Open-Source Yozh Scraper to Support AI and Data Teams - GlobeNewswire",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQ2d4cEotZFY0bWdLRlFSdnF6eVJIcUJBTklraTBOdlY5R1Q5VGUzb2p1NWZSaFdTcDRPTVpneVdzU1k0amswR3BoVGtPWnRlOG1KSnNEQml2Q3BIVG9idGxmTHprTS1uYzJUYlc5SHl5YjFDaXpDWElkS0dRQzh2UVh3TFhSWk83X0k0UDJ3aDZLd3U2UFpfVGJzd0FGMm5Nb0l6dE0xbEk1UnV0Ym45VEdJbUFBQVNmQjd2bkY2dmp1Q0RQWVJFXzhNX1Q1Z1NxMkwzXzN5YUtUNWpPelA1eV9lNU1qazFm?oc=5",
+   "source": "Scraping et parsing HTML (actualités)",
+   "resume": "CyberYozh App Launches Free Open-Source Yozh Scraper to Support AI and Data Teams &nbsp;&nbsp; GlobeNewswire",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pRmNhdS01UlVlYU5ldk5JMlNZTTFWczFxb1RXc2hURk5QeEZzSHdObFRYZzBnVXE0QnNTbXhuQzhvZFdlaHR4V0JtdDhsb3lkdUhTbEhLOE9uWUlVaFBQUGo5a0FnbHYxZWdoX29HMXphODhZM0E?oc=5",
+   "categorie": "comparatif",
+   "titre": "GPT-6.2 Sol Launches in Gray Release, Debuts Atop Leaderboard With Per-Task Cost Just 11.8% of Opus 5.5 - BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pRmNhdS01UlVlYU5ldk5JMlNZTTFWczFxb1RXc2hURk5QeEZzSHdObFRYZzBnVXE0QnNTbXhuQzhvZFdlaHR4V0JtdDhsb3lkdUhTbEhLOE9uWUlVaFBQUGo5a0FnbHYxZWdoX29HMXphODhZM0E?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)",
+   "resume": "GPT-6.2 Sol Launches in Gray Release, Debuts Atop Leaderboard With Per-Task Cost Just 11.8% of Opus 5.5 &nbsp;&nbsp; BigGo Finance",
+   "specificites": []
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.08572",
+   "categorie": "article",
+   "titre": "Enhancing Academic Advisement with Case-Based Reasoning",
+   "url": "https://arxiv.org/abs/2611.08572",
+   "source": "arXiv cs.AI",
+   "resume": "arXiv:2611.08572v1 Announce Type: new Abstract: This research involved the study of an application of Case-Based Reasoning (CBR) in the field of academic advising. Academic advisement has been recognised as an important function of higher education. However, there is a widespread desire to improve t",
+   "specificites": []
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+   "categorie": "pratique",
+   "titre": "The Web Is More Than Enough, by Paul Ford",
+   "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+   "source": "Simon Willison",
+   "resume": "My comment on The Web Is More Than Enough, by Paul Ford &mdash; Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I just asked Claude",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc1BIUm5EQ1A1OXdLVGNZd3dGdm1QV0tLMjRSZk5DWEllSTJQS05xSHhQTG5aSnR3NnNJMFB0dndwSFZMeldLbmwySVNENWd5UzlYR1dROG9Edi1sTE1DNWJQdlRpLWQyTEFOU3ZGa2VYMElvLVNhN1dTMWhhdUtQV0lQa0stUQ?oc=5",
+   "categorie": "modele",
+   "titre": "DeepSeek API Pricing vs Mistral Large 4 [2026] - shattered.io",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc1BIUm5EQ1A1OXdLVGNZd3dGdm1QV0tLMjRSZk5DWEllSTJQS05xSHhQTG5aSnR3NnNJMFB0dndwSFZMeldLbmwySVNENWd5UzlYR1dROG9Edi1sTE1DNWJQdlRpLWQyTEFOU3ZGa2VYMElvLVNhN1dTMWhhdUtQV0lQa0stUQ?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)",
+   "resume": "DeepSeek API Pricing vs Mistral Large 4 [2026] &nbsp;&nbsp; shattered.io",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNzFib2VZQnJWcGh0MHZCUVJSOHpNVWhTdko5SHRqU0k2RlpSSFVYTXZsTV9TdTd2UXRHM0R5dkJZNTFoOWx1VnBpQVlPWk9XYl9lS25xZnJTQnhSQ01wVk0zZVJLdXY4WHlmRnp3d2lfVVlRZmthNmJoT3R1aDhNajBlVTJXZ1JTNlE?oc=5",
+   "categorie": "robotique",
+   "titre": "UBTECH Partners with Tianyi to Scale Humanoid Robot Adoption - Unite.AI",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNzFib2VZQnJWcGh0MHZCUVJSOHpNVWhTdko5SHRqU0k2RlpSSFVYTXZsTV9TdTd2UXRHM0R5dkJZNTFoOWx1VnBpQVlPWk9XYl9lS25xZnJTQnhSQ01wVk0zZVJLdXY4WHlmRnp3d2lfVVlRZmthNmJoT3R1aDhNajBlVTJXZ1JTNlE?oc=5",
+   "source": "Robots humanoïdes (actualités)",
+   "resume": "UBTECH Partners with Tianyi to Scale Humanoid Robot Adoption &nbsp;&nbsp; Unite.AI",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.705",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.705",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.705",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.705",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWkpBOVdYakNfdmRRelI5TlNMTWEzMnhmMVBrRXdJcGJnbGhtY2s0NVRfNnc1dmQzdkVuRmEweDhTQ2YzUzdPUnJnN2VrWERJY2tUaXpBTFVxbnVMcjRIU1pGVHlYbmtZQWt1eGE4TTNVYnFnTkRUN1ZQMU1YOGFoTGRKZFdNOVJS?oc=5",
+   "categorie": "comparatif",
+   "titre": "Gemini 4 Carbon Scores 60 vs Claude Opus 5.5 [2026] - shattered.io",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWkpBOVdYakNfdmRRelI5TlNMTWEzMnhmMVBrRXdJcGJnbGhtY2s0NVRfNnc1dmQzdkVuRmEweDhTQ2YzUzdPUnJnN2VrWERJY2tUaXpBTFVxbnVMcjRIU1pGVHlYbmtZQWt1eGE4TTNVYnFnTkRUN1ZQMU1YOGFoTGRKZFdNOVJS?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)",
+   "resume": "Gemini 4 Carbon Scores 60 vs Claude Opus 5.5 [2026] &nbsp;&nbsp; shattered.io",
+   "specificites": []
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.08613",
+   "categorie": "article",
+   "titre": "NormGym: Evaluating Normative Competence through Social Interaction",
+   "url": "https://arxiv.org/abs/2611.08613",
+   "source": "arXiv cs.AI",
+   "resume": "arXiv:2611.08613v1 Announce Type: new Abstract: Normative competence, the ability to infer socially enforced expectations from interaction and adjust behavior accordingly, is essential for agents operating in unfamiliar human communities. Yet existing evaluations largely test whether agents can reco",
+   "specificites": []
+  }
+ ],
+ "comparatif": "",
+ "sans_ia": true,
+ "tendance": "Veille brute : l'IA était indisponible, les extraits viennent directement des sources.",
+ "date": "2026-11-09",
+ "prix": [
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "nom": "Anthropic: Claude Fable 5.1",
+   "fournisseur": "anthropic",
+   "entree": 10.0,
+   "sortie": 50.0,
+   "contexte": 1000000,
+   "cree": 1788285838,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.1-flash",
+   "nom": "Google: Gemini Omni 1.1 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793825668,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.59,
+   "sortie": 0.79,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.006,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.567,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.051 / 0.41 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
