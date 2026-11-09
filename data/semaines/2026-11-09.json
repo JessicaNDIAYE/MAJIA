@@ -1,117 +1,86 @@
 {
  "selection": [
   {
-   "id": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
-   "categorie": "modele",
-   "titre": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
-   "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
-   "source": "Hugging Face Blog",
-   "resume": "",
-   "specificites": []
-  },
-  {
-   "id": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZGpVQmNwQlV3Yk9pVDNlWFZhRUxoXzZiaGNlV0R4am0weFRtTEY3c0ZCM0NBQzBRemlWYXJGYzVQUEQ3cXd2ejdJUzVOWmc2SHRUbk9FNHI5NUlwcnl2YU5kU1FBUjhXLVRoWGY3WEtZeVZZNVB6UnJXNlBiQndUMmh1aUk4VDdqdEVXWV8yWlc5QnpTSkpHZ0dudXVmWTVKNFR0enF1NzdQVkJRVzh6UDNEbVVSTFJHa3MwYjg5Z1k?oc=5",
-   "categorie": "robotique",
-   "titre": "Lisbon Web Summit 2026 opens with humanoid robot speakers and record Chinese delegation - Euronews.com",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZGpVQmNwQlV3Yk9pVDNlWFZhRUxoXzZiaGNlV0R4am0weFRtTEY3c0ZCM0NBQzBRemlWYXJGYzVQUEQ3cXd2ejdJUzVOWmc2SHRUbk9FNHI5NUlwcnl2YU5kU1FBUjhXLVRoWGY3WEtZeVZZNVB6UnJXNlBiQndUMmh1aUk4VDdqdEVXWV8yWlc5QnpTSkpHZ0dudXVmWTVKNFR0enF1NzdQVkJRVzh6UDNEbVVSTFJHa3MwYjg5Z1k?oc=5",
-   "source": "Robots humanoïdes (actualités)",
-   "resume": "Lisbon Web Summit 2026 opens with humanoid robot speakers and record Chinese delegation &nbsp;&nbsp; Euronews.com",
-   "specificites": []
-  },
-  {
-   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.77.0",
-   "categorie": "monitoring",
-   "titre": "Langfuse v4.77.0",
-   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.77.0",
-   "source": "Langfuse (releases)",
-   "resume": "What's Changed Features feat(topics): proper cost tracking for executions by @nimarb in #19432 feat(external-media-storage): make external media storage an enterprise feature by @wochinge in #19778 feat(web): use Langfuse by ClickHouse logo in the app shell and auth screens by @marcklingen in #19740",
-   "specificites": []
-  },
-  {
-   "id": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQ2d4cEotZFY0bWdLRlFSdnF6eVJIcUJBTklraTBOdlY5R1Q5VGUzb2p1NWZSaFdTcDRPTVpneVdzU1k0amswR3BoVGtPWnRlOG1KSnNEQml2Q3BIVG9idGxmTHprTS1uYzJUYlc5SHl5YjFDaXpDWElkS0dRQzh2UVh3TFhSWk83X0k0UDJ3aDZLd3U2UFpfVGJzd0FGMm5Nb0l6dE0xbEk1UnV0Ym45VEdJbUFBQVNmQjd2bkY2dmp1Q0RQWVJFXzhNX1Q1Z1NxMkwzXzN5YUtUNWpPelA1eV9lNU1qazFm?oc=5",
-   "categorie": "parsing",
-   "titre": "CyberYozh App Launches Free Open-Source Yozh Scraper to Support AI and Data Teams - GlobeNewswire",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQ2d4cEotZFY0bWdLRlFSdnF6eVJIcUJBTklraTBOdlY5R1Q5VGUzb2p1NWZSaFdTcDRPTVpneVdzU1k0amswR3BoVGtPWnRlOG1KSnNEQml2Q3BIVG9idGxmTHprTS1uYzJUYlc5SHl5YjFDaXpDWElkS0dRQzh2UVh3TFhSWk83X0k0UDJ3aDZLd3U2UFpfVGJzd0FGMm5Nb0l6dE0xbEk1UnV0Ym45VEdJbUFBQVNmQjd2bkY2dmp1Q0RQWVJFXzhNX1Q1Z1NxMkwzXzN5YUtUNWpPelA1eV9lNU1qazFm?oc=5",
-   "source": "Scraping et parsing HTML (actualités)",
-   "resume": "CyberYozh App Launches Free Open-Source Yozh Scraper to Support AI and Data Teams &nbsp;&nbsp; GlobeNewswire",
-   "specificites": []
-  },
-  {
-   "id": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pRmNhdS01UlVlYU5ldk5JMlNZTTFWczFxb1RXc2hURk5QeEZzSHdObFRYZzBnVXE0QnNTbXhuQzhvZFdlaHR4V0JtdDhsb3lkdUhTbEhLOE9uWUlVaFBQUGo5a0FnbHYxZWdoX29HMXphODhZM0E?oc=5",
-   "categorie": "comparatif",
-   "titre": "GPT-6.2 Sol Launches in Gray Release, Debuts Atop Leaderboard With Per-Task Cost Just 11.8% of Opus 5.5 - BigGo Finance",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pRmNhdS01UlVlYU5ldk5JMlNZTTFWczFxb1RXc2hURk5QeEZzSHdObFRYZzBnVXE0QnNTbXhuQzhvZFdlaHR4V0JtdDhsb3lkdUhTbEhLOE9uWUlVaFBQUGo5a0FnbHYxZWdoX29HMXphODhZM0E?oc=5",
-   "source": "Benchmarks et comparatifs (actualités)",
-   "resume": "GPT-6.2 Sol Launches in Gray Release, Debuts Atop Leaderboard With Per-Task Cost Just 11.8% of Opus 5.5 &nbsp;&nbsp; BigGo Finance",
-   "specificites": []
-  },
-  {
-   "id": "https://arxiv.org/abs/2611.08572",
+   "id": "https://arxiv.org/abs/2611.08684",
    "categorie": "article",
-   "titre": "Enhancing Academic Advisement with Case-Based Reasoning",
-   "url": "https://arxiv.org/abs/2611.08572",
-   "source": "arXiv cs.AI",
-   "resume": "arXiv:2611.08572v1 Announce Type: new Abstract: This research involved the study of an application of Case-Based Reasoning (CBR) in the field of academic advising. Academic advisement has been recognised as an important function of higher education. However, there is a widespread desire to improve t",
-   "specificites": []
+   "resume": "Une étude sur le moteur vLLM montre que l'annulation des requêtes par les clients et proxys après un dépassement de délai (timeout) est insuffisante pour permettre la récupération du moteur lors d'une surcharge transitoire.",
+   "specificites": [
+    "Testé sur vLLM avec des surcharges sur trois modèles open-weights.",
+    "Met en évidence que le moteur continue de calculer pour des clients partis si l'annulation n'est pas entièrement propagée."
+   ],
+   "pourquoi": "Utile pour optimiser le monitoring et la gestion des files d'attente de mes pipelines d'inférence LLM.",
+   "titre": "Cancellation Is Not Enough: What Retries Leave Behind in an Overloaded LLM Engine",
+   "url": "https://arxiv.org/abs/2611.08684",
+   "source": "arXiv cs.AI"
   },
   {
-   "id": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
-   "categorie": "pratique",
-   "titre": "The Web Is More Than Enough, by Paul Ford",
-   "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
-   "source": "Simon Willison",
-   "resume": "My comment on The Web Is More Than Enough, by Paul Ford &mdash; Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I just asked Claude",
-   "specificites": []
-  },
-  {
-   "id": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc1BIUm5EQ1A1OXdLVGNZd3dGdm1QV0tLMjRSZk5DWEllSTJQS05xSHhQTG5aSnR3NnNJMFB0dndwSFZMeldLbmwySVNENWd5UzlYR1dROG9Edi1sTE1DNWJQdlRpLWQyTEFOU3ZGa2VYMElvLVNhN1dTMWhhdUtQV0lQa0stUQ?oc=5",
-   "categorie": "modele",
-   "titre": "DeepSeek API Pricing vs Mistral Large 4 [2026] - shattered.io",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc1BIUm5EQ1A1OXdLVGNZd3dGdm1QV0tLMjRSZk5DWEllSTJQS05xSHhQTG5aSnR3NnNJMFB0dndwSFZMeldLbmwySVNENWd5UzlYR1dROG9Edi1sTE1DNWJQdlRpLWQyTEFOU3ZGa2VYMElvLVNhN1dTMWhhdUtQV0lQa0stUQ?oc=5",
-   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)",
-   "resume": "DeepSeek API Pricing vs Mistral Large 4 [2026] &nbsp;&nbsp; shattered.io",
-   "specificites": []
-  },
-  {
-   "id": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNzFib2VZQnJWcGh0MHZCUVJSOHpNVWhTdko5SHRqU0k2RlpSSFVYTXZsTV9TdTd2UXRHM0R5dkJZNTFoOWx1VnBpQVlPWk9XYl9lS25xZnJTQnhSQ01wVk0zZVJLdXY4WHlmRnp3d2lfVVlRZmthNmJoT3R1aDhNajBlVTJXZ1JTNlE?oc=5",
-   "categorie": "robotique",
-   "titre": "UBTECH Partners with Tianyi to Scale Humanoid Robot Adoption - Unite.AI",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNzFib2VZQnJWcGh0MHZCUVJSOHpNVWhTdko5SHRqU0k2RlpSSFVYTXZsTV9TdTd2UXRHM0R5dkJZNTFoOWx1VnBpQVlPWk9XYl9lS25xZnJTQnhSQ01wVk0zZVJLdXY4WHlmRnp3d2lfVVlRZmthNmJoT3R1aDhNajBlVTJXZ1JTNlE?oc=5",
-   "source": "Robots humanoïdes (actualités)",
-   "resume": "UBTECH Partners with Tianyi to Scale Humanoid Robot Adoption &nbsp;&nbsp; Unite.AI",
-   "specificites": []
-  },
-  {
-   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.705",
-   "categorie": "parsing",
-   "titre": "Firecrawl v2.11.705",
-   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.705",
-   "source": "Firecrawl (releases)",
-   "resume": "Release API image v2.11.705",
-   "specificites": []
-  },
-  {
-   "id": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWkpBOVdYakNfdmRRelI5TlNMTWEzMnhmMVBrRXdJcGJnbGhtY2s0NVRfNnc1dmQzdkVuRmEweDhTQ2YzUzdPUnJnN2VrWERJY2tUaXpBTFVxbnVMcjRIU1pGVHlYbmtZQWt1eGE4TTNVYnFnTkRUN1ZQMU1YOGFoTGRKZFdNOVJS?oc=5",
-   "categorie": "comparatif",
-   "titre": "Gemini 4 Carbon Scores 60 vs Claude Opus 5.5 [2026] - shattered.io",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWkpBOVdYakNfdmRRelI5TlNMTWEzMnhmMVBrRXdJcGJnbGhtY2s0NVRfNnc1dmQzdkVuRmEweDhTQ2YzUzdPUnJnN2VrWERJY2tUaXpBTFVxbnVMcjRIU1pGVHlYbmtZQWt1eGE4TTNVYnFnTkRUN1ZQMU1YOGFoTGRKZFdNOVJS?oc=5",
-   "source": "Benchmarks et comparatifs (actualités)",
-   "resume": "Gemini 4 Carbon Scores 60 vs Claude Opus 5.5 [2026] &nbsp;&nbsp; shattered.io",
-   "specificites": []
-  },
-  {
-   "id": "https://arxiv.org/abs/2611.08613",
+   "id": "https://arxiv.org/abs/2611.08741",
    "categorie": "article",
-   "titre": "NormGym: Evaluating Normative Competence through Social Interaction",
-   "url": "https://arxiv.org/abs/2611.08613",
-   "source": "arXiv cs.AI",
-   "resume": "arXiv:2611.08613v1 Announce Type: new Abstract: Normative competence, the ability to infer socially enforced expectations from interaction and adjust behavior accordingly, is essential for agents operating in unfamiliar human communities. Yet existing evaluations largely test whether agents can reco",
-   "specificites": []
+   "resume": "AlterNet propose une architecture combinant des Mixture-of-Experts (MoE) à experts peu profonds avec un système de profondeur dynamique et d'arrêt appris pour un inférence élastique.",
+   "specificites": [
+    "Permet d'ajuster dynamiquement le calcul par passe avant selon la tâche.",
+    "Échelle la réduction de la charge après l'entraînement sans nécessiter de ré-entraînement."
+   ],
+   "pourquoi": "Permet d'ajuster dynamiquement le compromis coût/latence pour mes agents LLM.",
+   "titre": "AlterNet: Adaptive-Depth Mixture-of-Experts with Learned Halting for Elastic Inference",
+   "url": "https://arxiv.org/abs/2611.08741",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.08811",
+   "categorie": "article",
+   "resume": "Analyse des attaques par injection de pensée (thought injection) contre les grands modèles de raisonnement (LRM) qui intègrent une étape explicite de chaîne de pensée.",
+   "specificites": [
+    "Évalue les modèles open-weights GLM-5.3, MiniMax-M2.5 et Qwen3.8-Flash-Next.",
+    "Exploite le retour de texte non sécurisé imitant les délibérations du modèle."
+   ],
+   "pourquoi": "Crucial pour sécuriser la robustesse de mes agents et pipelines RAG face aux entrées malveillantes.",
+   "titre": "I Think, Therefore I Attack: Evaluating Thought Injection Attacks on Reasoning Agents",
+   "url": "https://arxiv.org/abs/2611.08811",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.09085",
+   "categorie": "article",
+   "resume": "Évaluation de quatre LLMs (Claude Opus 4.8, GPT-5.5, Gemini 2.5-flash, Qwen3.5-35B) sur la génération en indic romanisé à partir de 142 paires OpenAssistant.",
+   "specificites": [
+    "Montre que les métriques automatiques (BGE-M3, BERTScore) échouent à représenter la qualité réelle.",
+    "S'appuie sur un sous-ensemble diagnostique de 72 réponses."
+   ],
+   "pourquoi": "Fournit des repères techniques sur l'évaluation réelle des modèles pour des langues non standard.",
+   "titre": "The Invisible Gap: Romanized Indic Generation Fails Where Automatic Metrics Succeed",
+   "url": "https://arxiv.org/abs/2611.09085",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.08987",
+   "categorie": "robotique",
+   "resume": "Proposition du mécanisme VLA Handover permettant à un robot d'exécuter un petit modèle VLA localement et de basculer vers un grand VLA sur serveur uniquement en cas de risque d'échec.",
+   "specificites": [
+    "Formalisé comme la minimisation du coût des requêtes sous contrainte.",
+    "Réduit la surcharge de requêtes serveur par rapport à un appel systématique."
+   ],
+   "pourquoi": "Inspirant pour concevoir des architectures hybrides locales/distribuées minimisant la latence et les coûts d'API.",
+   "titre": "VLA Handover: Failure-Prediction-Based Switching from On-Robot to Server VLA Models",
+   "url": "https://arxiv.org/abs/2611.08987",
+   "source": "arXiv cs.RO"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.08714",
+   "categorie": "article",
+   "resume": "Un cadre pour corriger les angles morts de détecteurs de fraude tabulaires gelés via l'overlay de règles LLM réversibles basées sur les valeurs SHAP.",
+   "specificites": [
+    "Les LLMs proposent des règles ancrées sur les caractéristiques sous-pondérées par le modèle.",
+    "Application d'un overlay additif et réversible s'exécutant au seuil de production."
+   ],
+   "pourquoi": "Fournit une méthodologie pratique pour auditer et corriger des modèles tabulaires en production.",
+   "titre": "Patching the Blind Spots: Reversible LLM Rule Overlay for Frozen Fraud Detectors",
+   "url": "https://arxiv.org/abs/2611.08714",
+   "source": "arXiv cs.LG"
   }
  ],
- "comparatif": "",
- "sans_ia": true,
- "tendance": "Veille brute : l'IA était indisponible, les extraits viennent directement des sources.",
+ "tendance": "La veille technique met en avant la gestion de la charge des moteurs d'inférence (comme vLLM sous contrainte de retries), l'essor des architectures de raisonnement multi-agents spécialisées, et l'optimisation des coûts d'inférence via des modèles flash open-weights à grande fenêtre de contexte.",
+ "comparatif": "- **Modèles les moins chers (Entrée < 0,10 $ / million de tokens)** :\n  - `deepseek/deepseek-v4.1-flash-1017` : 0,006 $ en entrée, 0,5 $ en sortie (contexte de 1 048 576 tokens).\n  - `deepseek/deepseek-v4.1-flash` : 0,051 $ en entrée, 0,567 $ en sortie (contexte de 1 048 576 tokens).\n  - `nvidia/nemotron-3.5-lightning` : 0,07 $ en entrée, 0,2 $ en sortie (contexte de 262 144 tokens).\n  - `meta-llama/llama-4-scout` : 0,1 $ en entrée, 0,3 $ en sortie (contexte de 1 310 720 tokens).\n  - `anthropic/claude-haiku-5.5` : 0,1 $ en entrée, 0,5 $ en sortie (contexte de 1 000 000 tokens).\n\n- **Meilleur rapport qualité/prix pour les Agents et RAG (gros contextes et forte sortie)** :\n  - `deepseek/deepseek-v4.1-flash` (0,051 $ / 0,567 $ pour 1M de tokens) offre un compromis imbattable pour le traitement de documents volumineux et les pipelines RAG.\n  - `qwen/qwen3.8-flash` (0,15 $ en entrée, 0,47 $ en sortie pour 1M de contexte) est idéal pour les appels fréquents d'agents à faible coût.\n\n- **Modèles haut de gamme (Raisonnement / Tâches complexes)** :\n  - `anthropic/claude-sonnet-5.5` : 2,0 $ en entrée, 10,0 $ en sortie (1M de contexte).\n  - `anthropic/claude-opus-5.5` : 4,0 $ en entrée, 20,0 $ en sortie (1M de contexte).\n  - `qwen/qwen3.8-max-prime` : 4,0 $ en entrée, 12,0 $ en sortie (1M de contexte).",
  "date": "2026-11-09",
  "prix": [
   {
@@ -332,7 +301,7 @@
    "sortie": 0.567,
    "contexte": 1048576,
    "cree": 1789021285,
-   "evolution": "prix modifié (avant 0.051 / 0.41 $)"
+   "evolution": ""
   },
   {
    "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -475,6 +444,29 @@
    "evolution": ""
   }
  ],
- "idees": [],
- "lecon": null
+ "idees": [
+  {
+   "titre": "Audit des timeouts vLLM et gestion des requêtes orphelines",
+   "description": "Analyser notre configuration vLLM et nos proxys pour vérifier si les annulations de clients après un dépassement de délai propagent correctement l'arrêt du calcul au moteur, évitant ainsi le gaspillage de ressources sur des requêtes abandonnées.",
+   "effort": "moyen",
+   "source": "https://arxiv.org/abs/2611.08684"
+  },
+  {
+   "titre": "Robustesse des agents de raisonnement face aux injections de pensée",
+   "description": "Mettre en place des garde-fous pour nos agents LLM utilisant des chaînes de pensée explicites afin d'éviter qu'un retour de texte non sécurisé imitant la délibération ne détourne le comportement du modèle.",
+   "effort": "élevé",
+   "source": "https://arxiv.org/abs/2611.08811"
+  },
+  {
+   "titre": "Hybridation locale/serveur pour l'optimisation des coûts d'inférence",
+   "description": "S'inspirer de l'approche 'VLA Handover' pour concevoir une architecture de routage dynamique qui bascule nos requêtes vers de grands modèles de serveur uniquement en cas de risque d'échec détecté sur un modèle local plus léger.",
+   "effort": "élevé",
+   "source": "https://arxiv.org/abs/2611.08987"
+  }
+ ],
+ "lecon": {
+  "titre": "Gestion des ressources et résilience des moteurs LLM : au-delà des timeouts clients",
+  "markdown": "# Le concept\n\nLorsque nous déployons des LLM en production via des moteurs d'inférence haute performance comme vLLM, les clients (ou les proxys intermédiaires) envoient des requêtes et définissent des délais d'attente (timeouts). Traditionnellement, on suppose que si le client abandonne la connexion suite à un timeout, le serveur cesse immédiatement le traitement. \n\nCependant, une étude récente (arXiv:2611.08684) montre que l'annulation des requêtes est souvent insuffisante : si l'annulation n'est pas entièrement propagée dans le moteur, ce dernier continue de calculer pour des clients partis, provoquant des surcharges transitoires et un gaspillage critique de ressources GPU.\n\n# Pourquoi c'est important\n\nEn tant qu'ingénieure IA en charge du monitoring, de l'observabilité et des pipelines de production, ce phénomène a un impact direct sur :\n1. **La stabilité et l'observabilité** : Vos métriques de latence et d'utilisation GPU peuvent être faussées par des calculs fantômes.\n2. **Les coûts d'infrastructure** : Payer du temps de calcul GPU pour des utilisateurs qui ont déjà fermé leur onglet ou dont la requête a expiré.\n3. **La saturation du moteur** : Empêcher le moteur de récupérer rapidement lors d'un pic de trafic ou d'une surcharge.\n\n# Comment l'appliquer\n\nPour mitiger ce problème dans vos architectures d'agents ou de pipelines RAG :\n- **Inspectez la propagation des signaux d'annulation** entre votre API gateway (ex: Nginx, Envoy), vos orchestrateurs d'agents (ex: LangChain, LlamaIndex) et votre moteur vLLM.\n- **Configurez rigoureusement les keep-alive et les timeouts** au niveau de la couche réseau et du serveur d'inférence.\n- **Mettez en place un monitoring dédié** mesurant le taux de requêtes abandonnées par rapport aux tokens réellement générés et renvoyés au client.\n\n# Exercice pratique (30 min max)\n\n1. Dans votre stack de monitoring actuelle (Grafana/Prometheus ou logs applicatifs), identifiez les métriques liées aux connexions interrompues brusquement par les clients (erreurs 499 ou timeouts).\n2. Simulez une charge élevée sur un pipeline de test utilisant vLLM en envoyant des requêtes avec un timeout client très court.\n3. Analysez les logs du serveur vLLM pour observer si les calculs s'arrêtent net ou s'ils persistent après l'abandon du client.\n\n# Questions d'auto-évaluation\n\n**1. Pourquoi l'annulation d'une requête par un proxy client ne garantit-elle pas la libération immédiate des ressources sur vLLM ?**\n*Réponse :* Parce que si le signal d'annulation n'est pas entièrement propagé et géré à l'intérieur du moteur d'inférence, celui-ci continue le traitement en arrière-plan pour une requête dont le destinataire n'attend plus le résultat.\n\n**2. Quel est l'impact direct d'une surcharge transitoire non maîtrisée liée à ces requêtes orphelines ?**\n*Réponse :* Une saturation inutile des GPU, une augmentation de la latence pour les autres utilisateurs légitimes et une difficulté pour le moteur à récupérer un état stable.\n\n**3. Quel type d'outil devez-vous surveiller particulièrement pour détecter ce décalage ?**\n*Réponse :* Les outils d'observabilité système (monitoring des GPU/CPU) croisés avec les logs du moteur d'inférence (vLLM) et de la passerelle réseau.\n\n# Pour aller plus loin\n\n- Étude de référence : [Cancellation Is Not Enough: What Retries Leave Behind in an Overloaded LLM Engine](https://arxiv.org/abs/2611.08684)",
+  "fichier": "2026-11-09-gestion-des-ressources-et-resilience-des-moteurs-llm-au-dela.md"
+ }
 }
