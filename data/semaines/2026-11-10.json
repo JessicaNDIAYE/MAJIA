@@ -1,0 +1,463 @@
+{
+ "selection": [
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.78.0",
+   "categorie": "monitoring",
+   "resume": "Langfuse v4.78.0 intègre de nouvelles fonctionnalités d'observabilité, notamment le filtrage des traces dans le flux de configuration des topics et l'intégration de la navigation de l'AI Gateway au niveau organisationnel.",
+   "specificites": [
+    "Filtrage des traces dans les topics",
+    "Ajout d'une portée de clé API utilisateur (USER)",
+    "Navigation AI Gateway unifiée au niveau de l'organisation"
+   ],
+   "pourquoi": "Permet d'améliorer le monitoring et le découpage des traçages dans vos pipelines RAG et agents LLM.",
+   "titre": "Langfuse v4.78.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.78.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.718",
+   "categorie": "parsing",
+   "resume": "Mise à jour v2.11.718 de Firecrawl, l'outil de scraping web et d'extraction de données structurées par IA.",
+   "specificites": [
+    "Mise à jour de l'image API v2.11.718"
+   ],
+   "pourquoi": "Directement utile pour vos pipelines de scraping web et d'extraction structurée de pages HTML.",
+   "titre": "Firecrawl v2.11.718",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.718",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+   "categorie": "pratique",
+   "resume": "Meta a lancé Muse Ember, un modèle léger positionné sur le segment des petits modèles rapides pour l'exécution de tâches répétitives.",
+   "specificites": [
+    "Conçu pour l'exécution de code, l'appel d'outils, le routage et le parsing de documents longs",
+    "Tarif aligné à $0.10 par million de tokens d'entrée et $0.50 par million en sortie (idem Claude Haiku 5.5)"
+   ],
+   "pourquoi": "Fournit une alternative économique pour orchestrer des sous-tâches d'agents et du parsing à bas coût.",
+   "titre": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+   "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+   "categorie": "modele",
+   "resume": "Claude Code v2.1.321 introduit le modèle Claude Fable 5.2 avec une fenêtre de contexte de 1M de tokens et des optimisations de sécurité et d'authentification.",
+   "specificites": [
+    "Intégration de Claude Fable 5.2 par défaut (1M de contexte)",
+    "Tarification : $8 / million de tokens en entrée, $40 en sortie, avec des lectures de cache à $0.20 / million",
+    "Correction de bugs OAuth MCP et de la sandbox Bash"
+   ],
+   "pourquoi": "Essentiel pour calibrer vos intégrations MCP et l'utilisation de modèles à large contexte.",
+   "titre": "Claude Code v2.1.321",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+   "source": "Claude Code (releases)"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.10096",
+   "categorie": "article",
+   "resume": "Introduction de CoMixKV, une méthode de quantification mixte du cache KV coordonnée pour les systèmes multi-agents basés sur LLM.",
+   "specificites": [
+    "Combine estimation de sensibilité en ligne et allocation conjointe de bits par agent et par couche",
+    "Cible le goulot d'étranglement mémoire des caches KV simultanés"
+   ],
+   "pourquoi": "Permet d'optimiser l'empreinte mémoire de vos architectures multi-agents complexes.",
+   "titre": "Coordinated Mixed-Precision KV Cache Quantization for Efficient LLM-based Multi-agent Systems",
+   "url": "https://arxiv.org/abs/2611.10096",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.09942",
+   "categorie": "article",
+   "resume": "Publication de MedToolFault et MedGuard pour évaluer et améliorer la fiabilité des agents cliniques face aux erreurs de leurs outils.",
+   "specificites": [
+    "Benchmark MedToolFault : lien entre 6 classes d'échecs d'outils et l'exactitude des réponses",
+    "Méthode MedGuard : vérification des preuves en lecture et attribution des écritures ambiguës sur 127 861 épisodes"
+   ],
+   "pourquoi": "Fournit des patrons de conception robustes pour sécuriser la gestion des erreurs dans vos agents LLM.",
+   "titre": "MedToolFault and MedGuard: evaluating and improving clinical agent reliability",
+   "url": "https://arxiv.org/abs/2611.09942",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/",
+   "categorie": "robotique",
+   "resume": "NVIDIA a lancé GR00T 2 et Isaac Lab 3.0 lors de la conférence CoRL, adoptés par plusieurs acteurs de la robotique humanoïde.",
+   "specificites": [
+    "Utilisation par Ambi Robotics, FieldAI, Skild AI et d'autres",
+    "Amélioration des outils de simulation et d'apprentissage pour la manipulation"
+   ],
+   "pourquoi": "Sert de référence sur l'état de l'art des plateformes d'entraînement et de simulation robotique.",
+   "titre": "NVIDIA launches GR00T 2 and Isaac Lab 3.0 at CoRL",
+   "url": "https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/",
+   "source": "The Robot Report"
+  }
+ ],
+ "tendance": "La période est marquée par l'émergence de modèles à très grand contexte et à coût optimisé (comme Claude Fable 5.2 à 1M de contexte et Muse Ember), couplée à des avancées sur l'efficacité des architectures d'agents (quantification de cache KV, gestion des pannes d'outils). L'infrastructure de déploiement et l'observabilité (Langfuse v4.78.0) continuent de se structurer pour supporter des charges multi-agents.",
+ "comparatif": "- **Modèles les moins chers (Entrée / Sortie par million de tokens)** :\n  - DeepSeek V4.1 Flash : $0.006 / $0.50 (Contexte : 1 048 576 tokens)\n  - NVIDIA Nemotron 3.5 Lightning : $0.07 / $0.20 (Contexte : 262 144 tokens)\n  - Meta Llama 4 Scout : $0.10 / $0.30 (Contexte : 1 310 720 tokens)\n  - Anthropic Claude Haiku 5.5 : $0.10 / $0.50 (Contexte : 1 000 000 tokens)\n  - Qwen 3.8 Flash : $0.15 / $0.47 (Contexte : 1 000 000 tokens)\n\n- **Meilleur rapport qualité/prix par usage** :\n  - **Agents & Tâches répétitives** : Meta Llama 4 Scout ($0.10 / $0.30) ou Claude Haiku 5.5 ($0.10 / $0.50) offrent de grands contextes (1M+ tokens) à bas coût.\n  - **RAG & Traitement de gros volumes de texte** : DeepSeek V4.1 Flash propose le coût d'entrée le plus bas du marché à $0.006 pour un million de tokens, avec une sortie à $0.50.\n  - **Extraction web / Parsing & Modèles lourds** : Anthropic Claude Fable 5.2 culmine à $8.00 en entrée et $40.00 en sortie pour 1M de tokens, tandis que les modèles de milieu de gamme comme OpenAI GPT-6.1 Sol s'établissent à $2.00 / $10.00.\n\n- **Changements récents** :\n  - L'entrée d'Anthropic Claude Fable 5.2 à $8.00 / $40.00 avec un support de cache à $0.20.\n  - Ajustement tarifaire pour Meta Llama 3.3 70B Instruct ($0.71 / $0.71) et DeepSeek V4.1 Flash ($0.006 / $0.50).",
+ "date": "2026-11-10",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.1-flash",
+   "nom": "Google: Gemini Omni 1.1 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793825668,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-nano-banana-2.1",
+   "nom": "Google: Nano Banana 2.1",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 65536,
+   "cree": 1791300825,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": "prix modifié (avant 0.59 / 0.79 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.006,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.006,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.051 / 0.567 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": "prix modifié (avant 0.15 / 0.5 $)"
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

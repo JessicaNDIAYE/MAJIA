@@ -1,5 +1,15 @@
 [
  {
+  "id": "anthropic/claude-fable-5.2",
+  "nom": "Anthropic: Claude Fable 5.2",
+  "fournisseur": "anthropic",
+  "entree": 8.0,
+  "sortie": 40.0,
+  "contexte": 1000000,
+  "cree": 1794253781,
+  "evolution": "Nouveau"
+ },
+ {
   "id": "anthropic/claude-haiku-5.5",
   "nom": "Anthropic: Claude Haiku 5.5",
   "fournisseur": "anthropic",
@@ -27,16 +37,6 @@
   "sortie": 20.0,
   "contexte": 1000000,
   "cree": 1790094732,
-  "evolution": ""
- },
- {
-  "id": "anthropic/claude-fable-5.1",
-  "nom": "Anthropic: Claude Fable 5.1",
-  "fournisseur": "anthropic",
-  "entree": 10.0,
-  "sortie": 50.0,
-  "contexte": 1000000,
-  "cree": 1788285838,
   "evolution": ""
  },
  {
@@ -193,11 +193,11 @@
   "id": "meta-llama/llama-3.3-70b-instruct",
   "nom": "Meta: Llama 3.3 70B Instruct",
   "fournisseur": "meta-llama",
-  "entree": 0.59,
-  "sortie": 0.79,
+  "entree": 0.71,
+  "sortie": 0.71,
   "contexte": 131072,
   "cree": 1733506137,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.59 / 0.79 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -213,11 +213,11 @@
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.051,
-  "sortie": 0.567,
+  "entree": 0.006,
+  "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.051 / 0.567 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -324,10 +324,10 @@
   "nom": "NVIDIA: Nemotron 3.5 Super VL",
   "fournisseur": "nvidia",
   "entree": 0.15,
-  "sortie": 0.5,
+  "sortie": 0.47,
   "contexte": 1048576,
   "cree": 1792076662,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.15 / 0.5 $)"
  },
  {
   "id": "nvidia/nemotron-3.5-lightning",
