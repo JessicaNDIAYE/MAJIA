@@ -7,7 +7,7 @@
   "sortie": 40.0,
   "contexte": 1000000,
   "cree": 1794253781,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "anthropic/claude-haiku-5.5",
@@ -80,6 +80,16 @@
   "evolution": ""
  },
  {
+  "id": "google/gemini-4-carbon",
+  "nom": "Google: Gemini 4 Carbon",
+  "fournisseur": "google",
+  "entree": 2.0,
+  "sortie": 10.0,
+  "contexte": 1048576,
+  "cree": 1794326871,
+  "evolution": "Nouveau"
+ },
+ {
   "id": "google/gemini-omni-1.2-flash",
   "nom": "Google: Gemini Omni 1.2 Flash",
   "fournisseur": "google",
@@ -107,16 +117,6 @@
   "sortie": 10.0,
   "contexte": 1048576,
   "cree": 1791907477,
-  "evolution": ""
- },
- {
-  "id": "google/gemini-nano-banana-2.1",
-  "nom": "Google: Nano Banana 2.1",
-  "fournisseur": "google",
-  "entree": 1.5,
-  "sortie": 7.5,
-  "contexte": 65536,
-  "cree": 1791300825,
   "evolution": ""
  },
  {
@@ -197,7 +197,7 @@
   "sortie": 0.71,
   "contexte": 131072,
   "cree": 1733506137,
-  "evolution": "prix modifié (avant 0.59 / 0.79 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -213,11 +213,11 @@
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.006,
-  "sortie": 0.5,
+  "entree": 0.051,
+  "sortie": 0.567,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.051 / 0.567 $)"
+  "evolution": "prix modifié (avant 0.006 / 0.5 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -327,7 +327,7 @@
   "sortie": 0.47,
   "contexte": 1048576,
   "cree": 1792076662,
-  "evolution": "prix modifié (avant 0.15 / 0.5 $)"
+  "evolution": ""
  },
  {
   "id": "nvidia/nemotron-3.5-lightning",

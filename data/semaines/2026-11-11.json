@@ -1,0 +1,539 @@
+{
+ "selection": [
+  {
+   "id": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+   "categorie": "modele",
+   "resume": "Google DeepMind a rendu disponible Gemini 4 Carbon. Le modèle dispose d'une fenêtre de contexte de 1 048 576 tokens et est proposé à 2,0 $ / M tokens en entrée et 10,0 $ / M tokens en sortie (avec un doublement prévu à 4 $/20 $).",
+   "specificites": [
+    "Prix de lancement : 2,0 $ en entrée et 10,0 $ en sortie par million de tokens pour 1M de contexte.",
+    "Égalise statistiquement Claude Fable 5.2 sur le benchmark MKA pour un coût 5 à 6 fois inférieur au lancement.",
+    "Tarif programmé pour doubler au 1er décembre (4,0 $ / 20,0 $)."
+   ],
+   "pourquoi": "C'est un choix prioritaire pour les agents et le RAG à long contexte cherchant des performances de niveau frontier avant l'augmentation tarifaire.",
+   "titre": "Gemini 4 Carbon is now available",
+   "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+   "source": "Google DeepMind"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQX3dFVGxnUllZUDVUZko5dXAzbWVUNGJVNkUxVkkzMUs2djc1OTFnbE85WEVPVVYyMGp4RHlEcFF1QWdfSV9lOGhDQW9oRkVzekNhZ2dMYi1fTTJuYjNhM1hueXN5U3MtZ0RxUkRuR3hVVlg5aEtiMGhzM0c2N2RvSTM5UU5KY2FycEdQM2NONXNUSEVpRWRvcGhTcXFDVFNBVEp1azVNQklZLWF4a3hjUllvb2JtZFh6ck5UOGU5OUxRMW02X3UtdUtsazlUNEpIOVZ0MHhVeVNHMHlSRkE?oc=5",
+   "categorie": "comparatif",
+   "resume": "Le benchmark MKA montre une égalité statistique entre Gemini 4 Carbon et Claude Fable 5.2. Cette parité s'accompagne d'un coût opérationnel 5 à 6 fois plus faible pour le modèle de Google.",
+   "specificites": [
+    "Égalité statistique mesurée sur le benchmark visuel/agent MKA (co-développé par Google DeepMind et Artificial Analysis).",
+    "Comparaison directe face à Claude Fable 5.2 tarifé à 8,0 $ entrée / 40,0 $ sortie contre 2,0 $ / 10,0 $ pour Gemini 4 Carbon.",
+    "Pression directe sur la rentabilité des déploiements d'agents multimodaux complexes."
+   ],
+   "pourquoi": "Permet d'arbitrer objectivement entre Claude Fable 5.2 et Gemini 4 Carbon pour les agents autonomes nécessitant du raisonnement multimodal.",
+   "titre": "Gemini 4 Carbon Statistically Ties Claude Fable 5.2 on MKA Benchmark at Five to Six Times Lower Cost - Tech Times",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQX3dFVGxnUllZUDVUZko5dXAzbWVUNGJVNkUxVkkzMUs2djc1OTFnbE85WEVPVVYyMGp4RHlEcFF1QWdfSV9lOGhDQW9oRkVzekNhZ2dMYi1fTTJuYjNhM1hueXN5U3MtZ0RxUkRuR3hVVlg5aEtiMGhzM0c2N2RvSTM5UU5KY2FycEdQM2NONXNUSEVpRWRvcGhTcXFDVFNBVEp1azVNQklZLWF4a3hjUllvb2JtZFh6ck5UOGU5OUxRMW02X3UtdUtsazlUNEpIOVZ0MHhVeVNHMHlSRkE?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.723",
+   "categorie": "parsing",
+   "resume": "Publication de la version de correctif d'API v2.11.723 pour l'outil de scraping et d'extraction web Firecrawl. Cette version s'inscrit dans une série rapide de révisions successives (v2.11.719 à v2.11.723).",
+   "specificites": [
+    "Version corrective Release API image v2.11.723.",
+    "Mises à jour rapprochées ciblant la stabilité du moteur d'extraction HTML/web pour pipelines LLM.",
+    "Composant central pour transformer des pages web brutes en Markdown nettoyé pour le RAG."
+   ],
+   "pourquoi": "Essentiel pour maintenir à jour nos conteneurs d'extraction web et éviter les régressions lors du scraping de pages complexes.",
+   "titre": "Firecrawl v2.11.723",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.723",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.12935",
+   "categorie": "monitoring",
+   "resume": "L'article présente TopicScope, un framework de classification causale de sujet token par token basé sur des sparse autoencoders (SAE). Le système est entraîné sur le prefill et applique la surveillance directement au moment du décodage.",
+   "specificites": [
+    "Surveillance d'activation en temps réel au niveau token pour détecter les dérives thématiques en cours de génération.",
+    "Dépasse les limites des moniteurs binaires habituels en gérant 7 thèmes distincts simulés sur Gemma-3.",
+    "Permet de changer le label de classification thématique en cours de réponse sans verifier externe."
+   ],
+   "pourquoi": "Offre une piste d'observabilité runtime bas niveau pour surveiller les dérives thématiques de nos agents sans ajouter la latence d'un second LLM évaluateur.",
+   "titre": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+   "url": "https://arxiv.org/abs/2611.12935",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.13107",
+   "categorie": "article",
+   "resume": "Cette recherche introduit une méthode de vérification déterministe en ligne pour corriger les erreurs de raisonnement des LLM en temps réel. Elle valide les étapes intermédiaires par exécution de code plutôt que via des LLM verifieurs lents.",
+   "specificites": [
+    "Interception immédiate des erreurs d'étapes de raisonnement pour stopper la propagation de prémisses fausses.",
+    "Supprime la surcharge de calcul GPU liée aux LLM verifieurs concurrents.",
+    "Validation déterministe par exécution de code plutôt que restart complet de la génération."
+   ],
+   "pourquoi": "Applicable directement à nos pipelines text-to-SQL et pipelines d'agents pour valider syntaxiquement et logiquement les étapes intermédiaires sans gonfler les coûts d'inférence.",
+   "titre": "Catch It Where It Happens: Real Time Error Correction During LLM Reasoning",
+   "url": "https://arxiv.org/abs/2611.13107",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.13223",
+   "categorie": "article",
+   "resume": "L'article quantifie l'impact de la suppression des traces de raisonnement intermédiaires lors de sessions multi-tours avec outils. L'évaluation porte sur sept modèles de raisonnement ouverts et montre que la sensibilité à cette troncation est intrinsèque à chaque modèle.",
+   "specificites": [
+    "Étude menée sur 94 000 conversations ShareGPT (où 73 % des sessions comptent plusieurs tours).",
+    "Mesure en aveugle de la dégradation causée par la suppression de l'historique de raisonnement lors d'appels d'outils inter-fournisseurs.",
+    "Met en lumière les ruptures de performances quand les contextes MCP ou agentiques ne transmettent pas l'intégralité des traces."
+   ],
+   "pourquoi": "Crucial pour concevoir notre mémoire agentique et nos intégrations MCP : montre qu'élaguer les traces de raisonnement entre tours dégrade fortement certains modèles.",
+   "titre": "Deletion Sensitivity Is a Property of the Model: A Three-Condition Measurement across Seven Open Reasoning Models",
+   "url": "https://arxiv.org/abs/2611.13223",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://huggingface.co/papers/2611.14320",
+   "categorie": "article",
+   "resume": "Introduction de WikiTrace pour contrer le phénomène de 'memory-induced degradation' chez les agents LLM. L'étude montre que stocker des leçons sans lier la trace complète d'origine pousse l'agent à échouer sur des tâches qu'il réussissait auparavant.",
+   "specificites": [
+    "Identification de la dégradation causée par l'application aveugle de leçons synthétisées à partir de tâches mal contextualisées.",
+    "Liaison systématique de chaque leçon stockée en mémoire à la trajectoire d'exécution complète (Evidence-Linked Memory).",
+    "Permet à l'agent d'auditer et vérifier la validité d'une règle passée avant de l'exécuter sur un nouveau contexte."
+   ],
+   "pourquoi": "Directement exploitable pour améliorer la mémoire à long terme de nos agents en évitant les hallucinations induites par un RAG de mémoire mal étayé.",
+   "titre": "Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents",
+   "url": "https://huggingface.co/papers/2611.14320",
+   "source": "Hugging Face Daily Papers"
+  },
+  {
+   "id": "https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/",
+   "categorie": "pratique",
+   "resume": "NVIDIA présente Agent Substrate, une extension d'infrastructure Kubernetes conçue pour gérer l'inactivité prolongée des agents IA en attente d'appels d'outils ou de réponses utilisateurs. L'architecture optimise l'allocation des pods face aux patterns d'exécution asynchrones.",
+   "specificites": [
+    "Résout le problème du cycle de vie où un pod agent reste inactif la majeure partie du temps en attendant des réponses I/O ou humaines.",
+    "Découplage des ressources de calcul lors de l'attente d'appels MCP / API externes.",
+    "Compatible avec les orchestrateurs cloud-native d'entreprise."
+   ],
+   "pourquoi": "Fondamental pour dimensionner l'hébergement Kubernetes de nos agents MCP et réduire l'empreinte serveur lors des phases d'attente d'I/O.",
+   "titre": "Agent Substrate: Advancing Kubernetes for Agents at Scale",
+   "url": "https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/",
+   "source": "NVIDIA Technical Blog"
+  },
+  {
+   "id": "https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/",
+   "categorie": "pratique",
+   "resume": "NVIDIA Snapshot est un outil open-source du DSX AI Factory Platform permettant de sauvegarder et restaurer des workloads GPU initialisés en quelques secondes. Il rend les contextes GPU réutilisables d'une requête d'inférence à l'autre.",
+   "specificites": [
+    "Sauvegarde de l'état complet de la mémoire GPU pour éliminer le warm-up des modèles.",
+    "Restauration quasi-instantanée utile pour les microservices de parsing ou les modèles de raisonnement dédiés.",
+    "Composant open-source ciblant les clusters d'inférence scalables."
+   ],
+   "pourquoi": "Permet d'abaisser drastiquement la latence de démarrage à froid de nos workers locaux de serving pour les modèles de parsing et text-to-SQL.",
+   "titre": "Start and Restore GPU Workloads in Seconds with NVIDIA Snapshot",
+   "url": "https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/",
+   "source": "NVIDIA Technical Blog"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.12938",
+   "categorie": "article",
+   "resume": "Cette étude analyse l'impact de l'intégration de visualisations graphiques dans les prompts pour les tâches de Knowledge Graph Question Answering (KGQA) via des modèles vision-langage. L'ajout d'images de graphes apporte un gain moyen de 1,85 point de F1.",
+   "specificites": [
+    "Évaluation sur 1 500 questions issues de WebQSP et CWQ testées sur six VLMs.",
+    "Gain moyen de +1,85 point de score F1 par rapport au prompt textuel pur.",
+    "Amélioration de la précision particulièrement marquée sur les requêtes à faible et moyenne complexité relationnelle."
+   ],
+   "pourquoi": "Ouvre une piste d'optimisation concrète pour nos pipelines RAG structurés en injectant le sous-graphe sous forme visuelle en plus du texte brut.",
+   "titre": "Graph Visualizations in Prompts for Knowledge Graph Question Answering",
+   "url": "https://arxiv.org/abs/2611.12938",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+   "categorie": "robotique",
+   "resume": "Google DeepMind a dévoilé Gemini Robotics 2.5, son nouveau modèle Vision-Language-Action (VLA) orienté dextérité, fiabilité et sécurité opérationnelle en environnement physique réel.",
+   "specificites": [
+    "Architecture VLA entraînée pour coupler la perception multimodale à la génération d'actions robotiques de précision.",
+    "Accent mis sur la manipulation fine et la prise en compte des protocoles de sécurité dans les interactions physiques.",
+    "S'inscrit dans la lignée des modèles unifiés vision-langage-action déployables sur matériel robotique."
+   ],
+   "pourquoi": "Permet de suivre l'état de l'art des architectures VLA unifiées pouvant inspirer nos pipelines multimodaux agent-outil.",
+   "titre": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+   "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+   "source": "Google DeepMind"
+  },
+  {
+   "id": "https://github.com/GoogleChrome/modern-web-guidance",
+   "categorie": "pratique",
+   "resume": "L'équipe Google Chrome lance un projet open-source visant à orienter les agents de code vers les primitives modernes du web (CSS.highlights, dialog, field-sizing) plutôt que sur des bibliothèques JavaScript obsolètes.",
+   "specificites": [
+    "Injecte des règles systématiques dans le contexte des coding agents pour privilégier les APIs natives du DOM.",
+    "Réduit la dépendance à des surcouches JavaScript lourdes en favorisant les balises et APIs standard actuelles.",
+    "Diminue la taille du code généré et élimine les hallucinations de patterns obsolètes datant de 2019."
+   ],
+   "pourquoi": "Fournit un ensemble de règles de guidage directement injectable dans les prompts de nos agents de scraping et de génération d'interfaces.",
+   "titre": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+   "url": "https://github.com/GoogleChrome/modern-web-guidance",
+   "source": "Hacker News — IA (front page)"
+  }
+ ],
+ "tendance": "La tendance majeure réside dans l'arrivée à parité des modèles frontières multimodaux (Gemini 4 Carbon face à Claude Fable 5.2) avec une agressivité tarifaire forte, couplée à une rationalisation de l'architecture logicielle des agents. La recherche s'oriente vers la vérification déterministe token par token, l'auditabilité de la mémoire agentique (WikiTrace) et l'adaptation de l'infrastructure cloud (NVIDIA Agent Substrate, Snapshot) pour limiter le coût de l'attente I/O.",
+ "comparatif": "### Analyse comparative des coûts d'inférence\n\n* **Plafond de performance et modèles frontière :**\n  - **Claude Fable 5.2** reste le modèle le plus onéreux du catalogue à **8,00 $ / M tokens entrée** et **40,00 $ / M tokens sortie** pour un contexte de 1M.\n  - En comparaison directe, **Gemini 4 Carbon** offre un contexte comparable (1 048 576 tokens) pour **2,00 $ entrée** et **10,00 $ sortie**, soit un ratio 4x moins cher en entrée et en sortie, égalant pourtant Claude Fable 5.2 sur le benchmark MKA.\n  - Les modèles de niveau supérieur comme **Claude Opus 5.5** (4,00 $ / 20,00 $) et **Qwen3.8 Max Prime** (4,00 $ / 12,00 $) se positionnent également bien en-dessous de Claude Fable 5.2.\n\n* **Agents de raisonnement et RAG haute précision :**\n  - Pour les tâches de raisonnement demandant une grande capacité de contexte, **GPT-6.1 Terra** et **GPT-6.1 Terra Pro** affichent un ratio compétitif à **1,00 $ entrée / 5,00 $ sortie** pour 1 050 000 tokens de contexte.\n  - **Mistral Large 4** propose un excellent compromis pour le RAG d'entreprise à **0,70 $ entrée / 2,10 $ sortie** pour 1 048 576 tokens, surpassant largement en coût par token de sortie **GPT-6.1 Sol** (2,00 $ / 10,00 $).\n\n* **Scraping web, parsing HTML et extraction à très grand volume :**\n  - Le coût minimal absolu en entrée revient à **DeepSeek V4.1 Flash 1017** à seulement **0,006 $ entrée / 0,50 $ sortie** avec un contexte de 1M de tokens, ce qui en fait le choix numéro un pour digérer de gros dumps HTML bruts.\n  - À noter : la version **DeepSeek V4.1 Flash** standard a vu son prix augmenter pour atteindre **0,051 $ entrée / 0,567 $ sortie** (contre 0,006 $ / 0,50 $ auparavant).\n  - Les alternatives ultra-économiques incluent **Meta Llama 4 Scout** (**0,10 $ entrée / 0,30 $ sortie** avec 1 310 720 tokens de contexte) et **Claude Haiku 5.5** (**0,10 $ entrée / 0,50 $ sortie** pour 1M de contexte), tous deux idéaux pour l'extraction structurée JSON à faible latence.\n  - Sur les tâches multimodales de parsing visuel de pages web, **NVIDIA Nemotron 3.5 Super VL** se positionne très agressivement à **0,15 $ entrée / 0,47 $ sortie** pour 1 048 576 tokens de contexte, au même tarif que **Qwen3.8 Flash** (0,15 $ / 0,47 $).",
+ "date": "2026-11-11",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.1-flash",
+   "nom": "Google: Gemini Omni 1.1 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793825668,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.006,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.567,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.006 / 0.5 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
