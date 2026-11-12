@@ -1,0 +1,480 @@
+{
+ "selection": [
+  {
+   "id": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KSkw5RWNxUGNRaFRYclU0Q3lhbVYzYkxRVmlIbTRXWnBvQlNGTlNpM3ZDMmlfa1JWeWpCaW42eFNxWGotenFHNFpBU21ZdzA5NlVyMGpoQUkzMHlBNkRkZ3Q0anFpdw?oc=5",
+   "categorie": "modele",
+   "titre": "Former US Marine Used Claude and Qwen for Pro-Russian Content, Leaked Files Show - The 420.in",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KSkw5RWNxUGNRaFRYclU0Q3lhbVYzYkxRVmlIbTRXWnBvQlNGTlNpM3ZDMmlfa1JWeWpCaW42eFNxWGotenFHNFpBU21ZdzA5NlVyMGpoQUkzMHlBNkRkZ3Q0anFpdw?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)",
+   "resume": "Former US Marine Used Claude and Qwen for Pro-Russian Content, Leaked Files Show &nbsp;&nbsp; The 420.in",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRWhuczN4dU9KbWpPMTN6QTdMc25hS3NqeVlkU2VEODF0LWswVmF0NnVSRk5OdUlKNjlBSDNsRVdkZXhXYjdvZWZQdkh1X1RQeEYxWHpmSEVWNks3dVVVOVZNQ0F6SWhiUW1nWldRZjRKMjNyaDRQUi13NHZ6M0syR2NtM2JiaDBVTTl0ejZyT0g1SGQ5RGRUMlo5aVV2N2RzY2N4eEhaQUR5UVNkUVlzNDNIQWY0dGo4czdNQ25FakZqR2RTTEE?oc=5",
+   "categorie": "robotique",
+   "titre": "US humanoid robot production could reach 400,000 by 2030 as companies seek cheaper labor, J.P. Morgan says - Bilyonaryo Business",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRWhuczN4dU9KbWpPMTN6QTdMc25hS3NqeVlkU2VEODF0LWswVmF0NnVSRk5OdUlKNjlBSDNsRVdkZXhXYjdvZWZQdkh1X1RQeEYxWHpmSEVWNks3dVVVOVZNQ0F6SWhiUW1nWldRZjRKMjNyaDRQUi13NHZ6M0syR2NtM2JiaDBVTTl0ejZyT0g1SGQ5RGRUMlo5aVV2N2RzY2N4eEhaQUR5UVNkUVlzNDNIQWY0dGo4czdNQ25FakZqR2RTTEE?oc=5",
+   "source": "Robots humanoïdes (actualités)",
+   "resume": "US humanoid robot production could reach 400,000 by 2030 as companies seek cheaper labor, J.P. Morgan says &nbsp;&nbsp; Bilyonaryo Business",
+   "specificites": []
+  },
+  {
+   "id": "https://ipo.anthropic.com/us/",
+   "categorie": "pratique",
+   "titre": "Anthropic IPO",
+   "url": "https://ipo.anthropic.com/us/",
+   "source": "Hacker News — IA (front page)",
+   "resume": "Article URL: https://ipo.anthropic.com/us/ Comments URL: https://news.ycombinator.com/item?id=50465829 Points: 178 # Comments: 201",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.79.0",
+   "categorie": "monitoring",
+   "titre": "Langfuse v4.79.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.79.0",
+   "source": "Langfuse (releases)",
+   "resume": "What's Changed Features feat(ai-gateway): add OpenRouter as a pre-release gateway provider by @wochinge in #20002 feat: add SUBSTITUTE_OK no-data mode for monitors by @marksalpeter in #19981 feat(ai-gateway): add xAI as a pre-release gateway provider by @wochinge in #20004 feat(audit-logs): record r",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOd2NOTjA0am5kMnR1aTcyQUF0Sk9hVU5rZUIyZHB6cDhsczRBVEViOFljY0s2OFh3Yy1DZHBoQU82VXZUMlI5NUN4WUtJU3FPcVlOSzRNQnFVQXQ2dlM0M3FmUHBmQmtQTHlfMTlLQ3Z0R1pHSEx1c2hHcTBCNUptUndranFFNkZZY2pJUldTTExUZUJNTHVrZ0NXS2lQVlZ1S1VDckxiMFdSaEFLTU5CcmI4R2NMLVNrN1E?oc=5",
+   "categorie": "comparatif",
+   "titre": "What Comes Next? Micah Hill-Smith from Artificial Analysis shares his insights - The Centre for Independent Studies",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOd2NOTjA0am5kMnR1aTcyQUF0Sk9hVU5rZUIyZHB6cDhsczRBVEViOFljY0s2OFh3Yy1DZHBoQU82VXZUMlI5NUN4WUtJU3FPcVlOSzRNQnFVQXQ2dlM0M3FmUHBmQmtQTHlfMTlLQ3Z0R1pHSEx1c2hHcTBCNUptUndranFFNkZZY2pJUldTTExUZUJNTHVrZ0NXS2lQVlZ1S1VDckxiMFdSaEFLTU5CcmI4R2NMLVNrN1E?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)",
+   "resume": "What Comes Next? Micah Hill-Smith from Artificial Analysis shares his insights &nbsp;&nbsp; The Centre for Independent Studies",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.728",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.728",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.728",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.728",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNNE5ZNGlwajhVcF9zemlhR21NNXEyZy1PeVRIcU9nbGloTGlhTmkxWEZCS2lvRmwzSjNVc3RpZzYxdk1WQVpaZkNpUXdwVld6RkRjcDVWU0R0b3A5R1BFeDduOEx3YkVTU29qWlVTdm43Z1JKbnlGU2haWXoxT0dCSnZuY2RBNmlGSnNmMTluMFhYc0d3UjdXSUdzbUJYQ2wzUEhrYk8xdkxGSENwYXdJM0lUOGRyNkFmb1lsQ19ja2dGMkNNYlc5dk0zY0VwU3BWZTdlaEV5NGd2eE5fZmExemZ6YmQ?oc=5",
+   "categorie": "modele",
+   "titre": "Tether Launches On-Device AI Agent BotPsy, Claims Win Over Larger Qwen That Qwen's Own Score Narrows - Tech Times",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNNE5ZNGlwajhVcF9zemlhR21NNXEyZy1PeVRIcU9nbGloTGlhTmkxWEZCS2lvRmwzSjNVc3RpZzYxdk1WQVpaZkNpUXdwVld6RkRjcDVWU0R0b3A5R1BFeDduOEx3YkVTU29qWlVTdm43Z1JKbnlGU2haWXoxT0dCSnZuY2RBNmlGSnNmMTluMFhYc0d3UjdXSUdzbUJYQ2wzUEhrYk8xdkxGSENwYXdJM0lUOGRyNkFmb1lsQ19ja2dGMkNNYlc5dk0zY0VwU3BWZTdlaEV5NGd2eE5fZmExemZ6YmQ?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)",
+   "resume": "Tether Launches On-Device AI Agent BotPsy, Claims Win Over Larger Qwen That Qwen's Own Score Narrows &nbsp;&nbsp; Tech Times",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3dG5PZllQUEhYZk01OVBsMnR4blpYNnFkeUNNVUxrcndtdTJsam1QUW50WThRLXVhdS1HRXlaYUw0YUI0UDNndVlqZ3pQYTQzWlZYc0UzSVVYc2R1TG10eWh3UHFJeVliRnc?oc=5",
+   "categorie": "robotique",
+   "titre": "Humanoid robot production in the United States will reach 1.5 million by 2035 - Mezha.net",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3dG5PZllQUEhYZk01OVBsMnR4blpYNnFkeUNNVUxrcndtdTJsam1QUW50WThRLXVhdS1HRXlaYUw0YUI0UDNndVlqZ3pQYTQzWlZYc0UzSVVYc2R1TG10eWh3UHFJeVliRnc?oc=5",
+   "source": "Robots humanoïdes (actualités)",
+   "resume": "Humanoid robot production in the United States will reach 1.5 million by 2035 &nbsp;&nbsp; Mezha.net",
+   "specificites": []
+  },
+  {
+   "id": "https://latent.space/p/ainews-d-day-decision-models-day/",
+   "categorie": "pratique",
+   "titre": "[AINews] D-Day (Decision Models Day)",
+   "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+   "source": "Latent Space",
+   "resume": "November 11, 2026 — Google enters the decision model market. At AI Engineer, Cloudflare showed which parts of a build failure a classifier could handle. TypeSafe AI showed off their production customers.",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeUYtWEFPb2NWRlVWOW5zRWhmVWhwYndrQV9qSExTZnpPMmZoQmlEbHFVX1pPUHU4d3NjSmtvZFJRUm1pWmhUSDdGb1hKVzlDNFkwWTRjQmNRNi1rTU5BOVlCTWZVcTdJbjc0Q3YtNDBaaS1TYm9kbFE3dk01T0ZUM2RHVmJNOUZMYUw4SE9qM1diUGQtTzBndnpGaUNHRThoWjhFQXhBaDNTUFpicXNjNWllSkpwNGNILXB4ZThsZ3dwenZh?oc=5",
+   "categorie": "monitoring",
+   "titre": "AI Customer Pullback Could Be A Game Changer For Datadog Stock (DDOG) - Simply Wall St",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeUYtWEFPb2NWRlVWOW5zRWhmVWhwYndrQV9qSExTZnpPMmZoQmlEbHFVX1pPUHU4d3NjSmtvZFJRUm1pWmhUSDdGb1hKVzlDNFkwWTRjQmNRNi1rTU5BOVlCTWZVcTdJbjc0Q3YtNDBaaS1TYm9kbFE3dk01T0ZUM2RHVmJNOUZMYUw4SE9qM1diUGQtTzBndnpGaUNHRThoWjhFQXhBaDNTUFpicXNjNWllSkpwNGNILXB4ZThsZ3dwenZh?oc=5",
+   "source": "Observabilité LLM (actualités)",
+   "resume": "AI Customer Pullback Could Be A Game Changer For Datadog Stock (DDOG) &nbsp;&nbsp; Simply Wall St",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5yQUhsR3Jxc01zN01ULUZPSVJOUVV0NHQ0c0w3LVp4Q0lOUmN6cWFvSVF2YTVpOUFQLUpVYjZKaTh1R3JFcHQ0ZFVrdkhUVktyVkVKT0l3?oc=5",
+   "categorie": "comparatif",
+   "titre": "Five Crypto Projects Feature in AI Watchlist as Index Adds Benchmarks - tokenpost.com",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5yQUhsR3Jxc01zN01ULUZPSVJOUVV0NHQ0c0w3LVp4Q0lOUmN6cWFvSVF2YTVpOUFQLUpVYjZKaTh1R3JFcHQ0ZFVrdkhUVktyVkVKT0l3?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)",
+   "resume": "Five Crypto Projects Feature in AI Watchlist as Index Adds Benchmarks &nbsp;&nbsp; tokenpost.com",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.727",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.727",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.727",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.727",
+   "specificites": []
+  }
+ ],
+ "comparatif": "",
+ "sans_ia": true,
+ "tendance": "Veille brute : l'IA était indisponible, les extraits viennent directement des sources.",
+ "date": "2026-11-12",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "nom": "OpenAI: GPT-6.1 Terra Pro",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038556,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "nom": "OpenAI: GPT-6.1 Terra",
+   "fournisseur": "openai",
+   "entree": 1.0,
+   "sortie": 5.0,
+   "contexte": 1050000,
+   "cree": 1793038409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol-pro",
+   "nom": "OpenAI: GPT-6.1 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702886,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "nom": "OpenAI: GPT-6.1 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1790702882,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.1-flash",
+   "nom": "Google: Gemini Omni 1.1 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793825668,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "nom": "Google: Gemini 4 Argon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1791907477,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": "prix modifié (avant 0.006 / 0.5 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.022,
+   "sortie": 0.4,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.051 / 0.567 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-flash",
+   "nom": "Qwen: Qwen3.8 Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1787773060,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 262144,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.6,
+   "sortie": 2.4,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

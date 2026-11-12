@@ -87,7 +87,7 @@
   "sortie": 10.0,
   "contexte": 1048576,
   "cree": 1794326871,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "google/gemini-omni-1.2-flash",
@@ -203,21 +203,21 @@
   "id": "deepseek/deepseek-v4.1-flash-1017",
   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
   "fournisseur": "deepseek",
-  "entree": 0.006,
-  "sortie": 0.5,
+  "entree": 0.15,
+  "sortie": 0.6,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.006 / 0.5 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.051,
-  "sortie": 0.567,
+  "entree": 0.022,
+  "sortie": 0.4,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.006 / 0.5 $)"
+  "evolution": "prix modifié (avant 0.051 / 0.567 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
