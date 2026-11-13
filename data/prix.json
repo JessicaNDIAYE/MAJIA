@@ -80,6 +80,16 @@
   "evolution": ""
  },
  {
+  "id": "google/gemini-4-hydrogen",
+  "nom": "Google: Gemini 4 Hydrogen",
+  "fournisseur": "google",
+  "entree": 1.5,
+  "sortie": 7.5,
+  "contexte": 1048576,
+  "cree": 1794506460,
+  "evolution": "Nouveau"
+ },
+ {
   "id": "google/gemini-4-carbon",
   "nom": "Google: Gemini 4 Carbon",
   "fournisseur": "google",
@@ -107,16 +117,6 @@
   "sortie": 9.0,
   "contexte": 131072,
   "cree": 1793825668,
-  "evolution": ""
- },
- {
-  "id": "google/gemini-4-argon",
-  "nom": "Google: Gemini 4 Argon",
-  "fournisseur": "google",
-  "entree": 2.0,
-  "sortie": 10.0,
-  "contexte": 1048576,
-  "cree": 1791907477,
   "evolution": ""
  },
  {
@@ -203,21 +203,21 @@
   "id": "deepseek/deepseek-v4.1-flash-1017",
   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
   "fournisseur": "deepseek",
-  "entree": 0.15,
-  "sortie": 0.6,
+  "entree": 0.038,
+  "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": "prix modifié (avant 0.006 / 0.5 $)"
+  "evolution": "prix modifié (avant 0.15 / 0.6 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.022,
-  "sortie": 0.4,
+  "entree": 0.3,
+  "sortie": 1.2,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.051 / 0.567 $)"
+  "evolution": "prix modifié (avant 0.022 / 0.4 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
