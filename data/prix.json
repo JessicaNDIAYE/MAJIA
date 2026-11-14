@@ -87,7 +87,7 @@
   "sortie": 7.5,
   "contexte": 1048576,
   "cree": 1794506460,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "google/gemini-4-carbon",
@@ -207,17 +207,17 @@
   "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": "prix modifié (avant 0.15 / 0.6 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.3,
-  "sortie": 1.2,
+  "entree": 0.051,
+  "sortie": 0.203,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.022 / 0.4 $)"
+  "evolution": "prix modifié (avant 0.3 / 1.2 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
