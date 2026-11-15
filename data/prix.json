@@ -203,11 +203,11 @@
   "id": "deepseek/deepseek-v4.1-flash-1017",
   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
   "fournisseur": "deepseek",
-  "entree": 0.038,
-  "sortie": 0.5,
+  "entree": 0.15,
+  "sortie": 0.6,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.038 / 0.5 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
@@ -217,7 +217,7 @@
   "sortie": 0.203,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.3 / 1.2 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -324,10 +324,10 @@
   "nom": "NVIDIA: Nemotron 3.5 Super VL",
   "fournisseur": "nvidia",
   "entree": 0.15,
-  "sortie": 0.47,
+  "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1792076662,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.15 / 0.47 $)"
  },
  {
   "id": "nvidia/nemotron-3.5-lightning",
