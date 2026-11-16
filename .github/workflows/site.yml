@@ -6,6 +6,9 @@ on:
   workflow_run:
     workflows: ["Veille IA quotidienne"]
     types: [completed]
+  # Filet de sécurité : reconstruit le site chaque soir, au cas où une publication aurait échoué.
+  schedule:
+    - cron: "43 19 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,18 +18,17 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  deployer:
+  # Construction et publication sont deux jobs séparés (schéma recommandé par GitHub) : l'archive du site
+  # est ainsi bien enregistrée avant que la publication ne la cherche.
+  construire:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploiement.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
         with:
-          ref: main  # récupère la veille que le workflow hebdomadaire vient de commiter
+          ref: main  # récupère la veille que le workflow quotidien vient de commiter
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -34,8 +36,16 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m veille.site
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+
+  publier:
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
       - id: deploiement
         uses: actions/deploy-pages@v4
