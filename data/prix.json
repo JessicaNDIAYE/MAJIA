@@ -203,21 +203,21 @@
   "id": "deepseek/deepseek-v4.1-flash-1017",
   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
   "fournisseur": "deepseek",
-  "entree": 0.15,
-  "sortie": 0.6,
+  "entree": 0.036,
+  "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": "prix modifié (avant 0.038 / 0.5 $)"
+  "evolution": "prix modifié (avant 0.15 / 0.6 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.051,
-  "sortie": 0.203,
+  "entree": 0.14,
+  "sortie": 0.42,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.051 / 0.203 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -238,6 +238,16 @@
   "contexte": 1048576,
   "cree": 1786549364,
   "evolution": ""
+ },
+ {
+  "id": "qwen/qwen4-max",
+  "nom": "Qwen: Qwen4 Max",
+  "fournisseur": "qwen",
+  "entree": 1.5,
+  "sortie": 4.5,
+  "contexte": 1000000,
+  "cree": 1794795526,
+  "evolution": "Nouveau"
  },
  {
   "id": "qwen/qwen3.8-max-prime",
@@ -267,16 +277,6 @@
   "sortie": 6.0,
   "contexte": 1000000,
   "cree": 1788469704,
-  "evolution": ""
- },
- {
-  "id": "qwen/qwen3.8-flash",
-  "nom": "Qwen: Qwen3.8 Flash",
-  "fournisseur": "qwen",
-  "entree": 0.15,
-  "sortie": 0.47,
-  "contexte": 1000000,
-  "cree": 1787773060,
   "evolution": ""
  },
  {
@@ -327,7 +327,7 @@
   "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1792076662,
-  "evolution": "prix modifié (avant 0.15 / 0.47 $)"
+  "evolution": ""
  },
  {
   "id": "nvidia/nemotron-3.5-lightning",
