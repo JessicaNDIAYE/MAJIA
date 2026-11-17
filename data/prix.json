@@ -207,17 +207,17 @@
   "sortie": 0.5,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": "prix modifié (avant 0.15 / 0.6 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.14,
-  "sortie": 0.42,
+  "entree": 0.3,
+  "sortie": 1.2,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.051 / 0.203 $)"
+  "evolution": "prix modifié (avant 0.14 / 0.42 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -243,11 +243,11 @@
   "id": "qwen/qwen4-max",
   "nom": "Qwen: Qwen4 Max",
   "fournisseur": "qwen",
-  "entree": 1.5,
-  "sortie": 4.5,
+  "entree": 1.425,
+  "sortie": 4.275,
   "contexte": 1000000,
   "cree": 1794795526,
-  "evolution": "Nouveau"
+  "evolution": "prix modifié (avant 1.5 / 4.5 $)"
  },
  {
   "id": "qwen/qwen3.8-max-prime",
@@ -335,7 +335,7 @@
   "fournisseur": "nvidia",
   "entree": 0.07,
   "sortie": 0.2,
-  "contexte": 262144,
+  "contexte": 1048576,
   "cree": 1786452751,
   "evolution": ""
  },
@@ -353,10 +353,10 @@
   "id": "nvidia/nemotron-3-ultra-550b-a55b",
   "nom": "NVIDIA: Nemotron 3 Ultra",
   "fournisseur": "nvidia",
-  "entree": 0.6,
-  "sortie": 2.4,
+  "entree": 0.5,
+  "sortie": 2.2,
   "contexte": 262144,
   "cree": 1780551208,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.6 / 2.4 $)"
  }
 ]
