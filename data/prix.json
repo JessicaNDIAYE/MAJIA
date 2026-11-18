@@ -40,44 +40,44 @@
   "evolution": ""
  },
  {
-  "id": "openai/gpt-6.1-terra-pro",
-  "nom": "OpenAI: GPT-6.1 Terra Pro",
+  "id": "openai/gpt-6.2-astra-pro",
+  "nom": "OpenAI: GPT-6.2 Astra Pro",
   "fournisseur": "openai",
-  "entree": 1.0,
-  "sortie": 5.0,
+  "entree": 8.0,
+  "sortie": 40.0,
   "contexte": 1050000,
-  "cree": 1793038556,
-  "evolution": ""
+  "cree": 1794938432,
+  "evolution": "Nouveau"
  },
  {
-  "id": "openai/gpt-6.1-terra",
-  "nom": "OpenAI: GPT-6.1 Terra",
+  "id": "openai/gpt-6.2-astra",
+  "nom": "OpenAI: GPT-6.2 Astra",
   "fournisseur": "openai",
-  "entree": 1.0,
-  "sortie": 5.0,
+  "entree": 8.0,
+  "sortie": 40.0,
   "contexte": 1050000,
-  "cree": 1793038409,
-  "evolution": ""
+  "cree": 1794938423,
+  "evolution": "Nouveau"
  },
  {
-  "id": "openai/gpt-6.1-sol-pro",
-  "nom": "OpenAI: GPT-6.1 Sol Pro",
+  "id": "openai/gpt-6.2-sol-pro",
+  "nom": "OpenAI: GPT-6.2 Sol Pro",
   "fournisseur": "openai",
   "entree": 2.0,
   "sortie": 10.0,
   "contexte": 1050000,
-  "cree": 1790702886,
-  "evolution": ""
+  "cree": 1794938409,
+  "evolution": "Nouveau"
  },
  {
-  "id": "openai/gpt-6.1-sol",
-  "nom": "OpenAI: GPT-6.1 Sol",
+  "id": "openai/gpt-6.2-sol",
+  "nom": "OpenAI: GPT-6.2 Sol",
   "fournisseur": "openai",
   "entree": 2.0,
   "sortie": 10.0,
   "contexte": 1050000,
-  "cree": 1790702882,
-  "evolution": ""
+  "cree": 1794938371,
+  "evolution": "Nouveau"
  },
  {
   "id": "google/gemini-4-hydrogen",
@@ -213,11 +213,11 @@
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.3,
-  "sortie": 1.2,
+  "entree": 0.051,
+  "sortie": 0.203,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.14 / 0.42 $)"
+  "evolution": "prix modifié (avant 0.3 / 1.2 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -247,7 +247,7 @@
   "sortie": 4.275,
   "contexte": 1000000,
   "cree": 1794795526,
-  "evolution": "prix modifié (avant 1.5 / 4.5 $)"
+  "evolution": ""
  },
  {
   "id": "qwen/qwen3.8-max-prime",
@@ -357,6 +357,6 @@
   "sortie": 2.2,
   "contexte": 262144,
   "cree": 1780551208,
-  "evolution": "prix modifié (avant 0.6 / 2.4 $)"
+  "evolution": ""
  }
 ]
