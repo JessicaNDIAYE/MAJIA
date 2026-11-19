@@ -1,0 +1,529 @@
+{
+ "selection": [
+  {
+   "id": "https://arxiv.org/abs/2611.23375",
+   "categorie": "article",
+   "resume": "Cet article introduit une théorie de la thermodynamique logicielle pour modéliser le coût des agents de codage en comptant les tokens générés, séparés en travail et en chaleur, avec les tests unitaires comme démon de Maxwell.",
+   "specificites": [
+    "Formalise le coût d'exécution en tokens par agent",
+    "Divise la dépense énergétique/informatique en travail et en chaleur",
+    "S'applique directement à l'optimisation des flux d'agents LLM"
+   ],
+   "pourquoi": "Utile pour optimiser le coût et le monitoring des agents LLM en production.",
+   "titre": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+   "url": "https://arxiv.org/abs/2611.23375",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.83.0",
+   "categorie": "monitoring",
+   "resume": "Langfuse v4.83.0 apporte de nouvelles fonctionnalités d'observabilité LLM, incluant une vue Scatter pour les topics, la navigation entre files d'attente d'annotation et la prise en charge de la révision du protocole MCP 2026-07-28.",
+   "specificites": [
+    "Nouvelle vue Scatter pour les topics",
+    "Prise en charge native de la révision du protocole MCP du 2026-07-28",
+    "Assemblage des ressources et événements OTEL"
+   ],
+   "pourquoi": "Essentiel pour intégrer et monitorer mes pipelines RAG et mes intégrations MCP avec Langfuse.",
+   "titre": "Langfuse v4.83.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.83.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+   "categorie": "modele",
+   "resume": "Google a introduit Gemini 4 Neon, un modèle de frontière optimisé pour le codage et les charges de travail en entreprise, avec une fenêtre de contexte de 1 048 576 tokens.",
+   "specificites": [
+    "Fenêtre de contexte de 1 048 576 tokens",
+    "Prix d'entrée : 3.0 $ / million de tokens, sortie : 15.0 $ / million de tokens",
+    "Ciblé sur le codage et les tâches d'entreprise"
+   ],
+   "pourquoi": "Fournit une alternative haute performance et grand contexte pour mes pipelines RAG et text-to-SQL.",
+   "titre": "Introducing Gemini 4 Neon",
+   "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+   "source": "Google DeepMind"
+  },
+  {
+   "id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+   "categorie": "modele",
+   "resume": "Claude Code v2.1.328 ajoute le mode automatique pour Claude Opus 4.6 et Sonnet 4.6 sur divers hébergeurs cloud, ainsi que de nouveaux crochets de sécurité pour les outils MCP.",
+   "specificites": [
+    "Ajout de l'option 'onFailure': 'block' pour les crochets mcp_tool",
+    "Mode automatique pour les grands modèles sur Amazon Bedrock et Google Cloud",
+    "Support des sessions interactives sans mode de permission"
+   ],
+   "pourquoi": "Fournit des directives de sécurité concrètes pour la gestion des outils et intégrations MCP.",
+   "titre": "Claude Code v2.1.328",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+   "source": "Claude Code (releases)"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.23339",
+   "categorie": "article",
+   "resume": "Cette recherche optimise la recherche par faisceau pour l'inférence de recommandation générative en évitant les accès redondants au cache KV sur le préfixe de prompt partagé.",
+   "specificites": [
+    "Optimisation du cache KV pour les séquences longues et recherche par faisceau large",
+    "Réduction de la surcharge d'invocation du moteur de service"
+   ],
+   "pourquoi": "Permet d'améliorer les performances d'inférence pour des architectures d'agents complexes à contexte partagé.",
+   "titre": "Optimize the Cob, Then the Kernel: Optimizing Beam Search for Generative Recommendation Inference",
+   "url": "https://arxiv.org/abs/2611.23339",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.23362",
+   "categorie": "article",
+   "resume": "TRACE-MAS est un framework de diagnostic et de réparation des échecs de collaboration au sein des systèmes multi-agents (MAS), ciblant spécifiquement les interactions et dépendances de tâches.",
+   "specificites": [
+    "Détection d'anomalies au niveau des interactions (échanges de messages, dépendances)",
+    "Apprentissage des comportements de collaboration normaux dans les MAS"
+   ],
+   "pourquoi": "Fournit une méthode d'observabilité et de débogage pour mes architectures d'agents LLM multiples.",
+   "titre": "TRACE-MAS: Diagnosing and Repairing Collaboration Failures in Multi-Agent Systems",
+   "url": "https://arxiv.org/abs/2611.23362",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaEliWUh2SV9DRU1ua3Q5ckFVWWI2cF93b2RmRUxETFlvMC1lMHN1dGs5THQybzJsRE9Nb3VTXy1nWDN3dTlGcGtISlp2WGRlMHVoSzAxamhhSUJGMF9ZWFQySndiVzhtVGRhUG5qcFA3Qmt5WjZzaXQ4T1J0cEx6V0pleGU5eElqOGJyZHlHQ0FjZw?oc=5",
+   "comparatif": "comparatif",
+   "resume": "OpenAI met à jour son écosystème avec la gamme GPT-6.2 (Astra et Sol), optimisant les capacités pour des secteurs spécialisés et ajustant les grilles tarifaires.",
+   "specificites": [
+    "Modèles GPT-6.2 Astra et Sol avec contexte de 1 050 000 tokens",
+    "Tarifs d'entrée variant de 2.0 $ à 8.0 $ par million de tokens"
+   ],
+   "pourquoi": "Permet de comparer les performances et les coûts des modèles haut de gamme d'OpenAI face à Claude et Gemini.",
+   "categorie": "comparatif",
+   "titre": "OpenAI Widens Astra for Law Access With GPT-6.2 Update - The Defiant",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaEliWUh2SV9DRU1ua3Q5ckFVWWI2cF93b2RmRUxETFlvMC1lMHN1dGs5THQybzJsRE9Nb3VTXy1nWDN3dTlGcGtISlp2WGRlMHVoSzAxamhhSUJGMF9ZWFQySndiVzhtVGRhUG5qcFA3Qmt5WjZzaXQ4T1J0cEx6V0pleGU5eElqOGJyZHlHQ0FjZw?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.23570",
+   "categorie": "article",
+   "resume": "Étude sur l'optimisation de la latence dans les systèmes multi-agents lorsqu'un agent récepteur choisit d'ignorer ou non le message d'un agent assistant en évaluant sa confiance.",
+   "specificites": [
+    "Test à échantillons finis pour certifier un seuil de risque de modification de la réponse (inférieur à 5%)",
+    "Économie de latence et de calcul dans les boucles d'agents"
+   ],
+   "pourquoi": "Utile pour réduire la latence et optimiser les coûts d'appels LLM dans mes pipelines d'agents.",
+   "titre": "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message",
+   "url": "https://arxiv.org/abs/2611.23570",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://huggingface.co/papers/2611.23751",
+   "categorie": "article",
+   "resume": "AnyS1 présente un cadre pour transformer des instructions procédurales humaines en points de décision partagés, permettant d'utiliser un modèle System-1 léger à la place d'un grand modèle (System-2) à chaque étape.",
+   "specificites": [
+    "Architecture System-1 / System-2 pour les flux d'agents",
+    "Réduction du coût et de la latence en évitant l'appel systématique aux modèles lourds"
+   ],
+   "pourquoi": "Offre une stratégie concrète pour réduire les coûts d'inférence dans mes boucles d'agents LLM.",
+   "titre": "Thinking Fast, Anywhere: One System-1 for the Decision Points of Any Agent Workflow",
+   "url": "https://huggingface.co/papers/2611.23751",
+   "source": "Hugging Face Daily Papers"
+  },
+  {
+   "id": "https://www.therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics/",
+   "categorie": "robotique",
+   "resume": "Humyn Labs lève 47 millions de dollars pour collecter des données du monde réel destinées aux laboratoires d'IA de pointe, aux entreprises de robotique et aux développeurs de modèles du monde.",
+   "specificites": [
+    "Collecte de données opérationnelles réelles pour les modèles du monde et la robotique",
+    "Financement axé sur l'intelligence incarnée"
+   ],
+   "pourquoi": "Illustre les avancées de collecte de données pour les modèles multimodaux et de vision-action.",
+   "titre": "Humyn Labs raises $47M to collect real-world data for robotics",
+   "url": "https://www.therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics/",
+   "source": "The Robot Report"
+  }
+ ],
+ "tendance": "La période est marquée par l'expansion de fenêtres de contexte dépassant le million de tokens (Gemini 4 Neon, GPT-6.2) et par la structuration d'outils d'observabilité orientés vers les protocoles de communication standardisés (comme le Model Context Protocol). L'optimisation des coûts d'inférence et du comportement des agents multi-agents (réduction de la latence, filtrage des messages et théorie du coût des tokens) devient un axe central de recherche.",
+ "comparatif": "- **Meilleur rapport qualité/prix pour les agents et RAG à grande échelle :** Google Gemini 4 Hydrogen (1.50$ entrée / 7.50$ sortie pour 1 048 576 tokens) ou DeepSeek V4.1 Flash (0.051$ entrée / 0.203$ sortie pour 1 048 576 tokens).\n- **Modèles les moins chers (entrée de gamme et sécurité) :** DeepSeek V4.1 Flash à 0.051$ / million de tokens en entrée, Mistral Small 4 à 0.15$ / million, et Meta Llama 4 Scout à 0.10$ / million.\n- **Modèles de pointe (Frontier / Enterprise) :** Anthropic Claude Fable 5.2 et OpenAI GPT-6.2 Astra Pro affichent tous deux 8.0$ en entrée et 40.0$ en sortie pour un contexte supérieur à 1 million de tokens.\n- **Changements récents notables :** DeepSeek V4.1 Flash 1017 a vu son prix ajusté à 0.15$ (entrée) / 0.6$ (sortie). Google introduit Gemini 4 Neon à 3.0$ / 15.0$ avec 1 048 576 tokens de contexte.",
+ "date": "2026-11-19",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/devstral-2512",
+   "nom": "Mistral: Devstral 2 2512",
+   "fournisseur": "mistralai",
+   "entree": 0.4,
+   "sortie": 2.0,
+   "contexte": 262144,
+   "cree": 1765285419,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": "prix modifié (avant 0.036 / 0.5 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.203,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXAI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXAI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXAI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-build-0.1",
+   "nom": "SpaceXAI: Grok Build 0.1",
+   "fournisseur": "x-ai",
+   "entree": 1.0,
+   "sortie": 2.0,
+   "contexte": 256000,
+   "cree": 1779298123,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [
+  {
+   "titre": "Intégration du monitoring MCP avec Langfuse v4.83.0",
+   "description": "Mettre à jour notre stack d'observabilité pour exploiter la prise en charge native de la révision du protocole MCP du 2026-07-28 et l'assemblage des ressources OTEL. Cela nous permettra de mieux auditer les interactions de nos outils MCP et d'utiliser la vue Scatter pour analyser les topics.",
+   "effort": "moyen",
+   "source": "https://github.com/langfuse/langfuse/releases/tag/v4.83.0"
+  },
+  {
+   "titre": "Optimisation des coûts d'agents via l'approche System-1/System-2 (AnyS1)",
+   "description": "Implémenter un modèle System-1 léger pour prendre en charge les points de décision répétitifs de nos workflows d'agents, au lieu d'invalider systématiquement des grands modèles (System-2). Cela permettra de réduire drastiquement la latence et les coûts en tokens.",
+   "effort": "élevé",
+   "source": "https://huggingface.co/papers/2611.23751"
+  },
+  {
+   "titre": "Évaluation comparative des modèles de frontière Gemini 4 Neon et GPT-6.2",
+   "description": "Benchmarker Gemini 4 Neon (à 3.0 $ / 15.0 $ par million de tokens) et les nouveaux modèles GPT-6.2 Astra et Sol sur nos pipelines RAG et text-to-SQL complexes, en exploitant leurs vastes fenêtres de contexte (plus d'un million de tokens).",
+   "effort": "moyen",
+   "source": "https://deepmind.google/blog/introducing-gemini-4-neon/"
+  }
+ ],
+ "lecon": {
+  "titre": "Modélisation du coût des agents et optimisation du cache KV",
+  "markdown": "# Modélisation du coût des agents et optimisation du cache KV\n\n## Le concept\nL'exécution de pipelines d'agents LLM génère une quantité massive de tokens. Récemment, la recherche s'est penchée sur la thermodynamique logicielle pour modéliser le coût des agents de codage en séparant le travail de la chaleur, utilisant par exemple les tests unitaires comme démon de Maxwell. Parallèlement, l'optimisation des moteurs d'inférence (comme la recherche par faisceau pour la recommandation générative) cherche à éviter les accès redondants au cache KV sur les préfixes de prompts partagés.\n\n## Pourquoi c'est important\nEn tant qu'ingénieure IA construisant des agents et des pipelines RAG, la maîtrise de la consommation de tokens et de la latence est critique. Ignorer la redondance des accès au cache KV ou laisser les agents s'échanger des messages superflus entraîne des coûts d'infrastructure exorbitants et une latence inacceptable en production.\n\n## Comment l'appliquer\nPour optimiser vos flux d'agents et réduire la surcharge d'invocation du moteur de service, structurez vos prompts et vos appels pour maximiser le partage de préfixes et bénéficier de l'optimisation du cache KV. Vous pouvez également vous inspirer des approches d'optimisation de la recherche par faisceau pour les séquences longues.\n\n```python\n# Exemple conceptuel d'optimisation du cache KV pour un prompt partagé en RAG\nclass KV byłaCacheOptimizer:\n    def __init__(self, shared_prefix_prompt: str):\n        self.shared_prefix = shared_prefix_prompt\n        # Le moteur de service doit identifier ce préfixe pour éviter les accès redondants\n\n    def generate_with_shared_context(self, user_query: str):\n        optimized_payload = {\n            \"prefix_cache\": self.shared_prefix,\n            \"query\": user_query\n        }\n        return optimized_payload\n```\n\n## Exercice pratique (30 min max)\n1. Analysez un de vos pipelines d'agents actuels et identifiez les sections où le même contexte (ex: instructions système, schémas de base de données pour le text-to-SQL) est répété à chaque tour.\n2. Évaluez la part de \"chaleur\" (tokens générés ou passés inutilement) par rapport au \"travail\" effectif.\n3. Rédigez un plan pour mutualiser ces préfixes et activer l'optimisation du cache KV.\n\n## Questions d'auto-évaluation\n1. **Qu'est-ce que modélise la théorie de la thermodynamique logicielle pour les agents de codage ?**\n   - *Réponse :* Elle modélise le coût d'exécution en comptant les tokens générés, séparés en travail et en chaleur, avec les tests unitaires comme démon de Maxwell.\n2. **Quel est l'objectif principal de l'optimisation de la recherche par faisceau présentée dans la veille ?**\n   - *Réponse :* Éviter les accès redondants au cache KV sur le préfixe de prompt partagé pour réduire la surcharge du moteur de service.\n3. **Comment les tests unitaires sont-ils qualifiés dans ce modèle thermodynamique ?**\n   - *Réponse :* Ils agissent comme un démon de Maxwell.\n\n## Pour aller plus loin\n- [Where the Tokens Go: Heat, Entropy and Error in Agentic Coding](https://arxiv.org/abs/2611.23375)\n- [Optimize the Cob, Then the Kernel: Optimizing Beam Search for Generative Recommendation Inference](https://arxiv.org/abs/2611.23339)\n",
+  "fichier": "2026-11-19-modelisation-du-cout-des-agents-et-optimisation-du-cache-kv.md"
+ }
+}

@@ -47,7 +47,7 @@
   "sortie": 40.0,
   "contexte": 1050000,
   "cree": 1794938432,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "openai/gpt-6.2-astra",
@@ -57,7 +57,7 @@
   "sortie": 40.0,
   "contexte": 1050000,
   "cree": 1794938423,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "openai/gpt-6.2-sol-pro",
@@ -67,7 +67,7 @@
   "sortie": 10.0,
   "contexte": 1050000,
   "cree": 1794938409,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "openai/gpt-6.2-sol",
@@ -77,6 +77,16 @@
   "sortie": 10.0,
   "contexte": 1050000,
   "cree": 1794938371,
+  "evolution": ""
+ },
+ {
+  "id": "google/gemini-4-neon",
+  "nom": "Google: Gemini 4 Neon",
+  "fournisseur": "google",
+  "entree": 3.0,
+  "sortie": 15.0,
+  "contexte": 1048576,
+  "cree": 1795006977,
   "evolution": "Nouveau"
  },
  {
@@ -107,16 +117,6 @@
   "sortie": 9.0,
   "contexte": 131072,
   "cree": 1793898961,
-  "evolution": ""
- },
- {
-  "id": "google/gemini-omni-1.1-flash",
-  "nom": "Google: Gemini Omni 1.1 Flash",
-  "fournisseur": "google",
-  "entree": 1.5,
-  "sortie": 9.0,
-  "contexte": 131072,
-  "cree": 1793825668,
   "evolution": ""
  },
  {
@@ -203,11 +203,11 @@
   "id": "deepseek/deepseek-v4.1-flash-1017",
   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
   "fournisseur": "deepseek",
-  "entree": 0.036,
-  "sortie": 0.5,
+  "entree": 0.15,
+  "sortie": 0.6,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.036 / 0.5 $)"
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
@@ -217,7 +217,7 @@
   "sortie": 0.203,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.3 / 1.2 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
