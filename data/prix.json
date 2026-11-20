@@ -87,7 +87,7 @@
   "sortie": 15.0,
   "contexte": 1048576,
   "cree": 1795006977,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "google/gemini-4-hydrogen",
@@ -120,6 +120,16 @@
   "evolution": ""
  },
  {
+  "id": "mistralai/pixtral-large-2502",
+  "nom": "Mistral: Pixtral Large 2502",
+  "fournisseur": "mistralai",
+  "entree": 2.0,
+  "sortie": 6.0,
+  "contexte": 128000,
+  "cree": 1795135865,
+  "evolution": "Nouveau"
+ },
+ {
   "id": "mistralai/mistral-large-4-0",
   "nom": "Mistral: Mistral Large 4",
   "fournisseur": "mistralai",
@@ -147,16 +157,6 @@
   "sortie": 0.6,
   "contexte": 262144,
   "cree": 1773695685,
-  "evolution": ""
- },
- {
-  "id": "mistralai/devstral-2512",
-  "nom": "Mistral: Devstral 2 2512",
-  "fournisseur": "mistralai",
-  "entree": 0.4,
-  "sortie": 2.0,
-  "contexte": 262144,
-  "cree": 1765285419,
   "evolution": ""
  },
  {
@@ -207,7 +207,7 @@
   "sortie": 0.6,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": "prix modifié (avant 0.036 / 0.5 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
@@ -233,11 +233,11 @@
   "id": "deepseek/deepseek-v4-pro-0813",
   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
   "fournisseur": "deepseek",
-  "entree": 0.111,
-  "sortie": 4.44,
+  "entree": 1.32,
+  "sortie": 3.96,
   "contexte": 1048576,
   "cree": 1786549364,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.111 / 4.44 $)"
  },
  {
   "id": "qwen/qwen4-max",
@@ -281,7 +281,7 @@
  },
  {
   "id": "x-ai/grok-4.7",
-  "nom": "SpaceXAI: Grok 4.7",
+  "nom": "SpaceXSI: Grok 4.7",
   "fournisseur": "x-ai",
   "entree": 2.0,
   "sortie": 6.0,
@@ -291,7 +291,7 @@
  },
  {
   "id": "x-ai/grok-4.6",
-  "nom": "SpaceXAI: Grok 4.6",
+  "nom": "SpaceXSI: Grok 4.6",
   "fournisseur": "x-ai",
   "entree": 2.0,
   "sortie": 6.0,
@@ -301,7 +301,7 @@
  },
  {
   "id": "x-ai/grok-4.5",
-  "nom": "SpaceXAI: Grok 4.5",
+  "nom": "SpaceXSI: Grok 4.5",
   "fournisseur": "x-ai",
   "entree": 2.0,
   "sortie": 6.0,
@@ -310,14 +310,14 @@
   "evolution": ""
  },
  {
-  "id": "x-ai/grok-build-0.1",
-  "nom": "SpaceXAI: Grok Build 0.1",
+  "id": "x-ai/grok-4.3",
+  "nom": "SpaceXSI: Grok 4.3",
   "fournisseur": "x-ai",
-  "entree": 1.0,
-  "sortie": 2.0,
-  "contexte": 256000,
-  "cree": 1779298123,
-  "evolution": ""
+  "entree": 1.25,
+  "sortie": 2.5,
+  "contexte": 1000000,
+  "cree": 1777591821,
+  "evolution": "Nouveau"
  },
  {
   "id": "nvidia/nemotron-3.5-super-vl",

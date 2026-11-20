@@ -1,0 +1,539 @@
+{
+ "selection": [
+  {
+   "id": "https://github.com/unclecode/crawl4ai/releases/tag/docker-rebuild-v0.9.6",
+   "categorie": "parsing",
+   "resume": "Crawl4AI publie une révision du build Docker de la v0.9.6 en séparant la compilation sur des runners natifs ARM64. La précédente tentative via QEMU provoquait le crash du processus GPU de Chromium intégré à Playwright 1.65 lors de l'exécution de crawl4ai-doctor.",
+   "specificites": [
+    "Résout le plantage GPU de Chromium sous Playwright 1.65 lors d'émulation QEMU",
+    "Pipeline CI mis à jour avec runners natifs dédiés pour ARM64 et AMD64",
+    "Publication des tags Docker conditionnée au passage complet des tests sur les deux architectures"
+   ],
+   "pourquoi": "Essentiel pour déployer nos conteneurs de web scraping sur des instances cloud ou serveurs locaux ARM64 sans instabilité de Playwright.",
+   "titre": "Crawl4AI docker-rebuild-v0.9.6: ci: build arm64 Docker image on a native ARM runner",
+   "url": "https://github.com/unclecode/crawl4ai/releases/tag/docker-rebuild-v0.9.6",
+   "source": "Crawl4AI (releases)"
+  },
+  {
+   "id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+   "categorie": "modele",
+   "resume": "Mise à jour v2.1.329 de l'outil CLI Claude Code introduisant une meilleure observabilité des serveurs MCP. L'interface /mcp affiche désormais les codes et messages d'erreur JSON-RPC renvoyés par les serveurs HTTP distants en cas de rejet de connexion.",
+   "specificites": [
+    "Affichage direct des payloads d'erreur JSON-RPC pour les serveurs MCP distants en échec",
+    "Ajout d'une boîte de dialogue de validation de sécurité indiquant la provenance des hooks de dossiers",
+    "Gestion et suivi des tâches planifiées, boucles (/loop wakeups) et forks dans /tasks"
+   ],
+   "pourquoi": "Permet de déboguer rapidement les intégrations MCP distantes directement depuis l'interface agentique sans inspecter manuellement les logs réseau.",
+   "titre": "Claude Code v2.1.329",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+   "source": "Claude Code (releases)"
+  },
+  {
+   "id": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+   "categorie": "modele",
+   "resume": "Google intègre la fonctionnalité de Tool Retrieval nativement au sein de l'API Gemini. Ce mécanisme permet de sélectionner dynamiquement les outils pertinents dans un registre étendu avant la génération de l'appel d'outil.",
+   "specificites": [
+    "Réduction de la surcharge de tokens dans le prompt système en ne chargeant que les schémas d'outils requis",
+    "Amélioration de la précision de sélection face à de vastes catalogues de fonctions (APIs, connecteurs)",
+    "Adaptation dynamique du contexte d'exécution pour les agents multi-outils"
+   ],
+   "pourquoi": "Indispensable pour nos architectures agents manipulant des dizaines d'outils ou d'endpoints sans saturer la fenêtre de contexte ni dégrader la fidélité du tool calling.",
+   "titre": "Introducing Tool Retrieval in the Gemini API",
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+   "source": "Google AI Blog"
+  },
+  {
+   "id": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.11.0",
+   "categorie": "modele",
+   "resume": "Version 2.11.0 du SDK Python d'Anthropic optimisant la génération des sorties structurées. Le client met désormais en cache le schéma brut pour instancier les schémas d'appels successifs, réduisant l'overhead côté application.",
+   "specificites": [
+    "Optimisation de performance sur structured outputs via la réutilisation de schémas mis en cache",
+    "Correction du calcul de signature AWS SigV4 lors de requêtes contenant des espaces encodés (%20)",
+    "Gestion de l'erreur sandbox_egress_restricted sur l'API Admin pour les environnements confinés"
+   ],
+   "pourquoi": "Améliore la latence de nos pipelines d'extraction structurée JSON et fiabilise les déploiements sur AWS Bedrock.",
+   "titre": "Anthropic SDK Python v2.11.0",
+   "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.11.0",
+   "source": "Anthropic SDK Python (releases)"
+  },
+  {
+   "id": "https://developer.nvidia.com/blog/build-tool-calling-parsers-in-rust-with-ai-agents/",
+   "categorie": "pratique",
+   "resume": "NVIDIA détaille l'implémentation de parseurs d'appels d'outils en streaming développés en Rust pour les frameworks d'agents. Ces parseurs gèrent les fragments JSON tronqués et les fuites de balises spécifiques aux modèles lors de la génération continue.",
+   "specificites": [
+    "Parsing incrémental à faible latence des arguments d'outils au fil de l'émission des tokens",
+    "Tolérance aux coupures d'arguments et élimination du balisage propriétaire parasite",
+    "Gain de robustesse face aux erreurs de formatage générées par les modèles compacts en inférence locale"
+   ],
+   "pourquoi": "Offre un pattern performant pour fiabiliser le parsing d'appels de fonctions dans nos runtimes d'agents sans attendre la complétion intégrale du LLM.",
+   "titre": "Build Tool-Calling Parsers in Rust with AI Agents",
+   "url": "https://developer.nvidia.com/blog/build-tool-calling-parsers-in-rust-with-ai-agents/",
+   "source": "NVIDIA Technical Blog"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.25111",
+   "categorie": "article",
+   "resume": "DSFlow propose une plateforme neuro-symbolique pour agents de data science sous LangGraph, associant des compétences LLM réutilisables à des garde-fous diagnostiques statistiques stricts. Le composant symbolique peut valider, forcer une replanification ou annuler une méthode inappropriée.",
+   "specificites": [
+    "Orchestration hybride LangGraph couplant génération d'étapes LLM et vérification statistique déterministe",
+    "Capacité de forcer le replan et l'explication en cas d'incohérence méthodologique",
+    "Réduction drastique des hallucinations de transformation de données par rapport aux agents purs ReAct"
+   ],
+   "pourquoi": "Très utile pour structurer nos agents de manipulation de données et de text-to-SQL avec des garde-fous mathématiques déterministes.",
+   "titre": "DSFlow: A Neuro-Symbolic Data Workflow Agent with Statistical Diagnostic Guardrails",
+   "url": "https://arxiv.org/abs/2611.25111",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.24969",
+   "categorie": "article",
+   "resume": "L'article présente PRKV, une méthode sans réentraînement pour l'éviction de tokens dans le cache KV lors de l'inférence sur longs contextes. PRKV applique un Personalized PageRank sur le graphe de transition des attentions pour mesurer l'importance multi-sauts des tokens.",
+   "specificites": [
+    "Algorithme sans entraînement applicable directement sur différentes familles de LLM",
+    "Propagation d'importance globale dépassant les simples heuristiques de récence ou d'attention instantanée",
+    "Maintien des performances sur des contextes étendus sous des contraintes sévères de mémoire GPU"
+   ],
+   "pourquoi": "Aide à comprendre et anticiper les optimisations d'infrastructure pour nos pipelines RAG à large contexte et grand volume.",
+   "titre": "Global Importance Estimation for KV Cache Eviction",
+   "url": "https://arxiv.org/abs/2611.24969",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.24994",
+   "categorie": "monitoring",
+   "resume": "Cette recherche démontre que les activations internes d'un LLM peuvent révéler des altérations cachées même lorsque sa réponse textuelle paraît intègre. En traduisant les états internes de Gemma-3-27B en texte via un autoencodeur de langage naturel, un juge externe peut auditer les pensées verbalisées du modèle.",
+   "specificites": [
+    "Utilisation d'un autoencodeur pour projeter l'espace d'activations d'un modèle (Gemma-3-27B) en texte intelligible",
+    "Détection d'états internes manipulés indétectables par les techniques classiques de garde-fous entrée/sortie",
+    "Architecture d'observabilité séparée via un canal d'audit ('thoughts channel') lu par un LLM juge indépendant"
+   ],
+   "pourquoi": "Ouvre une piste technique majeure pour le monitoring profond et la détection d'attaques par injection ou manipulation interne sur nos modèles.",
+   "titre": "What the model knows but does not say: monitoring medical LLMs through verbalized thoughts",
+   "url": "https://arxiv.org/abs/2611.24994",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://huggingface.co/papers/2611.26073",
+   "categorie": "monitoring",
+   "resume": "Présentation d'AltRA-Test (Alternative Annotator Test with Resampled Annotations), un test statistique mesurant la validité du remplacement d'évaluateurs humains par des LLM judges dans des contextes réels. Il lève l'hypothèse restrictive des jeux de données denses où tous les éléments sont revus par les mêmes annotateurs.",
+   "specificites": [
+    "Gère les distributions d'annotations éparses et asynchrones rencontrées en production",
+    "Validation statistique rigoureuse avant de déléguer l'évaluation d'un système IA à un modèle",
+    "Permet de calibrer les benchmarks internes de qualité RAG et d'agents sans biais d'alignement"
+   ],
+   "pourquoi": "Fournit un protocole statistique actionnable pour valider nos pipelines d'évaluation LLM-as-a-judge sur nos propres données d'usage.",
+   "titre": "AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators",
+   "url": "https://huggingface.co/papers/2611.26073",
+   "source": "Hugging Face Daily Papers"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.25235",
+   "categorie": "article",
+   "resume": "L'article explore la dynamique de persistance et de décroissance temporelle de la mémoire utilisateur paramétrique stockée directement dans les poids d'un LLM. Les auteurs analysent les conditions dans lesquelles la mémoire paramétrique surpasse ou complète le RAG en gérant activement l'oubli et la mise à jour des faits.",
+   "specificites": [
+    "Comparaison empirique entre stockage paramétrique dynamique et RAG traditionnel",
+    "Mécanismes de gestion du cycle de vie des connaissances (consolidation de faits stables vs obsolescence)",
+    "Remise en question du continual learning visant la rétention infinie, au profit d'un oubli contrôlé"
+   ],
+   "pourquoi": "Fournit une base théorique et pratique pour trancher entre externalisation via base vectorielle (RAG) et internalisation par fine-tuning continu.",
+   "titre": "Some Memories Must Fade: Persistence and Decay of User Memories in Model Parameters",
+   "url": "https://arxiv.org/abs/2611.25235",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "categorie": "pratique",
+   "resume": "Sortie officielle de PostgreSQL 19 intégrant la commande WAIT FOR LSN pour résoudre le décalage de réplication sur les serveurs secondaires. Cette fonction permet à une session de lecture sur un replica d'attendre le rejeu exact du WAL pour garantir la cohérence read-your-writes.",
+   "specificites": [
+    "Introduction de 'WAIT FOR LSN' garantissant des lectures fraîches sur des instances standby",
+    "Suppression des incohérences de lecture après écriture courantes dans les architectures découplées",
+    "Durcissement global suite aux audits de vulnérabilités signalées par outillage IA"
+   ],
+   "pourquoi": "Critique pour la robustesse de nos agents text-to-SQL et pipelines de données opérant sur des répliques de lecture PostgreSQL.",
+   "titre": "PostgreSQL 19 Released",
+   "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.25243",
+   "categorie": "robotique",
+   "resume": "Verify2Act découple la planification sémantique d'un VLM de la vérification physique pour la manipulation robotique. Un modèle de monde latent opérant dans l'espace de caractéristiques DINOv2 génère des prédictions validées ensuite par un critique à double tête.",
+   "specificites": [
+    "Séparation modulaire entre proposition d'actions sémantiques et vérification physique latente",
+    "Simulation des trajectoires dans l'espace DINOv2, évitant la lenteur et le drift des modèles de monde en pixels",
+    "Critique évaluant la consistance temporelle des déroulements simulés"
+   ],
+   "pourquoi": "Offre un schéma d'architecture réutilisable pour valider et contraindre les plans d'actions d'un modèle multimodal via un espace latent intermédiaire.",
+   "titre": "Verify2Act: Critic-Guided Latent World Models for Verifying Language-Conditioned Manipulation Plans",
+   "url": "https://arxiv.org/abs/2611.25243",
+   "source": "arXiv cs.RO"
+  }
+ ],
+ "tendance": "La tendance actuelle met l'accent sur le contrôle d'exécution et l'observabilité fine des systèmes autonomes. D'une part, les frameworks agentiques se renforcent avec des garde-fous neuro-symboliques stricts (DSFlow) et des parseurs résilients (Rust, SDK Anthropic). D'autre part, la recherche bascule vers l'inspection de l'état interne des modèles (audits d'activations, tests statistiques de juges LLM) pour sécuriser des décisions que les vérifications classiques en boîte noire ne suffisent plus à encadrer.",
+ "comparatif": "### Analyse comparative des modèles et tarification\n\n* **Modèles ultra low-cost pour parsing, scraping et extraction massive :**\n  * **DeepSeek V4.1 Flash** domine le marché du traitement à fort volume avec un coût d'entrée de **0,051 $/M** et une sortie à **0,203 $/M** pour 1 048 576 tokens de contexte.\n  * **NVIDIA Nemotron 3.5 Lightning** propose une alternative compétitive à **0,07 $/M** en entrée et **0,20 $/M** en sortie (1,05M tokens).\n  * **Claude Haiku 5.5** (**0,10 $/M** entrée / **0,50 $/M** sortie) et **Llama 4 Scout** (**0,10 $/M** entrée / **0,30 $/M** sortie pour 1,31M tokens) restent d'excellentes options pour des tâches de parsing HTML nécessitant une meilleure compréhension syntaxique.\n\n* **Meilleur rapport qualité/prix pour pipelines RAG et agents intermédiaires :**\n  * **Mistral Large 4** se positionne très avantageusement avec **0,70 $/M** en entrée et **2,10 $/M** en sortie pour une fenêtre de 1M tokens, surpassant les modèles de milieu de gamme concurrents.\n  * **Llama 4 Maverick** offre un compromis intermédiaire agressif à **0,35 $/M** en entrée et **1,00 $/M** en sortie (524k tokens).\n  * **Claude Sonnet 5.5** (**2,00 $/M** / **10,00 $/M**) et **GPT-6.2 Sol** (**2,00 $/M** / **10,00 $/M**) représentent le standard pour les agents complexes nécessitant du tool calling avancé et du raisonnement text-to-SQL, bien qu'ils coûtent près de 3 fois plus cher que Mistral Large 4 en entrée.\n\n* **Modèles multimodaux et vision pour extraction visuelle de pages web :**\n  * **DeepSeek V4 Flash Vision Exp** reste l'option vision la plus économique (**0,44 $/M** entrée / **1,32 $/M** sortie, 1M tokens).\n  * **NVIDIA Nemotron 3.5 Super VL** offre un tarif d'entrée exceptionnellement bas pour un modèle vision à **0,15 $/M** (sortie à **0,50 $/M**).\n  * Nouveau modèle repéré : **Pixtral Large 2502** à **2,00 $/M** en entrée et **6,00 $/M** en sortie avec un contexte plus restreint de 128 000 tokens.\n\n* **Évolutions et nouveautés tarifaires :**\n  * **DeepSeek V4 Pro 0813** a subi un ajustement majeur de son modèle de prix : son entrée passe à **1,32 $/M** (contre 0,111 $ auparavant) tandis que sa sortie baisse légèrement à **3,96 $/M** (contre 4,44 $).\n  * Entrée de **Grok 4.3** à **1,25 $/M** en entrée et **2,50 $/M** en sortie (1M tokens), sensiblement moins cher que les versions Grok 4.5, 4.6 et 4.7 qui sont toutes fixées à **2,00 $/M** entrée et **6,00 $/M** sortie pour 500k de contexte.\n  * Le haut de gamme reste stabilisé à des tarifs élevés : **Claude Fable 5.2** et **GPT-6.2 Astra / Astra Pro** culminent à **8,00 $/M** en entrée et **40,00 $/M** en sortie.",
+ "date": "2026-11-20",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "nom": "Mistral: Pixtral Large 2502",
+   "fournisseur": "mistralai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 128000,
+   "cree": 1795135865,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.203,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 1.32,
+   "sortie": 3.96,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 0.111 / 4.44 $)"
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXSI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXSI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXSI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.3",
+   "nom": "SpaceXSI: Grok 4.3",
+   "fournisseur": "x-ai",
+   "entree": 1.25,
+   "sortie": 2.5,
+   "contexte": 1000000,
+   "cree": 1777591821,
+   "evolution": "Nouveau"
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.5,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
