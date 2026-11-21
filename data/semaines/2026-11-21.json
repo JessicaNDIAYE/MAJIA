@@ -1,0 +1,452 @@
+{
+ "selection": [
+  {
+   "id": "https://arxiv.org/abs/2611.25422",
+   "categorie": "article",
+   "resume": "Introduction d'un cadre d'énergie de chemin conditionné par l'incertitude pour convertir des prédictions de séquences génomiques en distributions de phénotypes sur des graphes de connaissances biomédicales.",
+   "specificites": [
+    "Sans supervision phénotypique au niveau du patient",
+    "Scores d'énergie appris pour les routes gène-maladie-phénotype",
+    "Gestion explicite de l'incertitude de la requête"
+   ],
+   "pourquoi": "Utile pour concevoir des pipelines RAG complexes intégrant du raisonnement sur graphes de connaissances.",
+   "titre": "From Sequence Uncertainty to Phenotype Hypotheses: Uncertainty-Conditioned Inference over Biomedical Knowledge Graphs",
+   "url": "https://arxiv.org/abs/2611.25422",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.25780",
+   "categorie": "article",
+   "resume": "RouteVerify étudie l'impact du routage des activations internes dans les modèles Mixture-of-Experts (MoE) sur la vérification des étapes de raisonnement.",
+   "specificites": [
+    "Intervention contrôlée par remplacement d'activations internes",
+    "Testé sur neuf checkpoints MoE",
+    "Permet de distinguer les étapes de raisonnement correctes et erronées"
+   ],
+   "pourquoi": "Fournit des méthodes techniques pour le monitoring et la vérification pas-à-pas des agents LLM basés sur des architectures MoE.",
+   "titre": "RouteVerify: Routing Interventions for Step-Level Verification in Mixture-of-Experts Models",
+   "url": "https://arxiv.org/abs/2611.25780",
+   "source": "arXiv cs.LG"
+  },
+  {
+   "id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+   "categorie": "modele",
+   "resume": "Mise à jour de Claude Code intégrant la gestion des authentifications d'organisation enterprise et l'outil graphique 'easel' pour générer des graphiques à partir de résultats MCP.",
+   "specificites": [
+    "Support de l'Enterprise Admin Console pour l'authentification",
+    "Ajout de l'outil 'easel' pour le rendu de graphiques sous métriques MCP",
+    "Configuration `--start-dir` pour les runners auto-hébergés"
+   ],
+   "pourquoi": "Directement applicable pour améliorer mes intégrations MCP et l'observabilité des métriques d'agents.",
+   "titre": "Claude Code v2.1.330",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+   "source": "Claude Code (releases)"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.809",
+   "categorie": "parsing",
+   "resume": "Publication des nouvelles versions de l'API d'image Firecrawl (v2.11.808 et v2.11.809) dédiées au scraping et au parsing web.",
+   "specificites": [
+    "Mise à jour incrémentielle des images Docker de l'API de crawling",
+    "Forte adoption communautaire avec plus de 1 200 étoiles GitHub récentes"
+   ],
+   "pourquoi": "Permet de suivre les évolutions des outils de scraping et d'extraction structurée de données web par l'IA.",
+   "titre": "Firecrawl v2.11.809",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.809",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+   "categorie": "pratique",
+   "resume": "Récit d'une découverte mathématique assistée par Claude formalisant des arguments sur l'hypothèse de Riemann sans hypothèses non prouvées.",
+   "specificites": [
+    "Utilisation de Claude pour la découverte de preuves",
+    "Formalisation sans hypothèses auxiliaires"
+   ],
+   "pourquoi": "Illustre les capacités de raisonnement avancé de Claude pour des tâches algorithmiques et formelles complexes.",
+   "titre": "Quoting Levent Alpöge",
+   "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://openai.com/index/combatting-adversarial-distillation",
+   "categorie": "modele",
+   "resume": "OpenAI détaille son approche multicouche pour contrer l'extraction de capacités par distillation contradictoire.",
+   "specificites": [
+    "Combinaison de l'entraînement, des garde-fous et de la détection",
+    "Protection ciblée contre l'extraction de poids et de comportements"
+   ],
+   "pourquoi": "Permet de comprendre les contraintes de sécurité et les méthodes de protection appliquées aux modèles propriétaires.",
+   "titre": "Combatting adversarial distillation",
+   "url": "https://openai.com/index/combatting-adversarial-distillation",
+   "source": "OpenAI News"
+  }
+ ],
+ "tendance": "La période est marquée par des avancées significatives dans l'utilisation des LLM pour la formalisation mathématique avancée (notamment avec Claude), l'émergence de frameworks d'observabilité spécialisés pour les architectures d'agents (AWS, Virtana), et l'optimisation continue des modèles open weights et propriétaires pour le raisonnement et le RAG.",
+ "comparatif": "- **Modèles les moins chers (Entrée ≤ 0.20 $ / Sortie ≤ 0.60 $ par million de tokens)** : `deepseek/deepseek-v4.1-flash` (0.05$ / 0.199$), `meta-llama/llama-4-scout` (0.1$ / 0.3$), `anthropic/claude-haiku-5.5` (0.1$ / 0.5$), `nvidia/nemotron-3.5-lightning` (0.07$ / 0.2$), `deepseek/deepseek-v4.1-flash-1017` (0.15$ / 0.6$), `mistralai/mistral-small-2603` (0.15$ / 0.6$), `qwen/qwen3.8-omni-flash` (0.15$ / 0.47$), `nvidia/nemotron-3.5-super-vl` (0.15$ / 0.47$).\n- **Meilleur rapport qualité/prix pour le Scraping / Extraction web & Agents légers** : `deepseek/deepseek-v4.1-flash` à 0.05$ en entrée et 0.199$ en sortie avec 1 048 576 tokens de contexte offre un coût minimal imbattable pour traiter de grands volumes de texte HTML nettoyé.\n- **Meilleur rapport qualité/prix pour le RAG à grande échelle (fenêtre de contexte large)** : `mistralai/mistral-large-4-0` propose un contexte de 1 048 576 tokens pour 0.70$ en entrée et 2.10$ en sortie, positionnant ce modèle comme une alternative économique pour l'ingestion massive de documents.\n- **Modèles haut de gamme / Raisonnement lourd** : `anthropic/claude-opus-5.5` (4.0$ / 20.0$), `openai/gpt-6.2-astra-pro` (8.0$ / 40.0$) et `google/gemini-4-neon` (3.0$ / 15.0$) ciblent les tâches complexes nécessitant un raisonnement approfondi.\n- **Changements récents** : Le fournisseur `deepseek` a ajusté les tarifs de `deepseek-v4.1-flash` (anciennement 0.051 / 0.203 $) et de `deepseek-v4-flash-vision-exp` (anciennement 0.44 / 1.32 $, baissé à 0.216 / 0.647 $).",
+ "date": "2026-11-21",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "nom": "Mistral: Pixtral Large 2502",
+   "fournisseur": "mistralai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 128000,
+   "cree": 1795135865,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.05,
+   "sortie": 0.199,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.051 / 0.203 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": "prix modifié (avant 0.44 / 1.32 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 1.32,
+   "sortie": 3.96,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXSI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXSI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXSI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.3",
+   "nom": "SpaceXSI: Grok 4.3",
+   "fournisseur": "x-ai",
+   "entree": 1.25,
+   "sortie": 2.5,
+   "contexte": 1000000,
+   "cree": 1777591821,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": "prix modifié (avant 0.15 / 0.5 $)"
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}

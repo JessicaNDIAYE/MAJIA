@@ -127,7 +127,7 @@
   "sortie": 6.0,
   "contexte": 128000,
   "cree": 1795135865,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "mistralai/mistral-large-4-0",
@@ -213,21 +213,21 @@
   "id": "deepseek/deepseek-v4.1-flash",
   "nom": "DeepSeek: DeepSeek V4.1 Flash",
   "fournisseur": "deepseek",
-  "entree": 0.051,
-  "sortie": 0.203,
+  "entree": 0.05,
+  "sortie": 0.199,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.051 / 0.203 $)"
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
   "fournisseur": "deepseek",
-  "entree": 0.44,
-  "sortie": 1.32,
+  "entree": 0.216,
+  "sortie": 0.647,
   "contexte": 1048576,
   "cree": 1787311563,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.44 / 1.32 $)"
  },
  {
   "id": "deepseek/deepseek-v4-pro-0813",
@@ -237,7 +237,7 @@
   "sortie": 3.96,
   "contexte": 1048576,
   "cree": 1786549364,
-  "evolution": "prix modifié (avant 0.111 / 4.44 $)"
+  "evolution": ""
  },
  {
   "id": "qwen/qwen4-max",
@@ -317,17 +317,17 @@
   "sortie": 2.5,
   "contexte": 1000000,
   "cree": 1777591821,
-  "evolution": "Nouveau"
+  "evolution": ""
  },
  {
   "id": "nvidia/nemotron-3.5-super-vl",
   "nom": "NVIDIA: Nemotron 3.5 Super VL",
   "fournisseur": "nvidia",
   "entree": 0.15,
-  "sortie": 0.5,
+  "sortie": 0.47,
   "contexte": 1048576,
   "cree": 1792076662,
-  "evolution": ""
+  "evolution": "prix modifié (avant 0.15 / 0.5 $)"
  },
  {
   "id": "nvidia/nemotron-3.5-lightning",
