@@ -217,7 +217,7 @@
   "sortie": 0.199,
   "contexte": 1048576,
   "cree": 1789021285,
-  "evolution": "prix modifié (avant 0.051 / 0.203 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4-flash-vision-exp",
@@ -227,7 +227,7 @@
   "sortie": 0.647,
   "contexte": 1048576,
   "cree": 1787311563,
-  "evolution": "prix modifié (avant 0.44 / 1.32 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4-pro-0813",
@@ -327,7 +327,7 @@
   "sortie": 0.47,
   "contexte": 1048576,
   "cree": 1792076662,
-  "evolution": "prix modifié (avant 0.15 / 0.5 $)"
+  "evolution": ""
  },
  {
   "id": "nvidia/nemotron-3.5-lightning",
