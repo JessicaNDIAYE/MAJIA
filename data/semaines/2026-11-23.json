@@ -1,0 +1,480 @@
+{
+ "selection": [
+  {
+   "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWGVaamIwYk9fN0dGV3pVQWVucW1TNGhiSjdBUHVTWGVoSVZuMXdnOTVwQXQzQnhrOFZ4VVp1MWdsMVVyVHI0aG5BbmMyTjdwYWtlY18yUnkyTEtMa1dJdG9xVW9XVlhuNjRFQUJHVFBQUDNhSkFUbjhmbXhKbjQwQTNFY2Zid0trQ1lsZ0ItZEJyYUZrMXlkc3RScHVKTlBWclQtWEJTV0huM0ItYWt3anJSNlhURjRHR25Z?oc=5",
+   "categorie": "monitoring",
+   "titre": "ServiceNow stock: Azure alerts flow into ServiceNow AIOps - ad-hoc-news.de",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWGVaamIwYk9fN0dGV3pVQWVucW1TNGhiSjdBUHVTWGVoSVZuMXdnOTVwQXQzQnhrOFZ4VVp1MWdsMVVyVHI0aG5BbmMyTjdwYWtlY18yUnkyTEtMa1dJdG9xVW9XVlhuNjRFQUJHVFBQUDNhSkFUbjhmbXhKbjQwQTNFY2Zid0trQ1lsZ0ItZEJyYUZrMXlkc3RScHVKTlBWclQtWEJTV0huM0ItYWt3anJSNlhURjRHR25Z?oc=5",
+   "source": "Observabilité LLM (actualités)",
+   "resume": "ServiceNow stock: Azure alerts flow into ServiceNow AIOps &nbsp;&nbsp; ad-hoc-news.de",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcTZQOXgzQ1BGbV9CdXNHRW1Fcl9VX0ZaaUlDYlZBSTNIMnBINkFiTFIwdC1VMUoyRnFFbWlablJNNG0yc180T05KdmplZEZDaGxoOXJTQmdtVC14QXNPT0Rub252Y09Cajlpd09GcmVXOHk2emFoQkJHV241eUc4SUtGY0hQY0lZazJuLUd2MFoxWXBTQVJyWld3?oc=5",
+   "categorie": "modele",
+   "titre": "Direxion Launches 2X Bull & Bear ETFs on Anthropic - ETF Database",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcTZQOXgzQ1BGbV9CdXNHRW1Fcl9VX0ZaaUlDYlZBSTNIMnBINkFiTFIwdC1VMUoyRnFFbWlablJNNG0yc180T05KdmplZEZDaGxoOXJTQmdtVC14QXNPT0Rub252Y09Cajlpd09GcmVXOHk2emFoQkJHV241eUc4SUtGY0hQY0lZazJuLUd2MFoxWXBTQVJyWld3?oc=5",
+   "source": "Anthropic / Claude (actualités)",
+   "resume": "Direxion Launches 2X Bull & Bear ETFs on Anthropic &nbsp;&nbsp; ETF Database",
+   "specificites": []
+  },
+  {
+   "id": "https://www.therobotreport.com/special-report-engineering-focus-on-motion-control/",
+   "categorie": "robotique",
+   "titre": "Special Report: Engineering Focus on Motion Control",
+   "url": "https://www.therobotreport.com/special-report-engineering-focus-on-motion-control/",
+   "source": "The Robot Report",
+   "resume": "The Robot Report looks at recent advances in automation for manufacturing, from improvements in technologies and use cases to the potential of humanoids and AI. The post Special Report: Engineering Focus on Motion Control appeared first on The Robot Report .",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.816",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.816",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.816",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.816",
+   "specificites": []
+  },
+  {
+   "id": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+   "categorie": "pratique",
+   "titre": "Jensen Huang Reinstated as Nvidia CEO",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+   "source": "Hacker News — IA (front page)",
+   "resume": "Article URL: https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director Comments URL: https://news.ycombinator.com/item?id=50611588 Points: 1412 # Comments: 1199",
+   "specificites": []
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.26663",
+   "categorie": "article",
+   "titre": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+   "url": "https://arxiv.org/abs/2611.26663",
+   "source": "arXiv cs.AI",
+   "resume": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized ",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPWG5xLWE5aUU0aXNEbUdPTDVhWkdKX3NrUHhYTkx1VzdfNUk2cGZxcEg4ZTZFLVFoZkV1a04zVU02TUFJc1F1cXlkN1lMbjNvTUg1cEpqMHNVTjNXS1lxbmlNMGJTcHFzN1E5RlpjYVhCeEFjVG1DOWpEbVFDUzBKN0xfcGNhdkI0bEc5MDZTTEhVZkR6bE53d3dxcHJtYzdvcHI1NFBEMHU0dGhNZ0VqQXNTWGZzMVUyQk1lVUtKcnZDU1U3ZzMwU2hnWGlVZTZ3WW0zNlRPM3IwbmdKS3FnVzVhOHFteUFIVUxPQkdzOGJ0Zw?oc=5",
+   "categorie": "monitoring",
+   "titre": "ServiceNow Taps Microsoft's Azure to Route Cloud Alerts Straight Into Its AIOps Platform - ad-hoc-news.de",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPWG5xLWE5aUU0aXNEbUdPTDVhWkdKX3NrUHhYTkx1VzdfNUk2cGZxcEg4ZTZFLVFoZkV1a04zVU02TUFJc1F1cXlkN1lMbjNvTUg1cEpqMHNVTjNXS1lxbmlNMGJTcHFzN1E5RlpjYVhCeEFjVG1DOWpEbVFDUzBKN0xfcGNhdkI0bEc5MDZTTEhVZkR6bE53d3dxcHJtYzdvcHI1NFBEMHU0dGhNZ0VqQXNTWGZzMVUyQk1lVUtKcnZDU1U3ZzMwU2hnWGlVZTZ3WW0zNlRPM3IwbmdKS3FnVzVhOHFteUFIVUxPQkdzOGJ0Zw?oc=5",
+   "source": "Observabilité LLM (actualités)",
+   "resume": "ServiceNow Taps Microsoft's Azure to Route Cloud Alerts Straight Into Its AIOps Platform &nbsp;&nbsp; ad-hoc-news.de",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNVo2emJtQjRqQXlrN0VEX3owRnQwQWw3d2hQMTdmNndLeVJ1MzdCZDBNeS11OHlDRVFpd1lrU1QtLVBHNXVNLW5YQjR5N0ZrenFiYXJZYW5pUXh1SURqakNKcmtqRW1yTWZXeUxIYjk4R3FxUU1LbWZQc0tzV21GM2pLSjZMWDZtS3UwVEhWYmN2QU9IcUVhRHVna2pFbU1jRHk4TWNWWWxFUVpUWnNwTGJKNG1OeHFPUHlaTGJMM0NiWHdrTllCM2ZhQlhmTWczN01MVFBUVnJDaWIxb0dJUHZsVHFnMEx1azRnR3hmYw?oc=5",
+   "categorie": "modele",
+   "titre": "Deutsche Telekom Backs Mistral AI With EUR 100 Million as Munich Compute Site Fills Up - ad-hoc-news.de",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNVo2emJtQjRqQXlrN0VEX3owRnQwQWw3d2hQMTdmNndLeVJ1MzdCZDBNeS11OHlDRVFpd1lrU1QtLVBHNXVNLW5YQjR5N0ZrenFiYXJZYW5pUXh1SURqakNKcmtqRW1yTWZXeUxIYjk4R3FxUU1LbWZQc0tzV21GM2pLSjZMWDZtS3UwVEhWYmN2QU9IcUVhRHVna2pFbU1jRHk4TWNWWWxFUVpUWnNwTGJKNG1OeHFPUHlaTGJMM0NiWHdrTllCM2ZhQlhmTWczN01MVFBUVnJDaWIxb0dJUHZsVHFnMEx1azRnR3hmYw?oc=5",
+   "source": "Mistral, DeepSeek, Qwen, Llama (actualités)",
+   "resume": "Deutsche Telekom Backs Mistral AI With EUR 100 Million as Munich Compute Site Fills Up &nbsp;&nbsp; ad-hoc-news.de",
+   "specificites": []
+  },
+  {
+   "id": "https://www.therobotreport.com/nvidia-reinstates-jensen-huang-after-11-day-absence/",
+   "categorie": "robotique",
+   "titre": "NVIDIA reinstates Jensen Huang after 11-day absence",
+   "url": "https://www.therobotreport.com/nvidia-reinstates-jensen-huang-after-11-day-absence/",
+   "source": "The Robot Report",
+   "resume": "The NVIDIA board reversed its decision following discussions with Huang and senior U.S. government officials, amid growing pressure from the White House, investors and technology executives. The post NVIDIA reinstates Jensen Huang after 11-day absence appeared first on The Robot Report .",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.815",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.815",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.815",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.815",
+   "specificites": []
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/22/select-styling/",
+   "categorie": "pratique",
+   "titre": "Select Styling Specimens",
+   "url": "https://simonwillison.net/2026/Nov/22/select-styling/",
+   "source": "Simon Willison",
+   "resume": "Tool: Select Styling Specimens I got frustrated at how HTML &lt;select&gt; boxes default to looking different in different browsers, and are (I think) quite ugly in Chrome: So I had Claude Fable 5.2 build me this page showing all of the ways they can be styled: Build an HTML page that shows all of t",
+   "specificites": []
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.26782",
+   "categorie": "article",
+   "titre": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
+   "url": "https://arxiv.org/abs/2611.26782",
+   "source": "arXiv cs.AI",
+   "resume": "arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it cen- tral to materials design and discovery. Yet an MD study requires an expert-driven workflow: des",
+   "specificites": []
+  }
+ ],
+ "comparatif": "",
+ "sans_ia": true,
+ "tendance": "Veille brute : l'IA était indisponible, les extraits viennent directement des sources.",
+ "date": "2026-11-23",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "nom": "Mistral: Pixtral Large 2502",
+   "fournisseur": "mistralai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 128000,
+   "cree": 1795135865,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.05,
+   "sortie": 0.199,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 1.32,
+   "sortie": 3.96,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXSI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXSI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXSI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.3",
+   "nom": "SpaceXSI: Grok 4.3",
+   "fournisseur": "x-ai",
+   "entree": 1.25,
+   "sortie": 2.5,
+   "contexte": 1000000,
+   "cree": 1777591821,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
