@@ -1,0 +1,480 @@
+{
+ "selection": [
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.837",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.837",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.837",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.837",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMHBNOVY5RDc1NmxUUjNnZkNhLWROQkhUOFZpVmQ0SEI0UG9aSUpTTjhpV3EydTNkdW8xYm1KOWF6OXg2Z3BMaUJCWTE3WnFCM0hCZGNuQ3ZKUklsYUROVWQzdExOamNKVlJLRTgwYWpoYVdOUjlDY0pxTmxZajlvckJ4cHc0TG1hbW1ZUkszaDZ2M2Rvd3RqTWRFaVRENXVWT0pr?oc=5",
+   "categorie": "modele",
+   "titre": "Anthropic falls below $83 IPO price in swift reversal after record listing - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMHBNOVY5RDc1NmxUUjNnZkNhLWROQkhUOFZpVmQ0SEI0UG9aSUpTTjhpV3EydTNkdW8xYm1KOWF6OXg2Z3BMaUJCWTE3WnFCM0hCZGNuQ3ZKUklsYUROVWQzdExOamNKVlJLRTgwYWpoYVdOUjlDY0pxTmxZajlvckJ4cHc0TG1hbW1ZUkszaDZ2M2Rvd3RqTWRFaVRENXVWT0pr?oc=5",
+   "source": "Anthropic / Claude (actualités)",
+   "resume": "Anthropic falls below $83 IPO price in swift reversal after record listing &nbsp;&nbsp; Reuters",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNcGg2YXRILUtVZXZVNDJCV09QOUJycjAyakdoZXhfUmdqRUN0eTV5MmUtbXhvcDUySzAzbXBOS25QUm1DV29oX196RlFQVXZEeTFseWRkajBUSF9CMmRHQ085eE1tNVVfMHNjN1lBVG54blplT1N3TEpsVVc1OEVEbjR1OXJFSWNBd2c2cmRNN3NfdnVlVm1iR1JoMFVQWFdGeFhuTWJPMWFyYmEtcFFxRXUyZExBb0MtUGJIVmh2NGR6TkV4NHFjeHdkamx3Tmk0X04wdFNMMkFOMzVOY01Z?oc=5",
+   "categorie": "robotique",
+   "titre": "NOETIX Robotics Introduces NOETIX Boomy, a Programmable Humanoid Robot Built for Hands-On Development - Big News Network.com",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNcGg2YXRILUtVZXZVNDJCV09QOUJycjAyakdoZXhfUmdqRUN0eTV5MmUtbXhvcDUySzAzbXBOS25QUm1DV29oX196RlFQVXZEeTFseWRkajBUSF9CMmRHQ085eE1tNVVfMHNjN1lBVG54blplT1N3TEpsVVc1OEVEbjR1OXJFSWNBd2c2cmRNN3NfdnVlVm1iR1JoMFVQWFdGeFhuTWJPMWFyYmEtcFFxRXUyZExBb0MtUGJIVmh2NGR6TkV4NHFjeHdkamx3Tmk0X04wdFNMMkFOMzVOY01Z?oc=5",
+   "source": "Robots humanoïdes (actualités)",
+   "resume": "NOETIX Robotics Introduces NOETIX Boomy, a Programmable Humanoid Robot Built for Hands-On Development &nbsp;&nbsp; Big News Network.com",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.85.0",
+   "categorie": "monitoring",
+   "titre": "Langfuse v4.85.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.85.0",
+   "source": "Langfuse (releases)",
+   "resume": "What's Changed Features feat(billing): meter Stripe from the billable units ledger by @Steffen911 in #20526 feat(web): Use unified session &amp; trace view for session table by @bezbac in #20373 feat(skills): remove beta badge from skill management by @tobi12345 in #20715 feat(topics): allow Topics ",
+   "specificites": []
+  },
+  {
+   "id": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+   "categorie": "pratique",
+   "titre": "LLM agents work for their parent companies, not for you",
+   "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+   "source": "Hacker News — IA (front page)",
+   "resume": "Article URL: https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/ Comments URL: https://news.ycombinator.com/item?id=50627340 Points: 470 # Comments: 199",
+   "specificites": []
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.28197",
+   "categorie": "article",
+   "titre": "From Point Clouds to Engineering Models: Benchmarking Agentic 3D Reconstruction in the Built Environment",
+   "url": "https://arxiv.org/abs/2611.28197",
+   "source": "arXiv cs.AI",
+   "resume": "arXiv:2611.28197v1 Announce Type: new Abstract: Coding agents can translate 3D measurements into CAD geometry, but reconstructing engineering models for the built environment demands semantic interpretation and consistent construction constraints beyond surface fitting. We formulate scene-level Scan",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWlZ0eTYxeXpaVVJxVVlrSWkzU2tjTHFtYWJwZEZBeURZdjRDNVJnbXNrU1JMNXlwT253YjN2bGZHU0FmWFFpWGYtRnZPaURtVkpUS2o4eEhxRWJxRmVHN0N1NmdEcDFZNGdJRUF0X1NjcUZ6SjBmMTMzNUVYanlfRFg3bXRoWlIzeTBsUm00dTFrLUU?oc=5",
+   "categorie": "comparatif",
+   "titre": "OpenAI: Astra and Sol Reduce Their Responses by 34 to 40% - Brief IA",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWlZ0eTYxeXpaVVJxVVlrSWkzU2tjTHFtYWJwZEZBeURZdjRDNVJnbXNrU1JMNXlwT253YjN2bGZHU0FmWFFpWGYtRnZPaURtVkpUS2o4eEhxRWJxRmVHN0N1NmdEcDFZNGdJRUF0X1NjcUZ6SjBmMTMzNUVYanlfRFg3bXRoWlIzeTBsUm00dTFrLUU?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)",
+   "resume": "OpenAI: Astra and Sol Reduce Their Responses by 34 to 40% &nbsp;&nbsp; Brief IA",
+   "specificites": []
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.836",
+   "categorie": "parsing",
+   "titre": "Firecrawl v2.11.836",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.836",
+   "source": "Firecrawl (releases)",
+   "resume": "Release API image v2.11.836",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYlFad0I0cjE0VVFtVkloWGVFZkZjODgtQ3BVTmV3cDNFSnZRX2ZESDdYRjRYUXNEMjFEbEp6Zm5mbnZzcVh6RkJPR1ZkS1ZINlg4LWdackdOa29CQkhwb1BiSHk3b0FMVlAxb1hVdU9hZ1hSOGZvOXhkblJCakNpVE8wMUxQM29DMG84THlQc3c1Sl9hLTREZG9BMlpCUjNXbnAwUHF4Q2t5R3lsZWlNejFmTjQ5dw?oc=5",
+   "categorie": "modele",
+   "titre": "Insiders say Anthropic, OpenAI struggle to contain unreleased AI models: Axios - Anadolu Ajansı",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYlFad0I0cjE0VVFtVkloWGVFZkZjODgtQ3BVTmV3cDNFSnZRX2ZESDdYRjRYUXNEMjFEbEp6Zm5mbnZzcVh6RkJPR1ZkS1ZINlg4LWdackdOa29CQkhwb1BiSHk3b0FMVlAxb1hVdU9hZ1hSOGZvOXhkblJCakNpVE8wMUxQM29DMG84THlQc3c1Sl9hLTREZG9BMlpCUjNXbnAwUHF4Q2t5R3lsZWlNejFmTjQ5dw?oc=5",
+   "source": "Anthropic / Claude (actualités)",
+   "resume": "Insiders say Anthropic, OpenAI struggle to contain unreleased AI models: Axios &nbsp;&nbsp; Anadolu Ajansı",
+   "specificites": []
+  },
+  {
+   "id": "https://www.therobotreport.com/softbank-acquires-marc-raiberts-robotics-and-ai-institute/",
+   "categorie": "robotique",
+   "titre": "SoftBank acquires Marc Raibert’s Robotics and AI Institute",
+   "url": "https://www.therobotreport.com/softbank-acquires-marc-raiberts-robotics-and-ai-institute/",
+   "source": "The Robot Report",
+   "resume": "SoftBank has completed its acquisition of the Robotics and AI Institute from Hyundai Motor Group, expanding its robotics portfolio as the research organization looks to fill 24 open positions in Massachusetts and Switzerland. The post SoftBank acquires Marc Raibert&#8217;s Robotics and AI Institute ",
+   "specificites": []
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrR3FuNHRNbmpwTk1YWGY4eTItQmxneXVXdUZUekdldXY4VTU0bFVMbS1vaEtXTHBxN0d4MXE5b3VUc29yT1BwZV9hRzYzdkxmS3hB?oc=5",
+   "categorie": "monitoring",
+   "titre": "UAE Business: Netscout sustainability design delivers 20pc improvement in energy efficiency - Gulf Daily News (Bahrain)",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrR3FuNHRNbmpwTk1YWGY4eTItQmxneXVXdUZUekdldXY4VTU0bFVMbS1vaEtXTHBxN0d4MXE5b3VUc29yT1BwZV9hRzYzdkxmS3hB?oc=5",
+   "source": "Observabilité LLM (actualités)",
+   "resume": "UAE Business: Netscout sustainability design delivers 20pc improvement in energy efficiency &nbsp;&nbsp; Gulf Daily News (Bahrain)",
+   "specificites": []
+  },
+  {
+   "id": "https://www.kadoa.com/congress/insights/trump-nvidia",
+   "categorie": "pratique",
+   "titre": "Who in Washington owns and trades Nvidia stock",
+   "url": "https://www.kadoa.com/congress/insights/trump-nvidia",
+   "source": "Hacker News — IA (front page)",
+   "resume": "Article URL: https://www.kadoa.com/congress/insights/trump-nvidia Comments URL: https://news.ycombinator.com/item?id=50626861 Points: 225 # Comments: 108",
+   "specificites": []
+  }
+ ],
+ "comparatif": "",
+ "sans_ia": true,
+ "tendance": "Veille brute : l'IA était indisponible, les extraits viennent directement des sources.",
+ "date": "2026-11-24",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "nom": "Mistral: Pixtral Large 2502",
+   "fournisseur": "mistralai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 128000,
+   "cree": 1795135865,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.03,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": "prix modifié (avant 0.15 / 0.6 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.203,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": "prix modifié (avant 0.05 / 0.199 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 1.32 / 3.96 $)"
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXSI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXSI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXSI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.3",
+   "nom": "SpaceXSI: Grok 4.3",
+   "fournisseur": "x-ai",
+   "entree": 1.25,
+   "sortie": 2.5,
+   "contexte": 1000000,
+   "cree": 1777591821,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.05,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": "prix modifié (avant 0.07 / 0.2 $)"
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
