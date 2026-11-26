@@ -207,7 +207,7 @@
   "sortie": 0.6,
   "contexte": 1048576,
   "cree": 1792225624,
-  "evolution": "prix modifié (avant 0.03 / 0.2 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4.1-flash",
@@ -227,7 +227,7 @@
   "sortie": 1.32,
   "contexte": 1048576,
   "cree": 1787311563,
-  "evolution": "prix modifié (avant 0.216 / 0.647 $)"
+  "evolution": ""
  },
  {
   "id": "deepseek/deepseek-v4-pro-0813",
@@ -337,7 +337,7 @@
   "sortie": 0.2,
   "contexte": 1048576,
   "cree": 1786452751,
-  "evolution": "prix modifié (avant 0.05 / 0.2 $)"
+  "evolution": ""
  },
  {
   "id": "nvidia/nemotron-3.5-content-safety",

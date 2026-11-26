@@ -1,0 +1,511 @@
+{
+ "selection": [
+  {
+   "id": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+   "categorie": "parsing",
+   "resume": "NVIDIA propose un article sur l'utilisation du modèle Nemotron 3.5 Parse combinant données ouvertes et fine-tuning pour le parsing et l'extraction de données web.",
+   "specificites": [
+    "Modèle associé dans le catalogue : nvidia/nemotron-3.5-lightning à 0.07 $ (entrée) et 0.2 $ (sortie) par million de tokens avec 1 048 576 tokens de contexte",
+    "Modèle ultra-rapide optimisé pour le traitement textuel et structuré de pages web"
+   ],
+   "pourquoi": "Permet de structurer des pipelines de parsing web et d'extraction de données à faible coût grâce à des modèles spécialisés.",
+   "titre": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+   "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+   "source": "Hugging Face Blog"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.871",
+   "categorie": "parsing",
+   "resume": "La version v2.11.871 de l'outil de scraping Firecrawl apporte des mises à jour incrémentales de son image API pour le crawling web.",
+   "specificites": [
+    "Mise à jour ciblée sur l'image API v2.11.871",
+    "Outil open-source de référence pour convertir des pages web en Markdown propre pour les agents"
+   ],
+   "pourquoi": "Essentiel pour maintenir et optimiser mes pipelines de scraping et d'ingestion de données web pour mes agents.",
+   "titre": "Firecrawl v2.11.871",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.871",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.87.0",
+   "categorie": "monitoring",
+   "resume": "La version 4.87.0 de Langfuse introduit l'évaluation des observations marquées dans la vue des traces échantillons et la gestion de la passerelle IA (AI Gateway).",
+   "specificites": [
+    "Ajout de la mise en cache/back off sur les limites de taux de résumé",
+    "Filtrage des options de clés de passerelle par utilisateurs sélectionnés et blocage/journalisation des requêtes correspondant à un guardrail"
+   ],
+   "pourquoi": "Améliore directement le monitoring, l'observabilité et la sécurité de mes systèmes d'agents LLM en production.",
+   "titre": "Langfuse v4.87.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.87.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://huggingface.co/papers/2611.34147",
+   "categorie": "article",
+   "resume": "Étude sur la gestion du contexte pilotée par le modèle où ce dernier décide quand et quoi compacter via une API de contexte dédiée.",
+   "specificites": [
+    "Évalué sur des budgets de contexte de 8K à 512K tokens dans l'harnais open source nooa de NVIDIA",
+    "Permet aux modèles d'atteindre une plus haute précision avec moins de jetons d'entrée"
+   ],
+   "pourquoi": "Fournit une alternative concrète aux purges de contexte basiques pour optimiser les performances de mes agents long-horizon.",
+   "titre": "Letting Models Manage Their Own Context: Where We Stand",
+   "url": "https://huggingface.co/papers/2611.34147",
+   "source": "Hugging Face Daily Papers"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.33174",
+   "categorie": "article",
+   "resume": "Présentation de MGMem, un framework de mémoire à long terme pour agents LLM qui évite les réécritures génératives coûteuses.",
+   "specificites": [
+    "Architecture déterministe et préservant la provenance des interactions",
+    "Élimine les milliers d'appels génératifs nécessaires aux graphes de connaissances ou résumés textuels"
+   ],
+   "pourquoi": "Solution directe pour structurer la mémoire persistante de mes agents LLM sans perte de traçabilité.",
+   "titre": "MGMem: An Efficient, Deterministic, and Provenance-Preserving Framework for Long-Horizon Agent Memory",
+   "url": "https://arxiv.org/abs/2611.33174",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
+   "categorie": "pratique",
+   "resume": "Explication de sqlite3_rsync, un outil expérimental de copie à distance pour SQLite introduit dans les versions récentes.",
+   "specificites": [
+    "Permet de copier ou synchroniser des bases SQLite sans saturer le disque (évite de dupliquer la base entière comme avec VACUUM INTO)",
+    "Fonctionnalité native enrichie depuis SQLite 3.50.0"
+   ],
+   "pourquoi": "Utile pour le stockage local léger, la persistance d'agents ou le monitoring de données embarquées sans surcoût matériel.",
+   "titre": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
+   "url": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
+   "source": "Simon Willison"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.33250",
+   "categorie": "article",
+   "resume": "Proposition d'un benchmark (FOF-Bench) et d'un modèle d'embedding (FOF-80M) pour obtenir des embeddings textuels invariants au style mais sensibles aux faits.",
+   "specificites": [
+    "Dataset de 83 263 triplets basé sur des réécritures stylistiques et des copies altérées sur le plan factuel",
+    "Réduit les biais de similarité de surface dans les pipelines de recherche textuelle"
+   ],
+   "pourquoi": "Permet d'améliorer la précision de mes pipelines RAG en évitant les faux positifs liés à la similarité lexicale.",
+   "titre": "Focus On Facts: Stylistically Invariant and Factually Sensitive Text Embeddings",
+   "url": "https://arxiv.org/abs/2611.33250",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://www.therobotreport.com/how-vention-is-cutting-factory-programming-from-weeks-to-minutes/",
+   "categorie": "robotique",
+   "resume": "Analyse de l'intégration de l'automatisation industrielle par l'IA pour réduire le temps de programmation en usine.",
+   "specificites": [
+    "Réduction du temps de déploiement de plusieurs semaines à quelques minutes",
+    "Accent mis sur l'ingénierie logicielle appliquée à la robotique physique"
+   ],
+   "pourquoi": "Donne un aperçu des contraintes de déploiement des modèles d'action et de vision-langage dans l'industrie.",
+   "titre": "How Vention is cutting factory programming from weeks to minutes",
+   "url": "https://www.therobotreport.com/how-vention-is-cutting-factory-programming-from-weeks-to-minutes/",
+   "source": "The Robot Report"
+  },
+  {
+   "id": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMmgyNExoUENocGJVY0k4NzZHdFk3dUNRZnFPS2N2WVRRRVI0NEx4RC15U0FEaUQzYUxSLUdWa25hT0UyUVg2dG1QSGRwazZsNWdsT1IzbjdfMDUxTEdTMmR1Q21aRHF4MzZYX2RmVTFCaTE4VmtkdEhzR01LYlVmRDZaRF80ZDVqdzlJb25xQzI4cEtWRTBENXk4eU9LT0NhMlA3VXVyZ1IzcDVNd0hGUHRiUlk4ZWY4RWNmVy1lRzBmV0FoWWt4QTdISQ?oc=5",
+   "categorie": "comparatif",
+   "resume": "Rapport sur la stratégie tarifaire de Google et l'intensification de la guerre des prix sur les performances IA face à Anthropic.",
+   "specificites": [
+    "Comparaison des grilles tarifaires entre fournisseurs majeurs",
+    "Impact direct sur l'arbitrage économique des grands modèles de fondation"
+   ],
+   "pourquoi": "Aide à optimiser le choix des fournisseurs pour nos appels API et à anticiper les baisses de coûts.",
+   "titre": "Google Is Turning AI Performance Into a Price War Anthropic Can’t Ignore - TradingView",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMmgyNExoUENocGJVY0k4NzZHdFk3dUNRZnFPS2N2WVRRRVI0NEx4RC15U0FEaUQzYUxSLUdWa25hT0UyUVg2dG1QSGRwazZsNWdsT1IzbjdfMDUxTEdTMmR1Q21aRHF4MzZYX2RmVTFCaTE4VmtkdEhzR01LYlVmRDZaRF80ZDVqdzlJb25xQzI4cEtWRTBENXk4eU9LT0NhMlA3VXVyZ1IzcDVNd0hGUHRiUlk4ZWY4RWNmVy1lRzBmV0FoWWt4QTdISQ?oc=5",
+   "source": "Benchmarks et comparatifs (actualités)"
+  }
+ ],
+ "tendance": "La tendance du jour se concentre sur l'optimisation des coûts d'inférence (via des modèles flash/lightning très bon marché), l'autonomie des agents dans la gestion de leur propre contexte, et l'amélioration de la robustesse des frameworks RAG et de parsing face aux défenses web.",
+ "comparatif": "- **Modèles les moins chers (Volume / Scraping / Extraction)** :\n  - `deepseek/deepseek-v4.1-flash` : 0.051 $ (entrée) / 0.203 $ (sortie) pour 1 048 576 tokens de contexte.\n  - `nvidia/nemotron-3.5-lightning` : 0.07 $ (entrée) / 0.2 $ (sortie) pour 1 048 576 tokens de contexte.\n  - `meta-llama/llama-4-scout` : 0.1 $ (entrée) / 0.3 $ (sortie) pour 1 310 720 tokens de contexte.\n  - `anthropic/claude-haiku-5.5` : 0.1 $ (entrée) / 0.5 $ (sortie) pour 1 000 000 tokens de contexte.\n\n- **Meilleur rapport qualité/prix pour les Agents et RAG** :\n  - `openai/gpt-6.2-sol` / `openai/gpt-6.2-sol-pro` : 2.0 $ (entrée) / 10.0 $ (sortie) pour 1 050 000 tokens de contexte, offrant une alternative intermédiaire haut de gamme.\n  - `mistralai/mistral-large-4-0` : 0.7 $ (entrée) / 2.1 $ (sortie) pour 1 048 576 tokens de contexte, idéal pour de grands volumes de documents à coût maîtrisé.\n  - `qwen/qwen3.8-omni-flash` : 0.15 $ (entrée) / 0.47 $ (sortie) pour 1 000 000 tokens de contexte, parfait pour les tâches multimodales économiques.\n\n- **Modèles haut de gamme (Raisonnement complexe)** :\n  - `anthropic/claude-fable-5.2` et `openai/gpt-6.2-astra-pro` se situent au même niveau tarifaire élevé de 8.0 $ (entrée) et 40.0 $ (sortie) par million de tokens pour un contexte d'environ 1 million de tokens.",
+ "date": "2026-11-26",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "nom": "Mistral: Pixtral Large 2502",
+   "fournisseur": "mistralai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 128000,
+   "cree": 1795135865,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.71,
+   "sortie": 0.71,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.203,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.44,
+   "sortie": 1.32,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.111,
+   "sortie": 4.44,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXSI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXSI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXSI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.3",
+   "nom": "SpaceXSI: Grok 4.3",
+   "fournisseur": "x-ai",
+   "entree": 1.25,
+   "sortie": 2.5,
+   "contexte": 1000000,
+   "cree": 1777591821,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [
+  {
+   "titre": "Intégration de Nemotron 3.5 Parse pour le scraping et le parsing web",
+   "description": "Proposer à l'équipe d'intégrer le modèle nvidia/nemotron-3.5-lightning pour nos pipelines de parsing HTML et d'extraction de données web. Ses coûts très bas (0.07 $ en entrée / 0.2 $ en sortie par million de tokens) et son contexte d'un million de tokens permettront d'optimiser nos flux de traitement de pages web couplés à Firecrawl.",
+   "effort": "moyen",
+   "source": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin"
+  },
+  {
+   "titre": "Renforcement de l'observabilité avec Langfuse v4.87.0",
+   "description": "Mettre à jour notre stack de monitoring avec Langfuse v4.87.0 pour exploiter la gestion de la passerelle IA (AI Gateway). Nous pourrons ainsi filtrer les clés par utilisateur et appliquer des guardrails bloquant ou journalisant directement les requêtes non conformes.",
+   "effort": "faible",
+   "source": "https://github.com/langfuse/langfuse/releases/tag/v4.87.0"
+  },
+  {
+   "titre": "Amélioration des pipelines RAG avec FOF-80M",
+   "description": "Explorer l'utilisation du modèle d'embedding FOF-80M (Focus On Facts) pour réduire les biais de similarité de surface dans nos recherches textuelles. Ce modèle est invariant au style mais sensible aux faits, ce qui améliorera la pertinence des documents récupérés dans nos pipelines RAG.",
+   "effort": "élevé",
+   "source": "https://arxiv.org/abs/2611.33250"
+  }
+ ],
+ "lecon": {
+  "titre": "Maîtriser l'extraction et le parsing web à grande échelle avec Nemotron 3.5 Parse et Firecrawl",
+  "markdown": "## Le concept\nLe parsing et l'extraction de données web pour alimenter des agents LLM ou des pipelines RAG nécessitent de traiter de grands volumes de texte structuré tout en maîtrisant les coûts et la latence. L'association de **Firecrawl** (pour convertir proprement des pages web en Markdown) et de modèles spécialisés ultra-rapides comme **Nemotron 3.5 Parse** (via le modèle `nvidia/nemotron-3.5-lightning`) permet de traiter efficacement des contextes massifs allant jusqu'à 1 million de tokens.\n\n## Pourquoi c'est important\nEn tant qu'ingénieure IA, vous savez que le coût et la vitesse sont des goulots d'étranglement majeurs lors du scraping de sites web complexes. Avec un modèle facturé à seulement 0.07 $ par million de tokens en entrée et 0.2 $ en sortie, couplé à une capacité de contexte énorme (1 048 576 tokens) et optimisé par fine-tuning sur des données ouvertes, vous pouvez transformer radicalement l'efficacité économique de vos pipelines de données.\n\n## Comment l'appliquer\nPour appliquer cette approche dans vos pipelines actuels :\n1. Utilisez la dernière version de **Firecrawl** (`v2.11.871`) pour extraire le contenu brut des pages web cibles sous un format Markdown propre et structuré.\n2. Passez ce contenu nettoyé au modèle `nvidia/nemotron-3.5-lightning` via l'API appropriée pour extraire les entités ou structurer les informations selon vos besoins.\n3. Profitez de la grande fenêtre de contexte pour envoyer des lots de pages ou des sites entiers en une seule fois, réduisant ainsi les allers-retours.\n\n## Exercice pratique (30 min max)\n- **Étape 1** : Passez en revue la documentation de l'article Hugging Face sur Nemotron 3.5 Parse.\n- **Étape 2** : Configurez un script de test local simulant l'appel au modèle `nvidia/nemotron-3.5-lightning` avec un prompt d'extraction structurée.\n- **Étape 3** : Estimez le coût pour traiter 10 000 pages web en vous basant sur la grille tarifaire (0.07$ / 1M tokens d'entrée).\n\n## Questions d'auto-évaluation\n1. **Quel est le coût d'entrée par million de tokens pour le modèle Nemotron 3.5 Lightning ?**\n   - *Réponse* : 0.07 $ par million de tokens.\n2. **Quelle est la taille maximale de la fenêtre de contexte supportée ?**\n   - *Réponse* : 1 048 576 tokens.\n3. **Quel rôle joue Firecrawl dans ce pipeline de données ?**\n   - *Réponse* : Il convertit les pages web en Markdown propre et exploitable par les agents.\n\n## Pour aller plus loin\n- [Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference](https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin)\n- [Firecrawl v2.11.871 Release](https://github.com/firecrawl/firecrawl/releases/tag/v2.11.871)",
+  "fichier": "2026-11-26-maitriser-l-extraction-et-le-parsing-web-a-grande-echelle-av.md"
+ }
+}
