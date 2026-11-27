@@ -1,0 +1,462 @@
+{
+ "selection": [
+  {
+   "id": "https://arxiv.org/abs/2611.33402",
+   "categorie": "article",
+   "resume": "Introduction d'un mécanisme de partial routing permettant à un modèle de pointe de déléguer des sous-tâches spécifiques à un modèle ouvrier moins coûteux au sein de flux agentiques.",
+   "specificites": [
+    "Cible l'inefficacité d'utiliser un modèle unique pour des tâches combinant des complexités variées",
+    "S'appuie sur l'historique d'exécution pour mesurer la qualité et le coût de chaque modèle sur des sous-tâches récurrentes"
+   ],
+   "pourquoi": "Permet d'optimiser l'exécution de mes pipelines RAG et agents LLM en réduisant les coûts d'inférence sans sacrifier la qualité.",
+   "titre": "Partial Routing: Trace-Tuned Delegation for Resource-Efficient Agentic Workflows",
+   "url": "https://arxiv.org/abs/2611.33402",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.872",
+   "categorie": "parsing",
+   "resume": "Publication de la version v2.11.872 de l'image API Firecrawl pour le crawling et le scraping web.",
+   "specificites": [
+    "Mise à jour incrémentale de l'image Docker de l'API Firecrawl",
+    "Outil spécialisé dans l'extraction de données structurées et le parsing HTML pour agents web"
+   ],
+   "pourquoi": "Permet de maintenir à jour mes pipelines de scraping et d'extraction de données web.",
+   "titre": "Firecrawl v2.11.872",
+   "url": "https://github.com/firecrawl/firecrawl/releases/tag/v2.11.872",
+   "source": "Firecrawl (releases)"
+  },
+  {
+   "id": "https://github.com/langfuse/langfuse/releases/tag/v4.88.0",
+   "categorie": "monitoring",
+   "resume": "Langfuse publie sa version v4.88.0 intégrant des fonctionnalités d'observabilité avancées, dont l'enregistrement des capacités MCP et de nouvelles gardes de rédaction.",
+   "specificites": [
+    "Enregistrement des capacités client et des extensions sur les spans MCP",
+    "Ajout d'une action de redaction 'redact' dans la passerelle IA (AI Gateway)"
+   ],
+   "pourquoi": "Essentiel pour auditer et tracer précisément mes intégrations MCP et appliquer des gardes de sécurité sur mes flux LLM.",
+   "titre": "Langfuse v4.88.0",
+   "url": "https://github.com/langfuse/langfuse/releases/tag/v4.88.0",
+   "source": "Langfuse (releases)"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.33497",
+   "categorie": "article",
+   "resume": "Proposition de Constraint-Aligned RAG (CA-RAG), un cadre de récupération augmentant les requêtes par des contraintes structurelles et des relations de graphes de connaissances.",
+   "specificites": [
+    "Répond à la limite du RAG classique qui optimise uniquement la pertinence sémantique au détriment des obligations structurelles",
+    "Injecte des contraintes ontologiques avant la sélection des évidences pour la génération longue"
+   ],
+   "pourquoi": "Offre une piste concrète pour améliorer la fidélité structurelle de mes pipelines RAG.",
+   "titre": "CA-RAG: Constraint-Aligned Retrieval for Structurally Faithful Long-Form Generation",
+   "url": "https://arxiv.org/abs/2611.33497",
+   "source": "arXiv cs.AI"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.33612",
+   "categorie": "article",
+   "resume": "Étude de l'adaptation continue d'agents d'utilisation d'outils via une mémoire à double polarité distinguant succès et échecs (DualPM).",
+   "specificites": [
+    "Workflow de mémoire sans récupération ('retrieval-free') basé sur des flux hâtifs de tâches multi-domaines",
+    "Exploite différemment la mémoire procédurale issue des succès et des échecs"
+   ],
+   "pourquoi": "Permet d'optimiser l'apprentissage et la robustesse de mes agents LLM manipulant des outils.",
+   "titre": "Failure Broadens, Success Sharpens: Continual Adaptation of Tool-Use Agents Across Diverse Tasks with Dual-Polarity Memory",
+   "url": "https://arxiv.org/abs/2611.33612",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://arxiv.org/abs/2611.33700",
+   "categorie": "article",
+   "resume": "Présentation de Sports Agent, un système évolutif pour l'analytique de données conversationnelles intégrant un modèle SQL agentique.",
+   "specificites": [
+    "Combine un modèle SQL agentique pour le raisonnement sur données structurées et un moteur de rétroaction ('Feedback Engine')",
+    "Assure une adaptation guidée par les preuves d'exécution en ligne"
+   ],
+   "pourquoi": "Fournit des architectures transposables pour mes projets de text-to-SQL et d'agents conversationnels.",
+   "titre": "Sports Agent: A Self-Evolving System for Conversational Data Analytics",
+   "url": "https://arxiv.org/abs/2611.33700",
+   "source": "arXiv cs.CL"
+  },
+  {
+   "id": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
+   "categorie": "pratique",
+   "resume": "Retour d'expérience de Clay sur la construction d'agents de go-to-market et la gestion des sélecteurs de modèles.",
+   "specificites": [
+    "Aborde la complexité de l'orchestration de modèles multiples pour des cas d'usage GTM",
+    "Discute des limites des sélecteurs de modèles génériques du point de vue client"
+   ],
+   "pourquoi": "Donne un aperçu pratique de l'ingénierie d'agents en production à grande échelle.",
+   "titre": "How Clay Builds GTM Agents — Jeff Barg, Head of AI",
+   "url": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
+   "source": "Latent Space"
+  }
+ ],
+ "tendance": "La veille technique de ce jour met en lumière l'optimisation des coûts et de l'architecture des agents à travers le routage partiel de modèles, la granularité de la facturation au compteur (comme chez DeepSeek), et le renforcement de la sécurité des intégrations MCP (observabilité et réduction des vulnérabilités d'images). Parallèlement, l'ingénierie RAG évolue vers la prise en compte de contraintes structurelles explicites (CA-RAG).",
+ "comparatif": "- **Modèles les moins chers (entrée/sortie par M tokens) :**\n  - DeepSeek V4.1 Flash : 0,051 $ (entrée) / 0,203 $ (sortie) pour un contexte de 1 048 576 tokens.\n  - Anthropic Claude Haiku 5.5 : 0,10 $ (entrée) / 0,50 $ (sortie) pour un contexte de 1 000 000 tokens.\n  - Meta Llama 4 Scout : 0,10 $ (entrée) / 0,30 $ (sortie) pour un contexte de 1 310 720 tokens.\n  - Mistral Small 4 : 0,15 $ (entrée) / 0,60 $ (sortie) pour un contexte de 262 144 tokens.\n  - NVIDIA Nemotron 3.5 Lightning : 0,07 $ (entrée) / 0,20 $ (sortie) pour un contexte de 1 048 576 tokens.\n\n- **Meilleur rapport qualité/prix pour le Scraping / Extraction web et Volume :**\n  - *DeepSeek V4.1 Flash* offre le coût d'entrée le plus bas du marché (0,051 $) couplé à une grande fenêtre de contexte (1M tokens), idéal pour ingérer et parser du HTML brut en masse.\n  - *NVIDIA Nemotron 3.5 Lightning* (0,07 $ / 0,20 $) constitue une excellente alternative ultra-économique pour le traitement de volumes massifs sur 1M de tokens.\n\n- **Meilleur rapport qualité/prix pour le RAG et les Agents LLM :**\n  - *Meta Llama 4 Scout* (0,10 $ / 0,30 $) avec 1,3M de tokens de contexte permet de charger de vastes bases documentaires sans exploser le budget d'ingestion.\n  - *Anthropic Claude Haiku 5.5* (0,10 $ / 0,50 $) offre un compromis optimal pour des agents rapides et textuels sur 1M de tokens.\n  - Pour les tâches complexes nécessitant un raisonnement intermédiaire, les modèles intermédiaires comme *OpenAI GPT-6.2 Sol* (2,00 $ / 10,00 $) ou *Anthropic Claude Sonnet 5.5* (2,00 $ / 10,00 $) positionnent leur entrée au même tarif.\n\n- **Modèles Haut de Gamme (Fronteer / Complexité maximale) :**\n  - *Anthropic Claude Fable 5.2* et *OpenAI GPT-6.2 Astra Pro* affichent les tarifs les plus élevés à 8,00 $ en entrée et 40,00 $ en sortie pour des contextes d'environ 1M tokens.\n  - *DeepSeek V4 Pro 0813* présente une asymétrie notable avec 0,10 $ en entrée mais 5,00 $ en sortie.\n\n- **Changements récents :**\n  - Le modèle *Meta: Llama 3.3 70B Instruct* a vu son prix modifié par rapport à son tarif précédent de 0,71 / 0,71 $ pour s'établir à 0,59 $ (entrée) / 0,79 $ (sortie).",
+ "date": "2026-11-27",
+ "prix": [
+  {
+   "id": "anthropic/claude-fable-5.2",
+   "nom": "Anthropic: Claude Fable 5.2",
+   "fournisseur": "anthropic",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1000000,
+   "cree": 1794253781,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "nom": "Anthropic: Claude Haiku 5.5",
+   "fournisseur": "anthropic",
+   "entree": 0.1,
+   "sortie": 0.5,
+   "contexte": 1000000,
+   "cree": 1791397883,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "nom": "Anthropic: Claude Sonnet 5.5",
+   "fournisseur": "anthropic",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1000000,
+   "cree": 1790618686,
+   "evolution": ""
+  },
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "nom": "Anthropic: Claude Opus 5.5",
+   "fournisseur": "anthropic",
+   "entree": 4.0,
+   "sortie": 20.0,
+   "contexte": 1000000,
+   "cree": 1790094732,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra-pro",
+   "nom": "OpenAI: GPT-6.2 Astra Pro",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938432,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-astra",
+   "nom": "OpenAI: GPT-6.2 Astra",
+   "fournisseur": "openai",
+   "entree": 8.0,
+   "sortie": 40.0,
+   "contexte": 1050000,
+   "cree": 1794938423,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol-pro",
+   "nom": "OpenAI: GPT-6.2 Sol Pro",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938409,
+   "evolution": ""
+  },
+  {
+   "id": "openai/gpt-6.2-sol",
+   "nom": "OpenAI: GPT-6.2 Sol",
+   "fournisseur": "openai",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1050000,
+   "cree": 1794938371,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "nom": "Google: Gemini 4 Neon",
+   "fournisseur": "google",
+   "entree": 3.0,
+   "sortie": 15.0,
+   "contexte": 1048576,
+   "cree": 1795006977,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "nom": "Google: Gemini 4 Hydrogen",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 1048576,
+   "cree": 1794506460,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "nom": "Google: Gemini 4 Carbon",
+   "fournisseur": "google",
+   "entree": 2.0,
+   "sortie": 10.0,
+   "contexte": 1048576,
+   "cree": 1794326871,
+   "evolution": ""
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "nom": "Google: Gemini Omni 1.2 Flash",
+   "fournisseur": "google",
+   "entree": 1.5,
+   "sortie": 9.0,
+   "contexte": 131072,
+   "cree": 1793898961,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/pixtral-large-2502",
+   "nom": "Mistral: Pixtral Large 2502",
+   "fournisseur": "mistralai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 128000,
+   "cree": 1795135865,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "nom": "Mistral: Mistral Large 4",
+   "fournisseur": "mistralai",
+   "entree": 0.7,
+   "sortie": 2.1,
+   "contexte": 1048576,
+   "cree": 1791294122,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "nom": "Mistral: Mistral Medium 3.5",
+   "fournisseur": "mistralai",
+   "entree": 1.5,
+   "sortie": 7.5,
+   "contexte": 262144,
+   "cree": 1777570439,
+   "evolution": ""
+  },
+  {
+   "id": "mistralai/mistral-small-2603",
+   "nom": "Mistral: Mistral Small 4",
+   "fournisseur": "mistralai",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 262144,
+   "cree": 1773695685,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-guard-4-12b",
+   "nom": "Meta: Llama Guard 4 12B",
+   "fournisseur": "meta-llama",
+   "entree": 0.18,
+   "sortie": 0.18,
+   "contexte": 163840,
+   "cree": 1745975193,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-maverick",
+   "nom": "Meta: Llama 4 Maverick",
+   "fournisseur": "meta-llama",
+   "entree": 0.35,
+   "sortie": 1.0,
+   "contexte": 524288,
+   "cree": 1743881822,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-4-scout",
+   "nom": "Meta: Llama 4 Scout",
+   "fournisseur": "meta-llama",
+   "entree": 0.1,
+   "sortie": 0.3,
+   "contexte": 1310720,
+   "cree": 1743881519,
+   "evolution": ""
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "nom": "Meta: Llama 3.3 70B Instruct",
+   "fournisseur": "meta-llama",
+   "entree": 0.59,
+   "sortie": 0.79,
+   "contexte": 131072,
+   "cree": 1733506137,
+   "evolution": "prix modifié (avant 0.71 / 0.71 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "fournisseur": "deepseek",
+   "entree": 0.15,
+   "sortie": 0.6,
+   "contexte": 1048576,
+   "cree": 1792225624,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "nom": "DeepSeek: DeepSeek V4.1 Flash",
+   "fournisseur": "deepseek",
+   "entree": 0.051,
+   "sortie": 0.203,
+   "contexte": 1048576,
+   "cree": 1789021285,
+   "evolution": ""
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-vision-exp",
+   "nom": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+   "fournisseur": "deepseek",
+   "entree": 0.216,
+   "sortie": 0.647,
+   "contexte": 1048576,
+   "cree": 1787311563,
+   "evolution": "prix modifié (avant 0.44 / 1.32 $)"
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "nom": "DeepSeek: DeepSeek V4 Pro 0813",
+   "fournisseur": "deepseek",
+   "entree": 0.1,
+   "sortie": 5.0,
+   "contexte": 1048576,
+   "cree": 1786549364,
+   "evolution": "prix modifié (avant 0.111 / 4.44 $)"
+  },
+  {
+   "id": "qwen/qwen4-max",
+   "nom": "Qwen: Qwen4 Max",
+   "fournisseur": "qwen",
+   "entree": 1.425,
+   "sortie": 4.275,
+   "contexte": 1000000,
+   "cree": 1794795526,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-prime",
+   "nom": "Qwen: Qwen3.8 Max Prime",
+   "fournisseur": "qwen",
+   "entree": 4.0,
+   "sortie": 12.0,
+   "contexte": 1000000,
+   "cree": 1790191228,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-omni-flash",
+   "nom": "Qwen: Qwen3.8 Omni Flash",
+   "fournisseur": "qwen",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1000000,
+   "cree": 1789959954,
+   "evolution": ""
+  },
+  {
+   "id": "qwen/qwen3.8-max-0902",
+   "nom": "Qwen: Qwen3.8 Max (0902)",
+   "fournisseur": "qwen",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 1000000,
+   "cree": 1788469704,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.7",
+   "nom": "SpaceXSI: Grok 4.7",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1790007541,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.6",
+   "nom": "SpaceXSI: Grok 4.6",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1786548957,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.5",
+   "nom": "SpaceXSI: Grok 4.5",
+   "fournisseur": "x-ai",
+   "entree": 2.0,
+   "sortie": 6.0,
+   "contexte": 500000,
+   "cree": 1783523154,
+   "evolution": ""
+  },
+  {
+   "id": "x-ai/grok-4.3",
+   "nom": "SpaceXSI: Grok 4.3",
+   "fournisseur": "x-ai",
+   "entree": 1.25,
+   "sortie": 2.5,
+   "contexte": 1000000,
+   "cree": 1777591821,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "nom": "NVIDIA: Nemotron 3.5 Super VL",
+   "fournisseur": "nvidia",
+   "entree": 0.15,
+   "sortie": 0.47,
+   "contexte": 1048576,
+   "cree": 1792076662,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "nom": "NVIDIA: Nemotron 3.5 Lightning",
+   "fournisseur": "nvidia",
+   "entree": 0.07,
+   "sortie": 0.2,
+   "contexte": 1048576,
+   "cree": 1786452751,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3.5-content-safety",
+   "nom": "NVIDIA: Nemotron 3.5 Content Safety",
+   "fournisseur": "nvidia",
+   "entree": 0.2,
+   "sortie": 0.2,
+   "contexte": 131072,
+   "cree": 1780581864,
+   "evolution": ""
+  },
+  {
+   "id": "nvidia/nemotron-3-ultra-550b-a55b",
+   "nom": "NVIDIA: Nemotron 3 Ultra",
+   "fournisseur": "nvidia",
+   "entree": 0.5,
+   "sortie": 2.2,
+   "contexte": 262144,
+   "cree": 1780551208,
+   "evolution": ""
+  }
+ ],
+ "idees": [],
+ "lecon": null
+}
